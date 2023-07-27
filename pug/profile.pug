@@ -1,0 +1,41 @@
+extends base
+
+block seo
+    - var seo = {title: 'Личные данные', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Личные данные
+        section.section._ultra-small._blue
+            .container
+                h1.h1.heading-font(role="heading") Личный кабинет
+                .cabinet__grid
+                    include includes/_cabinet-aside
+
+                    .cabinet__content
+                        h2.cabinet__content-title.heading-font(role="heading") Личные данные
+
+                        .profile
+                            ul.profile__items(role="list")
+                                li.profile__item(role="listitem")
+                                    span Имя:
+                                    | Иван Иванов
+                                li.profile__item(role="listitem")
+                                    span Номер телефона:
+                                    | +7 (999) 123-12-1234
+                                li.profile__item(role="listitem")
+                                    span Адрес доставки:
+                                    | г. Москва, ул. Тверская 4/3, кв 25
+
+                            a.profile__edit.btn._border._middle(href="#" role="link") Изменить
+
+        //Электронный гарантийный талон
+        include includes/_get-guarantee
+
+        //Вам может понравится
+        - var like_title = 'Вам может понравиться';
+        include includes/_like
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

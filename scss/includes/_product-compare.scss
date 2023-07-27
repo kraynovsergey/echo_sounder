@@ -1,0 +1,151 @@
+.product-compare {
+	&__scroll {
+		overflow-y: auto;
+
+		@media (max-width: 991px) {
+			margin-right: -20px;
+			padding-right: 20px;
+		}
+
+		@media (max-width: 575px) {
+			margin-right: -10px;
+			padding-right: 10px;
+		}
+	}
+
+	& table {
+		width: 100%;
+		color: #5D5D5D;
+		font-size: .87rem;
+
+		& thead {
+			& td {
+				vertical-align: top;
+
+				&:first-child {
+					background: $color_white;
+					position: sticky;
+					left: 0;
+				}
+			}
+		}
+
+		& tbody {
+			& tr {
+				background: $color_blue_light;
+
+				&:nth-child(2n) {
+					background: $color_white;
+
+					& td {
+						background: $color_white;
+
+						&._active {
+							background: rgba(63, 138, 224, 0.20) !important;
+						}
+					}
+				}
+
+				&:first-child {
+					& td {
+						&._active {
+							border-radius: 10px 10px 0 0;
+						}
+					}
+				}
+
+				&:last-child {
+					& td {
+						&._active {
+							border-radius: 0 0 10px 10px;
+						}
+					}
+				}
+
+				& td {
+					background: $color_blue_light;
+
+					&._active {
+						background: rgba(63, 138, 224, 0.30) !important;
+					}
+				}
+			}
+
+			& td {
+				padding: 15px;
+				background: $color_white;
+				vertical-align: middle;
+
+				@media (max-width: 991px) {
+					padding: 10px;
+				}
+
+				&:first-child {
+					position: sticky;
+					left: 0;
+					border-radius: 10px 0 0 10px;
+					font-weight: 600;
+					min-width: 300px;
+					padding-left: 20px;
+
+					@media (max-width: 1440px) {
+						min-width: 250px;
+					}
+
+					@media (max-width: 991px) {
+						min-width: 200px;
+						padding-left: 10px;
+					}
+
+					@media (max-width: 575px) {
+						min-width: 130px;
+					}
+				}
+
+				&:last-child {
+					border-radius: 0 10px 10px 0;
+					padding-right: 20px;
+
+					@media (max-width: 991px) {
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&__product {
+		display: grid;
+		justify-items: start;
+		grid-gap: 5px;
+		font-size: .87rem;
+		color: #5D5D5D !important;
+		text-decoration: none !important;
+		margin-bottom: 20px;
+		max-width: 90%;
+	}
+
+	&__picture {
+		width: 100%;
+		max-width: 70px;
+		height: 70px;
+		background: $color_blue_light;
+		border-radius: 5px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: 575px) {
+			max-width: 60px;
+			height: 60px;
+		}
+
+		& img {
+			max-width: 90%;
+			max-height: 90%;
+			width: auto;
+			height: auto;
+		}
+	}
+}

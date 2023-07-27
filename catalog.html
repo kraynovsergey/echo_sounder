@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Каталог</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header" role="banner" data-header>
+      <div class="container header__container"><a class="header__logo" href="#" role="link">
+              <picture class="header__logo-logo">
+                <source type="image/webp" srcset="img/webp/logo@2x.webp 2x, img/webp/logo.webp 1x"><img src="" srcset="img/logo@2x.png 2x, img/logo.png 1x" alt="" width="72" height="52" loading="lazy">
+              </picture>
+              <picture class="header__logo-flag">
+                <source type="image/webp" srcset="img/webp/flag@2x.webp 2x, img/webp/flag.webp 1x"><img src="" srcset="img/flag@2x.png 2x, img/flag.png 1x" alt="" width="65" height="65" loading="lazy">
+              </picture></a><a class="header__yandex" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <form class="header__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form>
+        <address class="header__contacts"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
+                <svg width="17" height="20">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Посмотреть список избранного">
+                <svg width="20" height="19">
+                  <use xlink:href="img/sprite.svg#favourite"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Перейти к сравнению товаров">
+                <svg width="25" height="20">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg></a><a class="header__control header__cart" href="#" role="link" aria-label="В корзину">
+                <svg width="22" height="20">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg><span class="header__cart-count">1</span></a></div>
+        <div class="header__user">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+        <button class="header__burger" type="button" role="button" data-toggle="[data-nav]"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <nav class="nav no-scroll" role="navigation" data-nav>
+      <div class="container nav__mobile-container">
+        <address class="header__contacts _tablet"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback-mobile]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback-mobile>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <form class="nav__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form><a class="header__yandex _tablet" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <div class="header__user _tablet">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city-mobile]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city-mobile>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+      </div>
+      <div class="container nav__container">
+        <div class="nav__catalog">
+          <button class="nav__catalog-btn heading-font" type="button" role="button" data-toggle="[data-nav-catalog-list]">В магазин
+                <svg width="21" height="18">
+                  <use xlink:href="img/sprite.svg#triangle-catalog"></use>
+                </svg>
+          </button>
+          <ul class="nav__catalog-list" role="list" data-nav-catalog-list>
+            <li class="nav__catalog-listitem" role="listitem" data-nav-item><a class="nav__catalog-listlink heading-font" href="#" role="link" data-nav-link>Эхолоты
+                    <svg width="10" height="8">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg></a>
+              <ul class="nav__sublist" role="list" data-nav-sublist>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для зимней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Беспроводные</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для летней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с берега</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с лодки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Недорогие эхолоты</a></li>
+              </ul>
+            </li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Аксессуары для эхолотов</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Подводные камеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Глубиномеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Насос "Бриз"</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Фонари для рыбалки</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Электромоторы</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Товары для туризма</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Мерч</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Уцененные товары</a></li>
+          </ul>
+        </div>
+        <ul class="nav__list" role="list">
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>О нас
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Общая информация</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Почему нам доверяют?</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">История компании</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Отзывы</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сертификаты</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Подбор эхолота</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Как это работает
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Информационная поддержка пользователя</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Частые вопросы</a></li>
+              <li class="nav__sublistitem" role="listitem" data-nav-item><a class="nav__sublistlink" href="#" role="link" data-nav-link>Блог
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg></a>
+                <ul class="nav__sublist" role="list" data-nav-sublist>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Новости</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Статьи</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Видео</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Акции</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Ремонт
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Как отправить прибор в сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Платный ремонт</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервисные центры</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Оплата и доставка</a></li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main" role="main">
+      <!--Основная часть каталога-->
+      <section class="section _pt0">
+        <div class="container">
+          <ul class="breadcrumbs" role="list">
+            <li class="breadcrumbs__item" role="listitem"><a class="breadcrumbs__link" href="#" role="link">Главная</a></li>
+            <li class="breadcrumbs__item" role="listitem">Эхолоты</li>
+          </ul>
+          <h1 class="h1 heading-font catalog__h1" role="heading">Эхолоты</h1>
+          <div class="catalog__grid">
+            <!--Фильтр-->
+            <aside class="catalog__aside no-scroll" role="complementary" data-catalog-aside>
+              <button class="catalog__aside-close" type="button" role="button" data-catalog-aside-control>
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#cross"></use>
+                    </svg>
+              </button>
+              <form class="filter" action="#" method="post">
+                <div class="filter__params">
+                  <fieldset class="filter__fieldset">
+                    <p class="filter__title">Время года</p>
+                    <div class="filter__checkboxes">
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="season" value="Круглогодичные" id="season-1">
+                        <label for="season-1"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-season-1"></use>
+                              </svg>Круглогодичные
+                        </label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="season" value="Летние" id="season-2">
+                        <label for="season-2"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-season-2"></use>
+                              </svg>Летние
+                        </label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="season" value="Зимние" id="season-3">
+                        <label for="season-3"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-season-3"></use>
+                              </svg>Зимние
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset">
+                    <p class="filter__title">Место рыбалки</p>
+                    <div class="filter__checkboxes">
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="place" value="С берега" id="place-1">
+                        <label for="place-1"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-place-1"></use>
+                              </svg>С берега
+                        </label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="place" value="С лодки" id="place-2">
+                        <label for="place-2"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-place-2"></use>
+                              </svg>С лодки
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset">
+                    <p class="filter__title">Функции</p>
+                    <div class="filter__checkboxes">
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="functions" value="Wi-Fi" id="functions-1">
+                        <label for="functions-1"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-functions-1"></use>
+                              </svg>Wi-Fi
+                        </label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="functions" value="Место рыбы" id="functions-2">
+                        <label for="functions-2"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-functions-2"></use>
+                              </svg>Место рыбы
+                        </label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input type="checkbox" name="functions" value="Звуковая сигнализация" id="functions-3">
+                        <label for="functions-3"><span></span>
+                              <svg width="24" height="24">
+                                <use xlink:href="img/sprite.svg#filter-functions-3"></use>
+                              </svg>Звуковая сигнализация
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter__controls">
+                  <button class="btn _middle" type="submit" role="button">Применить</button>
+                  <button class="btn _middle _border filter__reset" type="reset" role="button">Очистить</button>
+                </div>
+              </form>
+            </aside>
+            <!--Товары-->
+            <div class="catalog__content">
+              <div class="catalog__controls">
+                <button class="catalog__control catalog__filter btn-triangle" type="button" role="button" data-catalog-aside-control>Фильтр
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg>
+                </button>
+                <button class="catalog__control btn-triangle" type="button" role="button">Сортировка
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="catalog__products">
+                              <article class="catalog-product" role="article"><a class="catalog-product__picture" href="#" role="link">
+                                      <picture>
+                                        <source type="image/webp" data-srcset="img/tmp/webp/catalog-product@2x.webp 2x, img/tmp/webp/catalog-product.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/catalog-product@2x.png 2x, img/tmp/catalog-product.png 1x" srcset="" alt="" width="222" height="256">
+                                      </picture>
+                                  <ul class="product__labels" role="list">
+                                    <li class="product__label _blue" role="listitem">Гарантия 5 лет</li>
+                                    <li class="product__label _orange" role="listitem">Акция</li>
+                                  </ul></a>
+                                <div class="catalog-product__content">
+                                  <div class="catalog-product__ratings">
+                                    <div class="catalog-product__rating">
+                                          <svg width="19" height="18">
+                                            <use xlink:href="img/sprite.svg#star"></use>
+                                          </svg>5
+                                    </div>
+                                    <div class="catalog-product__buyers">312 покупок за 3 месяца</div>
+                                  </div>
+                                  <h3 class="catalog-product__title heading-font" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S</a></h3>
+                                  <ul class="catalog-product__tags" role="list">
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#wifi"></use>
+                                          </svg>Wi-Fi
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#all-seasons"></use>
+                                          </svg>Круглогодичный
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                  </ul>
+                                  <ul class="catalog-product__params" role="list">
+                                    <li role="listitem"><span>Угол луча</span> — 35</li>
+                                    <li role="listitem"><span>Рабочая глубина</span> — До 25 м</li>
+                                    <li role="listitem"><span>Дальность приема</span> — До 80 м</li>
+                                  </ul>
+                                </div>
+                                <div class="catalog-product__controls">
+                                  <!--Для не в наличии класс _out-of-stock-->
+                                  <div class="catalog-product__status _in-stock">В наличии</div>
+                                  <div class="catalog-product__price heading-font">12 990 р<span class="catalog-product__old-price">16 990 р</span></div>
+                                  <div class="catalog-product__btns">
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="20" height="19">
+                                            <use xlink:href="img/sprite.svg#favourite"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="25" height="20">
+                                            <use xlink:href="img/sprite.svg#compare"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _full btn _middle" type="button" role="button">Купить в один клик</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Смотреть акции</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">В корзину</button>
+                                  </div>
+                                </div>
+                              </article>
+                              <article class="catalog-product" role="article"><a class="catalog-product__picture" href="#" role="link">
+                                      <picture>
+                                        <source type="image/webp" data-srcset="img/tmp/webp/catalog-product@2x.webp 2x, img/tmp/webp/catalog-product.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/catalog-product@2x.png 2x, img/tmp/catalog-product.png 1x" srcset="" alt="" width="222" height="256">
+                                      </picture>
+                                  <ul class="product__labels" role="list">
+                                    <li class="product__label _blue" role="listitem">Гарантия 5 лет</li>
+                                    <li class="product__label _orange" role="listitem">Акция</li>
+                                  </ul></a>
+                                <div class="catalog-product__content">
+                                  <div class="catalog-product__ratings">
+                                    <div class="catalog-product__rating">
+                                          <svg width="19" height="18">
+                                            <use xlink:href="img/sprite.svg#star"></use>
+                                          </svg>5
+                                    </div>
+                                    <div class="catalog-product__buyers">312 покупок за 3 месяца</div>
+                                  </div>
+                                  <h3 class="catalog-product__title heading-font" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S</a></h3>
+                                  <ul class="catalog-product__tags" role="list">
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#wifi"></use>
+                                          </svg>Wi-Fi
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#all-seasons"></use>
+                                          </svg>Круглогодичный
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                  </ul>
+                                  <ul class="catalog-product__params" role="list">
+                                    <li role="listitem"><span>Угол луча</span> — 35</li>
+                                    <li role="listitem"><span>Рабочая глубина</span> — До 25 м</li>
+                                    <li role="listitem"><span>Дальность приема</span> — До 80 м</li>
+                                  </ul>
+                                </div>
+                                <div class="catalog-product__controls">
+                                  <!--Для не в наличии класс _out-of-stock-->
+                                  <div class="catalog-product__status _in-stock">В наличии</div>
+                                  <div class="catalog-product__price heading-font">12 990 р<span class="catalog-product__old-price">16 990 р</span></div>
+                                  <div class="catalog-product__btns">
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="20" height="19">
+                                            <use xlink:href="img/sprite.svg#favourite"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="25" height="20">
+                                            <use xlink:href="img/sprite.svg#compare"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _full btn _middle" type="button" role="button">Купить в один клик</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Смотреть акции</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">В корзину</button>
+                                  </div>
+                                </div>
+                              </article>
+                              <article class="catalog-product" role="article"><a class="catalog-product__picture" href="#" role="link">
+                                      <picture>
+                                        <source type="image/webp" data-srcset="img/tmp/webp/catalog-product@2x.webp 2x, img/tmp/webp/catalog-product.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/catalog-product@2x.png 2x, img/tmp/catalog-product.png 1x" srcset="" alt="" width="222" height="256">
+                                      </picture>
+                                  <ul class="product__labels" role="list">
+                                    <li class="product__label _blue" role="listitem">Гарантия 5 лет</li>
+                                    <li class="product__label _orange" role="listitem">Акция</li>
+                                  </ul></a>
+                                <div class="catalog-product__content">
+                                  <div class="catalog-product__ratings">
+                                    <div class="catalog-product__rating">
+                                          <svg width="19" height="18">
+                                            <use xlink:href="img/sprite.svg#star"></use>
+                                          </svg>5
+                                    </div>
+                                    <div class="catalog-product__buyers">312 покупок за 3 месяца</div>
+                                  </div>
+                                  <h3 class="catalog-product__title heading-font" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S</a></h3>
+                                  <ul class="catalog-product__tags" role="list">
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#wifi"></use>
+                                          </svg>Wi-Fi
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#all-seasons"></use>
+                                          </svg>Круглогодичный
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                  </ul>
+                                  <ul class="catalog-product__params" role="list">
+                                    <li role="listitem"><span>Угол луча</span> — 35</li>
+                                    <li role="listitem"><span>Рабочая глубина</span> — До 25 м</li>
+                                    <li role="listitem"><span>Дальность приема</span> — До 80 м</li>
+                                  </ul>
+                                </div>
+                                <div class="catalog-product__controls">
+                                  <!--Для не в наличии класс _out-of-stock-->
+                                  <div class="catalog-product__status _in-stock">В наличии</div>
+                                  <div class="catalog-product__price heading-font">12 990 р<span class="catalog-product__old-price">16 990 р</span></div>
+                                  <div class="catalog-product__btns">
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="20" height="19">
+                                            <use xlink:href="img/sprite.svg#favourite"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="25" height="20">
+                                            <use xlink:href="img/sprite.svg#compare"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _full btn _middle" type="button" role="button">Купить в один клик</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Смотреть акции</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">В корзину</button>
+                                  </div>
+                                </div>
+                              </article>
+                              <article class="catalog-product" role="article"><a class="catalog-product__picture" href="#" role="link">
+                                      <picture>
+                                        <source type="image/webp" data-srcset="img/tmp/webp/catalog-product@2x.webp 2x, img/tmp/webp/catalog-product.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/catalog-product@2x.png 2x, img/tmp/catalog-product.png 1x" srcset="" alt="" width="222" height="256">
+                                      </picture>
+                                  <ul class="product__labels" role="list">
+                                    <li class="product__label _blue" role="listitem">Гарантия 5 лет</li>
+                                    <li class="product__label _orange" role="listitem">Акция</li>
+                                  </ul></a>
+                                <div class="catalog-product__content">
+                                  <div class="catalog-product__ratings">
+                                    <div class="catalog-product__rating">
+                                          <svg width="19" height="18">
+                                            <use xlink:href="img/sprite.svg#star"></use>
+                                          </svg>5
+                                    </div>
+                                    <div class="catalog-product__buyers">312 покупок за 3 месяца</div>
+                                  </div>
+                                  <h3 class="catalog-product__title heading-font" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S</a></h3>
+                                  <ul class="catalog-product__tags" role="list">
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#wifi"></use>
+                                          </svg>Wi-Fi
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#all-seasons"></use>
+                                          </svg>Круглогодичный
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                    <li role="listitem">
+                                          <svg width="20" height="21">
+                                            <use xlink:href="img/sprite.svg#guard"></use>
+                                          </svg>Ударопрочный корпус
+                                    </li>
+                                  </ul>
+                                  <ul class="catalog-product__params" role="list">
+                                    <li role="listitem"><span>Угол луча</span> — 35</li>
+                                    <li role="listitem"><span>Рабочая глубина</span> — До 25 м</li>
+                                    <li role="listitem"><span>Дальность приема</span> — До 80 м</li>
+                                  </ul>
+                                </div>
+                                <div class="catalog-product__controls">
+                                  <!--Для не в наличии класс _out-of-stock-->
+                                  <div class="catalog-product__status _in-stock">В наличии</div>
+                                  <div class="catalog-product__price heading-font">12 990 р<span class="catalog-product__old-price">16 990 р</span></div>
+                                  <div class="catalog-product__btns">
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="20" height="19">
+                                            <use xlink:href="img/sprite.svg#favourite"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _grey btn _border _middle" type="button" role="button">
+                                          <svg width="25" height="20">
+                                            <use xlink:href="img/sprite.svg#compare"></use>
+                                          </svg>
+                                    </button>
+                                    <button class="catalog-product__btn _full btn _middle" type="button" role="button">Купить в один клик</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Смотреть акции</button>
+                                    <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">В корзину</button>
+                                  </div>
+                                </div>
+                              </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Акции для-->
+      <section class="section _pt0">
+        <div class="container">
+          <h2 class="section__h2 heading-font" role="heading">Акции для</h2>
+          <div class="catalog-stock">
+            <div class="catalog-stock__filters no-scroll">
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="all" id="catalog-stock-1" data-blog-filter checked>
+                <label for="catalog-stock-1">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Всех эхолотов</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="7-bmf-universal" id="catalog-stock-2" data-blog-filter>
+                <label for="catalog-stock-2">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>7 BMF универсал</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="7-bmf" id="catalog-stock-3" data-blog-filter>
+                <label for="catalog-stock-3">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>7 BMF</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="praktik-8" id="catalog-stock-4" data-blog-filter>
+                <label for="catalog-stock-4">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Практик 8</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="praktik-6" id="catalog-stock-5" data-blog-filter>
+                <label for="catalog-stock-5">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Практик 6</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="praktik-8" id="catalog-stock-6" data-blog-filter>
+                <label for="catalog-stock-6">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Практик 8</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="praktik-6" id="catalog-stock-7" data-blog-filter>
+                <label for="catalog-stock-7">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Практик 6</span>
+                </label>
+              </div>
+              <div class="catalog-stock__filter">
+                <input type="radio" name="stock" value="praktik-8" id="catalog-stock-8" data-blog-filter>
+                <label for="catalog-stock-8">
+                      <picture>
+                        <source type="image/webp" data-srcset="img/tmp/webp/stock-for@2x.webp 2x, img/tmp/webp/stock-for.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/stock-for@2x.png 2x, img/tmp/stock-for.png 1x" srcset="" alt="" width="144" height="139">
+                      </picture><span>Практик 8</span>
+                </label>
+              </div>
+            </div>
+            <div class="catalog-stock__items">
+                  <article class="product compare__product" role="article" data-blog-item="all 7-bmf-universal"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all 7-bmf"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-8"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all 7-bmf-universal"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all 7-bmf"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-8"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+                  <article class="product compare__product" role="article" data-blog-item="all praktik-6"><a class="product__picture compare__picture" href="#" role="link">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                          </picture></a>
+                    <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                    <div class="product__price">12 700р<span>14 000р</span></div>
+                    <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Не нашли подходящую акцию?-->
+      <section class="section _pt0">
+        <div class="container">
+          <div class="not-find-stock">
+            <div class="not-find-stock__content">
+              <h2 class="section__h2 not-find-stock__title heading-font" role="heading">Не нашли подходящую акцию?</h2>
+              <p class="not-find-stock__subtitle">Оставьте почту и мы сообщим о новых акциях</p>
+              <form class="not-find-stock__form form" action="#" method="">
+                <input class="form__input" type="email" name="email" placeholder="Почта">
+                <button class="form__submit btn _border _middle" type="submit">Подписаться</button>
+              </form>
+            </div>
+            <div class="not-find-stock__picture"><img class="lazy" src="img/not-find-stock.svg" alt="" width="463" height="410"></div>
+          </div>
+        </div>
+      </section>
+      <!--Ответьте на 8 вопросов-->
+      <section class="section _pt0">
+        <div class="container question__container">
+          <div class="question__cover">
+            <h2 class="question__h2 heading-font" role="heading">Ответьте на 8 вопросов и получите персональный подбор эхолота</h2>
+                <picture class="question__picture">
+                  <source type="image/webp" data-srcset="img/webp/question@2x.webp 2x, img/webp/question.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/question@2x.png 2x, img/question.png 1x" srcset="" alt="" width="337" height="366">
+                </picture>
+          </div>
+          <div class="question__content">
+            <div class="question__progress" data-step-progress data-step="1"><span class="_active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <svg class="question__fish" width="63" height="34">
+                <use xlink:href="img/sprite.svg#question-fish"></use>
+              </svg>
+            </div>
+            <form class="question__form" role="form">
+              <fieldset class="question__step _active" data-question-step data-step="1">
+                <h3 class="question__title" role="heading">1. В какое время года больше рыбачите?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question1" value="Зимнее" id="question1_1">
+                                <label for="question1_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Зимнее
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question1" value="Летнее" id="question1_2">
+                                <label for="question1_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Летнее
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question1" value="Примерно одинаково зимой и летом" id="question1_3">
+                                <label for="question1_3"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Примерно одинаково зимой и летом
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="2">
+                <h3 class="question__title" role="heading">2. Летом вы рыбачите больше с лодки или с забросом?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question2" value="C лодки" id="question2_1">
+                                <label for="question2_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>C лодки
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question2" value="C забросом" id="question2_2">
+                                <label for="question2_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>C забросом
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="3">
+                <h3 class="question__title" role="heading">3. Вы профессиональный рыболов или рыбак-любитель?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question3" value="Любитель" id="question3_1">
+                                <label for="question3_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Любитель
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question3" value="Профи" id="question3_2">
+                                <label for="question3_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Профи
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="4">
+                <h3 class="question__title" role="heading">4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question4" value="Да" id="question4_1">
+                                <label for="question4_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Да
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question4" value="Нет" id="question4_2">
+                                <label for="question4_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Нет
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="5">
+                <h3 class="question__title" role="heading">5. Максимально низкая температура, при которой собираетесь ловить рыбу?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question5" value="до –20гр." id="question5_1">
+                                <label for="question5_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>до –20гр.
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question5" value="до –25гр. и ниже" id="question5_2">
+                                <label for="question5_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>до –25гр. и ниже
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="6">
+                <h3 class="question__title" role="heading">6. Какой тип экрана эхолота вам необходим?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question6" value="Цветной" id="question6_1">
+                                <label for="question6_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Цветной
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question6" value="Черно-белый" id="question6_2">
+                                <label for="question6_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Черно-белый
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="7">
+                <h3 class="question__title" role="heading">7. Какой элемент питания устройства предпочтителен?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question7" value="Батарейка" id="question7_1">
+                                <label for="question7_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Батарейка
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question7" value="Встроенный аккумулятор" id="question7_2">
+                                <label for="question7_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Встроенный аккумулятор
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+              <fieldset class="question__step" data-question-step data-step="8">
+                <h3 class="question__title" role="heading">8. Какой тип соединения блока и датчика предпочтителен?</h3>
+                <div class="question__items">
+                              <div class="question__item">
+                                <input type="radio" name="question8" value="Проводное" id="question8_1">
+                                <label for="question8_1"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Проводное
+                                </label>
+                              </div>
+                              <div class="question__item">
+                                <input type="radio" name="question8" value="Беспроводное" id="question8_2">
+                                <label for="question8_2"><span>
+                                        <svg width="23" height="17">
+                                          <use xlink:href="img/sprite.svg#checkbox"></use>
+                                        </svg></span>Беспроводное
+                                </label>
+                              </div>
+                </div>
+              </fieldset>
+            </form>
+            <div class="question__controls">
+              <button class="question__control btn _small _border _prev" type="button" role="button" data-question-control data-prev data-step="0" disabled>
+                    <svg width="32" height="16">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>Назад
+              </button>
+              <button class="question__control btn _small _border _next" type="button" role="button" data-question-control data-next data-step="2">Далее
+                    <svg width="32" height="16">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Производим эхолоты-->
+      <section class="section _pt0">
+        <div class="container manufacturer__container">
+          <h2 class="section__h2 manufacturer__padding manufacturer__h2 heading-font" role="heading">Производим эхолоты для России уже 30 лет</h2>
+              <picture class="manufacturer__picture">
+                <source type="image/webp" data-srcset="img/tmp/webp/manufacturer@2x.webp 2x, img/tmp/webp/manufacturer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/manufacturer@2x.jpg 2x, img/tmp/manufacturer.jpg 1x" srcset="" alt="" width="900" height="600">
+              </picture>
+          <div class="manufacturer__items manufacturer__padding">
+            <article class="manufacturer__item _active" role="article" data-manufacturer>
+              <div class="manufacturer__icon">
+                    <svg width="38" height="36">
+                      <use xlink:href="img/sprite.svg#manufacturer-1"></use>
+                    </svg>
+              </div>
+              <h3 class="manufacturer__title" role="heading">Знаем все желания отечественных рыбаков</h3>
+              <p class="manufacturer__text">Поскольку среди разработчиков нашей компании много заядлых рыболовов, они прекрасно знают потребности любителей рыбной ловли и особенности рыбалки в России.</p>
+            </article>
+            <article class="manufacturer__item" role="article" data-manufacturer>
+              <div class="manufacturer__icon">
+                    <svg width="32" height="40">
+                      <use xlink:href="img/sprite.svg#manufacturer-2"></use>
+                    </svg>
+              </div>
+              <h3 class="manufacturer__title" role="heading">Продукция идеально адаптирована под условия рыбалки в России</h3>
+              <p class="manufacturer__text">Мы - единственные производители эхолотов в России. Разрабатываем продукцию таким образом, чтобы вы ощутили, насколько удобной и результативной может быть рыбалка как в условиях суровой зимы, так и жаркого лета.</p>
+            </article>
+            <article class="manufacturer__item" role="article" data-manufacturer>
+              <div class="manufacturer__icon">
+                    <svg width="38" height="36">
+                      <use xlink:href="img/sprite.svg#manufacturer-3"></use>
+                    </svg>
+              </div>
+              <h3 class="manufacturer__title" role="heading">Сохраняем традиции, продолжая развиваться</h3>
+              <p class="manufacturer__text">В отличие от конкурентов, наша компания предоставляет сервисное и гарантийное обслуживание каждому клиенту. Технические специалисты регулярно оказывают консультации по настройке прибора.</p>
+            </article>
+          </div><a class="manufacturer__btn btn _border _middle" href="#" role="link">Подробнее о нас</a>
+        </div>
+      </section>
+      <!--Почему нам доверяют-->
+      <section class="section _blue">
+        <div class="container">
+          <h2 class="section__h2 heading-font" role="heading">Почему нам доверяют?</h2>
+          <div class="why-we__items no-scroll">
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-1.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Высокое качество эхолотов</h3>
+                    <p class="why-we__text">Меньше 1% рекламаций в течение гарантийного срока</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-2.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Бесплатная рекламная продукция</h3>
+                    <p class="why-we__text">Предлагаем для размещения на торговых площадках: плакаты и рекламные листовки формата А5.</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-3.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Замена и ремонт брака</h3>
+                    <p class="why-we__text">Нет проблем с заменой или ремонтом брака. Сервисный центр находится на базе нашего предприятия</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-4.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Информация о партнерах</h3>
+                    <p class="why-we__text">Информация о постоянных партнерах размещается на нашем сайте в разделе «Где купить»</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-5.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Доставка по всей России</h3>
+                    <p class="why-we__text">Доставка по всей России (СДЭК) или самовывоз</p>
+                  </article>
+            <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-6.svg" alt="" width="533" height="338">
+              <h3 class="why-we__title heading-font _big" role="heading">ВАЖНО!</h3>
+              <h3 class="why-we__title heading-font">НЕТ ДЕМПИНГУ<br>во всех его проявлениях</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--Вам может понравится-->
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__h2 section__header-h2 heading-font" role="heading">Похожие товары</h2>
+            <div class="section__header-controls carousel__controls">
+              <button class="carousel__navigation _prev _blue" type="button" role="button" data-like-prev>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+              <button class="carousel__navigation _next _blue" type="button" role="button" data-like-next>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="like__swiper swiper" data-auto-width-swiper data-prev="[data-like-prev]" data-next="[data-like-next]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__container">
+        <div class="footer__contacts"><a class="footer__logo" href="#" role="link">
+                <picture>
+                  <source type="image/webp" data-srcset="img/webp/logo-footer@2x.webp 2x, img/webp/logo-footer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/logo-footer@2x.png 2x, img/logo-footer.png 1x" srcset="" alt="" width="101" height="73">
+                </picture></a>
+          <h2 class="footer__h2 heading-font" role="navigation">Контакты <br>и график работы</h2>
+          <div class="footer__items">
+            <address class="footer__item">
+              <p class="footer__item-title">Почта:</p><a class="footer__item-value footer__item-link" href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Сервис и ремонт:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы офиса:</p>
+              <p class="footer__item-value">Пн-Пт: 10:00-17:00</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Заказы и консультации:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Адрес:</p>
+              <p class="footer__item-value">124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы интернет-магазина:</p>
+              <p class="footer__item-value">Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00</p>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h3 class="footer__h3 heading-font" role="heading">Мы в соцсетях:</h3>
+            <div class="footer__icons"><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#youtube-footer"></use>
+                    </svg></a></div>
+          </div>
+        </div>
+        <nav class="footer__nav" role="navigation">
+          <ul class="footer__nav-list" role="list">
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">О нас</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Как это работает</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Контакты</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Подбор эхолота</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Ремонт</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Акции</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Оплата и доставка</a></li>
+          </ul>
+        </nav>
+        <div class="footer__download">
+          <div class="footer__download-content">
+            <h3 class="footer__download-title heading-font" role="heading">Скачивайте наше приложение <span>«Эхолоты практик 7»</span></h3>
+            <div class="footer__download-links"><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a></div>
+          </div>
+              <picture class="footer__download-picture">
+                <source type="image/webp" data-srcset="img/webp/apple-store-screenshot@2x.webp 2x, img/webp/apple-store-screenshot.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store-screenshot@2x.png 2x, img/apple-store-screenshot.png 1x" srcset="" alt="" width="310" height="459">
+              </picture>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+          <div class="footer__bottom-item">
+            <p>ⓒ «Практик», 2023</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__bottom-item">
+            <p>ООО «ПРАКТИК-НЦ»</p>
+            <p>ОГРН 1087746089276</p>
+            <p>ИНН 7735537073</p>
+            <p>КПП 773501001</p>
+          </div>
+          <address class="footer__bottom-item">
+            <p>Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1</p>
+          </address>
+          <div class="footer__bottom-item"><a href="#" role="link">Договор оферты</a><a href="#" role="link">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/lazyload.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/fancybox.umd.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

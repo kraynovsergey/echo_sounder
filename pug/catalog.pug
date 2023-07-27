@@ -1,0 +1,231 @@
+extends base
+
+block seo
+    - var seo = {title: 'Каталог', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Основная часть каталога
+        section.section._pt0
+            .container
+                include includes/_breadcrumbs
+                h1.h1.heading-font.catalog__h1(role="heading") Эхолоты
+
+                .catalog__grid
+                    //Фильтр
+                    aside.catalog__aside.no-scroll(role="complementary" data-catalog-aside)
+                        button.catalog__aside-close(type="button" role="button" data-catalog-aside-control)
+                            +svg_sprite('cross', 24, 24)
+                        form.filter(action="#" method="post")
+                            .filter__params
+                                fieldset.filter__fieldset
+                                    p.filter__title Время года
+                                    .filter__checkboxes
+                                        .filter__checkbox
+                                            input(type="checkbox" name="season" value="Круглогодичные" id="season-1")
+                                            label(for="season-1")
+                                                span
+                                                +svg_sprite('filter-season-1', 24, 24)
+                                                | Круглогодичные
+                                        .filter__checkbox
+                                            input(type="checkbox" name="season" value="Летние" id="season-2")
+                                            label(for="season-2")
+                                                span
+                                                +svg_sprite('filter-season-2', 24, 24)
+                                                | Летние
+                                        .filter__checkbox
+                                            input(type="checkbox" name="season" value="Зимние" id="season-3")
+                                            label(for="season-3")
+                                                span
+                                                +svg_sprite('filter-season-3', 24, 24)
+                                                | Зимние
+
+                                fieldset.filter__fieldset
+                                    p.filter__title Место рыбалки
+                                    .filter__checkboxes
+                                        .filter__checkbox
+                                            input(type="checkbox" name="place" value="С берега" id="place-1")
+                                            label(for="place-1")
+                                                span
+                                                +svg_sprite('filter-place-1', 24, 24)
+                                                | С берега
+                                        .filter__checkbox
+                                            input(type="checkbox" name="place" value="С лодки" id="place-2")
+                                            label(for="place-2")
+                                                span
+                                                +svg_sprite('filter-place-2', 24, 24)
+                                                | С лодки
+
+                                fieldset.filter__fieldset
+                                    p.filter__title Функции
+                                    .filter__checkboxes
+                                        .filter__checkbox
+                                            input(type="checkbox" name="functions" value="Wi-Fi" id="functions-1")
+                                            label(for="functions-1")
+                                                span
+                                                +svg_sprite('filter-functions-1', 24, 24)
+                                                | Wi-Fi
+                                        .filter__checkbox
+                                            input(type="checkbox" name="functions" value="Место рыбы" id="functions-2")
+                                            label(for="functions-2")
+                                                span
+                                                +svg_sprite('filter-functions-2', 24, 24)
+                                                | Место рыбы
+
+                                        .filter__checkbox
+                                            input(type="checkbox" name="functions" value="Звуковая сигнализация" id="functions-3")
+                                            label(for="functions-3")
+                                                span
+                                                +svg_sprite('filter-functions-3', 24, 24)
+                                                | Звуковая сигнализация
+
+                            .filter__controls
+                                button.btn._middle(type="submit" role="button") Применить
+                                button.btn._middle._border.filter__reset(type="reset" role="button") Очистить
+
+                    //Товары
+                    .catalog__content
+                        .catalog__controls
+                            button.catalog__control.catalog__filter.btn-triangle(type="button" role="button" data-catalog-aside-control) Фильтр
+                                +svg_sprite('triangle', 10, 8)
+                            button.catalog__control.btn-triangle(type="button" role="button") Сортировка
+                                +svg_sprite('triangle', 10, 8)
+
+                        mixin catalog_product
+                            article.catalog-product(role="article")
+                                a.catalog-product__picture(href="#" role="link")
+                                    +picture_lazy('', 'tmp/', 'catalog-product', 'png', 222, 256)
+                                    ul.product__labels(role="list")
+                                        li.product__label._blue(role="listitem") Гарантия 5 лет
+                                        li.product__label._orange(role="listitem") Акция
+
+                                .catalog-product__content
+                                    .catalog-product__ratings
+                                        .catalog-product__rating
+                                            +svg_sprite('star', 19, 18)
+                                            | 5
+                                        .catalog-product__buyers 312 покупок за 3 месяца
+                                    h3.catalog-product__title.heading-font(role="heading")
+                                        a(href="#" role="link") Эхолот ПРАКТИК 6S
+                                    ul.catalog-product__tags(role="list")
+                                        li(role="listitem")
+                                            +svg_sprite('wifi', 20, 21)
+                                            | Wi-Fi
+                                        li(role="listitem")
+                                            +svg_sprite('all-seasons', 20, 21)
+                                            | Круглогодичный
+                                        li(role="listitem")
+                                            +svg_sprite('guard', 20, 21)
+                                            | Ударопрочный корпус
+                                        li(role="listitem")
+                                            +svg_sprite('guard', 20, 21)
+                                            | Ударопрочный корпус
+                                    ul.catalog-product__params(role="list")
+                                        li(role="listitem") <span>Угол луча</span> — 35
+                                        li(role="listitem") <span>Рабочая глубина</span> — До 25 м
+                                        li(role="listitem") <span>Дальность приема</span> — До 80 м
+
+                                .catalog-product__controls
+                                    //Для не в наличии класс _out-of-stock
+                                    .catalog-product__status._in-stock В наличии
+                                    .catalog-product__price.heading-font 12 990 р
+                                        span.catalog-product__old-price 16 990 р
+                                    .catalog-product__btns
+                                        button.catalog-product__btn._grey.btn._border._middle(type="button" role="button")
+                                            +svg_sprite('favourite', 20, 19)
+                                        button.catalog-product__btn._grey.btn._border._middle(type="button" role="button")
+                                            +svg_sprite('compare', 25, 20)
+                                        button.catalog-product__btn._full.btn._middle(type="button" role="button") Купить в один клик
+                                        button.catalog-product__btn._full.btn._border._middle(type="button" role="button") Смотреть акции
+                                        button.catalog-product__btn._full.btn._border._middle(type="button" role="button") В корзину
+
+                        .catalog__products
+                            +catalog_product
+                            +catalog_product
+                            +catalog_product
+                            +catalog_product
+
+        //Акции для
+        section.section._pt0
+            .container
+                h2.section__h2.heading-font(role="heading") Акции для
+                .catalog-stock
+                    .catalog-stock__filters.no-scroll
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="all" id="catalog-stock-1" data-blog-filter checked)
+                            label(for="catalog-stock-1")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Всех эхолотов
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="7-bmf-universal" id="catalog-stock-2" data-blog-filter)
+                            label(for="catalog-stock-2")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span 7 BMF универсал
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="7-bmf" id="catalog-stock-3" data-blog-filter)
+                            label(for="catalog-stock-3")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span 7 BMF
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="praktik-8" id="catalog-stock-4" data-blog-filter)
+                            label(for="catalog-stock-4")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Практик 8
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="praktik-6" id="catalog-stock-5" data-blog-filter)
+                            label(for="catalog-stock-5")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Практик 6
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="praktik-8" id="catalog-stock-6" data-blog-filter)
+                            label(for="catalog-stock-6")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Практик 8
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="praktik-6" id="catalog-stock-7" data-blog-filter)
+                            label(for="catalog-stock-7")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Практик 6
+                        .catalog-stock__filter
+                            input(type="radio" name="stock" value="praktik-8" id="catalog-stock-8" data-blog-filter)
+                            label(for="catalog-stock-8")
+                                +picture_lazy('', 'tmp/', 'stock-for', 'png', 144, 139)
+                                span Практик 8
+
+                    .catalog-stock__items
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all 7-bmf-universal')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all 7-bmf')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-8')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all 7-bmf-universal')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all 7-bmf')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-8')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+                        +product_stock('product', 'Эхолот ПРАКТИК 6S + 2 подарка', 'all praktik-6')
+
+        //Не нашли подходящую акцию?
+        - var not_find_stock_classnames = '_pt0'
+        include includes/_not_find_stock
+
+        //Ответьте на 8 вопросов
+        - var quiz_classnames = '_pt0'
+        include includes/_quiz
+
+        //Производим эхолоты
+        - var manufacturer_classnames = '_pt0'
+        include includes/_manufacturer
+
+        //Почему нам доверяют
+        - var pluses_classnames = '_blue'
+        - var pluses_title = 'Почему нам доверяют?'
+        include includes/_pluses
+
+        //Вам может понравится
+        - var like_title = 'Похожие товары';
+        include includes/_like
+
+
+

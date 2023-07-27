@@ -1,0 +1,36 @@
+mixin fishermen_item(img, title, subtitle, text, youtube)
+    article.fishermen__item(class=fishermen_item_classnames role="article")
+        a.fishermen__picture(href="https://www.youtube.com/watch?v=dzn5Cr37twY" data-fancybox role="link")
+            +picture('', 'tmp/', img, 'jpg', 352, 448)
+            +svg_sprite('play', 80, 80, 'fishermen__play')
+        .fishermen__content
+            h3.fishermen__title.heading-font(role="heading")= title
+            p.fishermen__subtitle= subtitle
+            p.fishermen__text= text
+                +svg_sprite('quote', 91, 67, 'fishermen__quote _top')
+                +svg_sprite('quote', 91, 67, 'fishermen__quote _bottom')
+            .fishermen__divider
+            p.fishermen__youtube
+                +svg_sprite('youtube', 30, 30)
+                =youtube
+
+section.section(class=fishermen_classnames)
+    .container
+        .section__header
+            h2.section__h2.section__header-h2.heading-font(role="heading")=fishermen_title
+            .section__header-controls.carousel__controls
+                button.carousel__navigation._prev._blue(type="button" role="button" data-fishermen-prev)
+                    +svg_sprite('carousel-nav', 23, 15)
+                button.carousel__navigation._next._blue(type="button" role="button" data-fishermen-next)
+                    +svg_sprite('carousel-nav', 23, 15)
+
+        .fishermen__swiper.swiper(data-fishermen-swiper)
+            .swiper-wrapper
+                .swiper-slide.fishermen__slide
+                    +fishermen_item('fishermen-1', 'Сергей Пузанов', 'Ведущий канала FeederfishingTV, Мастер спорта России, Чемпион России 2014, Кубок России 2019, Сборная РФ', '«Эхолот Практик 7 Wi-Fi очень отчетливо показывал нахождение рыбы, благодаря нему были пойманы лещи и карпик зеркальный»', '38,9 тыс. подписчиков')
+                .swiper-slide.fishermen__slide
+                    +fishermen_item('fishermen-2', 'Юрий Хохлов', 'Продюсер, телеведущий рыболовных каналов, мастер спорта РФ', '«Что раньше было невозможно, стало доступно в Практик 8!»', '18,3 тыс. подписчиков')
+                .swiper-slide.fishermen__slide
+                    +fishermen_item('fishermen-1', 'Сергей Пузанов', 'Ведущий канала FeederfishingTV, Мастер спорта России, Чемпион России 2014, Кубок России 2019, Сборная РФ', '«Эхолот Практик 7 Wi-Fi очень отчетливо показывал нахождение рыбы, благодаря нему были пойманы лещи и карпик зеркальный»', '38,9 тыс. подписчиков')
+                .swiper-slide.fishermen__slide
+                    +fishermen_item('fishermen-2', 'Юрий Хохлов', 'Продюсер, телеведущий рыболовных каналов, мастер спорта РФ', '«Что раньше было невозможно, стало доступно в Практик 8!»', '18,3 тыс. подписчиков')

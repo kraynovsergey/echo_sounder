@@ -1,0 +1,89 @@
+extends base
+
+block seo
+    - var seo = {title: 'Об эхолотах', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Демонстрация работы
+        section
+            .container.demonstration__container
+                .demonstration__content
+                    img.demonstration__waves(src="img/demonstration-waves.svg" alt="" width="900" height="284")
+                    h1.demonstration__title.heading-font(role="heading") Об эхолотах
+                    ol.demonstration__list(role="list")
+                        li(role="listitem") Выберите модель эхолота
+                        li(role="listitem") Опустите его в воду
+                        li(role="listitem") Наблюдайте за информацией на экране эхолота
+                    a.demonstration__help.btn._middle._border(href="#" role="link") Помощь в подборе
+
+                .demonstration__echo-sounders(data-demonstration-sounders)
+                    .demonstration__swiper
+                        .swiper(data-demonstration-swiper)
+                            .swiper-wrapper
+                                .demonstration__slide.swiper-slide(data-title="Практик 8" data-item="0")
+                                    .demonstration__echo-sounders-item
+                                        +picture_nolazy('demonstration__echo-sounders-picture', 'tmp/', 'echo-sounder', 'png', 219, 397)
+                                        +picture_nolazy('demonstration__echo-sounders-screen', 'tmp/', 'echo-sounder-screen', 'jpg', 99, 160)
+                                .demonstration__slide.swiper-slide(data-title="Практик 9" data-item="1")
+                                    .demonstration__echo-sounders-item
+                                        +picture_nolazy('demonstration__echo-sounders-picture', 'tmp/', 'echo-sounder', 'png', 219, 397)
+                                        +picture_nolazy('demonstration__echo-sounders-screen', 'tmp/', 'echo-sounder-screen', 'jpg', 99, 160)
+                                .demonstration__slide.swiper-slide(data-title="Практик 10" data-item="2")
+                                    .demonstration__echo-sounders-item
+                                        +picture_nolazy('demonstration__echo-sounders-picture', 'tmp/', 'echo-sounder', 'png', 219, 397)
+                                        +picture_nolazy('demonstration__echo-sounders-screen', 'tmp/', 'echo-sounder-screen', 'jpg', 99, 160)
+
+                    .demonstration__echo-sounders-controls
+                        button.carousel__navigation.demonstration__echo-sounders-control._prev._blue(type="button" role="button" data-demostration-prev)
+                            +svg_sprite('carousel-nav', 23, 15)
+                        .demonstration__echo-sounders-title.heading-font(data-demonstration-title)
+                        button.carousel__navigation.demonstration__echo-sounders-control._next._blue(type="button" role="button" data-demostration-next)
+                            +svg_sprite('carousel-nav', 23, 15)
+
+                .demonstration__nature
+                    +picture('demonstration__nature-sensor', '', 'echo-sounder-sensor', 'png', 37, 234)
+
+                    .demonstration__nature-controls
+                        button.demonstration__nature-btn.heading-font(type="button" role="button" data-demonstration-play) Погрузить
+                        .demonstration__nature-season
+                            input(type="checkbox" name="season" id="demonstration-season" data-demonstration-season)
+                            label(for="demonstration-season")
+                                span
+                                    +svg_sprite('season-1', 35, 35)
+                                span
+                                    +svg_sprite('season-2', 31, 34)
+
+                    .demonstration__nature-pictures._active(data-demonstration-pictures)
+                        +picture_nolazy('demonstration__nature-picture _stop _active', '', 'echo-sounder-summer', 'jpg', '440', 516)
+                        +picture_nolazy('demonstration__nature-picture _play ', '', 'echo-sounder-summer-active', 'jpg', '440', 516)
+
+                    .demonstration__nature-pictures(data-demonstration-pictures)
+                        +picture_nolazy('demonstration__nature-picture _stop _active', '', 'echo-sounder-winter', 'jpg', '440', 516)
+                        +picture_nolazy('demonstration__nature-picture _play', '', 'echo-sounder-winter-active', 'jpg', '440', 516)
+
+        //Вопрос-ответ
+        section.section
+            .container.demonstration__faq
+                .faq__item
+                    button.faq__title.heading-font(type="button" role="button" data-toggle="[data-about-echo-sounders-1]") Зачем нужен
+                        span.faq__control
+                    .faq__content(data-about-echo-sounders-1 data-grid)
+                        p Содержимое этой вкладки находится в разработке
+
+                .faq__item
+                    button.faq__title.heading-font(type="button" role="button" data-toggle="[data-about-echo-sounders-2]") Принцип действия
+                        span.faq__control
+                    .faq__content(data-about-echo-sounders-2 data-grid)
+                        p Содержимое этой вкладки находится в разработке
+
+        //Продвинутые технологии
+        - var technology_title = 'Почему эхолоты практик?';
+        include includes/_technology
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps
+
+
+

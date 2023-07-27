@@ -1,0 +1,44 @@
+.breadcrumbs {
+	padding: 30px 0 20px;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@media (max-width: 991px) {
+		padding: 0 0 10px;
+	}
+
+	&__item {
+		color: $color_primary_light;
+		font-size: .77rem;
+
+		@media (max-width: 991px) {
+			font-size: .87rem;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1rem;
+		}
+
+		&:not(:last-child) {
+			margin-right: 10px;
+
+			&::after {
+				content: '/';
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit !important;
+		opacity: .4;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+extends base
+
+block seo
+    - var seo = {title: 'Статус сервиса', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Редактирование личных данных
+        section.section._ultra-small._blue
+            .container
+                h1.h1.heading-font(role="heading") Личный кабинет
+                .cabinet__grid
+                    include includes/_cabinet-aside
+
+                    .cabinet__content
+                        h2.cabinet__content-title.heading-font(role="heading") Статус сервиса
+
+                        mixin service_item(status_name, status_classname)
+                            article.orders__item(role="article")
+                                h3.orders__title.heading-font(role="heading") Заявка №12 от 27.06.23
+                                .orders__status(class=status_classname)=status_name
+                                .orders__info
+                                    .orders__info-item._products
+                                        .orders__info-title._service Причина обращения:
+                                        .orders__info-value Обновление ПО устройства Эхолот ПРАКТИК 6S
+                                    .orders__info-item._products
+                                        .orders__info-title._service Дата выполнения:
+                                        .orders__info-value 01.07.23
+                                button.orders__btn.btn._border._middle(type="button" role="button") Связаться с сервисом
+
+                        .orders__items
+                            +service_item('В работе', '_processing')
+                            +service_item('Завершен', '_success')
+                            +service_item('Завершен', '_success')
+
+        //Электронный гарантийный талон
+        include includes/_get-guarantee
+
+        //Вам может понравится
+        - var like_title = 'Вам может понравиться';
+        include includes/_like
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

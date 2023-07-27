@@ -1,0 +1,166 @@
+extends base
+
+block seo
+	- var seo = {title: 'Главная страница', description: '', keywords: ''}
+
+block main
+	main.main._pt0(role="main")
+		//Интро
+		section.home-intro
+			.container
+				.home-intro__wrapper
+					.home-intro__gradient
+
+					.home-intro__carousel.swiper(data-home-intro-carousel)
+						.swiper-wrapper
+							.swiper-slide.home-intro__carousel-slide(data-title="Практик 8" data-item="0" data-video="https://www.youtube.com/watch?v=IdP_C5bssro")
+								+picture('picture home-intro__carousel-picture', 'tmp/', 'home-intro-slide', 'jpg', 1252, 633)
+							.swiper-slide.home-intro__carousel-slide(data-title="Практик 9" data-item="1" data-video="https://www.youtube.com/watch?v=-oOmIrA7b-w")
+								+picture('picture home-intro__carousel-picture', 'tmp/', 'home-intro-slide', 'jpg', 1252, 633)
+							.swiper-slide.home-intro__carousel-slide(data-title="Практик 10" data-item="2" data-video="https://www.youtube.com/watch?v=SlN8aHHSQTM")
+								+picture('picture home-intro__carousel-picture', 'tmp/', 'home-intro-slide', 'jpg', 1252, 633)
+
+					.home-intro__col
+						.home-intro__content
+							h1.home-intro__title.heading-font(role="heading") Производитель эхолотов практик
+							p.home-intro__subtitle Разрабатываем и производим эхолоты и другие товары для рыбалки и кемпинга в России
+							.home-intro__controls
+								a.home-intro__control.btn._middle(href="#" role="link") В магазин
+								a.home-intro__control.btn._middle._border(href="#" role="link") Помощь в подборе
+
+					.home-intro__bottom
+						.home-intro__figure
+						.home-intro__navigation
+							.carousel__controls
+								button.carousel__navigation._prev._orange(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+								.home-intro__navigation-title.heading-font
+								button.carousel__navigation._next._orange(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+
+
+					a.home-intro__video(href="" data-fancybox)
+						+svg_sprite('home-intro-video', 96, 96)
+
+					.home-intro__controls._mobile
+						a.home-intro__control.btn._middle(href="#" role="link") В магазин
+						a.home-intro__control.btn._middle._border(href="#" role="link") Помощь в подборе
+
+		//Акции/Новинки
+		mixin product(img, title, list)
+			article.product(role="article")
+				a.product__picture(href="#" role="link")
+					+picture_nolazy('', 'tmp/', img, 'png', 238, 223)
+					ul.product__labels(role="list")
+						li.product__label._blue(role="listitem") Доступен подарок
+						li.product__label._orange(role="listitem") Акция
+				h3.product__title(role="heading")
+					a(href="#" role="link")= title
+				ul.product__params(role="list")
+					each val in list
+						li.product__param(role="listitem")= val
+				button.product__cart.btn._small(type="button" role="button") В корзину
+				.product__count(data-product-count)
+					button.product__count-btn(type="button" role="button" data-product-count-minus) -
+					input.product__count-input(type="text" name="count" value="1")
+					button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+		section.home-sales
+			.container
+				.home-sales__wrapper
+					.home-sales__content
+						.home-sales__header
+							.home-sales__tabs
+								button.home-sales__tab.heading-font._active(type="button" role="button" data-home-sales-tab="1") Акции
+								button.home-sales__tab.heading-font(type="button" role="button" data-home-sales-tab="2") Новинки
+
+							.home-sales__controls.carousel__controls._active(data-home-sales-nav="1")
+								button.carousel__navigation._prev._blue(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+								button.carousel__navigation._next._blue(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+
+							.home-sales__controls.carousel__controls(data-home-sales-nav="2")
+								button.carousel__navigation._prev._blue(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+								button.carousel__navigation._next._blue(type="button" role="button")
+									+svg_sprite('carousel-nav', 23, 15)
+
+						.home-sales__swiper.swiper._active(data-home-sales-swiper="1")
+							.swiper-wrapper
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+
+						.home-sales__swiper.swiper(data-home-sales-swiper="2")
+							.swiper-wrapper
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+								.home-sales__slide.swiper-slide
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+
+		//Категории товаров
+		mixin category(size, img, title, width, height)
+			article.category__item(class=size role="article")
+				h3.category__title.heading-font(role="heading")
+					a.all-link(href="#" role="link")=title
+				+picture_lazy('category__picture', 'tmp/', img, 'png', width, height)
+		section.section
+			.container
+				h2.section__h2.heading-font(role="heading") Категории товаров
+				.category__items
+					+category('_big', 'category-1', 'Эхолоты', 183, 224)
+					+category('', 'category-2', 'Глубиномеры', 176, 160)
+					+category('', 'category-3', 'Подводные камеры', 123, 153)
+					+category('', 'category-4', 'Фонари для рыбалки', 235, 167)
+					+category('', 'category-5', 'Электромоторы', 338, 157)
+					+category('_big', 'category-6', 'Аксессуары для эхолотов', 286, 175)
+					+category('_big', 'category-7', 'Воздушный насос "Бриз"', 222, 209)
+					+category('_big', 'category-8', 'Мерч', 213, 208)
+					+category('_big', 'category-7', 'Товары для туризма', 222, 209)
+					+category('_big', 'category-8', 'Уцененные товары', 213, 208)
+
+		//Продвинутые технологии
+		- var technology_title = 'Продвинутые технологии, доступные каждому';
+		include includes/_technology
+
+		//Производим эхолоты
+		include includes/_manufacturer
+
+		//Ответьте на 8 вопросов
+		- var quiz_classnames = '_pt0'
+		include includes/_quiz
+
+		//Стать партнером
+		- var get_partner_classnames = '_pt0 _pb0'
+		include includes/_get-partner
+
+		//Почему нам доверяют
+		- var pluses_title = 'Почему нам доверяют?'
+		include includes/_pluses
+
+		//Отзывы рыбаков
+		- var fishermen_classnames = '_small _blue'
+		- var fishermen_title = 'А профессиональные рыбаки выбирают нас'
+		include includes/_fishermen
+
+		//Карты
+		- var footer_maps_classnames = '_pt0 _pb0'
+		include includes/_footer-maps

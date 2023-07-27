@@ -1,0 +1,66 @@
+section.section._pb0
+    .container
+        h2.section__h2.repair-paid__h2.heading-font Электронный <br>гарантийный талон
+        p.repair-paid__subtitle Зарегистрируйте свою покупку, получите электронный гарантийный талон и вам не надо будет хранить бумажные чеки и талоны
+
+        .guarantee__items
+            .faq__item
+                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-guarantee-1]") Как получить электронный гарантийный талон
+                    span.faq__control
+                .faq__content(data-guarantee-1 data-grid)
+                    .get-guarantee
+                        .service-centers__warning
+                            .service-centers__circle
+                                +svg_sprite('info', 9, 25)
+                        .get-guarantee__content
+                            p.get-guarantee__text Отсканируйте или сфотографируйте бумажный чек и гарантийный талон, в котором проставлена дата покупки и печать продавца.
+
+                            .get-guarantee__block
+                                .get-guarantee__header
+                                    h4.get-guarantee__title(role="heading") Чек и гарантийный талон
+                                    +svg_sprite('camera', 40, 40, 'get-guarantee__icon')
+                                form.get-guarantee__form(action="#" method="post" enctype="multipart/form-data")
+                                    .get-guarantee__file
+                                        input(type="file" name="file" id='get-guarantee-file')
+                                        label.btn._border._middle(for="get-guarantee-file") Прикрепить фото
+
+                            .get-guarantee__block
+                                .get-guarantee__header
+                                    h4.get-guarantee__title(role="heading") Чек и гарантийный талон
+                                    .get-guarantee__success
+                                form.get-guarantee__form(action="#" method="post" enctype="multipart/form-data")
+                                    .get-guarantee__figures
+                                        figure.get-guarantee__figure
+                                            +picture_nolazy('', 'tmp/', 'get-guarantee-img', 'jpg', 151, 184)
+                                            figcaption.get-guarantee__figcaption гарантийный талон 1.jpg
+                                        figure.get-guarantee__figure
+                                            +picture_nolazy('', 'tmp/', 'get-guarantee-img', 'jpg', 151, 184)
+                                            figcaption.get-guarantee__figcaption гарантийный талон 1.jpg
+                                    .get-guarantee__file
+                                        input(type="file" name="file" id='get-guarantee-file-temp')
+                                        label.btn._border._middle(for="get-guarantee-file-temp") Прикрепить фото
+                                h4.get-guarantee__title(role="heading") Готово! Ваши талоны успешно загружены. Вы можете посмотреть их ниже, во вкладке “Мои гарантийные талоны”
+
+            .faq__item
+                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-guarantee-2]") Какие преимущества дает электронный гарантийный талон
+                    span.faq__control
+                .faq__content(data-guarantee-2 data-grid)
+                    ul.guarantee__list(role="list")
+                        li.guarantee__list-item(role="listitem")
+                            span.guarantee__list-circle
+                                +svg_sprite('guarantee-1', 29, 37)
+                            | Вам не надо хранить и иметь под рукой бумажные документы, подтверждающие покупку
+                        li.guarantee__list-item(role="listitem")
+                            span.guarantee__list-circle
+                                +svg_sprite('guarantee-2', 30, 30)
+                            | В случае обращения в сервисную службу будет достаточно назвать ваш номер телефона и имя или фамилию. Вы сможете позвонить прямо с рыбалки, чтобы получить консультацию.
+                        li.guarantee__list-item(role="listitem")
+                            span.guarantee__list-circle
+                                +svg_sprite('guarantee-3', 30, 30)
+                            | Вы получите доступ к информационной рассылке и сможете первым узнавать о выходе новинок Calypso и обновлении ПО.
+
+            .faq__item.get-guarantee__faq-stretch
+                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-guarantee-3]") Мои гарантийные талоны
+                    span.faq__control
+                .faq__content(data-guarantee-3 data-grid)
+                    p Содержимое этой вкладки находится в разработке

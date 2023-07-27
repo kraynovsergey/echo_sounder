@@ -1,0 +1,698 @@
+extends base
+
+block seo
+    - var seo = {title: 'Товар', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Основная информация
+        section
+            .container
+                p.product-page__title._tablet.h1.heading-font(role="heading") Эхолот ПРАКТИК 6S
+
+                .product-page__container
+                    //Галерея
+                    .product-page__gallery
+                        .product-page__swiper.swiper(data-product-gallery)
+                            .swiper-wrapper
+                                .swiper-slide.product-page__slide
+                                    a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
+                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                .swiper-slide.product-page__slide
+                                    a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
+                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                .swiper-slide.product-page__slide
+                                    a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
+                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                .swiper-slide.product-page__slide
+                                    a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
+                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                        .product-page__thumbs
+                            +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)
+                            +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)
+                            +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)
+                            +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)
+
+                    //Контент
+                    .product-page__content
+                        //Для не в наличии класс _out-of-stock
+                        .product-page__status.catalog-product__status._in-stock В наличии
+
+                        h1.product-page__title.heading-font(role="heading") Эхолот ПРАКТИК 6S
+
+                        .product-page__ratings.catalog-product__ratings
+                            .catalog-product__rating
+                                +svg_sprite('star', 19, 18)
+                                | 5
+                            .catalog-product__buyers 312 покупок за 3 месяца
+
+                        ul.product-page__params(role="list")
+                            li(role="listitem")
+                                +svg_sprite('product-param-angle', 30, 30)
+                                span <strong>Угол луча</strong> — 35
+                            li(role="listitem")
+                                +svg_sprite('product-param-deep', 30, 30)
+                                span <strong>Рабочая глубина</strong> — до 25 м
+                            li(role="listitem")
+                                +svg_sprite('product-param-distance', 30, 30)
+                                span <strong>Дальность приема</strong> — до 80 м
+                            li(role="listitem")
+                                +svg_sprite('product-param-season', 30, 30)
+                                span <strong>Сезон рыбалки</strong> — зима
+                            li(role="listitem")
+                                +svg_sprite('product-param-temperature', 30, 30)
+                                span <strong>Термоустойчивость</strong> — (-20 +30)
+
+                        .product-page__tags
+                            p.product-page__tags-title Ключевые особенности
+                            ul.catalog-product__tags(role="list")
+                                li(role="listitem")
+                                    +svg_sprite('wifi', 20, 21)
+                                    | Wi-Fi
+                                li(role="listitem")
+                                    +svg_sprite('all-seasons', 20, 21)
+                                    | Круглогодичный
+                                li(role="listitem")
+                                    +svg_sprite('guard', 20, 21)
+                                    | Ударопрочный корпус
+                                li(role="listitem")
+                                    +svg_sprite('guard', 20, 21)
+                                    | Ударопрочный корпус
+
+                    //Добавить корзину
+                    .product-page__controls
+                        .product-page__price.heading-font 12 990 р
+
+                        .product-page__products
+                            article.product-page__product(role='article')
+                                +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-1', 'png', 52, 60)
+                                .product-page__product-content
+                                    .product-page__product-header
+                                        h3.product-page__product-title.heading-font(role="heading") Товар 1
+                                        .product-page__product-price.heading-font 12 990 р
+                                    .product__count(data-product-count)
+                                        button.product__count-btn(type="button" role="button" data-product-count-minus) -
+                                        input.product__count-input(type="text" name="count" value="1")
+                                        button.product__count-btn(type="button" role="button" data-product-count-plus) +
+                            article.product-page__product(role='article')
+                                +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-2', 'png', 64, 65)
+                                .product-page__product-content
+                                    .product-page__product-header
+                                        h3.product-page__product-title.heading-font(role="heading") Товар 2
+                                        .product-page__product-price.heading-font 5000 р
+                                    .product__count(data-product-count)
+                                        button.product__count-btn(type="button" role="button" data-product-count-minus) -
+                                        input.product__count-input(type="text" name="count" value="1")
+                                        button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+                        .product-page__itogo
+                            .product-page__itogo-title Итого:
+                            .product-page__itogo-prices
+                                .product-page__itogo-oldprice.heading-font 17 990 р
+                                .product-page__itogo-price.heading-font 15 000 р
+
+                        .product-page__stocks Есть доступные акции!
+
+                        .product-page__btns
+                            button.catalog-product__btn._full.btn._middle(type="button" role="button") Купить в один клик
+                            button.catalog-product__btn._full.btn._border._middle(type="button" role="button") Смотреть акции
+                            button.catalog-product__btn._full.btn._border._middle(type="button" role="button") В корзину
+                            button.catalog-product__btn._full.btn._border._middle(type="button" role="button") Есть промокод
+
+        //Комплекты товаров
+        section.section._ultra-small
+            .container
+                h2.product-complect__title(role="heading") В комплекте к этому товару по акции
+
+                .product-complect__products
+                    article.product-page__product._blue(role='article')
+                        .product-page__product-label Скидка % по акции
+                        +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-1', 'png', 52, 60)
+                        .product-page__product-content
+                            .product-page__product-header
+                                .product-page__product-header-col
+                                    h3.product-page__product-title.heading-font(role="heading") Товар 1
+                                    p.product-page__product-text Описание
+                                .product-page__product-header-col._price
+                                    .product-page__product-price.heading-font 12 990 р
+                                    .product-page__product-oldprice.heading-font 16 990 р
+                            button.product-page__product-btn.btn._middle(type="button" role="button") Добавить
+                    article.product-page__product._blue(role='article')
+                        .product-page__product-label Скидка % по акции
+                        +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-1', 'png', 52, 60)
+                        .product-page__product-content
+                            .product-page__product-header
+                                .product-page__product-header-col
+                                    h3.product-page__product-title.heading-font(role="heading") Товар 1
+                                    p.product-page__product-text Описание
+                                .product-page__product-header-col._price
+                                    .product-page__product-price.heading-font 12 990 р
+                                    .product-page__product-oldprice.heading-font 16 990 р
+                            button.product-page__product-btn.btn._middle(type="button" role="button") Добавить
+                    article.product-page__product._blue(role='article')
+                        .product-page__product-label Скидка % по акции
+                        +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-1', 'png', 52, 60)
+                        .product-page__product-content
+                            .product-page__product-header
+                                .product-page__product-header-col
+                                    h3.product-page__product-title.heading-font(role="heading") Товар 1
+                                    p.product-page__product-text Описание
+                                .product-page__product-header-col._price
+                                    .product-page__product-price.heading-font 12 990 р
+                                    .product-page__product-oldprice.heading-font 16 990 р
+                            button.product-page__product-btn.btn._middle(type="button" role="button") Добавить
+
+        //О товаре
+        section.section._pt0
+            .container
+                .product-about(data-product-tabs)
+                    h2.section__h2.product-about__h2.heading-font(role="heading") О товаре
+
+                    .product-about__tabs
+                        button.product-about__tab._active(type="button" role="button" data-product-tab="1") Оплата
+                        button.product-about__tab(type="button" role="button" data-product-tab="2") Доставка
+                        button.product-about__tab(type="button" role="button" data-product-tab="3") Сервис
+
+                    //Оплата
+                    .product-about__content._active(data-product-content="1")
+                        .product-about__faqs
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-payment-1]") Оплата банковской картой на сайте
+                                    span.faq__control
+                                .faq__content(data-product-payment-1 data-grid)
+                                    p Для выбора оплаты товара с помощью банковской карты на соответствующей странице необходимо нажать кнопку «оплата заказа банковской картой». Оплата происходит через ПАО «СБЕРБАНК» с использованием банковских карт следующих платёжных систем:
+                                    .product-about__cards
+                                        img.lazy(data-src="img/payment-1.svg" alt="" width="120" height="36")
+                                        img.lazy(data-src="img/payment-2.svg" alt="" width="90" height="30")
+                                        img.lazy(data-src="img/payment-3.svg" alt="" width="60" height="46")
+                                        img.lazy(data-src="img/payment-4.svg" alt="" width="60" height="46")
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-payment-2]") Наличными или банковской картой
+                                    span.faq__control
+                                .faq__content(data-product-payment-2 data-grid)
+                                    .product-about__payments
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-1', 238, 238)
+                                            | Непосредственно у нас в офисе в г. Зеленограде
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-2', 204, 162)
+                                            | При получении заказов в филиалах городов Новосибирск и Екатеринбург
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-3', 220, 220)
+                                            | Оплата с банковской карты на наш расчетный счет
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-4', 190, 190)
+                                            | Распечатать квитанцию и оплатить в ближайшем отделении Сбербанка или через приложение «Сбербанк-онлайн»
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-5', 204, 204)
+                                            | Безналичная оплата (для ЮЛ и ИП)
+
+                    //Доставка
+                    .product-about__content(data-product-content="2")
+                        .product-about__faqs
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-1]") Самовывоз
+                                    span.faq__control
+                                .faq__content(data-product-delivery-1 data-grid)
+                                    p Пункты выдачи заказов:
+                                    .product-about__pickups
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Зеленоград
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-1', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Зеленоград, ул. Заводская, д. 31, стр.1 (выдача в день заказа)
+                                                p Режим работы: ПН-ПТ с 9.00 до 17.00, СБ-ВС — выходной
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Новосибирск
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-2', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Новосибирск, ул. Северный проезд, 37а, офис 1 (бывш.ул. Сибиряков-Гвардейцев, 49/3 корп.
+                                                p По предварительному согласованию.
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Екатеринбург
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-3', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Екатеринбург, ул. Учителей, 46 пав.9
+                                                p По предварительному согласованию.
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-2]") Службой доставки
+                                    span.faq__control
+                                .faq__content(data-product-delivery-2 data-grid)
+                                    p Содержимое этой вкладки находится в разработке
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-3]") Почтой России
+                                    span.faq__control
+                                .faq__content(data-product-delivery-3 data-grid)
+                                    p Содержимое этой вкладки находится в разработке
+
+                    //Сервис
+                    .product-about__content(data-product-content="3")
+                        p Сервисный центр компании «ПРАКТИК-НЦ» производит бесплатное гарантийное обслуживание и сервис оборудования «Практик» и «Практик-Актив». Гарантия действует с даты покупки. Гарантийный срок указан в гарантийном талоне изделия.
+                        p
+                            a(href="#" role="link") Проверить статус ремонта
+                        .product-about__faqs
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-service-1]") Отправка прибора в сервисный центр
+                                    span.faq__control
+                                .faq__content(data-product-service-1 data-grid)
+                                    .product-about__sending-services
+                                        .product-about__sending-service
+                                            .product-about__sending-service-icon
+                                                +svg_sprite('sending-service-1', 274, 274, 'product-about__sending-service-icon-svg')
+                                                +svg_sprite('sending-service-arrow', 205, 16, 'product-about__sending-service-icon-arrow')
+                                            .product-about__sending-service-text
+                                                p 1. Заполнить заявление
+                                                p
+                                                    a(href="#") Скачать заявление
+                                                p.product-about__sending-service-note Можно скачать бланк и заполнить, либо написать заявление вручную по образцу.
+                                        .product-about__sending-service
+                                            .product-about__sending-service-icon
+                                                +svg_sprite('sending-service-2', 274, 274, 'product-about__sending-service-icon-svg')
+                                                +svg_sprite('sending-service-arrow', 205, 16, 'product-about__sending-service-icon-arrow')
+                                            .product-about__sending-service-text
+                                                p 2. Упаковать прибор в чехол/коробку, чтобы исключить вероятность повреждения при транспортировке.
+                                        .product-about__sending-service
+                                            .product-about__sending-service-icon
+                                                +svg_sprite('sending-service-3', 274, 274, 'product-about__sending-service-icon-svg')
+                                                +svg_sprite('sending-service-arrow', 205, 16, 'product-about__sending-service-icon-arrow')
+                                            .product-about__sending-service-text
+                                                p 3. ОБЯЗАТЕЛЬНО вложить в посылку гарантийный талон и/или чек, заявление на гарантийное обслуживание
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-service-2]") Платный сервис
+                                    span.faq__control
+                                .faq__content(data-product-service-2 data-grid)
+                                    p После окончания гарантийного срока ремонтные работы выполняются согласно прайс-листу.
+                                    .product-about__paid-services
+                                        .product-about__paid-service
+                                            img.product-about__paid-service-logo.lazy(data-src="img/delivery-type-2.svg" alt="" width="105" height="50")
+                                            p
+                                                strong Оплата при отправлении Почтой России:
+                                            p 1. Предоплата, т.е. оплата стоимости сервиса до отправки эхолота клиенту (стоимость сервиса + почтовые расходы)
+                                            p 2. Оплата ремонта при получении прибора (стоимость сервиса + почтовые расходы + % за перевод денег, установленный Почтой России).
+                                            +picture_lazy('product-about__paid-service-map', 'tmp/', 'paid-service-map-1', 'jpg', 605, 320)
+                                            p
+                                                strong Адрес
+                                            p Адрес получателя: 124365, Москва, г. Зеленоград, ул. Заводская, д. 31, стр. 1<br>Получатель: ООО "Практик-НЦ"<br>ВАЖНО! Не отправляйте посылку наложенным платежом! Оцените посылку в 30-50 руб.
+                                        .product-about__paid-service
+                                            img.product-about__paid-service-logo.lazy(data-src="img/delivery-type-3.svg" alt="" width="73" height="21")
+                                            p
+                                                strong Оплата при отправлении ТК СДЭК:
+                                            p Предоплата или оплата при получении (стоимость ремонта + стоимость доставки)
+                                            +picture_lazy('product-about__paid-service-map', 'tmp/', 'paid-service-map-2', 'jpg', 605, 320)
+                                            p
+                                                strong Адрес
+                                            p Адрес: г. Зеленоград, ПВЗ на Савелкинском проезде.<br>Получатель: ООО "Практик-НЦ" Тел.: 8-495-514-11-73
+
+        //Обзор модели
+        section.section._pt0
+            .container
+                h2.section__h2.heading-font(role="heading") Обзор модели в действии
+                .product-video
+                    article.product-video__item(role="article")
+                        a.product-video__picture(href="https://www.youtube.com/watch?v=krs7WGJoeYk" data-fancybox)
+                            +picture_lazy('', 'tmp/', 'product-video-1', 'jpg', 890, 446)
+                            +svg_sprite('product-video-play', 90, 90, 'product-video__play')
+                        h3.product-video__title.heading-font(role="heading") Обязательно описание о чем видео
+                        p.product-video__text Таймкод
+                    article.product-video__item(role="article")
+                        a.product-video__picture(href="https://www.youtube.com/watch?v=krs7WGJoeYk" data-fancybox)
+                            +picture_lazy('', 'tmp/', 'product-video-1', 'jpg', 890, 446)
+                            +svg_sprite('product-video-play', 90, 90, 'product-video__play')
+                        h3.product-video__title.heading-font(role="heading") Обязательно описание о чем видео
+                        p.product-video__text Таймкод
+
+        //Почему нам доверяют
+        - var pluses_classnames = '_blue'
+        - var pluses_title = 'Почему нам доверяют?'
+        include includes/_pluses
+
+        //Информация о модели
+        section.section._pb0
+            .container(data-product-tabs)
+                h2.section__h2.product-about__h2.heading-font(role="heading") Информация о модели
+
+                .product-about__tabs.product-info__tabs.no-scroll
+                    button.product-about__tab._active(type="button" role="button" data-product-tab="1") Описание модели
+                    button.product-about__tab(type="button" role="button" data-product-tab="2") Отзывы
+                    button.product-about__tab(type="button" role="button" data-product-tab="3") Характеристики
+                    button.product-about__tab(type="button" role="button" data-product-tab="4") Сравнение
+                    button.product-about__tab(type="button" role="button" data-product-tab="4") Приложение
+
+                //Описание модели
+                .product-about__content.product-info__content._active(data-product-content="1")
+                    .product-about__faqs
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-1]") Про Эхолот Практик 6S
+                                span.faq__control
+                            .faq__content(data-product-info-1 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-2]") Отличие от «Практик 6М»
+                                span.faq__control
+                            .faq__content(data-product-info-2 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-3]") Информация от эхолота
+                                span.faq__control
+                            .faq__content(data-product-info-3 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-4]") Размер устройства
+                                span.faq__control
+                            .faq__content(data-product-info-4 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-5]") Датчик эхолота
+                                span.faq__control
+                            .faq__content(data-product-info-5 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                        .faq__item._white
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-info-6]") Датчик эхолота
+                                span.faq__control
+                            .faq__content(data-product-info-6 data-grid)
+                                p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
+
+                //Отзывы
+                mixin reviews_item
+                    .product-info__reviews-item
+                        .product-info__reviews-avatar И
+                        .product-info__reviews-title Иван И.
+                        .product-info__reviews-rating
+                            +svg_sprite('star', 19, 18)
+                            +svg_sprite('star', 19, 18)
+                            +svg_sprite('star', 19, 18)
+                            +svg_sprite('star', 19, 18)
+                            +svg_sprite('star', 19, 18)
+                        .product-info__reviews-text Хороший товар
+                        .product-info__reviews-picture
+                            a(href="img/tmp/product-reviews@2x.jpg" data-fancybox)
+                                +picture('', 'tmp/', 'product-reviews', 'jpg', 140, 100)
+
+                .product-about__content.product-info__reviews(data-product-content="2")
+                    h3.section__h2.heading-font(role="heading") Отзывы <sup>5</sup>
+                    .product-info__reviews-swiper.swiper(data-auto-width-swiper)
+                        .swiper-wrapper
+                            .product-info__reviews-slide.swiper-slide
+                                +reviews_item
+                            .product-info__reviews-slide.swiper-slide
+                                +reviews_item
+                            .product-info__reviews-slide.swiper-slide
+                                +reviews_item
+                            .product-info__reviews-slide.swiper-slide
+                                +reviews_item
+                            .product-info__reviews-slide.swiper-slide
+                                +reviews_item
+
+                //Характеристики
+                .product-about__content.product-params(data-product-content="3")
+                    +picture_lazy('product-params__picture', 'tmp/', 'product-info', 'png', 338, 711)
+                    .product-params__items
+                        .product-params__item
+                            span Диапозон глубин эхолокации
+                            span От 0.5 до 25 метров
+                        .product-params__item
+                            span Количество лучей
+                            span 1 луч (40°)
+                        .product-params__item
+                            span Вес
+                            span 225 г
+                        .product-params__item
+                            span Температурный диапазон эксплуатации, °С
+                            span от -20 до +60
+                        .product-params__item
+                            span Отображение символов рыбы и ее размеров
+                            span +
+                        .product-params__item
+                            span Звуковая сигнализация рыбы
+                            span +
+                        .product-params__item
+                            span Отображение рельефа дна и указатель плотности грунта
+                            span +
+                        .product-params__item
+                            span Регулировка чувствительности
+                            span плавная, 28 градаций
+                        .product-params__item
+                            span Регулировка «глухой» зоны
+                            span +
+                        .product-params__item
+                            span ZOOM придонного слоя
+                            span регулируемый: от 1 до 5 м
+                        .product-params__item
+                            span Диаметр пятна эхолота на дне
+                            span +
+                        .product-params__item
+                            span Диагностика эхолота на воздухе
+                            span +
+                        .product-params__item
+                            span Подсветка экрана
+                            span +
+                        .product-params__item
+                            span Режим «FISH ID»
+                            span обработанная информация, отображение контуров рыбы
+                        .product-params__item
+                            span Режим «Pro»
+                            span необработанная информация, профессиональный режим
+                        .product-params__item
+                            span Режим «Флешер»
+                            span необработанная информация в режиме реального времени
+                        .product-params__item
+                            span Режим «Мелководье (М.В.)»
+                            span предназначен для работы на глубинах 0,5-2 м
+                        .product-params__item
+                            span Режим «Глубиномер»
+                            span измерение глубины с точностью ±1 см, в т.ч. в сложных условиях мелководья и водорослей
+                        .product-params__item
+                            span Режим «Демо»
+                            span проверка работоспособности прибора на воздухе
+                        .product-params__item
+                            span Режим «Инфо»
+                            span +
+                        .product-params__item
+                            span Цвет кабеля
+                            span оранжевый, чёрный
+
+                //Сравнение
+                .product-about__content.product-compare(data-product-content="4")
+                    .product-compare__scroll.no-scroll
+                        table
+                            thead
+                                tr
+                                    td
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | Глубиномер
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 6М
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 6S
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 6 PLUS
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 7 Wi-Fi
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 7 BWF
+                                    td
+                                        a.product-compare__product(href="#" role="link")
+                                            +picture_lazy('product-compare__picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                            | 7 BWF <br>Универсал
+
+                            tbody
+                                tr
+                                    td Зимой на лунке
+                                    td идеален
+                                    td._active идеален
+                                    td идеален
+                                    td идеален
+                                    td да
+                                    td да
+                                    td идеален
+                                tr
+                                    td Летом с лодки
+                                    td да
+                                    td._active да
+                                    td да
+                                    td да
+                                    td идеален
+                                    td идеален
+                                    td идеален
+                                tr
+                                    td Летом с берега
+                                    td нет
+                                    td._active нет
+                                    td нет
+                                    td нет
+                                    td идеален
+                                    td идеален
+                                    td идеален
+                                tr
+                                    td Проводной / беспроводной
+                                    td самостоятельный
+                                    td._active проводной
+                                    td проводной
+                                    td проводной
+                                    td беспроводной
+                                    td беспроводной
+                                    td беспроводной/проводной
+                                tr
+                                    td Приемник информации
+                                    td нет
+                                    td._active блок Практик
+                                    td блок Практик
+                                    td блок Практик
+                                    td Смартфон/планшет
+                                    td Смартфон/блок Практик
+                                    td Смартфон/блок Практик
+                                tr
+                                    td Тип соединение блока и датчика
+                                    td нет
+                                    td._active разъемное (кабель)
+                                    td разъемное (кабель)
+                                    td разъемное (кабель)
+                                    td Wi-Fi
+                                    td Wi-Fi
+                                    td Wi-Fi/разъемное (кабель)
+                                tr
+                                    td Количество лучей
+                                    td 1 (30°)
+                                    td._active 1 (40°)
+                                    td 1 (40°)
+                                    td 2 (30° и 12) CHIRP
+                                    td 1 (35°)
+                                    td 1 (35°)
+                                    td 1 (35°)
+                                tr
+                                    td Температура эксплуатации
+                                    td -20° ... +60°
+                                    td._active -20° ... +60°
+                                    td -20° ... +60°
+                                    td -30° ... +60°
+                                    td -20° ... +40°
+                                    td -20° ... +40°
+                                    td -20° ... +40°
+                                tr
+                                    td Вес эхолота
+                                    td 100 г
+                                    td._active 225 г
+                                    td 225 г
+                                    td 303 г
+                                    td 303 г
+                                    td 100 г
+                                    td 100 г
+
+                //Приложение
+                .product-about__content.product-info__content.product-application(data-product-content="5")
+                    article.product-application__application(role="article")
+                        h3.product-application__application-title.heading-font._mobile(role="heading") Скачайте наше <span>приложение</span>
+                        +picture_lazy('product-application__application-picture', 'tmp/', 'product-application', 'png', 351, 700)
+                        .product-application__application-content
+                            h3.product-application__application-title.heading-font(role="heading") Скачайте наше <span>приложение</span>
+                            ul.product-application__application-list.heading-font(role="list")
+                                li
+                                    +svg_sprite('product-application-1', 54, 54)
+                                    | Стройте карты рельефа дна
+                                li
+                                    +svg_sprite('product-application-2', 54, 54)
+                                    | Отмечайте точки для изучения
+                                li
+                                    +svg_sprite('product-application-3', 54, 54)
+                                    | Узнавайте местоположение рыб
+                            .product-application__application-download
+                                a(href="#" target="_blank" role="link")
+                                    +picture_lazy('', '', 'google-play', 'png', 150, 44)
+                                a(href="#" target="_blank" role="link")
+                                    +picture_lazy('', '', 'apple-store', 'png', 150, 44)
+                                span Скачивайте приложение <br>во всех магазинах
+
+                    article.product-application__instruction(role="article")
+                        h3.product-application__instruction-title.heading-font._mobile(role="heading") Инструкция по <br>использованию
+                        a.product-application__instruction-video(href="https://www.youtube.com/watch?v=4rSIt2QUCds" data-fancybox role="link")
+                            +picture_lazy('product-application__instruction-picture', 'tmp/', 'product-application-instruction', 'png', 781, 434)
+                            +svg_sprite('product-video-play', 90, 90, 'product-application__instruction-play')
+                        .product-application__instruction-content
+                            h3.product-application__instruction-title.heading-font(role="heading") Инструкция по <br>использованию
+                            p.product-application__instruction-text
+                                strong Хронометраж видео
+                            ul.product-application__instruction-list(role="list")
+                                li(role="listitem") 1:22 Как установить приложение
+                                li(role="listitem") 2:00 Возможности приложения
+                                li(role="listitem") 3:00 Как ставить метки на карте
+
+        //Комплекты по акции
+        section.section._pb0
+            .container
+                .section__header
+                    h2.section__h2.section__header-h2.heading-font(role="heading") Комплекты по акции
+                    .section__header-controls.carousel__controls
+                        button.carousel__navigation._prev._blue(type="button" role="button" data-complect-prev)
+                            +svg_sprite('carousel-nav', 23, 15)
+                        button.carousel__navigation._next._blue(type="button" role="button" data-complect-next)
+                            +svg_sprite('carousel-nav', 23, 15)
+
+                .like__swiper.swiper(data-auto-width-swiper data-prev="[data-complect-prev]" data-next="[data-complect-next]")
+                    .swiper-wrapper
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Комплект 1')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                        .swiper-slide.like__slide
+                            +product_complect('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+
+        //Не нашли подходящую акцию?
+        include includes/_not_find_stock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

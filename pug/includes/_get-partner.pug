@@ -1,0 +1,29 @@
+section.section(class=get_partner_classnames)
+    .container
+        .get-partner__container
+            h2.section__h2.get-partner__h2.get-partner__padding.heading-font(role="heading") Стать партнером
+            p.get-partner__subtitle.get-partner__padding Приглашаем к сотрудничеству торговые организации, ИП и фирмы оптовой торговли.
+            form.get-partner__form(action="#" method="post" role="form")
+                .get-partner__steps
+                    fieldset.get-partner__step._active(data-partner-step="1")
+                        input.get-partner__input(type="text" name="name" placeholder="ФИО контактного лица")
+                        input.get-partner__input(type="tel" name="phone" placeholder="Телефон" data-tel)
+                        input.get-partner__input(type="email" name="email" placeholder="E-mail")
+                        button.get-partner__button.btn._border._small(type="button" role="button" data-partner-next) Далее
+                            +svg_sprite('arrow', 32, 16)
+                    fieldset.get-partner__step(data-partner-step="2")
+                        input.get-partner__input(type="text" name="city" placeholder="Город")
+                        input.get-partner__input(type="text" name="company" placeholder="Название компании или ИП")
+                        input.get-partner__input(type="text" name="shop" placeholder="Название магазина")
+                        input.get-partner__input(type="text" name="count" placeholder="Количество магазинов")
+                        .get-partner__checkbox
+                            input(type="checkbox" name="policy" id="get-partner-policy" data-policy checked)
+                            label(for="get-partner-policy")
+                                span
+                                    +svg_sprite('checkbox', 23, 17)
+                                | Нажимая кнопку отправить, вы соглашаетесь с политикой конфиденциальности
+                        button.get-partner__button.btn._border._middle(type="submit" role="button") Отправить
+                .get-partner__count.heading-font(data-partner-count) Шаг <span>1</span> из 2
+                .get-partner__info Для получения более подробной информации по ценам и условиям сотрудничества просьба писать на <a href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a> с указанием Ваших контактов
+
+            img.get-partner__picture.get-partner__padding.lazy(data-src="img/get-partner.svg" alt="" width="455" height="384")

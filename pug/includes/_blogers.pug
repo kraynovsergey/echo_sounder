@@ -1,0 +1,28 @@
+mixin blogers_item(img, title, subtitle)
+    article.blogers__item(class=blogers_item_classnames role="article")
+        a.blogers__picture(href="https://www.youtube.com/watch?v=dzn5Cr37twY" data-fancybox role="link")
+            +picture('picture', 'tmp/', img, 'jpg', 660, 364)
+            +svg_sprite('play', 80, 80, 'blogers__play')
+        h3.blogers__title.heading-font(role="heading")=title
+        p.blogers__subtitle=subtitle
+
+section.section(class=blogers_classnames)
+    .container
+        .section__header
+            h2.section__h2.section__header-h2.heading-font(role="heading")=blogers_title
+            .section__header-controls.carousel__controls
+                button.carousel__navigation._prev._blue(type="button" role="button" data-blogers-prev)
+                    +svg_sprite('carousel-nav', 23, 15)
+                button.carousel__navigation._next._blue(type="button" role="button" data-blogers-next)
+                    +svg_sprite('carousel-nav', 23, 15)
+
+        .fishermen__swiper.swiper(data-auto-width-swiper data-prev="[data-blogers-prev]" data-next="[data-blogers-next]")
+            .swiper-wrapper
+                .swiper-slide.fishermen__slide
+                    +blogers_item('blogers-1', 'Что будет с Российскими эхолотами практик?', 'Интервью с разработчиками, Практик 8 с боковым обзором!')
+                .swiper-slide.fishermen__slide
+                    +blogers_item('blogers-2', 'Этот рыбак поймает даже в центре города.', 'Тестирование эхолота «Практик» в Якутии при температуре -47')
+                .swiper-slide.fishermen__slide
+                    +blogers_item('blogers-1', 'Что будет с Российскими эхолотами практик?', 'Интервью с разработчиками, Практик 8 с боковым обзором!')
+                .swiper-slide.fishermen__slide
+                    +blogers_item('blogers-2', 'Этот рыбак поймает даже в центре города.', 'Тестирование эхолота «Практик» в Якутии при температуре -47')

@@ -1,0 +1,33 @@
+.no-scroll {
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+}
+
+.all-link {
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.picture {
+	width: 100%;
+
+	& img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+body .hidden {
+	display: none;
+}

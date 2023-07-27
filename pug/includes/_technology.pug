@@ -1,0 +1,30 @@
+mixin technology(img, title)
+    article.technology__item(role="article")
+        h3.technology__title.heading-font(role="heading")= title
+        img.technology__item-picture(src="img/tmp/"+img+".svg" loading="lazy" alt="" width="320" height="448")
+section.section._blue
+    .container
+        .section__header
+            h2.section__h2.section__header-h2.heading-font.technology__h2(role="heading")=technology_title
+            .section__header-controls.carousel__controls
+                button.carousel__navigation._prev._blue(type="button" role="button" data-technology-prev)
+                    +svg_sprite('carousel-nav', 23, 15)
+                button.carousel__navigation._next._blue(type="button" role="button" data-technology-next)
+                    +svg_sprite('carousel-nav', 23, 15)
+
+        .technology__grid
+            +picture_lazy('technology__picture', 'tmp/', 'technology', 'jpg', 569, 541)
+
+            .technology__swiper-wrapper
+                .technology__swiper.swiper(data-auto-width-swiper data-prev="[data-technology-prev]" data-next="[data-technology-next]")
+                    .swiper-wrapper
+                        .technology__slide.swiper-slide
+                            +technology('technology-1', 'Продуманная функциональность')
+                        .technology__slide.swiper-slide
+                            +technology('technology-2', 'Длительный срок службы')
+                        .technology__slide.swiper-slide
+                            +technology('technology-3', 'Чувствительность и точность')
+                        .technology__slide.swiper-slide
+                            +technology('technology-4', 'Низкое энергопотребление')
+                        .technology__slide.swiper-slide
+                            +technology('technology-5', 'Компактный размер')

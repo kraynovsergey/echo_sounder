@@ -1,0 +1,91 @@
+.repair-paid {
+	&__h2 {
+		margin: 0 0 10px;
+	}
+
+	&__subtitle {
+		font-size: 1.4rem;
+		font-weight: bold;
+		width: 100%;
+		margin: 0 0 30px;
+		max-width: 720px;
+		line-height: 130%;
+
+		@media (max-width: 991px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 575px) {
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+
+		@media (max-width: 991px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		background: $color_white;
+		border-radius: 10px;
+		padding: 40px 35px;
+		display: grid;
+		align-items: start;
+
+		@media (max-width: 991px) {
+			padding: 30px 25px;
+		}
+
+		@media (max-width: 575px) {
+			padding: 20px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		align-items: start;
+		grid-gap: 20px;
+		color: $color_primary_light;
+
+		@media (max-width: 1440px) {
+			grid-gap: 15px;
+		}
+
+		& h3 {
+			font-family: 'TT Runs', sans-serif;
+			font-weight: 800;
+			text-transform: uppercase;
+			color: $color_blue;
+			font-size: 1.2rem;
+			padding: 0;
+			margin: 0;
+
+			@media (max-width: 991px) {
+				font-size: 1rem;
+			}
+		}
+
+		& h4 {
+			font-size: 1.1rem;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+		}
+
+		& p {
+			margin: 0;
+		}
+	}
+
+	&__faq {
+		@media (min-width: 992px) {
+			grid-column: span 2;
+		}
+	}
+}

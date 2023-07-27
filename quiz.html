@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Квиз</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header" role="banner" data-header>
+      <div class="container header__container"><a class="header__logo" href="#" role="link">
+              <picture class="header__logo-logo">
+                <source type="image/webp" srcset="img/webp/logo@2x.webp 2x, img/webp/logo.webp 1x"><img src="" srcset="img/logo@2x.png 2x, img/logo.png 1x" alt="" width="72" height="52" loading="lazy">
+              </picture>
+              <picture class="header__logo-flag">
+                <source type="image/webp" srcset="img/webp/flag@2x.webp 2x, img/webp/flag.webp 1x"><img src="" srcset="img/flag@2x.png 2x, img/flag.png 1x" alt="" width="65" height="65" loading="lazy">
+              </picture></a><a class="header__yandex" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <form class="header__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form>
+        <address class="header__contacts"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
+                <svg width="17" height="20">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Посмотреть список избранного">
+                <svg width="20" height="19">
+                  <use xlink:href="img/sprite.svg#favourite"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Перейти к сравнению товаров">
+                <svg width="25" height="20">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg></a><a class="header__control header__cart" href="#" role="link" aria-label="В корзину">
+                <svg width="22" height="20">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg><span class="header__cart-count">1</span></a></div>
+        <div class="header__user">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+        <button class="header__burger" type="button" role="button" data-toggle="[data-nav]"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <nav class="nav no-scroll" role="navigation" data-nav>
+      <div class="container nav__mobile-container">
+        <address class="header__contacts _tablet"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback-mobile]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback-mobile>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <form class="nav__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form><a class="header__yandex _tablet" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <div class="header__user _tablet">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city-mobile]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city-mobile>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+      </div>
+      <div class="container nav__container">
+        <div class="nav__catalog">
+          <button class="nav__catalog-btn heading-font" type="button" role="button" data-toggle="[data-nav-catalog-list]">В магазин
+                <svg width="21" height="18">
+                  <use xlink:href="img/sprite.svg#triangle-catalog"></use>
+                </svg>
+          </button>
+          <ul class="nav__catalog-list" role="list" data-nav-catalog-list>
+            <li class="nav__catalog-listitem" role="listitem" data-nav-item><a class="nav__catalog-listlink heading-font" href="#" role="link" data-nav-link>Эхолоты
+                    <svg width="10" height="8">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg></a>
+              <ul class="nav__sublist" role="list" data-nav-sublist>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для зимней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Беспроводные</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для летней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с берега</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с лодки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Недорогие эхолоты</a></li>
+              </ul>
+            </li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Аксессуары для эхолотов</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Подводные камеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Глубиномеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Насос "Бриз"</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Фонари для рыбалки</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Электромоторы</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Товары для туризма</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Мерч</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Уцененные товары</a></li>
+          </ul>
+        </div>
+        <ul class="nav__list" role="list">
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>О нас
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Общая информация</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Почему нам доверяют?</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">История компании</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Отзывы</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сертификаты</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Подбор эхолота</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Как это работает
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Информационная поддержка пользователя</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Частые вопросы</a></li>
+              <li class="nav__sublistitem" role="listitem" data-nav-item><a class="nav__sublistlink" href="#" role="link" data-nav-link>Блог
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg></a>
+                <ul class="nav__sublist" role="list" data-nav-sublist>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Новости</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Статьи</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Видео</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Акции</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Ремонт
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Как отправить прибор в сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Платный ремонт</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервисные центры</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Оплата и доставка</a></li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main" role="main">
+      <section class="section _pt0">
+        <div class="container">
+          <ul class="breadcrumbs" role="list">
+            <li class="breadcrumbs__item" role="listitem"><a class="breadcrumbs__link" href="#" role="link">Главная</a></li>
+            <li class="breadcrumbs__item" role="listitem">Эхолоты</li>
+          </ul>
+          <div class="quiz" data-quiz>
+            <div class="quiz__step _active" data-question-step data-step="1">
+              <h2 class="quiz__title heading-font">1. В какое время года больше рыбачите?</h2>
+              <div class="quiz__big-radios _w3">
+                <div class="quiz__big-radio get-order__radio">
+                  <input type="radio" name="quiz-1" value="" id="quiz-1-1" checked>
+                  <label class="quiz__box" for="quiz-1-1">
+                        <picture class="quiz__big-radio-picture">
+                          <source type="image/webp" srcset="img/webp/quiz-1-1@2x.webp 2x, img/webp/quiz-1-1.webp 1x"><img src="" srcset="img/quiz-1-1@2x.png 2x, img/quiz-1-1.png 1x" alt="" width="346" height="346">
+                        </picture><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Зимнее</span>
+                  </label>
+                </div>
+                <div class="quiz__big-radio get-order__radio">
+                  <input type="radio" name="quiz-1" value="" id="quiz-1-2">
+                  <label class="quiz__box" for="quiz-1-2">
+                        <picture class="quiz__big-radio-picture">
+                          <source type="image/webp" srcset="img/webp/quiz-1-2@2x.webp 2x, img/webp/quiz-1-2.webp 1x"><img src="" srcset="img/quiz-1-2@2x.png 2x, img/quiz-1-2.png 1x" alt="" width="346" height="346">
+                        </picture><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Летнее</span>
+                  </label>
+                </div>
+                <div class="quiz__big-radio get-order__radio">
+                  <input type="radio" name="quiz-1" value="" id="quiz-1-3">
+                  <label class="quiz__box" for="quiz-1-3">
+                        <picture class="quiz__big-radio-picture">
+                          <source type="image/webp" srcset="img/webp/quiz-1-3@2x.webp 2x, img/webp/quiz-1-3.webp 1x"><img src="" srcset="img/quiz-1-3@2x.png 2x, img/quiz-1-3.png 1x" alt="" width="469" height="347">
+                        </picture><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Примерно одинаково зимой и летом</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="2">
+              <h2 class="quiz__title heading-font">2. Летом вы рыбачите больше с лодки или с забросом?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-2" value="" id="quiz-2-1" checked>
+                  <label class="quiz__box" for="quiz-2-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>С лодки</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-2" value="" id="quiz-2-2">
+                  <label class="quiz__box" for="quiz-2-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>С забросом</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-2@2x.webp 2x, img/tmp/webp/quiz-2.webp 1x"><img src="" srcset="img/tmp/quiz-2@2x.jpg 2x, img/tmp/quiz-2.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="3">
+              <h2 class="quiz__title heading-font">3. Вы профессиональный рыболов или рыбак-любитель?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-3" value="" id="quiz-3-1" checked>
+                  <label class="quiz__box" for="quiz-3-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Профи</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-3" value="" id="quiz-3-2">
+                  <label class="quiz__box" for="quiz-3-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Любитель</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-3@2x.webp 2x, img/tmp/webp/quiz-3.webp 1x"><img src="" srcset="img/tmp/quiz-3@2x.jpg 2x, img/tmp/quiz-3.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="4">
+              <h2 class="quiz__title heading-font">4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-4" value="" id="quiz-4-1" checked>
+                  <label class="quiz__box" for="quiz-4-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Да</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-4" value="" id="quiz-4-2">
+                  <label class="quiz__box" for="quiz-4-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Нет</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-4@2x.webp 2x, img/tmp/webp/quiz-4.webp 1x"><img src="" srcset="img/tmp/quiz-4@2x.jpg 2x, img/tmp/quiz-4.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="5">
+              <h2 class="quiz__title heading-font">5. Максимально низкая температура, при которой собираетесь ловить рыбу?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-5" value="" id="quiz-5-1" checked>
+                  <label class="quiz__box" for="quiz-5-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>До -20°C</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-5" value="" id="quiz-5-2">
+                  <label class="quiz__box" for="quiz-5-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>До -25°C и ниже</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-5@2x.webp 2x, img/tmp/webp/quiz-5.webp 1x"><img src="" srcset="img/tmp/quiz-5@2x.jpg 2x, img/tmp/quiz-5.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="6">
+              <h2 class="quiz__title heading-font">6. Какой тип экрана эхолота вам необходим?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-6" value="" id="quiz-6-1" checked>
+                  <label class="quiz__box" for="quiz-6-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Цветной</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-6" value="" id="quiz-6-2">
+                  <label class="quiz__box" for="quiz-6-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Чёрно-белый</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-6@2x.webp 2x, img/tmp/webp/quiz-6.webp 1x"><img src="" srcset="img/tmp/quiz-6@2x.jpg 2x, img/tmp/quiz-6.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step quiz__grid" data-question-step data-step="7">
+              <h2 class="quiz__title heading-font">7. Какой элемент питания устройства предпочтителен?</h2>
+              <div class="quiz__radios">
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-7" value="" id="quiz-7-1" checked>
+                  <label class="quiz__box" for="quiz-7-1"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Батарейка</span></label>
+                </div>
+                <div class="quiz__radio get-order__radio">
+                  <input type="radio" name="quiz-7" value="" id="quiz-7-2">
+                  <label class="quiz__box" for="quiz-7-2"><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Встроенный аккумулятор</span></label>
+                </div>
+              </div>
+                  <picture class="quiz__picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-7@2x.webp 2x, img/tmp/webp/quiz-7.webp 1x"><img src="" srcset="img/tmp/quiz-7@2x.jpg 2x, img/tmp/quiz-7.jpg 1x" alt="" width="850" height="570">
+                  </picture>
+            </div>
+            <div class="quiz__step" data-question-step data-step="8">
+              <h2 class="quiz__title heading-font">8. Какой тип соединения блока и датчика предпочтителен?</h2>
+              <div class="quiz__big-radios _w2">
+                <div class="quiz__big-radio get-order__radio">
+                  <input type="radio" name="quiz-8" value="" id="quiz-8-1" checked>
+                  <label class="quiz__box" for="quiz-8-1">
+                        <picture class="quiz__big-radio-picture">
+                          <source type="image/webp" data-srcset="img/webp/quiz-8-1@2x.webp 2x, img/webp/quiz-8-1.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/quiz-8-1@2x.png 2x, img/quiz-8-1.png 1x" srcset="" alt="" width="346" height="346">
+                        </picture><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Проводное</span>
+                  </label>
+                </div>
+                <div class="quiz__big-radio get-order__radio">
+                  <input type="radio" name="quiz-8" value="" id="quiz-8-2">
+                  <label class="quiz__box" for="quiz-8-2">
+                        <picture class="quiz__big-radio-picture">
+                          <source type="image/webp" data-srcset="img/webp/quiz-8-2@2x.webp 2x, img/webp/quiz-8-2.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/quiz-8-2@2x.png 2x, img/quiz-8-2.png 1x" srcset="" alt="" width="346" height="346">
+                        </picture><span class="quiz__big-radio-title"><span class="get-order__radio-check"></span>Беспроводное</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__footer">
+              <div class="quiz__progress">
+                <div class="quiz__progress-title">Шаг <span data-step-number>1</span> из 8</div>
+                <div class="question__progress" data-step-progress data-step="1"><span class="_active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <svg class="question__fish" width="63" height="34">
+                    <use xlink:href="img/sprite.svg#question-fish"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="quiz__controls">
+                <button class="quiz__control btn _grey _middle" type="button" role="button" data-question-control data-prev data-step="0" disabled>Назад</button>
+                <button class="quiz__control btn _middle" type="button" role="button" data-question-control data-next data-step="2">Далее</button>
+              </div>
+            </div>
+          </div>
+          <div class="quiz__final" data-quiz-final>
+            <div class="quiz__final-content">
+                  <picture class="quiz__final-picture">
+                    <source type="image/webp" srcset="img/tmp/webp/quiz-product@2x.webp 2x, img/tmp/webp/quiz-product.webp 1x"><img src="" srcset="img/tmp/quiz-product@2x.png 2x, img/tmp/quiz-product.png 1x" alt="" width="272" height="297">
+                  </picture>
+              <div class="quiz__final-info">
+                <p class="quiz__final-subtitle">Вам подойдёт:</p>
+                <h3 class="quiz__final-title heading-font" role="heading">Эхолот <span>«Практик 8»</span></h3>
+                <p class="quiz__final-text">Эхолот Практик 8 – это абсолютно новая разработка от компании «ПРАКТИК-НЦ». В данной модели от предыдущих эхолотов остался лишь компактный корпус, а вся начинка и программное обеспечение написаны "с нуля" с учетом того опыта, который ПРАКТИК-НЦ получал в течение многих лет, производя и используя приборы для поиска рыбы.</p>
+              </div>
+              <div class="quiz__final-controls"><a class="quiz__final-control btn _middle" href="#" role="link">Купить</a><a class="quiz__final-control btn _middle _grey _border" href="#" role="link">Пройти еще раз</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__container">
+        <div class="footer__contacts"><a class="footer__logo" href="#" role="link">
+                <picture>
+                  <source type="image/webp" data-srcset="img/webp/logo-footer@2x.webp 2x, img/webp/logo-footer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/logo-footer@2x.png 2x, img/logo-footer.png 1x" srcset="" alt="" width="101" height="73">
+                </picture></a>
+          <h2 class="footer__h2 heading-font" role="navigation">Контакты <br>и график работы</h2>
+          <div class="footer__items">
+            <address class="footer__item">
+              <p class="footer__item-title">Почта:</p><a class="footer__item-value footer__item-link" href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Сервис и ремонт:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы офиса:</p>
+              <p class="footer__item-value">Пн-Пт: 10:00-17:00</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Заказы и консультации:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Адрес:</p>
+              <p class="footer__item-value">124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы интернет-магазина:</p>
+              <p class="footer__item-value">Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00</p>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h3 class="footer__h3 heading-font" role="heading">Мы в соцсетях:</h3>
+            <div class="footer__icons"><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#youtube-footer"></use>
+                    </svg></a></div>
+          </div>
+        </div>
+        <nav class="footer__nav" role="navigation">
+          <ul class="footer__nav-list" role="list">
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">О нас</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Как это работает</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Контакты</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Подбор эхолота</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Ремонт</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Акции</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Оплата и доставка</a></li>
+          </ul>
+        </nav>
+        <div class="footer__download">
+          <div class="footer__download-content">
+            <h3 class="footer__download-title heading-font" role="heading">Скачивайте наше приложение <span>«Эхолоты практик 7»</span></h3>
+            <div class="footer__download-links"><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a></div>
+          </div>
+              <picture class="footer__download-picture">
+                <source type="image/webp" data-srcset="img/webp/apple-store-screenshot@2x.webp 2x, img/webp/apple-store-screenshot.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store-screenshot@2x.png 2x, img/apple-store-screenshot.png 1x" srcset="" alt="" width="310" height="459">
+              </picture>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+          <div class="footer__bottom-item">
+            <p>ⓒ «Практик», 2023</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__bottom-item">
+            <p>ООО «ПРАКТИК-НЦ»</p>
+            <p>ОГРН 1087746089276</p>
+            <p>ИНН 7735537073</p>
+            <p>КПП 773501001</p>
+          </div>
+          <address class="footer__bottom-item">
+            <p>Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1</p>
+          </address>
+          <div class="footer__bottom-item"><a href="#" role="link">Договор оферты</a><a href="#" role="link">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/lazyload.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/fancybox.umd.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

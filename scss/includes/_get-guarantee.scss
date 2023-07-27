@@ -1,0 +1,135 @@
+.get-guarantee {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-gap: 20px;
+	color: $color_primary_light;
+
+	@media (max-width: 575px) {
+		grid-gap: 10px;
+	}
+
+	&__content {
+		display: grid;
+		grid-gap: 20px;
+	}
+
+	&__text {
+		font-size: 1.1rem;
+		margin: 0;
+	}
+
+	&__block {
+		border: 1px dashed $color_blue_border;
+		border-radius: 10px;
+		padding: 30px;
+		display: grid;
+		grid-gap: 20px;
+
+		@media (max-width: 991px) {
+			padding: 20px;
+		}
+
+		@media (max-width: 575px) {
+			padding: 15px;
+		}
+	}
+
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		@media (max-width: 575px) {
+			font-size: .9rem !important;
+		}
+	}
+
+	&__icon {
+		color: $color_blue_border;
+	}
+
+	&__form {
+		display: grid;
+		justify-items: start;
+		grid-gap: 30px;
+
+		@media (max-width: 991px) {
+			justify-items: stretch;
+		}
+	}
+
+	&__file {
+		& input {
+			display: none;
+		}
+
+		& label {
+			cursor: pointer;
+
+			@media (max-width: 575px) {
+				font-size: .8rem !important;
+			}
+		}
+	}
+
+	&__success {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background: #0AA360;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		@media (max-width: 575px) {
+			width: 35px;
+			height: 35px;
+		}
+
+		&::after {
+			content: '';
+			width: 16px;
+			height: 8px;
+			border-left: 2px solid $color_white;
+			border-bottom: 2px solid $color_white;
+			transform: rotate(-45deg);
+			top: calc(50% - 5px);
+			position: absolute;
+		}
+	}
+
+	&__figures {
+		display: grid;
+		grid-template-columns: repeat(2, 150px);
+		grid-gap: 20px;
+
+		@media (max-width: 575px) {
+			grid-template-columns: repeat(2, 80px);
+		}
+	}
+
+	&__figure {
+		display: grid;
+		margin: 0;
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__figcaption {
+		font-size: .66rem;
+	}
+
+	&__faq-stretch {
+		@media (min-width: 992px) {
+			grid-column: span 2;
+		}
+	}
+}

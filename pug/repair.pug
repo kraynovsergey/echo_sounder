@@ -1,0 +1,199 @@
+extends base
+
+block seo
+    - var seo = {title: 'Гарантийный ремонт и обслуживание', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Интро
+        section
+            .container
+                .repair-intro
+                    .repair-intro__content
+                        h1.repair-intro__title.heading-font(role="heading") Гарантийный ремонт и обслуживание
+                        p.repair-intro__text Сервисный центр компании «ПРАКТИК-НЦ» производит бесплатное гарантийное обслуживание и ремонт оборудования «Практик» и «Практик-Актив». Гарантия действует с даты покупки. Гарантийный срок указан в гарантийном талоне изделия.
+                        .repair-intro__icon
+                            +svg_sprite('repair-intro', 41, 56)
+                        p.repair-intro__note Вы можете узнать статус гарантийного ремонта вашего прибора, нажав на кнопку ниже и введя номер телефона в появившемся окне.
+                        a.repair-intro__link.btn._small(href="#" role="link") Проверить статус
+                    +picture_nolazy('repair-intro__picture', 'tmp/', 'repair-intro', 'jpg', 799, 680)
+
+        //Этапы
+        section.section
+            .container
+                h2.section__h2.heading-font.repair-steps__h2(role="heading") Как отправить прибор в сервисный центр
+                .repair-steps__items
+                    article.repair-steps__item(role="article")
+                        .repair-steps__icon
+                            img.lazy(data-src="img/tmp/repair-step-1.svg" alt="" width="55" height="55")
+                        h3.repair-steps__title.heading-font(role="heading") Заполните заявление
+                        p.repair-steps__text Скачать заявление на ремонт. Можно скачать бланк и заполнить, либо написать заявление вручную по образцу.
+                        a.repair-steps__link(href="#" role="link") Скачать заявление на ремонт
+
+                    article.repair-steps__item(role="article")
+                        .repair-steps__icon
+                            img.lazy(data-src="img/tmp/repair-step-2.svg" alt="" width="55" height="55")
+                        h3.repair-steps__title.heading-font(role="heading") Упакуйте прибор
+                        p.repair-steps__text Упаковать прибор в чехол/коробку, чтобы исключить вероятность повреждения при транспортировке.
+
+                    article.repair-steps__item(role="article")
+                        .repair-steps__icon
+                            img.lazy(data-src="img/tmp/repair-step-3.svg" alt="" width="55" height="36")
+                        h3.repair-steps__title.heading-font(role="heading") Не забудьте гарантийный талон
+                        p.repair-steps__text ОБЯЗАТЕЛЬНО вложить в посылку гарантийный талон и/или чек, заявление на гарантийный ремонт
+
+                    article.repair-steps__item(role="article")
+                        .repair-steps__icon
+                            img.lazy(data-src="img/tmp/repair-step-4.svg" alt="" width="55" height="36")
+                        h3.repair-steps__title.heading-font(role="heading") Выберите варианты отправки
+                        p.repair-steps__text 1. Почтой России. Адрес получателя: 124365, Москва, г. Зеленоград, ул. Заводская, д. 31, стр.1 Получатель: ООО "Практик-НЦ" ВАЖНО! Не отправляйте посылку наложенным платежом! Оцените посылку в 30-50 руб.
+                        p.repair-steps__text 2. Транспортной компанией СДЭК. Адрес: г. Зеленоград, ПВЗ на Савелкинском проезде Получатель: ООО "Практик-НЦ" Тел.: 8-495-514-11-73
+
+                    +svg_sprite('repair-steps-line', 402, 852, 'repair-steps__line')
+
+        //Платный ремонт
+        section.section._blue
+            .container
+                h2.section__h2.heading-font.repair-paid__h2(role="heading") Платный ремонт
+                p.repair-paid__subtitle После окончания гарантийного срока ремонтные работы выполняются согласно прайс-листу.
+                .repair-paid__items
+                    article.repair-paid__item(role="article")
+                        .repair-paid__content
+                            h3(role="heading") Оплата
+                            h4(role="heading") При отправлении Почтой России:
+                            p 1. Предоплата, т.е. оплата стоимости ремонта до отправки эхолота клиенту (стоимость ремонта + почтовые расходы)
+                            p 2. Оплата ремонта при получении прибора (стоимость ремонта + почтовые расходы + % за перевод денег, установленный Почтой России).
+                            h4(role="heading") При отправлении ТК СДЭК:
+                            p Предоплата или оплата при получении (стоимость ремонта + стоимость доставки)
+                    article.repair-paid__item(role="article")
+                        .repair-paid__content
+                            h3(role="heading") Варианты отправки:
+                            h4(role="heading") Почтой России
+                            p Адрес получателя: 124365, Москва, г. Зеленоград, ул. Заводская, д. 31, стр.1. Получатель: ООО "Практик-НЦ" ВАЖНО! Не отправляйте посылку наложенным платежом! Оцените посылку в 30-50 руб.
+                            h4(role="heading") Транспортной компанией СДЭК
+                            p Адрес: г. Зеленоград, ПВЗ на Савелкинском проезде. Получатель: ООО "Практик-НЦ" Тел.: 8-495-514-11-73
+                            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;source=constructor" width="100%" height="200" frameborder="0")
+                    .repair-paid__faq.faq__item._white
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-paid-1]") ПРАЙС ЛИСТ
+                            span.faq__control
+                        .faq__content(data-repair-paid-1 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+
+        //О гарантийном талоне
+        section.section._pb0
+            .container
+                h2.section__h2.heading-font.repair-faq__h2(role="heading") О гарантийном талоне и гарантийных обязательствах
+                .repair-faq__items
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-faq-1]") Гарантии
+                            span.faq__control
+                        .faq__content(data-repair-faq-1 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-faq-2]") Особые условия гарантии
+                            span.faq__control
+                        .faq__content(data-repair-faq-2 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-faq-3]") Гарантийные обязательства
+                            span.faq__control
+                        .faq__content(data-repair-faq-3 data-grid)
+                            h4(role="heading") Гарантийные обязательства
+                            p - использования эхолота согласно Инструкции к прибору;
+                            p - при условии предъявления гарантийного талона, который был заполнен на момент продажи(с указанием модели, серийного номера устройства, даты продажи, штампа поставщика и торговой организации).
+                            .faq__yellow
+                                h4(role="heading") Гарантийные обязательства на прибор НЕ РАСПРОСТРАНЯЮТСЯ:
+                                p - при нарушении пользователем правил эксплуатации прибора;
+                                p - при наличии механических повреждений(разрывы и нарушение изоляции кабеля, трещины в корпусе, сколы на датчике и т.п.), а также повреждений электрических контактов, соединений, разъемов;
+                                p - при наличии термического повреждения прибора или его составных частей;
+                                p - при попадании внутрь прибора посторонних предметов и жидкости(насекомых, грязи, воды и т.д.);
+                                p - при наличии признаков самостоятельного ремонта или обслуживания в неавторизованных сервисных центрах(с нарушением внутренней пломбировки корпуса с отсутствием серийного номера и т.п.);
+                                p - в срок превышающих официальный гарантийный срок производителя, указанный в «Руководстве пользователя», если продавец при продаже или в рекламе предоставил расширенную гарантию.В данном случае для предоставления расширенной гарантии следует обратится к Продавцу напрямую.
+                                p Обслуживание изделий в период официальной гарантии производителя осуществляется в авторизованных сервисных центрах, адреса которых указаны на сайте: www.rusonar.ru/service/centers/.
+
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-faq-4]") Возврат товара надлежащего качества
+                            span.faq__control
+                        .faq__content(data-repair-faq-4 data-grid)
+                            h4(role="heading") Вы можете отказаться от товара купленного дистанционно, если сохранены:
+                            p - его товарный вид,
+                            p - потребительские свойства,
+                            p - документ, подтверждающий факт и условия покупки указанного товара.
+                            p При соблюдении указанных условий вы вправе отказаться от товара в течение 7 дней с даты получения, обратившись по адресу 124365, г. Москва, Зеленоград, Ул. Заводская, д.31, стр.1, оф. 8
+                            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;source=constructor" width="100%" height="300" frameborder="0")
+
+        //Сервисные центры
+        section.section
+            .container
+                h2.section__h2.heading-font(role="heading") Сервисные центры
+
+                .service-centers__map
+                    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abd3bd565debca01bd5f7bc55e2b0da05c23aff499d8e4ee7f790e792f0a735d7&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false")
+
+                .service-centers__notes
+                    .service-centers__note
+                        .service-centers__warning
+                            .service-centers__circle
+                                +svg_sprite('info', 9, 25)
+                        | Доставка изделия в сервисный центр осуществляется за счет Клиента.
+                    .service-centers__note
+                        .service-centers__warning
+                            .service-centers__circle
+                                +svg_sprite('info', 9, 25)
+                        | Запасные части и комплектующие для эхолотов "Практик" отдельно НЕ ПРОДАЮТСЯ (для самостоятельного ремонта)
+                    .service-centers__note
+                        .service-centers__warning
+                            .service-centers__circle
+                                +svg_sprite('info', 9, 25)
+                        | Ремонт эхолотов Практик 4-й серии (ЭР-4Pro, ЭР-4Pro2) больше не производится! Возможен только обмен по акции "Практичный обмен-2".
+
+                h3.service-centers__h3.heading-font(role="heading") Сервисные центры:
+
+                .repair-faq__items
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-1]") г. Москва
+                            span.faq__control
+                        .faq__content(data-repair-city-1 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-2]") г. Иваново
+                            span.faq__control
+                        .faq__content(data-repair-city-2 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-3]") г. Казань
+                            span.faq__control
+                        .faq__content(data-repair-city-3 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-4]") г. Нижний Новгород
+                            span.faq__control
+                        .faq__content(data-repair-city-4 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-5]") г. Самара
+                            span.faq__control
+                        .faq__content(data-repair-city-5 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-6]") г. Тверь
+                            span.faq__control
+                        .faq__content(data-repair-city-6 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-7]") республика Беларусь
+                            span.faq__control
+                        .faq__content(data-repair-city-7 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-8]") г. Екатеринбург
+                            span.faq__control
+                        .faq__content(data-repair-city-8 data-grid)
+                            p Содержимое этой вкладки находится в разработке
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-repair-city-9]") г. Пермь
+                            span.faq__control
+                        .faq__content(data-repair-city-9 data-grid)
+                            p Содержимое этой вкладки находится в разработке

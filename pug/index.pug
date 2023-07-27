@@ -1,0 +1,56 @@
+doctype html
+block html
+html(lang="ru")
+    head
+        block seo
+            - var seo = {title: 'Список страниц', description: '', keywords: ''}
+        include includes/_meta
+
+    body
+        div(style="width: 100vw; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 0;")
+            ol(style="font-size: 1rem;")
+                li
+                    a(href="home.html" target="_blank" style="color: #000; text-decoration: none;") Главная страница
+                li
+                    a(href="compare.html" target="_blank" style="color: #000; text-decoration: none;") Сравнение товаров
+                li
+                    a(href="about.html" target="_blank" style="color: #000; text-decoration: none;") О компании
+                li
+                    a(href="for-users.html" target="_blank" style="color: #000; text-decoration: none;") Информационная поддержка пользователя
+                li
+                    a(href="delivery.html" target="_blank" style="color: #000; text-decoration: none;") Доставка и оплата
+                li
+                    a(href="about-echo-sounder.html" target="_blank" style="color: #000; text-decoration: none;") Об эхолотах
+                li
+                    a(href="repair.html" target="_blank" style="color: #000; text-decoration: none;") Гарантийный ремонт и обслуживание
+                li
+                    a(href="for-partners.html" target="_blank" style="color: #000; text-decoration: none;") Информация для партнеров
+                li
+                    a(href="blog.html" target="_blank" style="color: #000; text-decoration: none;") Новости
+                li
+                    a(href="auth.html" target="_blank" style="color: #000; text-decoration: none;") Личный кабинет - вход
+                li
+                    a(href="profile.html" target="_blank" style="color: #000; text-decoration: none;") Личный кабинет - профиль
+                li
+                    a(href="profile-edit.html" target="_blank" style="color: #000; text-decoration: none;") Личный кабинет - редактирование профиля
+                li
+                    a(href="orders.html" target="_blank" style="color: #000; text-decoration: none;") Личный кабинет - мои заказы
+                li
+                    a(href="status-service.html" target="_blank" style="color: #000; text-decoration: none;") Личный кабинет - статус сервиса
+                li
+                    a(href="catalog.html" target="_blank" style="color: #000; text-decoration: none;") Каталог
+                li
+                    a(href="catalog-light.html" target="_blank" style="color: #000; text-decoration: none;") Каталог без фильтров
+                li
+                    a(href="product.html" target="_blank" style="color: #000; text-decoration: none;") Товар
+                li
+                    a(href="cart.html" target="_blank" style="color: #000; text-decoration: none;") Корзина
+                li
+                    a(href="get-order.html" target="_blank" style="color: #000; text-decoration: none;") Оформление заказа
+                li
+                    a(href="404.html" target="_blank" style="color: #000; text-decoration: none;") Страница не найдена
+                li
+                    a(href="privacy-policy.html" target="_blank" style="color: #000; text-decoration: none;") Политика конфиденциальности
+                li
+                    a(href="quiz.html" target="_blank" style="color: #000; text-decoration: none;") Квиз
+

@@ -1,0 +1,65 @@
+extends base
+
+block seo
+    - var seo = {title: 'Доставка и оплата', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Интро
+        section
+            .container
+                .delivery-intro
+                    .delivery-intro__content
+                        h1.delivery-intro__title.heading-font(role="heading") Доставка <br>и оплата
+                        p.delivery-intro__note Самовывоз и доставка во всех крупных городах
+                    img.delivery-intro__bg(src="img/delivery-intro.svg" alt="" width="1373" height="576")
+
+        //Условия доставки
+        mixin delivery_types_note(text)
+            .delivery-types__note
+                .delivery-types__note-icon
+                    +svg_sprite('info', 9, 25)
+                p.delivery-types__note-text=text
+        section.section
+            .container
+                h2.section__h2.delivery-types__title.heading-font(role="heading") Покупатели могут сами выбирать условия доставки заказанного товара:
+                .delivery-types
+                    .delivery-types__col
+                        .faq__item
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-delivery-1]")
+                                span.delivery-types__btn
+                                    span.delivery-types__picture
+                                        img.lazy(data-src="img/delivery-type-1.svg" alt="" width="82" height="55")
+                                    | Самовывоз
+                                span.faq__control
+                            .faq__content(data-delivery-1 data-grid)
+                                p Содержимое этой вкладки находится в разработке
+
+                        .faq__item
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-delivery-2]")
+                                span.delivery-types__btn
+                                    span.delivery-types__picture
+                                        img.lazy(data-src="img/delivery-type-2.svg" alt="" width="105" height="50")
+                                    | Почта
+                                span.faq__control
+                            .faq__content(data-delivery-2 data-grid)
+                                p Содержимое этой вкладки находится в разработке
+
+                        .faq__item
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-delivery-3]")
+                                span.delivery-types__btn
+                                    span.delivery-types__picture
+                                        img.lazy(data-src="img/delivery-type-3.svg" alt="" width="73" height="21")
+                                    | СДЭК
+                                span.faq__control
+                            .faq__content(data-delivery-3 data-grid)
+                                p Содержимое этой вкладки находится в разработке
+
+                    .delivery-types__col
+                        +delivery_types_note('Купить эхолот «Практик» с доставкой вы можете на нашем сайте или на OZON.RU')
+                        +delivery_types_note('Оплата доставки Почтой России и транспортными компаниями осуществляется по тарифам этих служб.')
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps
+

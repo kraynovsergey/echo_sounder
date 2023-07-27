@@ -1,0 +1,257 @@
+.cart {
+	display: grid;
+	grid-template-columns: .7fr .5fr;
+	grid-gap: 20px;
+	align-items: start;
+
+	@media (max-width: 991px) {
+		grid-template-columns: 1fr;
+		grid-gap: 30px;
+	}
+
+	@media (max-width: 575px) {
+		grid-gap: 20px;
+	}
+
+	&__items {
+		display: grid;
+		grid-gap: 15px;
+
+		@media (max-width: 991px) {
+			grid-gap: 10px;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: .2fr .8fr;
+		grid-gap: 40px;
+		padding: 20px;
+		border: 1px solid $color_blue_bg;
+		border-radius: 10px;
+
+		@media (max-width: 1440px) {
+			padding: 15px;
+			grid-gap: 20px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 10px;
+			grid-gap: 10px;
+		}
+
+		@media (max-width: 575px) {
+			grid-template-columns: .3fr .7fr;
+		}
+	}
+
+	&__picture {
+		display: flex;
+
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			background: $color_blue_light;
+			border-radius: 10px;
+			overflow: hidden;
+
+			& img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-gap: 20px;
+	}
+
+	&__title {
+		margin: 0;
+		padding: 0;
+		font-size: 1.2rem;
+
+		@media (max-width: 1440px) {
+			font-size: .87rem;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1rem;
+		}
+
+		& a {
+			color: $color_primary;
+			text-decoration: none;
+
+			&:hover {
+				color: $color_blue;
+			}
+		}
+	}
+
+	&__price {
+		font-size: 1.2rem;
+
+		@media (max-width: 1440px) {
+			font-size: .87rem;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1rem;
+		}
+	}
+
+	&__controls {
+		grid-column: span 2;
+		display: flex;
+		align-items: center;
+	}
+
+	&__remove {
+		margin-left: 30px;
+		color: $color_primary_light;
+
+		@media (max-width: 1440px) {
+			font-size: .77rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: .87rem;
+			margin-left: 20px;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1rem;
+		}
+
+		&:hover {
+			color: $color_blue;
+		}
+	}
+
+	&__details {
+		display: grid;
+		grid-gap: 20px;
+		background: $color_blue_light;
+		border-radius: 10px;
+		padding: 25px 20px;
+		color: $color_primary_light;
+
+		@media (max-width: 1440px) {
+			padding: 25px 15px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 25px 10px;
+		}
+
+		&-title {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+
+			@media (max-width: 1440px) {
+				font-size: 1.2rem;
+			}
+
+			@media (max-width: 575px) {
+				font-size: 1rem;
+			}
+		}
+
+		&-products {
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			justify-content: space-between;
+			align-items: end;
+			position: relative;
+			grid-gap: 20px;
+
+			@media (max-width: 1440px) and (min-width: 576px) {
+				font-size: .87rem;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+				right: 0;
+				height: 1px;
+				border-bottom: 1px dotted #C8CBCF;
+				z-index: 1;
+			}
+
+			& span {
+				background: $color_blue_light;
+				position: relative;
+				z-index: 2;
+
+				&:first-child {
+					padding-right: 5px;
+				}
+
+				&:last-child {
+					padding-left: 5px;
+				}
+			}
+		}
+
+		&-itogo {
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			justify-content: space-between;
+			align-items: end;
+			position: relative;
+			grid-gap: 20px;
+
+			@media (max-width: 1440px) and (min-width: 576px) {
+				font-size: .87rem;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 8px;
+				left: 0;
+				right: 0;
+				height: 1px;
+				border-bottom: 1px dotted #C8CBCF;
+				z-index: 1;
+			}
+
+			&-title {
+				padding-right: 5px;
+				background: $color_blue_light;
+				position: relative;
+				z-index: 2;
+			}
+
+			&-prices {
+				display: grid;
+				justify-items: end;
+				background: $color_blue_light;
+				padding-left: 5px;
+				position: relative;
+				z-index: 2;
+			}
+
+			&-oldprice {
+				color: #C0C0C0;
+				text-decoration: line-through;
+				font-size: .77rem;
+
+				@media (max-width: 1440px) and (min-width: 576px) {
+					font-size: .66rem;
+				}
+			}
+		}
+	}
+}

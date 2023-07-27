@@ -1,0 +1,414 @@
+extends base
+
+block seo
+    - var seo = {title: 'Сравнение товаров', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                h1.h1.compare__h1.heading-font(role="heading") Сравнение товаров
+
+                .compare__tabs
+                    button.compare__tab.heading-font._active(type="button" data-compare-tab="1" role="button") Эхолоты <span>(4)</span>
+                    button.compare__tab.heading-font(type="button" data-compare-tab="2" role="button") Насосы <span>(2)</span>
+
+                .compare__content._active(data-compare-content="1")
+                    .compare__header
+                        .compare__checkbox
+                            input(type="checkbox" name="compare" id="compare-checkbox")
+                            label(for="compare-checkbox")
+                                span
+                                    +svg_sprite('checkbox', 23, 17)
+                                | Показывать только различия
+
+                        .compare__swiper
+                            .swiper(data-compare-swiper="1")
+                                .swiper-wrapper
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+
+                        .compare__controls.carousel__controls
+                            button.carousel__navigation._prev._blue(type="button" role="button" data-compare-prev="1")
+                                +svg_sprite('carousel-nav', 23, 15)
+                            button.carousel__navigation._next._blue(type="button" role="button" data-compare-next="1")
+                                +svg_sprite('carousel-nav', 23, 15)
+
+                    .compare__block
+                        button.compare__title.heading-font._active(type="button" role="button" data-compare-block="1-1") Характеристики
+                            +svg_sprite('triangle', 10, 8)
+
+                        .compare__block-content._active(data-compare-block-content="1-1")
+                            .compare__block-row
+                                .compare__block-title Модель
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Эхолот ПРАКТИК 6S + 2 подарка
+                                            .compare__slide.compare__block-slide.swiper-slide Эхолот ПРАКТИК 6S + 2 подарка
+                                            .compare__slide.compare__block-slide.swiper-slide Эхолот ПРАКТИК 6S + 2 подарка
+                                            .compare__slide.compare__block-slide.swiper-slide Эхолот ПРАКТИК 6S + 2 подарка
+                                            .compare__slide.compare__block-slide.swiper-slide Эхолот ПРАКТИК 6S + 2 подарка
+
+                            .compare__block-row
+                                .compare__block-title Применение
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Идеально зимой в лунке
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с берега
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с лодки
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с берега
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с лодки
+
+                            .compare__block-row
+                                .compare__block-title Проводной/беспроводной
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Проводной
+                                            .compare__slide.compare__block-slide.swiper-slide Самостоятельный
+                                            .compare__slide.compare__block-slide.swiper-slide Беспроводной
+                                            .compare__slide.compare__block-slide.swiper-slide Самостоятельный
+                                            .compare__slide.compare__block-slide.swiper-slide Беспроводной
+
+                            .compare__block-row
+                                .compare__block-title Приемник информации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+
+                            .compare__block-row
+                                .compare__block-title Тип соединения блока и датчика
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+
+                            .compare__block-row
+                                .compare__block-title Количество лучей
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (35°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (35°)
+
+                            .compare__block-row
+                                .compare__block-title Температура эксплуатации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+
+                            .compare__block-row
+                                .compare__block-title Диапазон глубин эхолокации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+
+                            .compare__block-row
+                                .compare__block-title Вес
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 100 г
+                                            .compare__slide.compare__block-slide.swiper-slide 225 г
+                                            .compare__slide.compare__block-slide.swiper-slide 303 г
+                                            .compare__slide.compare__block-slide.swiper-slide 225 г
+                                            .compare__slide.compare__block-slide.swiper-slide 303 г
+
+                            .compare__block-row
+                                .compare__block-title Электрическое питание
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 1 батарейка ААА до 120 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+
+                            .compare__block-row
+                                .compare__block-title Тип экрана
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+
+                            .compare__block-row
+                                .compare__block-title GPS модуль
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+
+                    .compare__block
+                        button.compare__title.heading-font._active(type="button" role="button" data-compare-block="1-2") Преимущества покупки
+                            +svg_sprite('triangle', 10, 8)
+
+                        .compare__block-content._active(data-compare-block-content="1-2")
+                            .compare__block-row
+                                .compare__block-title Гарантия
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+
+                            .compare__block-row
+                                .compare__block-title Акции
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+
+                            .compare__block-row
+                                .compare__block-title Спецпредложение
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="1")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 2 подарка: поплавок и бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+
+                .compare__content(data-compare-content="2")
+                    .compare__header
+                        .compare__checkbox
+                            input(type="checkbox" name="compare" id="compare-checkbox2")
+                            label(for="compare-checkbox2")
+                                span
+                                    +svg_sprite('checkbox', 23, 17)
+                                | Показывать только различия
+
+                        .compare__swiper
+                            .swiper(data-compare-swiper="2")
+                                .swiper-wrapper
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Насос ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Насос ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Насос ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Насос ПРАКТИК 6S + 2 подарка')
+                                    .compare__slide.swiper-slide
+                                        +compare_product('product', 'Насос ПРАКТИК 6S + 2 подарка')
+
+                        .compare__controls.carousel__controls
+                            button.carousel__navigation._prev._blue(type="button" role="button" data-compare-prev="2")
+                                +svg_sprite('carousel-nav', 23, 15)
+                            button.carousel__navigation._next._blue(type="button" role="button" data-compare-next="2")
+                                +svg_sprite('carousel-nav', 23, 15)
+
+                    .compare__block
+                        button.compare__title.heading-font._active(type="button" role="button" data-compare-block="2-1") Характеристики
+                            +svg_sprite('triangle', 10, 8)
+
+                        .compare__block-content._active(data-compare-block-content="2-1")
+                            .compare__block-row
+                                .compare__block-title Применение
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Идеально зимой в лунке
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с берега
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с лодки
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с берега
+                                            .compare__slide.compare__block-slide.swiper-slide Летом с лодки
+
+                            .compare__block-row
+                                .compare__block-title Проводной/беспроводной
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Проводной
+                                            .compare__slide.compare__block-slide.swiper-slide Самостоятельный
+                                            .compare__slide.compare__block-slide.swiper-slide Беспроводной
+                                            .compare__slide.compare__block-slide.swiper-slide Самостоятельный
+                                            .compare__slide.compare__block-slide.swiper-slide Беспроводной
+
+                            .compare__block-row
+                                .compare__block-title Приемник информации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+                                            .compare__slide.compare__block-slide.swiper-slide Блок Практик
+
+                            .compare__block-row
+                                .compare__block-title Тип соединения блока и датчика
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+                                            .compare__slide.compare__block-slide.swiper-slide Разъемное (кабель)
+
+                            .compare__block-row
+                                .compare__block-title Количество лучей
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (35°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (40°)
+                                            .compare__slide.compare__block-slide.swiper-slide 1 луч (35°)
+
+                            .compare__block-row
+                                .compare__block-title Температура эксплуатации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+                                            .compare__slide.compare__block-slide.swiper-slide -20° ... +60°С
+
+                            .compare__block-row
+                                .compare__block-title Диапазон глубин эхолокации
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+                                            .compare__slide.compare__block-slide.swiper-slide От 0.5 до 30м
+
+                            .compare__block-row
+                                .compare__block-title Вес
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 100 г
+                                            .compare__slide.compare__block-slide.swiper-slide 225 г
+                                            .compare__slide.compare__block-slide.swiper-slide 303 г
+                                            .compare__slide.compare__block-slide.swiper-slide 225 г
+                                            .compare__slide.compare__block-slide.swiper-slide 303 г
+
+                            .compare__block-row
+                                .compare__block-title Электрическое питание
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 1 батарейка ААА до 120 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+                                            .compare__slide.compare__block-slide.swiper-slide Встроенный аккумулятор, до 7 ч
+
+                            .compare__block-row
+                                .compare__block-title Тип экрана
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+                                            .compare__slide.compare__block-slide.swiper-slide Цветной/Черно-белый
+
+                            .compare__block-row
+                                .compare__block-title GPS модуль
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Нет
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+                                            .compare__slide.compare__block-slide.swiper-slide Опционально
+
+                    .compare__block
+                        button.compare__title.heading-font._active(type="button" role="button" data-compare-block="2-2") Преимущества покупки
+                            +svg_sprite('triangle', 10, 8)
+
+                        .compare__block-content._active(data-compare-block-content="2-2")
+                            .compare__block-row
+                                .compare__block-title Гарантия
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+                                            .compare__slide.compare__block-slide.swiper-slide 12 месяцев
+
+                            .compare__block-row
+                                .compare__block-title Акции
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+                                            .compare__slide.compare__block-slide.swiper-slide Акции
+
+                            .compare__block-row
+                                .compare__block-title Спецпредложение
+                                .compare__block-swiper
+                                    .swiper(data-compare-block-swiper="2")
+                                        .swiper-wrapper
+                                            .compare__slide.compare__block-slide.swiper-slide 2 подарка: поплавок и бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+                                            .compare__slide.compare__block-slide.swiper-slide 3 подарка: Унибокс + поплавок + бампер
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

@@ -1,0 +1,29 @@
+extends base
+
+block seo
+    - var seo = {title: 'Информация для партнеров', description: '', keywords: ''}
+
+block main
+    main.main._pt0(role="main")
+        //Интро
+        section.section._pt0
+            .container
+                .for-partners-intro
+                    h1.for-partners-intro__title.heading-font(role="heading") Информация для партнеров
+                    .for-partners-intro__content
+                        .for-partners-intro__box
+                            p.for-partners-intro__text Приглашаем к сотрудничеству торговые организации, Индивидуальных предпринимателей, фирмы оптовой торговли
+                            a.for-partners-intro__link.btn._middle(href="#" role="link") Стать партнером
+                    img.for-partners-intro__img(src="img/for-partners-intro-bg.svg" alt="" width="1820" height="592")
+
+        //Преимущества
+        - var pluses_classnames = '_blue'
+        - var pluses_title = 'Почему нам доверяют?'
+        include includes/_pluses
+
+        //Стать партнером
+        include includes/_get-partner
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

@@ -1,0 +1,67 @@
+.guarantee {
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+		align-items: start;
+
+		@media (max-width: 991px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-gap: 20px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list-item {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		align-items: start;
+		grid-gap: 20px;
+
+		@media (max-width: 575px) {
+			grid-gap: 10px;
+		}
+	}
+
+	&__list-circle {
+		width: 46px;
+		height: 46px;
+		background: $color_blue_list;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2rem;
+		color: $color_blue;
+
+		@media (max-width: 575px) {
+			width: 30px;
+			height: 30px;
+			font-size: 1rem;
+		}
+
+		& svg {
+			@media (max-width: 575px) {
+				height: 70%;
+				width: auto;
+			}
+		}
+	}
+
+	&__link {
+		margin-left: 66px;
+		max-width: 100%;
+		white-space: normal;
+		text-align: center;
+
+		@media (max-width: 575px) {
+			margin-left: 0;
+		}
+	}
+}

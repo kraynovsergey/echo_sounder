@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Об эхолотах</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header" role="banner" data-header>
+      <div class="container header__container"><a class="header__logo" href="#" role="link">
+              <picture class="header__logo-logo">
+                <source type="image/webp" srcset="img/webp/logo@2x.webp 2x, img/webp/logo.webp 1x"><img src="" srcset="img/logo@2x.png 2x, img/logo.png 1x" alt="" width="72" height="52" loading="lazy">
+              </picture>
+              <picture class="header__logo-flag">
+                <source type="image/webp" srcset="img/webp/flag@2x.webp 2x, img/webp/flag.webp 1x"><img src="" srcset="img/flag@2x.png 2x, img/flag.png 1x" alt="" width="65" height="65" loading="lazy">
+              </picture></a><a class="header__yandex" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <form class="header__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form>
+        <address class="header__contacts"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
+                <svg width="17" height="20">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Посмотреть список избранного">
+                <svg width="20" height="19">
+                  <use xlink:href="img/sprite.svg#favourite"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Перейти к сравнению товаров">
+                <svg width="25" height="20">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg></a><a class="header__control header__cart" href="#" role="link" aria-label="В корзину">
+                <svg width="22" height="20">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg><span class="header__cart-count">1</span></a></div>
+        <div class="header__user">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+        <button class="header__burger" type="button" role="button" data-toggle="[data-nav]"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <nav class="nav no-scroll" role="navigation" data-nav>
+      <div class="container nav__mobile-container">
+        <address class="header__contacts _tablet"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback-mobile]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback-mobile>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <form class="nav__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form><a class="header__yandex _tablet" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <div class="header__user _tablet">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city-mobile]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city-mobile>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+      </div>
+      <div class="container nav__container">
+        <div class="nav__catalog">
+          <button class="nav__catalog-btn heading-font" type="button" role="button" data-toggle="[data-nav-catalog-list]">В магазин
+                <svg width="21" height="18">
+                  <use xlink:href="img/sprite.svg#triangle-catalog"></use>
+                </svg>
+          </button>
+          <ul class="nav__catalog-list" role="list" data-nav-catalog-list>
+            <li class="nav__catalog-listitem" role="listitem" data-nav-item><a class="nav__catalog-listlink heading-font" href="#" role="link" data-nav-link>Эхолоты
+                    <svg width="10" height="8">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg></a>
+              <ul class="nav__sublist" role="list" data-nav-sublist>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для зимней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Беспроводные</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для летней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с берега</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с лодки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Недорогие эхолоты</a></li>
+              </ul>
+            </li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Аксессуары для эхолотов</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Подводные камеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Глубиномеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Насос "Бриз"</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Фонари для рыбалки</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Электромоторы</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Товары для туризма</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Мерч</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Уцененные товары</a></li>
+          </ul>
+        </div>
+        <ul class="nav__list" role="list">
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>О нас
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Общая информация</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Почему нам доверяют?</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">История компании</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Отзывы</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сертификаты</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Подбор эхолота</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Как это работает
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Информационная поддержка пользователя</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Частые вопросы</a></li>
+              <li class="nav__sublistitem" role="listitem" data-nav-item><a class="nav__sublistlink" href="#" role="link" data-nav-link>Блог
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg></a>
+                <ul class="nav__sublist" role="list" data-nav-sublist>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Новости</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Статьи</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Видео</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Акции</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Ремонт
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Как отправить прибор в сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Платный ремонт</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервисные центры</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Оплата и доставка</a></li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main" role="main">
+      <!--Демонстрация работы-->
+      <section>
+        <div class="container demonstration__container">
+          <div class="demonstration__content"><img class="demonstration__waves" src="img/demonstration-waves.svg" alt="" width="900" height="284">
+            <h1 class="demonstration__title heading-font" role="heading">Об эхолотах</h1>
+            <ol class="demonstration__list" role="list">
+              <li role="listitem">Выберите модель эхолота</li>
+              <li role="listitem">Опустите его в воду</li>
+              <li role="listitem">Наблюдайте за информацией на экране эхолота</li>
+            </ol><a class="demonstration__help btn _middle _border" href="#" role="link">Помощь в подборе</a>
+          </div>
+          <div class="demonstration__echo-sounders" data-demonstration-sounders>
+            <div class="demonstration__swiper">
+              <div class="swiper" data-demonstration-swiper>
+                <div class="swiper-wrapper">
+                  <div class="demonstration__slide swiper-slide" data-title="Практик 8" data-item="0">
+                    <div class="demonstration__echo-sounders-item">
+                          <picture class="demonstration__echo-sounders-picture">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder@2x.webp 2x, img/tmp/webp/echo-sounder.webp 1x"><img src="" srcset="img/tmp/echo-sounder@2x.png 2x, img/tmp/echo-sounder.png 1x" alt="" width="219" height="397">
+                          </picture>
+                          <picture class="demonstration__echo-sounders-screen">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder-screen@2x.webp 2x, img/tmp/webp/echo-sounder-screen.webp 1x"><img src="" srcset="img/tmp/echo-sounder-screen@2x.jpg 2x, img/tmp/echo-sounder-screen.jpg 1x" alt="" width="99" height="160">
+                          </picture>
+                    </div>
+                  </div>
+                  <div class="demonstration__slide swiper-slide" data-title="Практик 9" data-item="1">
+                    <div class="demonstration__echo-sounders-item">
+                          <picture class="demonstration__echo-sounders-picture">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder@2x.webp 2x, img/tmp/webp/echo-sounder.webp 1x"><img src="" srcset="img/tmp/echo-sounder@2x.png 2x, img/tmp/echo-sounder.png 1x" alt="" width="219" height="397">
+                          </picture>
+                          <picture class="demonstration__echo-sounders-screen">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder-screen@2x.webp 2x, img/tmp/webp/echo-sounder-screen.webp 1x"><img src="" srcset="img/tmp/echo-sounder-screen@2x.jpg 2x, img/tmp/echo-sounder-screen.jpg 1x" alt="" width="99" height="160">
+                          </picture>
+                    </div>
+                  </div>
+                  <div class="demonstration__slide swiper-slide" data-title="Практик 10" data-item="2">
+                    <div class="demonstration__echo-sounders-item">
+                          <picture class="demonstration__echo-sounders-picture">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder@2x.webp 2x, img/tmp/webp/echo-sounder.webp 1x"><img src="" srcset="img/tmp/echo-sounder@2x.png 2x, img/tmp/echo-sounder.png 1x" alt="" width="219" height="397">
+                          </picture>
+                          <picture class="demonstration__echo-sounders-screen">
+                            <source type="image/webp" srcset="img/tmp/webp/echo-sounder-screen@2x.webp 2x, img/tmp/webp/echo-sounder-screen.webp 1x"><img src="" srcset="img/tmp/echo-sounder-screen@2x.jpg 2x, img/tmp/echo-sounder-screen.jpg 1x" alt="" width="99" height="160">
+                          </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="demonstration__echo-sounders-controls">
+              <button class="carousel__navigation demonstration__echo-sounders-control _prev _blue" type="button" role="button" data-demostration-prev>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+              <div class="demonstration__echo-sounders-title heading-font" data-demonstration-title></div>
+              <button class="carousel__navigation demonstration__echo-sounders-control _next _blue" type="button" role="button" data-demostration-next>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="demonstration__nature">
+                <picture class="demonstration__nature-sensor">
+                  <source type="image/webp" srcset="img/webp/echo-sounder-sensor@2x.webp 2x, img/webp/echo-sounder-sensor.webp 1x"><img src="" srcset="img/echo-sounder-sensor@2x.png 2x, img/echo-sounder-sensor.png 1x" alt="" width="37" height="234" loading="lazy">
+                </picture>
+            <div class="demonstration__nature-controls">
+              <button class="demonstration__nature-btn heading-font" type="button" role="button" data-demonstration-play>Погрузить</button>
+              <div class="demonstration__nature-season">
+                <input type="checkbox" name="season" id="demonstration-season" data-demonstration-season>
+                <label for="demonstration-season"><span>
+                        <svg width="35" height="35">
+                          <use xlink:href="img/sprite.svg#season-1"></use>
+                        </svg></span><span>
+                        <svg width="31" height="34">
+                          <use xlink:href="img/sprite.svg#season-2"></use>
+                        </svg></span></label>
+              </div>
+            </div>
+            <div class="demonstration__nature-pictures _active" data-demonstration-pictures>
+                  <picture class="demonstration__nature-picture _stop _active">
+                    <source type="image/webp" srcset="img/webp/echo-sounder-summer@2x.webp 2x, img/webp/echo-sounder-summer.webp 1x"><img src="" srcset="img/echo-sounder-summer@2x.jpg 2x, img/echo-sounder-summer.jpg 1x" alt="" width="440" height="516">
+                  </picture>
+                  <picture class="demonstration__nature-picture _play ">
+                    <source type="image/webp" srcset="img/webp/echo-sounder-summer-active@2x.webp 2x, img/webp/echo-sounder-summer-active.webp 1x"><img src="" srcset="img/echo-sounder-summer-active@2x.jpg 2x, img/echo-sounder-summer-active.jpg 1x" alt="" width="440" height="516">
+                  </picture>
+            </div>
+            <div class="demonstration__nature-pictures" data-demonstration-pictures>
+                  <picture class="demonstration__nature-picture _stop _active">
+                    <source type="image/webp" srcset="img/webp/echo-sounder-winter@2x.webp 2x, img/webp/echo-sounder-winter.webp 1x"><img src="" srcset="img/echo-sounder-winter@2x.jpg 2x, img/echo-sounder-winter.jpg 1x" alt="" width="440" height="516">
+                  </picture>
+                  <picture class="demonstration__nature-picture _play">
+                    <source type="image/webp" srcset="img/webp/echo-sounder-winter-active@2x.webp 2x, img/webp/echo-sounder-winter-active.webp 1x"><img src="" srcset="img/echo-sounder-winter-active@2x.jpg 2x, img/echo-sounder-winter-active.jpg 1x" alt="" width="440" height="516">
+                  </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Вопрос-ответ-->
+      <section class="section">
+        <div class="container demonstration__faq">
+          <div class="faq__item">
+            <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-about-echo-sounders-1]">Зачем нужен<span class="faq__control"></span></button>
+            <div class="faq__content" data-about-echo-sounders-1 data-grid>
+              <p>Содержимое этой вкладки находится в разработке</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-about-echo-sounders-2]">Принцип действия<span class="faq__control"></span></button>
+            <div class="faq__content" data-about-echo-sounders-2 data-grid>
+              <p>Содержимое этой вкладки находится в разработке</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Продвинутые технологии-->
+      <section class="section _blue">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__h2 section__header-h2 heading-font technology__h2" role="heading">Почему эхолоты практик?</h2>
+            <div class="section__header-controls carousel__controls">
+              <button class="carousel__navigation _prev _blue" type="button" role="button" data-technology-prev>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+              <button class="carousel__navigation _next _blue" type="button" role="button" data-technology-next>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="technology__grid">
+                <picture class="technology__picture">
+                  <source type="image/webp" data-srcset="img/tmp/webp/technology@2x.webp 2x, img/tmp/webp/technology.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/technology@2x.jpg 2x, img/tmp/technology.jpg 1x" srcset="" alt="" width="569" height="541">
+                </picture>
+            <div class="technology__swiper-wrapper">
+              <div class="technology__swiper swiper" data-auto-width-swiper data-prev="[data-technology-prev]" data-next="[data-technology-next]">
+                <div class="swiper-wrapper">
+                  <div class="technology__slide swiper-slide">
+                          <article class="technology__item" role="article">
+                            <h3 class="technology__title heading-font" role="heading">Продуманная функциональность</h3><img class="technology__item-picture" src="img/tmp/technology-1.svg" loading="lazy" alt="" width="320" height="448">
+                          </article>
+                  </div>
+                  <div class="technology__slide swiper-slide">
+                          <article class="technology__item" role="article">
+                            <h3 class="technology__title heading-font" role="heading">Длительный срок службы</h3><img class="technology__item-picture" src="img/tmp/technology-2.svg" loading="lazy" alt="" width="320" height="448">
+                          </article>
+                  </div>
+                  <div class="technology__slide swiper-slide">
+                          <article class="technology__item" role="article">
+                            <h3 class="technology__title heading-font" role="heading">Чувствительность и точность</h3><img class="technology__item-picture" src="img/tmp/technology-3.svg" loading="lazy" alt="" width="320" height="448">
+                          </article>
+                  </div>
+                  <div class="technology__slide swiper-slide">
+                          <article class="technology__item" role="article">
+                            <h3 class="technology__title heading-font" role="heading">Низкое энергопотребление</h3><img class="technology__item-picture" src="img/tmp/technology-4.svg" loading="lazy" alt="" width="320" height="448">
+                          </article>
+                  </div>
+                  <div class="technology__slide swiper-slide">
+                          <article class="technology__item" role="article">
+                            <h3 class="technology__title heading-font" role="heading">Компактный размер</h3><img class="technology__item-picture" src="img/tmp/technology-5.svg" loading="lazy" alt="" width="320" height="448">
+                          </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Карты-->
+      <section class="section footer-maps _pt0 _pb0">
+        <button class="footer-maps__button heading-font _active" type="button" role="button" data-footer-map-tab="1">Наш офис</button>
+        <button class="footer-maps__button heading-font" type="button" role="button" data-footer-map-tab="2">Сервисные центры</button>
+        <div class="footer-maps__items">
+          <div class="footer-maps__item _active" data-footer-map="1">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+          </div>
+          <div class="footer-maps__item" data-footer-map="2">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad69a8fdb37f9fcbae587aa7d7289d157443c3bcd4cd48b69300cc41cba7f514e&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__container">
+        <div class="footer__contacts"><a class="footer__logo" href="#" role="link">
+                <picture>
+                  <source type="image/webp" data-srcset="img/webp/logo-footer@2x.webp 2x, img/webp/logo-footer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/logo-footer@2x.png 2x, img/logo-footer.png 1x" srcset="" alt="" width="101" height="73">
+                </picture></a>
+          <h2 class="footer__h2 heading-font" role="navigation">Контакты <br>и график работы</h2>
+          <div class="footer__items">
+            <address class="footer__item">
+              <p class="footer__item-title">Почта:</p><a class="footer__item-value footer__item-link" href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Сервис и ремонт:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы офиса:</p>
+              <p class="footer__item-value">Пн-Пт: 10:00-17:00</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Заказы и консультации:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Адрес:</p>
+              <p class="footer__item-value">124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы интернет-магазина:</p>
+              <p class="footer__item-value">Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00</p>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h3 class="footer__h3 heading-font" role="heading">Мы в соцсетях:</h3>
+            <div class="footer__icons"><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#youtube-footer"></use>
+                    </svg></a></div>
+          </div>
+        </div>
+        <nav class="footer__nav" role="navigation">
+          <ul class="footer__nav-list" role="list">
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">О нас</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Как это работает</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Контакты</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Подбор эхолота</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Ремонт</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Акции</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Оплата и доставка</a></li>
+          </ul>
+        </nav>
+        <div class="footer__download">
+          <div class="footer__download-content">
+            <h3 class="footer__download-title heading-font" role="heading">Скачивайте наше приложение <span>«Эхолоты практик 7»</span></h3>
+            <div class="footer__download-links"><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a></div>
+          </div>
+              <picture class="footer__download-picture">
+                <source type="image/webp" data-srcset="img/webp/apple-store-screenshot@2x.webp 2x, img/webp/apple-store-screenshot.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store-screenshot@2x.png 2x, img/apple-store-screenshot.png 1x" srcset="" alt="" width="310" height="459">
+              </picture>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+          <div class="footer__bottom-item">
+            <p>ⓒ «Практик», 2023</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__bottom-item">
+            <p>ООО «ПРАКТИК-НЦ»</p>
+            <p>ОГРН 1087746089276</p>
+            <p>ИНН 7735537073</p>
+            <p>КПП 773501001</p>
+          </div>
+          <address class="footer__bottom-item">
+            <p>Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1</p>
+          </address>
+          <div class="footer__bottom-item"><a href="#" role="link">Договор оферты</a><a href="#" role="link">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/lazyload.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/fancybox.umd.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

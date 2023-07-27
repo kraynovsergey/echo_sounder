@@ -1,0 +1,41 @@
+extends base
+
+block seo
+    - var seo = {title: 'Корзина', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                h1.heading-font(role="heading") Корзина <sup>2</sup>
+
+                .cart
+                    mixin cart_item
+                        article.cart__item(role="article")
+                            a.cart__picture(href="#" role="link")
+                                +picture_lazy('', 'tmp/', 'product-cart', 'png', 109, 126)
+                            .cart__content
+                                h3.cart__title.heading-font(role="heading")
+                                    a(href="#" role="link") Эхолот <br>ПРАКТИК 6S
+                                .cart__price.heading-font 12 990 р
+                                .cart__controls
+                                    .product__count.cart__count(data-product-count)
+                                        button.product__count-btn(type="button" role="button" data-product-count-minus) -
+                                        input.product__count-input(type="text" name="count" value="1")
+                                        button.product__count-btn(type="button" role="button" data-product-count-plus) +
+                                    button.cart__remove(type="button" role="button") Удалить
+                    .cart__items
+                        +cart_item
+                        +cart_item
+
+                    .cart__details
+                        .cart__details-title.heading-font Детали заказа
+                        .cart__details-products
+                            span 2 товара
+                            span 17 990 р.
+                        .cart__details-itogo
+                            .cart__details-itogo-title.heading-font Итого:
+                            .cart__details-itogo-prices
+                                .cart__details-itogo-oldprice.heading-font 17 990 р
+                                .cart__details-itogo-price.heading-font 15 000 р
+                        a.cart__btn.btn._middle(href="#" role="link") Перейти к оформлению

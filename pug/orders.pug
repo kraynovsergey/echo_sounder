@@ -1,0 +1,77 @@
+extends base
+
+block seo
+    - var seo = {title: 'Мои заказы', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Редактирование личных данных
+        section.section._ultra-small._blue
+            .container
+                h1.h1.heading-font(role="heading") Личный кабинет
+                .cabinet__grid
+                    include includes/_cabinet-aside
+
+                    .cabinet__content
+                        .cabinet__content-header
+                            h2.cabinet__content-title.heading-font(role="heading") Мои заказы
+                            .orders__filters
+                                fieldset.orders__filter
+                                    input(type="radio" name="orders_status" value="all" id="order-status-1" checked data-blog-filter)
+                                    label(for="order-status-1") Все
+                                fieldset.orders__filter
+                                    input(type="radio" name="orders_status" value="processing" id="order-status-2" data-blog-filter)
+                                    label(for="order-status-2") В обработке
+                                fieldset.orders__filter
+                                    input(type="radio" name="orders_status" value="success" id="order-status-3" data-blog-filter)
+                                    label(for="order-status-3") Выполненные
+                                fieldset.orders__filter
+                                    input(type="radio" name="orders_status" value="cancel" id="order-status-4" data-blog-filter)
+                                    label(for="order-status-4") Отмененные
+
+                        mixin orders_item(status_name, status_icon, status_classname, attr, payment, payment_status)
+                            article.orders__item(role="article" data-blog-item=attr)
+                                h3.orders__title.heading-font(role="heading") Заказ №12345678 от 27.06.23
+                                .orders__status(class=status_classname)=status_name
+                                    +svg_sprite(status_icon, 22, 22)
+                                .orders__info
+                                    .orders__info-item
+                                        .orders__info-title Сумма:
+                                        .orders__info-value 36 000р
+                                    .orders__info-item
+                                        .orders__info-title Оплата:
+                                        .orders__info-value Банковской картой&nbsp;
+                                            span.orders__info-payment(class=payment_status)=payment
+                                    .orders__info-item._products
+                                        .orders__info-title Товары:
+                                        .orders__info-products
+                                            .orders__info-product
+                                                span Эхолот ПРАКТИК 6S
+                                                span 2 шт
+                                                span 12 000р
+                                                span 24 000р
+                                            .orders__info-product
+                                                span Эхолот ПРАКТИК 6S
+                                                span 2 шт
+                                                span 12 000р
+                                                span 24 000р
+
+                                button.orders__btn.btn._border._middle(type="button" role="button") Повторить
+
+                        .orders__items
+                            +orders_item('В обработке', 'clock', '_processing', 'all processing', '(Оплачен)', '_success')
+                            +orders_item('Выполнен', 'check', '_success', 'all success', '(Оплачен)', '_success')
+                            +orders_item('Отменен', 'cross', '_cancel', 'all cancel', '(Не оплачен)', '_cancel')
+
+                        button.orders__more.btn._middle(type="button" role="button") Посмотреть все
+
+        //Электронный гарантийный талон
+        include includes/_get-guarantee
+
+        //Вам может понравится
+        - var like_title = 'Вам может понравиться';
+        include includes/_like
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

@@ -1,0 +1,133 @@
+extends base
+
+block seo
+    - var seo = {title: 'О компании', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Интро
+        section.section._pt0
+            .container
+                .about-intro
+                    h1.about-intro__h1.heading-font(role="heading") О компании
+                    p.about-intro__subtitle.heading-font Есть такая поговорка у рыбаков «Душа поёт, когда клюёт». Наша миссия - сделать так, чтобы душа наших покупателей пела чаще.
+                    .about-intro__items
+                        article.about-intro__item(role="article")
+                            h3.about-intro__item-title.heading-font(role="heading") 20 лет
+                            p.about-intro__item-text Занимаемся разработкой, производством и продажей эхолотов
+
+                        article.about-intro__item(role="article")
+                            h3.about-intro__item-title.heading-font(role="heading") 1 млн$
+                            p.about-intro__item-text Инвестировано в разработку и исследования только <span>за последний год</span>
+
+                        article.about-intro__item(role="article")
+                            h3.about-intro__item-title.heading-font(role="heading") В 2 раза
+                            p.about-intro__item-text Выросли объем производства и продаж <span>за последний год</span>
+
+        //Преимущества
+        mixin why_we_item(icon, title, text)
+            article.why-we__item(role="article")
+                img.why-we__icon.lazy(data-src="img/tmp/" + icon + ".svg" alt="" width="533" height='338')
+                h3.why-we__title.heading-font(role="heading")= title
+                p.why-we__text= text
+
+        section.section._blue
+            .container
+                h2.section__h2.heading-font(role="heading") Почему нам доверяют?
+
+                .why-we__items.no-scroll
+                    +why_we_item('why-we-5', 'Доставка по всей россии', 'Доставим ваш заказ в любой уголок России')
+                    +why_we_item('about-pluses-2', 'Отгрузим прямо с завода', 'Гарантируем отсутствие брака и лучшую цену')
+                    +why_we_item('about-pluses-3', 'Многие разработчики нашей компании - рыбаки', 'Они знают потребности любителей рыбной ловли и особенности рыбалки в условиях средней полосы России.')
+                    +why_we_item('about-pluses-4', 'Мы лично тестируем все наши устройства', 'Выпускаемые образцы проходят испытания на водоемах России, после чего в эхолоты вносятся доработки и улучшения.')
+                    +why_we_item('about-pluses-5', 'Широкий ассортимент', 'Каждый рыболов может выбрать для себя оптимальный вариант модели, исходя из запросов')
+                    +why_we_item('about-pluses-6', 'Отличный сервис', 'Наши технические специалисты с радостью помогут вам настроить прибор')
+
+        //История компании
+        section.section._pb0
+            .container
+                h2.section__h2.heading-font(role="heading") История компании
+                .about-history__container
+                    .about-history__items
+                        article.about-history__item(role="article")
+                            +svg_sprite('clip', 49, 77, 'about-history__icon')
+                            h3.about-history__title.heading-font(role="heading") Как все начиналось
+                            p В <span>2000е</span> годы команда разработчиков создавала приборы для контроля качества сверхчистой воды. В свободное время инженеры часто занимались рыбалкой.
+                            p Опытные рыбаки знают, насколько сильно упрощает рыбалку эхолот. Но на тот момент, можно было купить только эхолоты иностранных производителей, которые работали со сбоями на зимней рыбалке, были громоздкими и неудобными.
+                            p.about-history__note Талантливые разработчики решили создать собственный эхолот, соответствующий пожеланиям отечественных рыбаков. Так родилась компания “Практик”.
+
+                        article.about-history__item(role="article")
+                            +svg_sprite('clip', 49, 77, 'about-history__icon')
+                            h3.about-history__title.heading-font(role="heading") Активное развитие компании
+                            p К <span>2008му</span> году мы выпустили 3 серии моделей эхолотов и продолжали совершенствоваться.
+                            .about-history__directors
+                                h3.about-history__title.about-history__directors-title(role="heading") Учредители компании «Практик-НЦ»
+
+                                figure.about-history__director
+                                    +picture_lazy('about-history__director-picture picture', 'tmp/', 'about-history-1', 'jpg', 300, 320)
+                                    figcaption.about-history__director-title Василий Мельник
+
+                                figure.about-history__director
+                                    +picture_lazy('about-history__director-picture picture', 'tmp/', 'about-history-2', 'jpg', 300, 320)
+                                    figcaption.about-history__director-title Сивоволов Владимир
+
+                        article.about-history__item(role="article")
+                            +svg_sprite('clip', 49, 77, 'about-history__icon')
+                            h3.about-history__title.heading-font(role="heading") Наши дни
+                            p Спустя <span>20</span> лет компания продолжает активно развиваться, объединяя опыт прошлого и технологии будущего, чтобы продолжать радовать  рыбаков нашей страны.
+                            p <span>За 2022 год:</span>
+                            p - общая сумма инвестиций в исследования и разработки составила около 1млн USD</span>
+                            p - объем производства увеличен в 2 раза, аналогично и объем продаж вырос в 2 раза.</span>
+                            p <span>В 2023 году</span> запланирован выпуск 3х новых эхолотов и совершенно новых датчиков
+                            p.about-history__note Наша компания активно расширяется и растет, потому что мы делаем качественный и востребованный продукт, которым мы рады делиться с покупателями и партнерами.
+
+                    .about-history__route
+                        .about-history__route-container
+                            img.about-history__route-img.lazy(data-src="img/about-history-route.svg" width="487" height="1000" alt="")
+                            p.about-history__route-text._el1 Создание эхолота, соответствующего желаниям отечественных рыбаков.  Открытие компании “Практик”
+                            p.about-history__route-text._el2 Выпустили 3 серии моделей эхолотов
+                            p.about-history__route-text._el3 Общая сумма инвестиций в исследования и разработки составила около 1млн USD
+                            p.about-history__route-text._el4 Объем производства увеличен в 2 раза, аналогично и объем продаж вырос в 2 раза.
+                            p.about-history__route-text._el5 В 2023 году запланирован выпуск 3х новых эхолотов и совершенно новых датчиков
+
+        //Отзывы рыбаков
+        - var fishermen_classnames = '_pb0'
+        - var fishermen_title = 'Отзывы профессиональных рыбаков'
+        - var fishermen_item_classnames = '_blue'
+        include includes/_fishermen
+
+        //Блогеры о нашем продукте
+        - var blogers_title = 'Блогеры о нашем продукте'
+        include includes/_blogers
+
+        //Сертификаты
+        mixin certiticates_item
+            a.certificates__item(href="img/tmp/certificate@2x.jpg" data-fancybox="certificates")
+                +picture('picture', 'tmp/', 'certificate', 'jpg', 317, 420)
+        section.section._blue
+            .container
+                h2.section__h2.heading-font(role="heading") Сертификаты
+                .certificates__container
+                    .certificates__controls.carousel__controls
+                        button.carousel__navigation._prev._blue(type="button" role="button" data-certificates-prev)
+                            +svg_sprite('carousel-nav', 23, 15)
+                        button.carousel__navigation._next._blue(type="button" role="button" data-certificates-next)
+                            +svg_sprite('carousel-nav', 23, 15)
+
+                    .certificates__swiper
+                        .swiper(data-auto-width-swiper data-prev="[data-certificates-prev]" data-next="[data-certificates-next]")
+                            .swiper-wrapper
+                                .certificates__slide.swiper-slide
+                                    +certiticates_item
+                                .certificates__slide.swiper-slide
+                                    +certiticates_item
+                                .certificates__slide.swiper-slide
+                                    +certiticates_item
+                                .certificates__slide.swiper-slide
+                                    +certiticates_item
+                                .certificates__slide.swiper-slide
+                                    +certiticates_item
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

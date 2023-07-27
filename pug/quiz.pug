@@ -1,0 +1,185 @@
+extends base
+
+block seo
+    - var seo = {title: 'Квиз', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                include includes/_breadcrumbs
+                .quiz(data-quiz)
+                    .quiz__step._active(data-question-step data-step="1")
+                        h2.quiz__title.heading-font 1. В какое время года больше рыбачите?
+                        .quiz__big-radios._w3
+                            .quiz__big-radio.get-order__radio
+                                input(type="radio" name="quiz-1" value="" id="quiz-1-1" checked)
+                                label(for="quiz-1-1").quiz__box
+                                    +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-1', 'png', 346, 346)
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Зимнее
+                            .quiz__big-radio.get-order__radio
+                                input(type="radio" name="quiz-1" value="" id="quiz-1-2")
+                                label(for="quiz-1-2").quiz__box
+                                    +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-2', 'png', 346, 346)
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Летнее
+                            .quiz__big-radio.get-order__radio
+                                input(type="radio" name="quiz-1" value="" id="quiz-1-3")
+                                label(for="quiz-1-3").quiz__box
+                                    +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-3', 'png', 469, 347)
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Примерно одинаково зимой и летом
+
+                    .quiz__step.quiz__grid(data-question-step data-step="2")
+                        h2.quiz__title.heading-font 2. Летом вы рыбачите больше с лодки или с забросом?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-2" value="" id="quiz-2-1" checked)
+                                label(for="quiz-2-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | С лодки
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-2" value="" id="quiz-2-2")
+                                label(for="quiz-2-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | С забросом
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-2', 'jpg', 850, 570)
+
+                    .quiz__step.quiz__grid(data-question-step data-step="3")
+                        h2.quiz__title.heading-font 3. Вы профессиональный рыболов или рыбак-любитель?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-3" value="" id="quiz-3-1" checked)
+                                label(for="quiz-3-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Профи
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-3" value="" id="quiz-3-2")
+                                label(for="quiz-3-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Любитель
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-3', 'jpg', 850, 570)
+
+                    .quiz__step.quiz__grid(data-question-step data-step="4")
+                        h2.quiz__title.heading-font 4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-4" value="" id="quiz-4-1" checked)
+                                label(for="quiz-4-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Да
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-4" value="" id="quiz-4-2")
+                                label(for="quiz-4-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Нет
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-4', 'jpg', 850, 570)
+
+                    .quiz__step.quiz__grid(data-question-step data-step="5")
+                        h2.quiz__title.heading-font 5. Максимально низкая температура, при которой собираетесь ловить рыбу?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-5" value="" id="quiz-5-1" checked)
+                                label(for="quiz-5-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | До -20°C
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-5" value="" id="quiz-5-2")
+                                label(for="quiz-5-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | До -25°C и ниже
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-5', 'jpg', 850, 570)
+
+                    .quiz__step.quiz__grid(data-question-step data-step="6")
+                        h2.quiz__title.heading-font 6. Какой тип экрана эхолота вам необходим?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-6" value="" id="quiz-6-1" checked)
+                                label(for="quiz-6-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Цветной
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-6" value="" id="quiz-6-2")
+                                label(for="quiz-6-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Чёрно-белый
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-6', 'jpg', 850, 570)
+
+                    .quiz__step.quiz__grid(data-question-step data-step="7")
+                        h2.quiz__title.heading-font 7. Какой элемент питания устройства предпочтителен?
+                        .quiz__radios
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-7" value="" id="quiz-7-1" checked)
+                                label(for="quiz-7-1").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Батарейка
+                            .quiz__radio.get-order__radio
+                                input(type="radio" name="quiz-7" value="" id="quiz-7-2")
+                                label(for="quiz-7-2").quiz__box
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Встроенный аккумулятор
+                        +picture_nolazy('quiz__picture', 'tmp/', 'quiz-7', 'jpg', 850, 570)
+
+                    .quiz__step(data-question-step data-step="8")
+                        h2.quiz__title.heading-font 8. Какой тип соединения блока и датчика предпочтителен?
+                        .quiz__big-radios._w2
+                            .quiz__big-radio.get-order__radio
+                                input(type="radio" name="quiz-8" value="" id="quiz-8-1" checked)
+                                label(for="quiz-8-1").quiz__box
+                                    +picture_lazy('quiz__big-radio-picture', '', 'quiz-8-1', 'png', 346, 346)
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Проводное
+                            .quiz__big-radio.get-order__radio
+                                input(type="radio" name="quiz-8" value="" id="quiz-8-2")
+                                label(for="quiz-8-2").quiz__box
+                                    +picture_lazy('quiz__big-radio-picture', '', 'quiz-8-2', 'png', 346, 346)
+                                    span.quiz__big-radio-title
+                                        span.get-order__radio-check
+                                        | Беспроводное
+
+                    .quiz__footer
+                        .quiz__progress
+                            .quiz__progress-title Шаг <span data-step-number>1</span> из 8
+                            .question__progress(data-step-progress data-step="1")
+                                span._active
+                                span
+                                span
+                                span
+                                span
+                                span
+                                span
+                                span
+                                svg.question__fish(width="63" height="34")
+                                    use(xlink:href="img/sprite.svg#question-fish")
+
+                        .quiz__controls
+                            button.quiz__control.btn._grey._middle(type="button" role="button" data-question-control data-prev data-step="0" disabled) Назад
+                            button.quiz__control.btn._middle(type="button" role="button" data-question-control data-next data-step="2") Далее
+
+                .quiz__final(data-quiz-final)
+                    .quiz__final-content
+                        +picture_nolazy('quiz__final-picture', 'tmp/', 'quiz-product', 'png', 272, 297)
+                        .quiz__final-info
+                            p.quiz__final-subtitle Вам подойдёт:
+                            h3.quiz__final-title.heading-font(role="heading") Эхолот <span>«Практик 8»</span>
+                            p.quiz__final-text Эхолот Практик 8 – это абсолютно новая разработка от компании «ПРАКТИК-НЦ». В данной модели от предыдущих эхолотов остался лишь компактный корпус, а вся начинка и программное обеспечение написаны "с нуля" с учетом того опыта, который ПРАКТИК-НЦ получал в течение многих лет, производя и используя приборы для поиска рыбы.
+                        .quiz__final-controls
+                            a.quiz__final-control.btn._middle(href="#" role="link") Купить
+                            a.quiz__final-control.btn._middle._grey._border(href="#" role="link") Пройти еще раз

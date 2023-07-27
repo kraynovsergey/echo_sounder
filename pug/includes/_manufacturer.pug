@@ -1,0 +1,23 @@
+section.section(class=manufacturer_classnames)
+    .container.manufacturer__container
+        h2.section__h2.manufacturer__padding.manufacturer__h2.heading-font(role="heading") Производим эхолоты для России уже 30 лет
+        +picture_lazy('manufacturer__picture', 'tmp/', 'manufacturer', 'jpg', 900, 600)
+        .manufacturer__items.manufacturer__padding
+            article.manufacturer__item._active(role="article" data-manufacturer)
+                .manufacturer__icon
+                    +svg_sprite('manufacturer-1', 38, 36)
+                h3.manufacturer__title(role="heading") Знаем все желания отечественных рыбаков
+                p.manufacturer__text Поскольку среди разработчиков нашей компании много заядлых рыболовов, они прекрасно знают потребности любителей рыбной ловли и особенности рыбалки в России.
+
+            article.manufacturer__item(role="article" data-manufacturer)
+                .manufacturer__icon
+                    +svg_sprite('manufacturer-2', 32, 40)
+                h3.manufacturer__title(role="heading") Продукция идеально адаптирована под условия рыбалки в России
+                p.manufacturer__text Мы - единственные производители эхолотов в России. Разрабатываем продукцию таким образом, чтобы вы ощутили, насколько удобной и результативной может быть рыбалка как в условиях суровой зимы, так и жаркого лета.
+
+            article.manufacturer__item(role="article" data-manufacturer)
+                .manufacturer__icon
+                    +svg_sprite('manufacturer-3', 38, 36)
+                h3.manufacturer__title(role="heading") Сохраняем традиции, продолжая развиваться
+                p.manufacturer__text В отличие от конкурентов, наша компания предоставляет сервисное и гарантийное обслуживание каждому клиенту. Технические специалисты регулярно оказывают консультации по настройке прибора.
+        a.manufacturer__btn.btn._border._middle(href="#" role="link") Подробнее о нас

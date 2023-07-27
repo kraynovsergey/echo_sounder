@@ -1,0 +1,75 @@
+extends base
+
+block seo
+    - var seo = {title: 'Новости', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Новости
+        section.section._ultra-small._blue
+            .container
+                .section__header.blog__header
+                    h1.h1.heading-font.section__header-h2(role="heading") Новости
+                    .blog__filter
+                        fieldset.blog__filter-item
+                            input(type="radio" name="blog" value="all" id="blog-category-1" data-blog-filter checked)
+                            label(for="blog-category-1") Все
+                        fieldset.blog__filter-item
+                            input(type="radio" name="blog" value="news" id="blog-category-2" data-blog-filter)
+                            label(for="blog-category-2") Новости
+                        fieldset.blog__filter-item
+                            input(type="radio" name="blog" value="press" id="blog-category-3" data-blog-filter)
+                            label(for="blog-category-3") Пресс-релизы
+                        fieldset.blog__filter-item
+                            input(type="radio" name="blog" value="smi" id="blog-category-4" data-blog-filter)
+                            label(for="blog-category-4") Мы в СМИ
+
+                mixin blog_item(attr, tag)
+                    article.blog__item-page(role="article" data-blog-item=attr)
+                        .blog__item-page-tag=tag
+                        time.blog__item-page-date(datetime="2023-03-19") 19 марта
+                        h3.blog__item-page-title(role="heading")
+                            a.blog__item-page-link(href="#" role="link") Участились случаи мошенничества!
+                        p.blog__item-page-introtext Не покупайте эхолоты “Практик” у сомнительных продавцов! Не покупайте эхолоты “Практик” у сомнительных продавцов!
+                        a.blog__item-page-more.btn._middle(href="#" role="link") Читать
+                .blog__items.no-scroll
+                    +blog_item('all news', 'Новости')
+                    +blog_item('all press', 'Пресс-релизы')
+                    +blog_item('all press', 'Пресс-релизы')
+                    +blog_item('all smi', 'Мы в СМИ')
+                    +blog_item('all press', 'Пресс-релизы')
+                    +blog_item('all smi', 'Мы в СМИ')
+
+        //Статьи
+        section.section
+            .container
+                h2.section__h2.heading-font(role="heading") Статьи
+
+                mixin article_item
+                    article.article__item(role="article")
+                        a.article__picture(href="#" role="link")
+                            +picture_lazy('', 'tmp/', 'article-item', 'jpg', 747, 255)
+                        .article__content
+                            h3.article__title.heading-font(role="heading")
+                                a.article__link(href="#" role="link") Как эхолот определяет рыбу?
+                            time.article__date(datetime="2023-04-08")
+                                span 8 апреля
+                            p.article__introtext Я попытаюсь подробно рассказать вам, как правильно определить рыбку на примере эхолота Практик 8. На мой взгляд, это лучший девайс на данный момент.
+                            a.article__more.btn._middle(href="#" role="link") Читать
+                .article__items
+                    +article_item
+                    +article_item
+                    +article_item
+                    +article_item
+
+                button.article__more-states.btn._middle._border(type="button" role="button") Больше статей
+
+        //Видео
+        - var blogers_title = 'Видео'
+        - var blogers_classnames = '_blue'
+        - var blogers_item_classnames = '_white'
+        include includes/_blogers
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

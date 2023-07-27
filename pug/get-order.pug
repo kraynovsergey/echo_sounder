@@ -1,0 +1,235 @@
+extends base
+
+block seo
+    - var seo = {title: 'Оформление заказа', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                ul.get-order__steps(role="list")
+                    li.get-order__step(role="listitem")
+                        span.get-order__step-number.heading-font 1
+                        span.get-order__step-title Оформите заказ
+                        +svg_sprite('get-order-step', 8, 10)
+                    li.get-order__step._active(role="listitem" data-order-delivery)
+                        span.get-order__step-number.heading-font 2
+                        span.get-order__step-title Выберите способ доставки
+                        +svg_sprite('get-order-step', 8, 10)
+                    li.get-order__step(role="listitem" data-order-payment)
+                        span.get-order__step-number.heading-font 3
+                        span.get-order__step-title Выберите способ оплаты
+
+                //Доставка
+                .get-order__stage._active(data-order-delivery)
+                    h2.h1.heading-font(role="heading") Доставка
+
+                    .get-order__delivery-grid
+                        //Выбор способа доставки
+                        .get-order__delivery-types
+                            .get-order__delivery-type.get-order__radio
+                                input(type="radio" name='delivery' value="delivery-1" id="delivery-1" data-delivery-type checked)
+                                label(for="delivery-1")
+                                    span.get-order__delivery-type-check.get-order__radio-check
+                                    span.get-order__delivery-type-title.heading-font Самовывоз
+                                    span.get-order__delivery-type-text Доступен для 3 городов: Зеленоград, Новосибирск, Екатеринбург
+                                    span.get-order__delivery-type-param Цена: 0 рублей
+                                    span.get-order__delivery-type-param Доставка: от 3 до 5 дней
+
+                            .get-order__delivery-type.get-order__radio
+                                input(type="radio" name='delivery' value="delivery-2" id="delivery-2" data-delivery-type)
+                                label(for="delivery-2")
+                                    span.get-order__delivery-type-check.get-order__radio-check
+                                    span.get-order__delivery-type-title.heading-font Службой доставки
+                                    span.get-order__delivery-type-text СДЭК или транспортной компанией “Деловые линии”
+                                    span.get-order__delivery-type-param Цена: от 400 рублей
+                                    span.get-order__delivery-type-param Доставка: от 3 до 5 дней
+
+                            .get-order__delivery-type.get-order__radio
+                                input(type="radio" name='delivery' value="delivery-3" id="delivery-3" data-delivery-type)
+                                label(for="delivery-3")
+                                    span.get-order__delivery-type-check.get-order__radio-check
+                                    span.get-order__delivery-type-title.heading-font Почтой России
+                                    span.get-order__delivery-type-text По всей России
+                                    span.get-order__delivery-type-param Цена: от 500 рублей
+                                    span.get-order__delivery-type-param Доставка: от 3 до 5 дней
+
+                        .get-order__delivery-subtypes
+                            //Самовывоз
+                            .get-order__delivery-subtype._active(data-delivery-subtype="delivery-1")
+                                h2.get-order__delivery-subtype-title.section__h2.heading-font(role="heading") Выберите ваш <br>город
+                                .get-order__delivery-subtype-items
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="pickup_city" value="pickup-city-1" id="pickup-city-1" checked)
+                                        label(for="pickup-city-1")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font Зеленоград
+                                        .get-order__delivery-subtype-pickup-info
+                                            p <strong>Адрес:</strong> <br>ул. Заводская, д. 31, стр.1 <br>(выдача в день заказа)
+                                            p <strong>Режим работы:</strong> <br>Понедельник-пятница с 9:00 до 17:00
+
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="pickup_city" value="pickup-city-2" id="pickup-city-2")
+                                        label(for="pickup-city-2")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font Новосибирск
+                                        .get-order__delivery-subtype-pickup-info
+                                            p <strong>Адрес:</strong> <br>ул. Заводская, д. 31, стр.1 <br>(выдача в день заказа)
+                                            p <strong>Режим работы:</strong> <br>Понедельник-пятница с 9:00 до 17:00
+
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="pickup_city" value="pickup-city-3" id="pickup-city-3")
+                                        label(for="pickup-city-3")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font Екатеринбург
+                                        .get-order__delivery-subtype-pickup-info
+                                            p <strong>Адрес:</strong> <br>ул. Заводская, д. 31, стр.1 <br>(выдача в день заказа)
+                                            p <strong>Режим работы:</strong> <br>Понедельник-пятница с 9:00 до 17:00
+
+                            //Служба доставки
+                            .get-order__delivery-subtype(data-delivery-subtype="delivery-2")
+                                h2.get-order__delivery-subtype-title.section__h2.heading-font(role="heading") Выберите вариант <br>доставки
+                                .get-order__delivery-subtype-items
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="delivery_service" value="delivery-service-1" id="delivery-service-1" data-delivery-radio checked)
+                                        label(for="delivery-service-1")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font СДЭК, пункт выдачи
+                                            span.get-order__delivery-subtype-param.get-order__delivery-type-param Цена: 350 рублей
+                                            span.get-order__delivery-subtype-param.get-order__delivery-type-param Доставка: от 3 до 5 дней
+
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="delivery_service" value="delivery-service-2" id="delivery-service-2" data-delivery-radio)
+                                        label(for="delivery-service-2")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font СДЭК, курьером
+                                            span.get-order__delivery-subtype-param.get-order__delivery-type-param Цена: 400 рублей
+                                            span.get-order__delivery-subtype-param.get-order__delivery-type-param Доставка: от 3 до 5 дней
+
+                                    .get-order__delivery-subtype-item.get-order__radio
+                                        input(type="radio" name="delivery_service" value="delivery-service-3" id="delivery-service-3" data-delivery-radio disabled)
+                                        label(for="delivery-service-3")
+                                            span.get-order__radio-check
+                                            span.get-order__delivery-type-title.heading-font Деловые линии
+                                            span.get-order__delivery-subtype-param.get-order__delivery-type-param По всей России
+                                            span.get-order__delivery-subtype-info
+                                                +svg_sprite('info', 9, 25)
+
+                            //Почта России
+                            .get-order__delivery-subtype(data-delivery-subtype="delivery-3")
+                                h2.get-order__delivery-subtype-title.section__h2.heading-font(role="heading") Введите ваш <br>адрес
+                                form.form(action="#" method="post")
+                                    input.form__input._blue(type="text" name="address" placeholder="Адрес")
+                                    .get-order__delivery-inputs
+                                        input.form__input._blue(type="text" name="room" placeholder="Квартира")
+                                        input.form__input._blue(type="text" name="entrance" placeholder="Подъезд")
+                                        input.form__input._blue(type="text" name="floor" placeholder="Этаж")
+                                    input.form__input._blue(type="email" name="email" placeholder="E-mail")
+                                    input.form__input._blue(type="tel" name="phone" placeholder="Телефон")
+
+                        .get-order__delivery-right
+                            .get-order__delivery-right-item._active(data-delivery-right="delivery-1")
+                                .get-order__delivery-right-map
+                                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;source=constructor" width="100%" height="100%" frameborder="0")
+                                .get-order__delivery-right-params
+                                    .get-order__delivery-right-param
+                                        span.heading-font Стоимость доставки
+                                        span.heading-font бесплатно
+                                    .get-order__delivery-right-param
+                                        span.heading-font Время доставки
+                                        span.heading-font от 3 до 5 дней
+
+                            .get-order__delivery-right-item(data-delivery-right="delivery-service-1")
+                                .get-order__delivery-right-map
+                                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;source=constructor" width="100%" height="100%" frameborder="0")
+                                .get-order__delivery-right-params
+                                    .get-order__delivery-right-param
+                                        span.heading-font Стоимость доставки
+                                        span.heading-font 400 р
+                                    .get-order__delivery-right-param
+                                        span.heading-font Время доставки
+                                        span.heading-font от 3 до 5 дней
+
+                            .get-order__delivery-right-item(data-delivery-right="delivery-service-2")
+                                .get-order__delivery-right-form
+                                    h3.section__h2.heading-font(role="heading") Адрес доставки
+                                    form.form(action="#" method="post")
+                                        input.form__input._blue._transparent(type="text" name="address" placeholder="Адрес")
+                                        .get-order__delivery-inputs
+                                            input.form__input._blue._transparent(type="text" name="room" placeholder="Квартира")
+                                            input.form__input._blue._transparent(type="text" name="entrance" placeholder="Подъезд")
+                                            input.form__input._blue._transparent(type="text" name="floor" placeholder="Этаж")
+                                        input.form__input._blue._transparent(type="email" name="email" placeholder="E-mail")
+                                        input.form__input._blue._transparent(type="tel" name="phone" placeholder="Телефон")
+
+                                .get-order__delivery-right-params
+                                    .get-order__delivery-right-param
+                                        span.heading-font Стоимость доставки
+                                        span.heading-font 400 р
+                                    .get-order__delivery-right-param
+                                        span.heading-font Время доставки
+                                        span.heading-font от 3 до 5 дней
+
+                            .get-order__delivery-right-item(data-delivery-right="delivery-3")
+                                .get-order__delivery-right-map
+                                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;source=constructor" width="100%" height="100%" frameborder="0")
+                                .get-order__delivery-right-params
+                                    .get-order__delivery-right-param
+                                        span.heading-font Стоимость доставки
+                                        span.heading-font индивидуально
+                                    .get-order__delivery-right-param
+                                        span.heading-font Время доставки
+                                        span.heading-font индивидуально
+
+                            .get-order__delivery-controls
+                                a.get-order__delivery-control._blue.heading-font(href="#" role="link") Назад
+                                button.get-order__delivery-control._orange.heading-font(type="button" role="button" data-order-next) Далее
+
+                //Оплата
+                .get-order__stage(data-order-payment)
+                    h2.h1.heading-font(role="heading") Оплата
+                    .cart
+                        .get-order__payment-grid
+                            .get-order__payment-items
+                                .get-order__payment-box.get-order__payment-radio.get-order__radio
+                                    input(type="radio" name="payment" value="payment-1" id="payment-1" checked)
+                                    label(for="payment-1")
+                                        span.get-order__radio-check
+                                        +svg_sprite('payment-1', 36, 31, 'get-order__payment-radio-icon')
+                                        span.get-order__payment-radio-title.heading-font Оплата при получении
+
+                            .get-order__payment-info
+                                h2.section__h2.heading-font(role="heading") О заказе
+                                .get-order__payment-items
+                                    article.get-order__payment-box.get-order__payment-product(role="article")
+                                        +picture_lazy('get-order__payment-product-picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                        h3.get-order__payment-product-title.heading-font(role="heading") Эхолот <br>ПРАКТИК 6S
+                                        .get-order__payment-product-price.get-order__payment-product-title.heading-font 12 990 р
+
+                                    article.get-order__payment-box.get-order__payment-product(role="article")
+                                        +picture_lazy('get-order__payment-product-picture', 'tmp/', 'product-compare', 'png', 50, 68)
+                                        h3.get-order__payment-product-title.heading-font(role="heading") Эхолот <br>ПРАКТИК 6S
+                                        .get-order__payment-product-price.get-order__payment-product-title.heading-font 12 990 р
+
+                                    .get-order__payment-box.get-order__payment-param
+                                        +svg_sprite('pickup', 30, 30, 'get-order__payment-param-icon')
+                                        .get-order__payment-param-title Самовывоз из:
+                                        .get-order__payment-param-text г. Зеленоград, ул. Заводская, д. 31, стр.1
+
+                                    .get-order__payment-box.get-order__payment-param
+                                        +svg_sprite('time', 30, 30, 'get-order__payment-param-icon')
+                                        .get-order__payment-param-title Время и дата:
+                                        .get-order__payment-param-text Понедельник, 3 июня, 9:00-12:00
+
+                        .cart__details
+                            .cart__details-title.heading-font Детали заказа
+                            .cart__details-products
+                                span 2 товара
+                                span 17 990 р.
+                            .cart__details-itogo
+                                .cart__details-itogo-title.heading-font Итого:
+                                .cart__details-itogo-prices
+                                    .cart__details-itogo-oldprice.heading-font 17 990 р
+                                    .cart__details-itogo-price.heading-font 15 000 р
+                            button.cart__btn.btn._middle(type="button" role="button") Оформить
+

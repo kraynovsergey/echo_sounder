@@ -1,0 +1,90 @@
+mixin picture_lazy(classname, dir, filename, format, width, height)
+    picture(class= classname)
+        source(type="image/webp" data-srcset="img/"+dir+"webp/"+filename+"@2x.webp 2x, img/"+dir+"webp/"+filename+".webp 1x" srcset="")
+        img.lazy(src="" data-srcset="img/"+dir+filename+"@2x."+format+" 2x, img/"+dir+filename+"."+format+" 1x" srcset="" alt="" width= width height= height)
+
+mixin picture(classname, dir, filename, format, width, height)
+    picture(class= classname)
+        source(type="image/webp" srcset="img/"+dir+"webp/"+filename+"@2x.webp 2x, img/"+dir+"webp/"+filename+".webp 1x")
+        img(src="" srcset="img/"+dir+filename+"@2x."+format+" 2x, img/"+dir+filename+"."+format+" 1x" alt="" width= width height= height loading="lazy")
+
+mixin picture_nolazy(classname, dir, filename, format, width, height)
+    picture(class= classname)
+        source(type="image/webp" srcset="img/"+dir+"webp/"+filename+"@2x.webp 2x, img/"+dir+"webp/"+filename+".webp 1x")
+        img(src="" srcset="img/"+dir+filename+"@2x."+format+" 2x, img/"+dir+filename+"."+format+" 1x" alt="" width= width height= height)
+
+mixin svg_sprite(id, width, height, classname)
+    svg(class=classname width=width height=height)
+        use(xlink:href="img/sprite.svg#"+id+"")
+
+mixin carousel_navigation(classname)
+    .carousel-navigation(class= classname)
+        button.carousel-navigation__item._prev(type="button" role="button")
+            if classname == '_vertical'
+                +svg_sprite('carousel-navigation-vertical', 24, 86)
+            else
+                +svg_sprite('carousel-navigation', 102, 24)
+        button.carousel-navigation__item._next(type="button" role="button")
+            if classname == '_vertical'
+                +svg_sprite('carousel-navigation-vertical', 24, 86)
+            else
+                +svg_sprite('carousel-navigation', 102, 24)
+
+mixin compare_product(img, title)
+    article.product.compare__product(role="article")
+        button.compare__remove(type="button" role="button")
+            +svg_sprite('remove', 33, 34)
+        a.product__picture.compare__picture(href="#" role="link")
+            +picture_nolazy('', 'tmp/', img, 'png', 238, 223)
+        h3.product__title(role="heading")
+            a(href="#" role="link")= title
+        .product__price 12 700р
+            span 14 000р
+        button.product__cart.btn._small(type="button" role="button") В корзину
+        .product__count(data-product-count)
+            button.product__count-btn(type="button" role="button" data-product-count-minus) -
+            input.product__count-input(type="text" name="count" value="1")
+            button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+mixin product(img, title)
+    article.product.compare__product(role="article")
+        a.product__picture.compare__picture(href="#" role="link")
+            +picture_nolazy('', 'tmp/', img, 'png', 238, 223)
+        h3.product__title(role="heading")
+            a(href="#" role="link")= title
+        .product__price 12 700р
+            span 14 000р
+        button.product__cart.btn._small(type="button" role="button") В корзину
+        .product__count(data-product-count)
+            button.product__count-btn(type="button" role="button" data-product-count-minus) -
+            input.product__count-input(type="text" name="count" value="1")
+            button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+mixin product_stock(img, title, attr)
+    article.product.compare__product(role="article" data-blog-item=attr)
+        a.product__picture.compare__picture(href="#" role="link")
+            +picture_nolazy('', 'tmp/', img, 'png', 238, 223)
+        h3.product__title(role="heading")
+            a(href="#" role="link")= title
+        .product__price 12 700р
+            span 14 000р
+        button.product__cart.btn._small(type="button" role="button") В корзину
+        .product__count(data-product-count)
+            button.product__count-btn(type="button" role="button" data-product-count-minus) -
+            input.product__count-input(type="text" name="count" value="1")
+            button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+mixin product_complect(img, title)
+    article.product.compare__product._complect(role="article")
+        a.product__picture.compare__picture(href="#" role="link")
+            +picture_nolazy('', 'tmp/', img, 'png', 238, 223)
+        h3.product__title(role="heading")
+            a(href="#" role="link")= title
+        ul.product__params(role="list")
+            li.product__param(role="listitem") Позиция 1
+            li.product__param(role="listitem") Позиция 2
+            li.product__param(role="listitem") Позиция 3
+        .product__price 12 700р
+            span 14 000р
+        button.product__cart.btn._small._border(type="button" role="button") В корзину
+

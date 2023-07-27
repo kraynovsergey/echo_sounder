@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Мои заказы</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header" role="banner" data-header>
+      <div class="container header__container"><a class="header__logo" href="#" role="link">
+              <picture class="header__logo-logo">
+                <source type="image/webp" srcset="img/webp/logo@2x.webp 2x, img/webp/logo.webp 1x"><img src="" srcset="img/logo@2x.png 2x, img/logo.png 1x" alt="" width="72" height="52" loading="lazy">
+              </picture>
+              <picture class="header__logo-flag">
+                <source type="image/webp" srcset="img/webp/flag@2x.webp 2x, img/webp/flag.webp 1x"><img src="" srcset="img/flag@2x.png 2x, img/flag.png 1x" alt="" width="65" height="65" loading="lazy">
+              </picture></a><a class="header__yandex" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <form class="header__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form>
+        <address class="header__contacts"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
+                <svg width="17" height="20">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Посмотреть список избранного">
+                <svg width="20" height="19">
+                  <use xlink:href="img/sprite.svg#favourite"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Перейти к сравнению товаров">
+                <svg width="25" height="20">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg></a><a class="header__control header__cart" href="#" role="link" aria-label="В корзину">
+                <svg width="22" height="20">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg><span class="header__cart-count">1</span></a></div>
+        <div class="header__user">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+        <button class="header__burger" type="button" role="button" data-toggle="[data-nav]"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <nav class="nav no-scroll" role="navigation" data-nav>
+      <div class="container nav__mobile-container">
+        <address class="header__contacts _tablet"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback-mobile]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback-mobile>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <form class="nav__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form><a class="header__yandex _tablet" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <div class="header__user _tablet">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city-mobile]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city-mobile>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+      </div>
+      <div class="container nav__container">
+        <div class="nav__catalog">
+          <button class="nav__catalog-btn heading-font" type="button" role="button" data-toggle="[data-nav-catalog-list]">В магазин
+                <svg width="21" height="18">
+                  <use xlink:href="img/sprite.svg#triangle-catalog"></use>
+                </svg>
+          </button>
+          <ul class="nav__catalog-list" role="list" data-nav-catalog-list>
+            <li class="nav__catalog-listitem" role="listitem" data-nav-item><a class="nav__catalog-listlink heading-font" href="#" role="link" data-nav-link>Эхолоты
+                    <svg width="10" height="8">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg></a>
+              <ul class="nav__sublist" role="list" data-nav-sublist>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для зимней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Беспроводные</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для летней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с берега</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с лодки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Недорогие эхолоты</a></li>
+              </ul>
+            </li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Аксессуары для эхолотов</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Подводные камеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Глубиномеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Насос "Бриз"</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Фонари для рыбалки</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Электромоторы</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Товары для туризма</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Мерч</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Уцененные товары</a></li>
+          </ul>
+        </div>
+        <ul class="nav__list" role="list">
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>О нас
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Общая информация</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Почему нам доверяют?</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">История компании</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Отзывы</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сертификаты</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Подбор эхолота</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Как это работает
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Информационная поддержка пользователя</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Частые вопросы</a></li>
+              <li class="nav__sublistitem" role="listitem" data-nav-item><a class="nav__sublistlink" href="#" role="link" data-nav-link>Блог
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg></a>
+                <ul class="nav__sublist" role="list" data-nav-sublist>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Новости</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Статьи</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Видео</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Акции</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Ремонт
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Как отправить прибор в сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Платный ремонт</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервисные центры</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Оплата и доставка</a></li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main" role="main">
+      <!--Редактирование личных данных-->
+      <section class="section _ultra-small _blue">
+        <div class="container">
+          <h1 class="h1 heading-font" role="heading">Личный кабинет</h1>
+          <div class="cabinet__grid">
+            <aside class="cabinet__aside" role="complementary"><a class="cabinet__aside-link _active" href="#" role="link"><span class="cabinet__aside-icon">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#cabinet-profile"></use>
+                      </svg></span>Личные данные</a><a class="cabinet__aside-link" href="#" role="link"><span class="cabinet__aside-icon">
+                      <svg width="22" height="28">
+                        <use xlink:href="img/sprite.svg#cabinet-orders"></use>
+                      </svg></span>Мои заказы</a><a class="cabinet__aside-link" href="#" role="link"><span class="cabinet__aside-icon">
+                      <svg width="30" height="26">
+                        <use xlink:href="img/sprite.svg#cabinet-statuses"></use>
+                      </svg></span>Статус сервиса</a></aside>
+            <div class="cabinet__content">
+              <div class="cabinet__content-header">
+                <h2 class="cabinet__content-title heading-font" role="heading">Мои заказы</h2>
+                <div class="orders__filters">
+                  <fieldset class="orders__filter">
+                    <input type="radio" name="orders_status" value="all" id="order-status-1" checked data-blog-filter>
+                    <label for="order-status-1">Все</label>
+                  </fieldset>
+                  <fieldset class="orders__filter">
+                    <input type="radio" name="orders_status" value="processing" id="order-status-2" data-blog-filter>
+                    <label for="order-status-2">В обработке</label>
+                  </fieldset>
+                  <fieldset class="orders__filter">
+                    <input type="radio" name="orders_status" value="success" id="order-status-3" data-blog-filter>
+                    <label for="order-status-3">Выполненные</label>
+                  </fieldset>
+                  <fieldset class="orders__filter">
+                    <input type="radio" name="orders_status" value="cancel" id="order-status-4" data-blog-filter>
+                    <label for="order-status-4">Отмененные</label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="orders__items">
+                              <article class="orders__item" role="article" data-blog-item="all processing">
+                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
+                                <div class="orders__status _processing">В обработке
+                                      <svg width="22" height="22">
+                                        <use xlink:href="img/sprite.svg#clock"></use>
+                                      </svg>
+                                </div>
+                                <div class="orders__info">
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Сумма:</div>
+                                    <div class="orders__info-value">36 000р</div>
+                                  </div>
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Оплата:</div>
+                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _success">(Оплачен)</span></div>
+                                  </div>
+                                  <div class="orders__info-item _products">
+                                    <div class="orders__info-title">Товары:</div>
+                                    <div class="orders__info-products">
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
+                              </article>
+                              <article class="orders__item" role="article" data-blog-item="all success">
+                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
+                                <div class="orders__status _success">Выполнен
+                                      <svg width="22" height="22">
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                      </svg>
+                                </div>
+                                <div class="orders__info">
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Сумма:</div>
+                                    <div class="orders__info-value">36 000р</div>
+                                  </div>
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Оплата:</div>
+                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _success">(Оплачен)</span></div>
+                                  </div>
+                                  <div class="orders__info-item _products">
+                                    <div class="orders__info-title">Товары:</div>
+                                    <div class="orders__info-products">
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
+                              </article>
+                              <article class="orders__item" role="article" data-blog-item="all cancel">
+                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
+                                <div class="orders__status _cancel">Отменен
+                                      <svg width="22" height="22">
+                                        <use xlink:href="img/sprite.svg#cross"></use>
+                                      </svg>
+                                </div>
+                                <div class="orders__info">
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Сумма:</div>
+                                    <div class="orders__info-value">36 000р</div>
+                                  </div>
+                                  <div class="orders__info-item">
+                                    <div class="orders__info-title">Оплата:</div>
+                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _cancel">(Не оплачен)</span></div>
+                                  </div>
+                                  <div class="orders__info-item _products">
+                                    <div class="orders__info-title">Товары:</div>
+                                    <div class="orders__info-products">
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
+                              </article>
+              </div>
+              <button class="orders__more btn _middle" type="button" role="button">Посмотреть все</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Электронный гарантийный талон-->
+      <section class="section _pb0">
+        <div class="container">
+          <h2 class="section__h2 repair-paid__h2 heading-font">Электронный <br>гарантийный талон</h2>
+          <p class="repair-paid__subtitle">Зарегистрируйте свою покупку, получите электронный гарантийный талон и вам не надо будет хранить бумажные чеки и талоны</p>
+          <div class="guarantee__items">
+            <div class="faq__item">
+              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-1]">Как получить электронный гарантийный талон<span class="faq__control"></span></button>
+              <div class="faq__content" data-guarantee-1 data-grid>
+                <div class="get-guarantee">
+                  <div class="service-centers__warning">
+                    <div class="service-centers__circle">
+                          <svg width="9" height="25">
+                            <use xlink:href="img/sprite.svg#info"></use>
+                          </svg>
+                    </div>
+                  </div>
+                  <div class="get-guarantee__content">
+                    <p class="get-guarantee__text">Отсканируйте или сфотографируйте бумажный чек и гарантийный талон, в котором проставлена дата покупки и печать продавца.</p>
+                    <div class="get-guarantee__block">
+                      <div class="get-guarantee__header">
+                        <h4 class="get-guarantee__title" role="heading">Чек и гарантийный талон</h4>
+                            <svg class="get-guarantee__icon" width="40" height="40">
+                              <use xlink:href="img/sprite.svg#camera"></use>
+                            </svg>
+                      </div>
+                      <form class="get-guarantee__form" action="#" method="post" enctype="multipart/form-data">
+                        <div class="get-guarantee__file">
+                          <input type="file" name="file" id="get-guarantee-file">
+                          <label class="btn _border _middle" for="get-guarantee-file">Прикрепить фото</label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="get-guarantee__block">
+                      <div class="get-guarantee__header">
+                        <h4 class="get-guarantee__title" role="heading">Чек и гарантийный талон</h4>
+                        <div class="get-guarantee__success"></div>
+                      </div>
+                      <form class="get-guarantee__form" action="#" method="post" enctype="multipart/form-data">
+                        <div class="get-guarantee__figures">
+                          <figure class="get-guarantee__figure">
+                                <picture>
+                                  <source type="image/webp" srcset="img/tmp/webp/get-guarantee-img@2x.webp 2x, img/tmp/webp/get-guarantee-img.webp 1x"><img src="" srcset="img/tmp/get-guarantee-img@2x.jpg 2x, img/tmp/get-guarantee-img.jpg 1x" alt="" width="151" height="184">
+                                </picture>
+                            <figcaption class="get-guarantee__figcaption">гарантийный талон 1.jpg</figcaption>
+                          </figure>
+                          <figure class="get-guarantee__figure">
+                                <picture>
+                                  <source type="image/webp" srcset="img/tmp/webp/get-guarantee-img@2x.webp 2x, img/tmp/webp/get-guarantee-img.webp 1x"><img src="" srcset="img/tmp/get-guarantee-img@2x.jpg 2x, img/tmp/get-guarantee-img.jpg 1x" alt="" width="151" height="184">
+                                </picture>
+                            <figcaption class="get-guarantee__figcaption">гарантийный талон 1.jpg</figcaption>
+                          </figure>
+                        </div>
+                        <div class="get-guarantee__file">
+                          <input type="file" name="file" id="get-guarantee-file-temp">
+                          <label class="btn _border _middle" for="get-guarantee-file-temp">Прикрепить фото</label>
+                        </div>
+                      </form>
+                      <h4 class="get-guarantee__title" role="heading">Готово! Ваши талоны успешно загружены. Вы можете посмотреть их ниже, во вкладке “Мои гарантийные талоны”</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item">
+              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-2]">Какие преимущества дает электронный гарантийный талон<span class="faq__control"></span></button>
+              <div class="faq__content" data-guarantee-2 data-grid>
+                <ul class="guarantee__list" role="list">
+                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
+                          <svg width="29" height="37">
+                            <use xlink:href="img/sprite.svg#guarantee-1"></use>
+                          </svg></span>Вам не надо хранить и иметь под рукой бумажные документы, подтверждающие покупку</li>
+                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
+                          <svg width="30" height="30">
+                            <use xlink:href="img/sprite.svg#guarantee-2"></use>
+                          </svg></span>В случае обращения в сервисную службу будет достаточно назвать ваш номер телефона и имя или фамилию. Вы сможете позвонить прямо с рыбалки, чтобы получить консультацию.</li>
+                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
+                          <svg width="30" height="30">
+                            <use xlink:href="img/sprite.svg#guarantee-3"></use>
+                          </svg></span>Вы получите доступ к информационной рассылке и сможете первым узнавать о выходе новинок Calypso и обновлении ПО.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq__item get-guarantee__faq-stretch">
+              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-3]">Мои гарантийные талоны<span class="faq__control"></span></button>
+              <div class="faq__content" data-guarantee-3 data-grid>
+                <p>Содержимое этой вкладки находится в разработке</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Вам может понравится-->
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__h2 section__header-h2 heading-font" role="heading">Вам может понравиться</h2>
+            <div class="section__header-controls carousel__controls">
+              <button class="carousel__navigation _prev _blue" type="button" role="button" data-like-prev>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+              <button class="carousel__navigation _next _blue" type="button" role="button" data-like-next>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="like__swiper swiper" data-auto-width-swiper data-prev="[data-like-prev]" data-next="[data-like-next]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                      <div class="product__count" data-product-count>
+                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                        <input class="product__count-input" type="text" name="count" value="1">
+                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                      </div>
+                    </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Карты-->
+      <section class="section footer-maps _pt0 _pb0">
+        <button class="footer-maps__button heading-font _active" type="button" role="button" data-footer-map-tab="1">Наш офис</button>
+        <button class="footer-maps__button heading-font" type="button" role="button" data-footer-map-tab="2">Сервисные центры</button>
+        <div class="footer-maps__items">
+          <div class="footer-maps__item _active" data-footer-map="1">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+          </div>
+          <div class="footer-maps__item" data-footer-map="2">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad69a8fdb37f9fcbae587aa7d7289d157443c3bcd4cd48b69300cc41cba7f514e&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__container">
+        <div class="footer__contacts"><a class="footer__logo" href="#" role="link">
+                <picture>
+                  <source type="image/webp" data-srcset="img/webp/logo-footer@2x.webp 2x, img/webp/logo-footer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/logo-footer@2x.png 2x, img/logo-footer.png 1x" srcset="" alt="" width="101" height="73">
+                </picture></a>
+          <h2 class="footer__h2 heading-font" role="navigation">Контакты <br>и график работы</h2>
+          <div class="footer__items">
+            <address class="footer__item">
+              <p class="footer__item-title">Почта:</p><a class="footer__item-value footer__item-link" href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Сервис и ремонт:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы офиса:</p>
+              <p class="footer__item-value">Пн-Пт: 10:00-17:00</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Заказы и консультации:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Адрес:</p>
+              <p class="footer__item-value">124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы интернет-магазина:</p>
+              <p class="footer__item-value">Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00</p>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h3 class="footer__h3 heading-font" role="heading">Мы в соцсетях:</h3>
+            <div class="footer__icons"><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#youtube-footer"></use>
+                    </svg></a></div>
+          </div>
+        </div>
+        <nav class="footer__nav" role="navigation">
+          <ul class="footer__nav-list" role="list">
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">О нас</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Как это работает</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Контакты</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Подбор эхолота</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Ремонт</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Акции</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Оплата и доставка</a></li>
+          </ul>
+        </nav>
+        <div class="footer__download">
+          <div class="footer__download-content">
+            <h3 class="footer__download-title heading-font" role="heading">Скачивайте наше приложение <span>«Эхолоты практик 7»</span></h3>
+            <div class="footer__download-links"><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a></div>
+          </div>
+              <picture class="footer__download-picture">
+                <source type="image/webp" data-srcset="img/webp/apple-store-screenshot@2x.webp 2x, img/webp/apple-store-screenshot.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store-screenshot@2x.png 2x, img/apple-store-screenshot.png 1x" srcset="" alt="" width="310" height="459">
+              </picture>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+          <div class="footer__bottom-item">
+            <p>ⓒ «Практик», 2023</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__bottom-item">
+            <p>ООО «ПРАКТИК-НЦ»</p>
+            <p>ОГРН 1087746089276</p>
+            <p>ИНН 7735537073</p>
+            <p>КПП 773501001</p>
+          </div>
+          <address class="footer__bottom-item">
+            <p>Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1</p>
+          </address>
+          <div class="footer__bottom-item"><a href="#" role="link">Договор оферты</a><a href="#" role="link">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/lazyload.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/fancybox.umd.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

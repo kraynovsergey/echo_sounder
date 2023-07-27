@@ -1,0 +1,80 @@
+footer.footer(role="contentinfo")
+    .container.footer__container
+        .footer__contacts
+            a.footer__logo(href="#" role="link")
+                +picture_lazy('', '', 'logo-footer', 'png', 101, 73)
+            h2.footer__h2.heading-font(role="navigation") Контакты <br>и график работы
+            .footer__items
+                address.footer__item
+                    p.footer__item-title Почта:
+                    a.footer__item-value.footer__item-link(href="mailto:praktik@rusonar.ru") praktik@rusonar.ru
+                address.footer__item
+                    p.footer__item-title Сервис и ремонт:
+                    a.footer__item-value.footer__item-link(href="tel:+74955141173") +7 (495) 514-11-73
+                address.footer__item
+                    p.footer__item-title График работы офиса:
+                    p.footer__item-value Пн-Пт: 10:00-17:00
+                address.footer__item
+                    p.footer__item-title Заказы и консультации:
+                    a.footer__item-value.footer__item-link(href="tel:+74955141173") +7 (495) 514-11-73
+                address.footer__item
+                    p.footer__item-title Адрес:
+                    p.footer__item-value 124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1
+                address.footer__item
+                    p.footer__item-title График работы интернет-магазина:
+                    p.footer__item-value Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00
+            .footer__socials
+                h3.footer__h3.heading-font(role="heading") Мы в соцсетях:
+                .footer__icons
+                    a.footer__social(href="#" target="_blank" rel="nofollow")
+                        +svg_sprite('vk', 48, 48)
+                    a.footer__social(href="#" target="_blank" rel="nofollow")
+                        +svg_sprite('ok', 48, 48)
+                    a.footer__social(href="#" target="_blank" rel="nofollow")
+                        +svg_sprite('youtube-footer', 48, 48)
+
+        nav.footer__nav(role="navigation")
+            ul.footer__nav-list(role="list")
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") О нас
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Как это работает
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Контакты
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Подбор эхолота
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Ремонт
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Акции
+                li.footer__nav-listitem(role="listitem")
+                    a.footer__nav-listlink(href="#" role="link") Оплата и доставка
+
+        .footer__download
+            .footer__download-content
+                h3.footer__download-title.heading-font(role="heading") Скачивайте наше приложение <span>«Эхолоты практик 7»</span>
+                .footer__download-links
+                    a.footer__download-link(href="#" target="_blank" role="link")
+                        +picture_lazy('', '', 'google-play', 'png', 150, 44)
+                    a.footer__download-link(href="#" target="_blank" role="link")
+                        +picture_lazy('', '', 'apple-store', 'png', 150, 44)
+            +picture_lazy('footer__download-picture', '', 'apple-store-screenshot', 'png', 310, 459)
+
+    .footer__bottom
+        .container.footer__bottom-container
+            .footer__bottom-item
+                p ⓒ «Практик», 2023
+                p Все права защищены
+
+            .footer__bottom-item
+                p ООО «ПРАКТИК-НЦ»
+                p ОГРН 1087746089276
+                p ИНН 7735537073
+                p КПП 773501001
+
+            address.footer__bottom-item
+                p Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1
+
+            .footer__bottom-item
+                a(href="#" role="link") Договор оферты
+                a(href="#" role="link") Политика конфиденциальности

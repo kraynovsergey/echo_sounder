@@ -1,0 +1,195 @@
+extends base
+
+block seo
+    - var seo = {title: 'Информационная поддержка пользователя', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Товары
+        mixin for_users_product_item(classnames)
+            article.for-users-products__item(class=classnames role="article" data-for-users-product)
+                +picture('for-users-products__picture', 'tmp/', 'for-users-product', 'png', 191, 234)
+                h3.for-users-products__title(role="heading") Эхолот ПРАКТИК 6S
+                .for-users-products__controls
+                    a.for-users-products__control.btn._border._middle(href="#") Как обновить ПО
+                    a.for-users-products__control.btn._border._middle(href="#") Отзывы экспертов
+                    a.for-users-products__control.btn._border._middle(href="#") Видео инструкция
+        section.section._pt0
+            .container
+                h1.h1.heading-font(role="heading") Информационная <br>поддержка пользователя
+                .for-users-products__items
+                    +for_users_product_item('_active')
+                    +for_users_product_item('_active')
+                    +for_users_product_item
+                    +for_users_product_item
+                    +for_users_product_item
+                    +for_users_product_item
+                button.for-users-products__control.for-users-products__more.btn._border._middle(type="button" role="button" data-for-users-products-more) Показать еще
+
+        //Сервис
+        section.section._blue
+            .container
+                h2.section__h2.heading-font(role="heading") сервис
+                .for-users-service__items
+                    article.for-users-service__item(role="article")
+                        h3.for-users-service__title.heading-font(role="heading") Гарантийный сервис
+                        p Наша компания предоставляет бесплатный ремонт эхолотов, при  соблюдении условий гарантии.
+                        p Чтобы не хранить чеки, зарегистрируйте свою покупку в личном кабинете и получите электронный гарантийный талон.
+                        a.for-users-service__link.btn._middle(href="#" role="link") Подробнее об условиях
+                        img.for-users-service__icon.lazy(data-src="img/for-users-service-1.svg" alt="" width="225" height="180")
+
+                    article.for-users-service__item(role="article")
+                        h3.for-users-service__title.heading-font(role="heading") Платный сервис
+                        p По истечению гарантийного срока или не выполнения гарантийных обязательств, ремонт эхолотов производится, согласно прайс-листу в одном из многочисленных сервисных центров компании.
+                        a.for-users-service__link.btn._middle(href="#" role="link") Подробнее
+                        img.for-users-service__icon.lazy(data-src="img/for-users-service-2.svg" alt="" width="225" height="180")
+
+        //Гарантийный талон
+        section.section._pb0
+            .container
+                h2.section__h2.heading-font(role="heading") Гарантийный талон
+                .guarantee__items
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-guarantee-1]") Как подключить
+                            span.faq__control
+                        .faq__content(data-guarantee-1 data-grid)
+                            ul.guarantee__list(role="list")
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle.heading-font 1
+                                    | Отсканируйте или сфотографируйте бумажный чек и гарантийный талон, в котором проставлена дата покупки и печать продавца.Зарегистрируйтесь на сайте, заполнив все обязательные поля. Приложите в форме регистрации файлы со сканом или фотографией бумажных чека и гарантийного талона
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle.heading-font 2
+                                    | На указанную почту придет письмо, подтверждающее регистрацию. Электронный гарантийный талон Calypso будет сохранен в вашем личном кабинете автоматически в разделе «Электронный гарантийный талон Calypso
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle.heading-font 3
+                                    | Если вы уже зарегистрированы на сайте, то зайдите в свой личный кабинет и найдите там вкладку «Электронный гарантийный талон Calypso». От вас потребуется только приложить файлы о сканом или фотографией бумажных чека и гарантийного талона
+                            a.guarantee__link.btn._middle(href="#" role="link") Подключить в личном кабинете
+                    .faq__item
+                        button.faq__title.heading-font(type="button" role="button" data-toggle="[data-guarantee-2]") Какие преимущества дает электронный гарантийный талон
+                            span.faq__control
+                        .faq__content(data-guarantee-2 data-grid)
+                            ul.guarantee__list(role="list")
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle
+                                        +svg_sprite('guarantee-1', 29, 37)
+                                    | Вам не надо хранить и иметь под рукой бумажные документы, подтверждающие покупку
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle
+                                        +svg_sprite('guarantee-2', 30, 30)
+                                    | В случае обращения в сервисную службу будет достаточно назвать ваш номер телефона и имя или фамилию. Вы сможете позвонить прямо с рыбалки, чтобы получить консультацию.
+                                li.guarantee__list-item(role="listitem")
+                                    span.guarantee__list-circle
+                                        +svg_sprite('guarantee-3', 30, 30)
+                                    | Вы получите доступ к информационной рассылке и сможете первым узнавать о выходе новинок Calypso и обновлении ПО.
+
+        //Узнать больше
+        section.section._pb0
+            .container
+                .learn-more
+                    img.learn-more__bg.lazy(data-src="img/learn-more-bg.svg" alt="" width="1820" height="435")
+                    .learn-more__content
+                        h2.section__h2.heading-font.learn-more__h2(role="heading") Узнать больше об эхолотах
+                        p.learn-more__subtitle Узнай зачем нужны эхолоты, как они работают и чем наши приборы отличаются от аналогов
+                        a.learn-more__link.btn._middle(href="#" role="link") Подробнее
+                    .learn-more__images
+                        +picture_lazy('learn-more__picture _img1', 'tmp/', 'learn-more-img', 'png', 220, 334)
+                        +picture_lazy('learn-more__picture _img2', '', 'apple-store-screenshot', 'png', 310, 459)
+                a.learn-more__link-mobile.btn._middle(href="#" role="link") Подробнее
+
+        //Часто задаваемые вопросы
+        section.section
+            .container
+                h2.section__h2.heading-font(role="heading") Часто задаваемые вопросы
+                .faq__cols
+                    .faq__items
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-1]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-1 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-2]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-2 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-3]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-3 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-4]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-4 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-5]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-5 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-6]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-6 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                    .faq__items
+                        .faq__item._hidden(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-7]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-7 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item._hidden(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-8]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-8 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item._hidden(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-9]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-9 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item._hidden(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-10]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-10 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+                        .faq__item._hidden(data-faq)
+                            button.faq__title.heading-font(type="button" role="button" data-toggle="[data-faq-11]") Может эхолот замерять глубину через лед?
+                                span.faq__control
+                            .faq__content(data-faq-11 data-grid)
+                                p Без проблем, если лед однородный (без шуги и вмерзших пузырьков воздуха). Достаточно создать акустический контакт между датчиком и льдом (плеснуть воды на лед). На одном из форумов один из наших пользователей "Практиком" рассказал, как он замерил глубину через метровый слой льда. Очень удобно по замерзшим старым лункам делать замеры.
+
+                button.faq__more.btn._border._middle(type="button" role="button" data-faq-more) Показать еще
+
+        //Блог
+        section.section._blue
+            .container
+                .section__header
+                    h2.section__h2.section__header-h2.heading-font(role="heading") Блог
+                    a.blog__more.btn._border._small(href="#" role="link") Смотреть все
+                .blog.no-scroll
+                    article.blog__item(role="article")
+                        +picture_lazy('blog__picture', 'tmp/', 'blog-1', 'jpg', 860, 323)
+                        h3.blog__title.heading-font(role="heading")
+                            a.blog__link.all-link(href="#" role="link") Выбираем фонарь для рыбалки
+                        time.blog__date(datetime="2023-02-06") 6 февраля
+
+                    article.blog__item(role="article")
+                        +picture_lazy('blog__picture', 'tmp/', 'blog-2', 'jpg', 267, 184)
+                        h3.blog__title.heading-font(role="heading")
+                            a.blog__link.all-link(href="#" role="link") Выбираем фонарь для рыбалки
+                        p.blog__introtext Как выбрать хороший фонарь по всем характеристикам
+                        time.blog__date(datetime="2023-02-06") 6 февраля
+
+                    article.blog__item(role="article")
+                        +picture_lazy('blog__picture', 'tmp/', 'blog-2', 'jpg', 267, 184)
+                        h3.blog__title.heading-font(role="heading")
+                            a.blog__link.all-link(href="#" role="link") Выбираем фонарь для рыбалки
+                        p.blog__introtext Как выбрать хороший фонарь по всем характеристикам
+                        time.blog__date(datetime="2023-02-06") 6 февраля
+
+                a.blog__more-mobile.btn._border._small(href="#" role="link") Смотреть все
+
+        //Карты
+        - var footer_maps_classnames = '_pt0 _pb0'
+        include includes/_footer-maps

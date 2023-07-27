@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Товар</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/libs/fancybox.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header" role="banner" data-header>
+      <div class="container header__container"><a class="header__logo" href="#" role="link">
+              <picture class="header__logo-logo">
+                <source type="image/webp" srcset="img/webp/logo@2x.webp 2x, img/webp/logo.webp 1x"><img src="" srcset="img/logo@2x.png 2x, img/logo.png 1x" alt="" width="72" height="52" loading="lazy">
+              </picture>
+              <picture class="header__logo-flag">
+                <source type="image/webp" srcset="img/webp/flag@2x.webp 2x, img/webp/flag.webp 1x"><img src="" srcset="img/flag@2x.png 2x, img/flag.png 1x" alt="" width="65" height="65" loading="lazy">
+              </picture></a><a class="header__yandex" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <form class="header__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form>
+        <address class="header__contacts"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
+                <svg width="17" height="20">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Посмотреть список избранного">
+                <svg width="20" height="19">
+                  <use xlink:href="img/sprite.svg#favourite"></use>
+                </svg></a><a class="header__control" href="#" role="link" aria-label="Перейти к сравнению товаров">
+                <svg width="25" height="20">
+                  <use xlink:href="img/sprite.svg#compare"></use>
+                </svg></a><a class="header__control header__cart" href="#" role="link" aria-label="В корзину">
+                <svg width="22" height="20">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg><span class="header__cart-count">1</span></a></div>
+        <div class="header__user">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+        <button class="header__burger" type="button" role="button" data-toggle="[data-nav]"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <nav class="nav no-scroll" role="navigation" data-nav>
+      <div class="container nav__mobile-container">
+        <address class="header__contacts _tablet"><a class="header__contacts-phone heading-font" href="tel:88005004062" role="link">8 800 500 40 62</a>
+          <div class="header__contacts-controls">
+            <button class="header__contacts-btn btn-triangle" type="button" role="button" data-toggle="[data-header-feedback-mobile]">Связаться
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__contacts-info">Звонок бесплатный</div>
+          </div>
+          <div class="header__contacts-box" data-header-feedback-mobile>
+            <div class="header__contacts-socials"><a class="header__contacts-social" href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg></span>Telegram</a><a class="header__contacts-social" href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link"><span>
+                      <svg width="25" height="25">
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg></span>WhatsApp</a></div>
+            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+          </div>
+        </address>
+        <form class="nav__search search__form" action="#" method="get" role="form">
+          <input class="search__input" type="text" name="search" placeholder="Поиск">
+          <button class="search__submit" type="submit" role="button" aria-label="Искать">
+                <svg width="19" height="22">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+          </button>
+        </form><a class="header__yandex _tablet" href="https://ya.ru" target="_blank" rel="nofollow" role="link">
+              <svg class="header__yandex-icon" width="28" height="28">
+                <use xlink:href="img/sprite.svg#yandex"></use>
+              </svg><span class="header__yandex-content"><span class="header__yandex-rating heading-font">5,0</span><span class="header__yandex-text">Рейтинг на яндекс</span></span></a>
+        <div class="header__user _tablet">
+          <div class="header__city">
+            <button class="header__city-current btn-triangle" type="button" role="button" data-toggle="[data-header-city-mobile]"><span>Москва</span>
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg>
+            </button>
+            <div class="header__city-box" data-header-city-mobile>
+              <form class="header__city-search search__form" action="#" method="get" role="form">
+                <input class="search__input _border-grey" type="text" name="search" placeholder="Введите название вашего города">
+                <button class="search__submit _border-grey" type="submit" role="button" aria-label="Искать">
+                      <svg width="19" height="22">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg>
+                </button>
+              </form>
+              <ul class="header__city-list" role="list">
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink header__city-current" href="#" role="link"><span>Москва</span></a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Балашиха</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Дмитров</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Долгопрудный</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Жуковский</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Красногорск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Одинцово</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Санкт-Петербург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Уфа</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Екатеринбург</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink _bold" href="#" role="link">Новосибирск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Белгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владивосток</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Владимир</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Казань</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Кострома</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Курск</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Тверь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Нижний Новгород</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Орел</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Пермь</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Псков</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ростов</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Самара</a></li>
+                <li class="header__city-listitem" role="listitem"><a class="header__city-listlink" href="#" role="link">Ярославль</a></li>
+              </ul>
+            </div>
+          </div><a class="header__account" href="#" role="link" aria-label="Личный кабинет">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite.svg#user"></use>
+                </svg></a>
+        </div>
+      </div>
+      <div class="container nav__container">
+        <div class="nav__catalog">
+          <button class="nav__catalog-btn heading-font" type="button" role="button" data-toggle="[data-nav-catalog-list]">В магазин
+                <svg width="21" height="18">
+                  <use xlink:href="img/sprite.svg#triangle-catalog"></use>
+                </svg>
+          </button>
+          <ul class="nav__catalog-list" role="list" data-nav-catalog-list>
+            <li class="nav__catalog-listitem" role="listitem" data-nav-item><a class="nav__catalog-listlink heading-font" href="#" role="link" data-nav-link>Эхолоты
+                    <svg width="10" height="8">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg></a>
+              <ul class="nav__sublist" role="list" data-nav-sublist>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для зимней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Беспроводные</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для летней рыбалки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с берега</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Для рыбалки с лодки</a></li>
+                <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Недорогие эхолоты</a></li>
+              </ul>
+            </li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Аксессуары для эхолотов</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Подводные камеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Глубиномеры</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Насос "Бриз"</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Фонари для рыбалки</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Электромоторы</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Товары для туризма</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Мерч</a></li>
+            <li class="nav__catalog-listitem" role="listitem"><a class="nav__catalog-listlink heading-font" href="#" role="link">Уцененные товары</a></li>
+          </ul>
+        </div>
+        <ul class="nav__list" role="list">
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>О нас
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Общая информация</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Почему нам доверяют?</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">История компании</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Отзывы</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сертификаты</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Подбор эхолота</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Как это работает
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Информационная поддержка пользователя</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Частые вопросы</a></li>
+              <li class="nav__sublistitem" role="listitem" data-nav-item><a class="nav__sublistlink" href="#" role="link" data-nav-link>Блог
+                      <svg width="10" height="8">
+                        <use xlink:href="img/sprite.svg#triangle"></use>
+                      </svg></a>
+                <ul class="nav__sublist" role="list" data-nav-sublist>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Новости</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Статьи</a></li>
+                  <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Видео</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Акции</a></li>
+          <li class="nav__listitem" role="listitem" data-nav-item><a class="nav__listlink" href="#" role="link" data-nav-link>Ремонт
+                  <svg width="10" height="8">
+                    <use xlink:href="img/sprite.svg#triangle"></use>
+                  </svg></a>
+            <ul class="nav__sublist" role="list" data-nav-sublist>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Как отправить прибор в сервис</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Платный ремонт</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Гарантийный талон</a></li>
+              <li class="nav__sublistitem" role="listitem"><a class="nav__sublistlink" href="#" role="link">Сервисные центры</a></li>
+            </ul>
+          </li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Оплата и доставка</a></li>
+          <li class="nav__listitem" role="listitem"><a class="nav__listlink" href="#" role="link">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main" role="main">
+      <!--Основная информация-->
+      <section>
+        <div class="container">
+          <p class="product-page__title _tablet h1 heading-font" role="heading">Эхолот ПРАКТИК 6S</p>
+          <div class="product-page__container">
+            <!--Галерея-->
+            <div class="product-page__gallery">
+              <div class="product-page__swiper swiper" data-product-gallery>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide product-page__slide"><a class="product-page__picture" href="img/tmp/product-page@2x.png" data-fancybox="product-gallery">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product-page@2x.webp 2x, img/tmp/webp/product-page.webp 1x"><img src="" srcset="img/tmp/product-page@2x.png 2x, img/tmp/product-page.png 1x" alt="" width="509" height="562" loading="lazy">
+                          </picture></a></div>
+                  <div class="swiper-slide product-page__slide"><a class="product-page__picture" href="img/tmp/product-page@2x.png" data-fancybox="product-gallery">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product-page@2x.webp 2x, img/tmp/webp/product-page.webp 1x"><img src="" srcset="img/tmp/product-page@2x.png 2x, img/tmp/product-page.png 1x" alt="" width="509" height="562" loading="lazy">
+                          </picture></a></div>
+                  <div class="swiper-slide product-page__slide"><a class="product-page__picture" href="img/tmp/product-page@2x.png" data-fancybox="product-gallery">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product-page@2x.webp 2x, img/tmp/webp/product-page.webp 1x"><img src="" srcset="img/tmp/product-page@2x.png 2x, img/tmp/product-page.png 1x" alt="" width="509" height="562" loading="lazy">
+                          </picture></a></div>
+                  <div class="swiper-slide product-page__slide"><a class="product-page__picture" href="img/tmp/product-page@2x.png" data-fancybox="product-gallery">
+                          <picture>
+                            <source type="image/webp" srcset="img/tmp/webp/product-page@2x.webp 2x, img/tmp/webp/product-page.webp 1x"><img src="" srcset="img/tmp/product-page@2x.png 2x, img/tmp/product-page.png 1x" alt="" width="509" height="562" loading="lazy">
+                          </picture></a></div>
+                </div>
+              </div>
+              <div class="product-page__thumbs">
+                    <picture class="product-page__thumb">
+                      <source type="image/webp" srcset="img/tmp/webp/product-page-thumb@2x.webp 2x, img/tmp/webp/product-page-thumb.webp 1x"><img src="" srcset="img/tmp/product-page-thumb@2x.png 2x, img/tmp/product-page-thumb.png 1x" alt="" width="85" height="99" loading="lazy">
+                    </picture>
+                    <picture class="product-page__thumb">
+                      <source type="image/webp" srcset="img/tmp/webp/product-page-thumb@2x.webp 2x, img/tmp/webp/product-page-thumb.webp 1x"><img src="" srcset="img/tmp/product-page-thumb@2x.png 2x, img/tmp/product-page-thumb.png 1x" alt="" width="85" height="99" loading="lazy">
+                    </picture>
+                    <picture class="product-page__thumb">
+                      <source type="image/webp" srcset="img/tmp/webp/product-page-thumb@2x.webp 2x, img/tmp/webp/product-page-thumb.webp 1x"><img src="" srcset="img/tmp/product-page-thumb@2x.png 2x, img/tmp/product-page-thumb.png 1x" alt="" width="85" height="99" loading="lazy">
+                    </picture>
+                    <picture class="product-page__thumb">
+                      <source type="image/webp" srcset="img/tmp/webp/product-page-thumb@2x.webp 2x, img/tmp/webp/product-page-thumb.webp 1x"><img src="" srcset="img/tmp/product-page-thumb@2x.png 2x, img/tmp/product-page-thumb.png 1x" alt="" width="85" height="99" loading="lazy">
+                    </picture>
+              </div>
+            </div>
+            <!--Контент-->
+            <div class="product-page__content">
+              <!--Для не в наличии класс _out-of-stock-->
+              <div class="product-page__status catalog-product__status _in-stock">В наличии</div>
+              <h1 class="product-page__title heading-font" role="heading">Эхолот ПРАКТИК 6S</h1>
+              <div class="product-page__ratings catalog-product__ratings">
+                <div class="catalog-product__rating">
+                      <svg width="19" height="18">
+                        <use xlink:href="img/sprite.svg#star"></use>
+                      </svg>5
+                </div>
+                <div class="catalog-product__buyers">312 покупок за 3 месяца</div>
+              </div>
+              <ul class="product-page__params" role="list">
+                <li role="listitem">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#product-param-angle"></use>
+                      </svg><span><strong>Угол луча</strong> — 35</span>
+                </li>
+                <li role="listitem">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#product-param-deep"></use>
+                      </svg><span><strong>Рабочая глубина</strong> — до 25 м</span>
+                </li>
+                <li role="listitem">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#product-param-distance"></use>
+                      </svg><span><strong>Дальность приема</strong> — до 80 м</span>
+                </li>
+                <li role="listitem">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#product-param-season"></use>
+                      </svg><span><strong>Сезон рыбалки</strong> — зима</span>
+                </li>
+                <li role="listitem">
+                      <svg width="30" height="30">
+                        <use xlink:href="img/sprite.svg#product-param-temperature"></use>
+                      </svg><span><strong>Термоустойчивость</strong> — (-20 +30)</span>
+                </li>
+              </ul>
+              <div class="product-page__tags">
+                <p class="product-page__tags-title">Ключевые особенности</p>
+                <ul class="catalog-product__tags" role="list">
+                  <li role="listitem">
+                        <svg width="20" height="21">
+                          <use xlink:href="img/sprite.svg#wifi"></use>
+                        </svg>Wi-Fi
+                  </li>
+                  <li role="listitem">
+                        <svg width="20" height="21">
+                          <use xlink:href="img/sprite.svg#all-seasons"></use>
+                        </svg>Круглогодичный
+                  </li>
+                  <li role="listitem">
+                        <svg width="20" height="21">
+                          <use xlink:href="img/sprite.svg#guard"></use>
+                        </svg>Ударопрочный корпус
+                  </li>
+                  <li role="listitem">
+                        <svg width="20" height="21">
+                          <use xlink:href="img/sprite.svg#guard"></use>
+                        </svg>Ударопрочный корпус
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Добавить корзину-->
+            <div class="product-page__controls">
+              <div class="product-page__price heading-font">12 990 р</div>
+              <div class="product-page__products">
+                <article class="product-page__product" role="article">
+                      <picture class="product-page__product-picture">
+                        <source type="image/webp" srcset="img/tmp/webp/product-page-complekt-1@2x.webp 2x, img/tmp/webp/product-page-complekt-1.webp 1x"><img src="" srcset="img/tmp/product-page-complekt-1@2x.png 2x, img/tmp/product-page-complekt-1.png 1x" alt="" width="52" height="60" loading="lazy">
+                      </picture>
+                  <div class="product-page__product-content">
+                    <div class="product-page__product-header">
+                      <h3 class="product-page__product-title heading-font" role="heading">Товар 1</h3>
+                      <div class="product-page__product-price heading-font">12 990 р</div>
+                    </div>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="product-page__product" role="article">
+                      <picture class="product-page__product-picture">
+                        <source type="image/webp" srcset="img/tmp/webp/product-page-complekt-2@2x.webp 2x, img/tmp/webp/product-page-complekt-2.webp 1x"><img src="" srcset="img/tmp/product-page-complekt-2@2x.png 2x, img/tmp/product-page-complekt-2.png 1x" alt="" width="64" height="65" loading="lazy">
+                      </picture>
+                  <div class="product-page__product-content">
+                    <div class="product-page__product-header">
+                      <h3 class="product-page__product-title heading-font" role="heading">Товар 2</h3>
+                      <div class="product-page__product-price heading-font">5000 р</div>
+                    </div>
+                    <div class="product__count" data-product-count>
+                      <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                      <input class="product__count-input" type="text" name="count" value="1">
+                      <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="product-page__itogo">
+                <div class="product-page__itogo-title">Итого:</div>
+                <div class="product-page__itogo-prices">
+                  <div class="product-page__itogo-oldprice heading-font">17 990 р</div>
+                  <div class="product-page__itogo-price heading-font">15 000 р</div>
+                </div>
+              </div>
+              <div class="product-page__stocks">Есть доступные акции!</div>
+              <div class="product-page__btns">
+                <button class="catalog-product__btn _full btn _middle" type="button" role="button">Купить в один клик</button>
+                <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Смотреть акции</button>
+                <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">В корзину</button>
+                <button class="catalog-product__btn _full btn _border _middle" type="button" role="button">Есть промокод</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Комплекты товаров-->
+      <section class="section _ultra-small">
+        <div class="container">
+          <h2 class="product-complect__title" role="heading">В комплекте к этому товару по акции</h2>
+          <div class="product-complect__products">
+            <article class="product-page__product _blue" role="article">
+              <div class="product-page__product-label">Скидка % по акции</div>
+                  <picture class="product-page__product-picture">
+                    <source type="image/webp" srcset="img/tmp/webp/product-page-complekt-1@2x.webp 2x, img/tmp/webp/product-page-complekt-1.webp 1x"><img src="" srcset="img/tmp/product-page-complekt-1@2x.png 2x, img/tmp/product-page-complekt-1.png 1x" alt="" width="52" height="60" loading="lazy">
+                  </picture>
+              <div class="product-page__product-content">
+                <div class="product-page__product-header">
+                  <div class="product-page__product-header-col">
+                    <h3 class="product-page__product-title heading-font" role="heading">Товар 1</h3>
+                    <p class="product-page__product-text">Описание</p>
+                  </div>
+                  <div class="product-page__product-header-col _price">
+                    <div class="product-page__product-price heading-font">12 990 р</div>
+                    <div class="product-page__product-oldprice heading-font">16 990 р</div>
+                  </div>
+                </div>
+                <button class="product-page__product-btn btn _middle" type="button" role="button">Добавить</button>
+              </div>
+            </article>
+            <article class="product-page__product _blue" role="article">
+              <div class="product-page__product-label">Скидка % по акции</div>
+                  <picture class="product-page__product-picture">
+                    <source type="image/webp" srcset="img/tmp/webp/product-page-complekt-1@2x.webp 2x, img/tmp/webp/product-page-complekt-1.webp 1x"><img src="" srcset="img/tmp/product-page-complekt-1@2x.png 2x, img/tmp/product-page-complekt-1.png 1x" alt="" width="52" height="60" loading="lazy">
+                  </picture>
+              <div class="product-page__product-content">
+                <div class="product-page__product-header">
+                  <div class="product-page__product-header-col">
+                    <h3 class="product-page__product-title heading-font" role="heading">Товар 1</h3>
+                    <p class="product-page__product-text">Описание</p>
+                  </div>
+                  <div class="product-page__product-header-col _price">
+                    <div class="product-page__product-price heading-font">12 990 р</div>
+                    <div class="product-page__product-oldprice heading-font">16 990 р</div>
+                  </div>
+                </div>
+                <button class="product-page__product-btn btn _middle" type="button" role="button">Добавить</button>
+              </div>
+            </article>
+            <article class="product-page__product _blue" role="article">
+              <div class="product-page__product-label">Скидка % по акции</div>
+                  <picture class="product-page__product-picture">
+                    <source type="image/webp" srcset="img/tmp/webp/product-page-complekt-1@2x.webp 2x, img/tmp/webp/product-page-complekt-1.webp 1x"><img src="" srcset="img/tmp/product-page-complekt-1@2x.png 2x, img/tmp/product-page-complekt-1.png 1x" alt="" width="52" height="60" loading="lazy">
+                  </picture>
+              <div class="product-page__product-content">
+                <div class="product-page__product-header">
+                  <div class="product-page__product-header-col">
+                    <h3 class="product-page__product-title heading-font" role="heading">Товар 1</h3>
+                    <p class="product-page__product-text">Описание</p>
+                  </div>
+                  <div class="product-page__product-header-col _price">
+                    <div class="product-page__product-price heading-font">12 990 р</div>
+                    <div class="product-page__product-oldprice heading-font">16 990 р</div>
+                  </div>
+                </div>
+                <button class="product-page__product-btn btn _middle" type="button" role="button">Добавить</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--О товаре-->
+      <section class="section _pt0">
+        <div class="container">
+          <div class="product-about" data-product-tabs>
+            <h2 class="section__h2 product-about__h2 heading-font" role="heading">О товаре</h2>
+            <div class="product-about__tabs">
+              <button class="product-about__tab _active" type="button" role="button" data-product-tab="1">Оплата</button>
+              <button class="product-about__tab" type="button" role="button" data-product-tab="2">Доставка</button>
+              <button class="product-about__tab" type="button" role="button" data-product-tab="3">Сервис</button>
+            </div>
+            <!--Оплата-->
+            <div class="product-about__content _active" data-product-content="1">
+              <div class="product-about__faqs">
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-payment-1]">Оплата банковской картой на сайте<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-payment-1 data-grid>
+                    <p>Для выбора оплаты товара с помощью банковской карты на соответствующей странице необходимо нажать кнопку «оплата заказа банковской картой». Оплата происходит через ПАО «СБЕРБАНК» с использованием банковских карт следующих платёжных систем:</p>
+                    <div class="product-about__cards"><img class="lazy" data-src="img/payment-1.svg" alt="" width="120" height="36"><img class="lazy" data-src="img/payment-2.svg" alt="" width="90" height="30"><img class="lazy" data-src="img/payment-3.svg" alt="" width="60" height="46"><img class="lazy" data-src="img/payment-4.svg" alt="" width="60" height="46"></div>
+                  </div>
+                </div>
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-payment-2]">Наличными или банковской картой<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-payment-2 data-grid>
+                    <div class="product-about__payments">
+                      <div class="product-about__payment">
+                        <div class="product-about__payment-icon">
+                              <svg width="238" height="238">
+                                <use xlink:href="img/sprite.svg#product-payment-1"></use>
+                              </svg>
+                        </div>Непосредственно у нас в офисе в г. Зеленограде
+                      </div>
+                      <div class="product-about__payment">
+                        <div class="product-about__payment-icon">
+                              <svg width="204" height="162">
+                                <use xlink:href="img/sprite.svg#product-payment-2"></use>
+                              </svg>
+                        </div>При получении заказов в филиалах городов Новосибирск и Екатеринбург
+                      </div>
+                      <div class="product-about__payment">
+                        <div class="product-about__payment-icon">
+                              <svg width="220" height="220">
+                                <use xlink:href="img/sprite.svg#product-payment-3"></use>
+                              </svg>
+                        </div>Оплата с банковской карты на наш расчетный счет
+                      </div>
+                      <div class="product-about__payment">
+                        <div class="product-about__payment-icon">
+                              <svg width="190" height="190">
+                                <use xlink:href="img/sprite.svg#product-payment-4"></use>
+                              </svg>
+                        </div>Распечатать квитанцию и оплатить в ближайшем отделении Сбербанка или через приложение «Сбербанк-онлайн»
+                      </div>
+                      <div class="product-about__payment">
+                        <div class="product-about__payment-icon">
+                              <svg width="204" height="204">
+                                <use xlink:href="img/sprite.svg#product-payment-5"></use>
+                              </svg>
+                        </div>Безналичная оплата (для ЮЛ и ИП)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Доставка-->
+            <div class="product-about__content" data-product-content="2">
+              <div class="product-about__faqs">
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-delivery-1]">Самовывоз<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-delivery-1 data-grid>
+                    <p>Пункты выдачи заказов:</p>
+                    <div class="product-about__pickups">
+                      <article class="product-about__pickup" role="article">
+                        <h4 class="product-about__pickup-title heading-font" role="heading">г. Зеленоград</h4>
+                            <picture class="product-about__pickup-picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/pickup-map-1@2x.webp 2x, img/tmp/webp/pickup-map-1.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/pickup-map-1@2x.jpg 2x, img/tmp/pickup-map-1.jpg 1x" srcset="" alt="" width="548" height="400">
+                            </picture>
+                        <div class="product-about__pickup-text">
+                          <p>г. Зеленоград, ул. Заводская, д. 31, стр.1 (выдача в день заказа)</p>
+                          <p>Режим работы: ПН-ПТ с 9.00 до 17.00, СБ-ВС — выходной</p>
+                        </div>
+                      </article>
+                      <article class="product-about__pickup" role="article">
+                        <h4 class="product-about__pickup-title heading-font" role="heading">г. Новосибирск</h4>
+                            <picture class="product-about__pickup-picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/pickup-map-2@2x.webp 2x, img/tmp/webp/pickup-map-2.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/pickup-map-2@2x.jpg 2x, img/tmp/pickup-map-2.jpg 1x" srcset="" alt="" width="548" height="400">
+                            </picture>
+                        <div class="product-about__pickup-text">
+                          <p>г. Новосибирск, ул. Северный проезд, 37а, офис 1 (бывш.ул. Сибиряков-Гвардейцев, 49/3 корп.</p>
+                          <p>По предварительному согласованию.</p>
+                        </div>
+                      </article>
+                      <article class="product-about__pickup" role="article">
+                        <h4 class="product-about__pickup-title heading-font" role="heading">г. Екатеринбург</h4>
+                            <picture class="product-about__pickup-picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/pickup-map-3@2x.webp 2x, img/tmp/webp/pickup-map-3.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/pickup-map-3@2x.jpg 2x, img/tmp/pickup-map-3.jpg 1x" srcset="" alt="" width="548" height="400">
+                            </picture>
+                        <div class="product-about__pickup-text">
+                          <p>г. Екатеринбург, ул. Учителей, 46 пав.9</p>
+                          <p>По предварительному согласованию.</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-delivery-2]">Службой доставки<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-delivery-2 data-grid>
+                    <p>Содержимое этой вкладки находится в разработке</p>
+                  </div>
+                </div>
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-delivery-3]">Почтой России<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-delivery-3 data-grid>
+                    <p>Содержимое этой вкладки находится в разработке</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Сервис-->
+            <div class="product-about__content" data-product-content="3">
+              <p>Сервисный центр компании «ПРАКТИК-НЦ» производит бесплатное гарантийное обслуживание и сервис оборудования «Практик» и «Практик-Актив». Гарантия действует с даты покупки. Гарантийный срок указан в гарантийном талоне изделия.</p>
+              <p><a href="#" role="link">Проверить статус ремонта</a></p>
+              <div class="product-about__faqs">
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-service-1]">Отправка прибора в сервисный центр<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-service-1 data-grid>
+                    <div class="product-about__sending-services">
+                      <div class="product-about__sending-service">
+                        <div class="product-about__sending-service-icon">
+                              <svg class="product-about__sending-service-icon-svg" width="274" height="274">
+                                <use xlink:href="img/sprite.svg#sending-service-1"></use>
+                              </svg>
+                              <svg class="product-about__sending-service-icon-arrow" width="205" height="16">
+                                <use xlink:href="img/sprite.svg#sending-service-arrow"></use>
+                              </svg>
+                        </div>
+                        <div class="product-about__sending-service-text">
+                          <p>1. Заполнить заявление</p>
+                          <p><a href="#">Скачать заявление</a></p>
+                          <p class="product-about__sending-service-note">Можно скачать бланк и заполнить, либо написать заявление вручную по образцу.</p>
+                        </div>
+                      </div>
+                      <div class="product-about__sending-service">
+                        <div class="product-about__sending-service-icon">
+                              <svg class="product-about__sending-service-icon-svg" width="274" height="274">
+                                <use xlink:href="img/sprite.svg#sending-service-2"></use>
+                              </svg>
+                              <svg class="product-about__sending-service-icon-arrow" width="205" height="16">
+                                <use xlink:href="img/sprite.svg#sending-service-arrow"></use>
+                              </svg>
+                        </div>
+                        <div class="product-about__sending-service-text">
+                          <p>2. Упаковать прибор в чехол/коробку, чтобы исключить вероятность повреждения при транспортировке.</p>
+                        </div>
+                      </div>
+                      <div class="product-about__sending-service">
+                        <div class="product-about__sending-service-icon">
+                              <svg class="product-about__sending-service-icon-svg" width="274" height="274">
+                                <use xlink:href="img/sprite.svg#sending-service-3"></use>
+                              </svg>
+                              <svg class="product-about__sending-service-icon-arrow" width="205" height="16">
+                                <use xlink:href="img/sprite.svg#sending-service-arrow"></use>
+                              </svg>
+                        </div>
+                        <div class="product-about__sending-service-text">
+                          <p>3. ОБЯЗАТЕЛЬНО вложить в посылку гарантийный талон и/или чек, заявление на гарантийное обслуживание</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item _white">
+                  <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-service-2]">Платный сервис<span class="faq__control"></span></button>
+                  <div class="faq__content" data-product-service-2 data-grid>
+                    <p>После окончания гарантийного срока ремонтные работы выполняются согласно прайс-листу.</p>
+                    <div class="product-about__paid-services">
+                      <div class="product-about__paid-service"><img class="product-about__paid-service-logo lazy" data-src="img/delivery-type-2.svg" alt="" width="105" height="50">
+                        <p><strong>Оплата при отправлении Почтой России:</strong></p>
+                        <p>1. Предоплата, т.е. оплата стоимости сервиса до отправки эхолота клиенту (стоимость сервиса + почтовые расходы)</p>
+                        <p>2. Оплата ремонта при получении прибора (стоимость сервиса + почтовые расходы + % за перевод денег, установленный Почтой России).</p>
+                            <picture class="product-about__paid-service-map">
+                              <source type="image/webp" data-srcset="img/tmp/webp/paid-service-map-1@2x.webp 2x, img/tmp/webp/paid-service-map-1.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/paid-service-map-1@2x.jpg 2x, img/tmp/paid-service-map-1.jpg 1x" srcset="" alt="" width="605" height="320">
+                            </picture>
+                        <p><strong>Адрес</strong></p>
+                        <p>Адрес получателя: 124365, Москва, г. Зеленоград, ул. Заводская, д. 31, стр. 1<br>Получатель: ООО "Практик-НЦ"<br>ВАЖНО! Не отправляйте посылку наложенным платежом! Оцените посылку в 30-50 руб.</p>
+                      </div>
+                      <div class="product-about__paid-service"><img class="product-about__paid-service-logo lazy" data-src="img/delivery-type-3.svg" alt="" width="73" height="21">
+                        <p><strong>Оплата при отправлении ТК СДЭК:</strong></p>
+                        <p>Предоплата или оплата при получении (стоимость ремонта + стоимость доставки)</p>
+                            <picture class="product-about__paid-service-map">
+                              <source type="image/webp" data-srcset="img/tmp/webp/paid-service-map-2@2x.webp 2x, img/tmp/webp/paid-service-map-2.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/paid-service-map-2@2x.jpg 2x, img/tmp/paid-service-map-2.jpg 1x" srcset="" alt="" width="605" height="320">
+                            </picture>
+                        <p><strong>Адрес</strong></p>
+                        <p>Адрес: г. Зеленоград, ПВЗ на Савелкинском проезде.<br>Получатель: ООО "Практик-НЦ" Тел.: 8-495-514-11-73</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Обзор модели-->
+      <section class="section _pt0">
+        <div class="container">
+          <h2 class="section__h2 heading-font" role="heading">Обзор модели в действии</h2>
+          <div class="product-video">
+            <article class="product-video__item" role="article"><a class="product-video__picture" href="https://www.youtube.com/watch?v=krs7WGJoeYk" data-fancybox>
+                    <picture>
+                      <source type="image/webp" data-srcset="img/tmp/webp/product-video-1@2x.webp 2x, img/tmp/webp/product-video-1.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-video-1@2x.jpg 2x, img/tmp/product-video-1.jpg 1x" srcset="" alt="" width="890" height="446">
+                    </picture>
+                    <svg class="product-video__play" width="90" height="90">
+                      <use xlink:href="img/sprite.svg#product-video-play"></use>
+                    </svg></a>
+              <h3 class="product-video__title heading-font" role="heading">Обязательно описание о чем видео</h3>
+              <p class="product-video__text">Таймкод</p>
+            </article>
+            <article class="product-video__item" role="article"><a class="product-video__picture" href="https://www.youtube.com/watch?v=krs7WGJoeYk" data-fancybox>
+                    <picture>
+                      <source type="image/webp" data-srcset="img/tmp/webp/product-video-1@2x.webp 2x, img/tmp/webp/product-video-1.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-video-1@2x.jpg 2x, img/tmp/product-video-1.jpg 1x" srcset="" alt="" width="890" height="446">
+                    </picture>
+                    <svg class="product-video__play" width="90" height="90">
+                      <use xlink:href="img/sprite.svg#product-video-play"></use>
+                    </svg></a>
+              <h3 class="product-video__title heading-font" role="heading">Обязательно описание о чем видео</h3>
+              <p class="product-video__text">Таймкод</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--Почему нам доверяют-->
+      <section class="section _blue">
+        <div class="container">
+          <h2 class="section__h2 heading-font" role="heading">Почему нам доверяют?</h2>
+          <div class="why-we__items no-scroll">
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-1.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Высокое качество эхолотов</h3>
+                    <p class="why-we__text">Меньше 1% рекламаций в течение гарантийного срока</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-2.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Бесплатная рекламная продукция</h3>
+                    <p class="why-we__text">Предлагаем для размещения на торговых площадках: плакаты и рекламные листовки формата А5.</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-3.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Замена и ремонт брака</h3>
+                    <p class="why-we__text">Нет проблем с заменой или ремонтом брака. Сервисный центр находится на базе нашего предприятия</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-4.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Информация о партнерах</h3>
+                    <p class="why-we__text">Информация о постоянных партнерах размещается на нашем сайте в разделе «Где купить»</p>
+                  </article>
+                  <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-5.svg" alt="" width="533" height="338">
+                    <h3 class="why-we__title heading-font" role="heading">Доставка по всей России</h3>
+                    <p class="why-we__text">Доставка по всей России (СДЭК) или самовывоз</p>
+                  </article>
+            <article class="why-we__item" role="article"><img class="why-we__icon lazy" data-src="img/tmp/why-we-6.svg" alt="" width="533" height="338">
+              <h3 class="why-we__title heading-font _big" role="heading">ВАЖНО!</h3>
+              <h3 class="why-we__title heading-font">НЕТ ДЕМПИНГУ<br>во всех его проявлениях</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--Информация о модели-->
+      <section class="section _pb0">
+        <div class="container" data-product-tabs>
+          <h2 class="section__h2 product-about__h2 heading-font" role="heading">Информация о модели</h2>
+          <div class="product-about__tabs product-info__tabs no-scroll">
+            <button class="product-about__tab _active" type="button" role="button" data-product-tab="1">Описание модели</button>
+            <button class="product-about__tab" type="button" role="button" data-product-tab="2">Отзывы</button>
+            <button class="product-about__tab" type="button" role="button" data-product-tab="3">Характеристики</button>
+            <button class="product-about__tab" type="button" role="button" data-product-tab="4">Сравнение</button>
+            <button class="product-about__tab" type="button" role="button" data-product-tab="4">Приложение</button>
+          </div>
+          <!--Описание модели-->
+          <div class="product-about__content product-info__content _active" data-product-content="1">
+            <div class="product-about__faqs">
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-1]">Про Эхолот Практик 6S<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-1 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-2]">Отличие от «Практик 6М»<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-2 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-3]">Информация от эхолота<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-3 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-4]">Размер устройства<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-4 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-5]">Датчик эхолота<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-5 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+              <div class="faq__item _white">
+                <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-product-info-6]">Датчик эхолота<span class="faq__control"></span></button>
+                <div class="faq__content" data-product-info-6 data-grid>
+                  <p>Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Отзывы-->
+          <div class="product-about__content product-info__reviews" data-product-content="2">
+            <h3 class="section__h2 heading-font" role="heading">Отзывы <sup>5</sup></h3>
+            <div class="product-info__reviews-swiper swiper" data-auto-width-swiper>
+              <div class="swiper-wrapper">
+                <div class="product-info__reviews-slide swiper-slide">
+                            <div class="product-info__reviews-item">
+                              <div class="product-info__reviews-avatar">И</div>
+                              <div class="product-info__reviews-title">Иван И.</div>
+                              <div class="product-info__reviews-rating">
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                              </div>
+                              <div class="product-info__reviews-text">Хороший товар</div>
+                              <div class="product-info__reviews-picture"><a href="img/tmp/product-reviews@2x.jpg" data-fancybox>
+                                      <picture>
+                                        <source type="image/webp" srcset="img/tmp/webp/product-reviews@2x.webp 2x, img/tmp/webp/product-reviews.webp 1x"><img src="" srcset="img/tmp/product-reviews@2x.jpg 2x, img/tmp/product-reviews.jpg 1x" alt="" width="140" height="100" loading="lazy">
+                                      </picture></a></div>
+                            </div>
+                </div>
+                <div class="product-info__reviews-slide swiper-slide">
+                            <div class="product-info__reviews-item">
+                              <div class="product-info__reviews-avatar">И</div>
+                              <div class="product-info__reviews-title">Иван И.</div>
+                              <div class="product-info__reviews-rating">
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                              </div>
+                              <div class="product-info__reviews-text">Хороший товар</div>
+                              <div class="product-info__reviews-picture"><a href="img/tmp/product-reviews@2x.jpg" data-fancybox>
+                                      <picture>
+                                        <source type="image/webp" srcset="img/tmp/webp/product-reviews@2x.webp 2x, img/tmp/webp/product-reviews.webp 1x"><img src="" srcset="img/tmp/product-reviews@2x.jpg 2x, img/tmp/product-reviews.jpg 1x" alt="" width="140" height="100" loading="lazy">
+                                      </picture></a></div>
+                            </div>
+                </div>
+                <div class="product-info__reviews-slide swiper-slide">
+                            <div class="product-info__reviews-item">
+                              <div class="product-info__reviews-avatar">И</div>
+                              <div class="product-info__reviews-title">Иван И.</div>
+                              <div class="product-info__reviews-rating">
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                              </div>
+                              <div class="product-info__reviews-text">Хороший товар</div>
+                              <div class="product-info__reviews-picture"><a href="img/tmp/product-reviews@2x.jpg" data-fancybox>
+                                      <picture>
+                                        <source type="image/webp" srcset="img/tmp/webp/product-reviews@2x.webp 2x, img/tmp/webp/product-reviews.webp 1x"><img src="" srcset="img/tmp/product-reviews@2x.jpg 2x, img/tmp/product-reviews.jpg 1x" alt="" width="140" height="100" loading="lazy">
+                                      </picture></a></div>
+                            </div>
+                </div>
+                <div class="product-info__reviews-slide swiper-slide">
+                            <div class="product-info__reviews-item">
+                              <div class="product-info__reviews-avatar">И</div>
+                              <div class="product-info__reviews-title">Иван И.</div>
+                              <div class="product-info__reviews-rating">
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                              </div>
+                              <div class="product-info__reviews-text">Хороший товар</div>
+                              <div class="product-info__reviews-picture"><a href="img/tmp/product-reviews@2x.jpg" data-fancybox>
+                                      <picture>
+                                        <source type="image/webp" srcset="img/tmp/webp/product-reviews@2x.webp 2x, img/tmp/webp/product-reviews.webp 1x"><img src="" srcset="img/tmp/product-reviews@2x.jpg 2x, img/tmp/product-reviews.jpg 1x" alt="" width="140" height="100" loading="lazy">
+                                      </picture></a></div>
+                            </div>
+                </div>
+                <div class="product-info__reviews-slide swiper-slide">
+                            <div class="product-info__reviews-item">
+                              <div class="product-info__reviews-avatar">И</div>
+                              <div class="product-info__reviews-title">Иван И.</div>
+                              <div class="product-info__reviews-rating">
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg width="19" height="18">
+                                      <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                              </div>
+                              <div class="product-info__reviews-text">Хороший товар</div>
+                              <div class="product-info__reviews-picture"><a href="img/tmp/product-reviews@2x.jpg" data-fancybox>
+                                      <picture>
+                                        <source type="image/webp" srcset="img/tmp/webp/product-reviews@2x.webp 2x, img/tmp/webp/product-reviews.webp 1x"><img src="" srcset="img/tmp/product-reviews@2x.jpg 2x, img/tmp/product-reviews.jpg 1x" alt="" width="140" height="100" loading="lazy">
+                                      </picture></a></div>
+                            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Характеристики-->
+          <div class="product-about__content product-params" data-product-content="3">
+                <picture class="product-params__picture">
+                  <source type="image/webp" data-srcset="img/tmp/webp/product-info@2x.webp 2x, img/tmp/webp/product-info.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-info@2x.png 2x, img/tmp/product-info.png 1x" srcset="" alt="" width="338" height="711">
+                </picture>
+            <div class="product-params__items">
+              <div class="product-params__item"><span>Диапозон глубин эхолокации</span><span>От 0.5 до 25 метров</span></div>
+              <div class="product-params__item"><span>Количество лучей</span><span>1 луч (40°)</span></div>
+              <div class="product-params__item"><span>Вес</span><span>225 г</span></div>
+              <div class="product-params__item"><span>Температурный диапазон эксплуатации, °С</span><span>от -20 до +60</span></div>
+              <div class="product-params__item"><span>Отображение символов рыбы и ее размеров</span><span>+</span></div>
+              <div class="product-params__item"><span>Звуковая сигнализация рыбы</span><span>+</span></div>
+              <div class="product-params__item"><span>Отображение рельефа дна и указатель плотности грунта</span><span>+</span></div>
+              <div class="product-params__item"><span>Регулировка чувствительности</span><span>плавная, 28 градаций</span></div>
+              <div class="product-params__item"><span>Регулировка «глухой» зоны</span><span>+</span></div>
+              <div class="product-params__item"><span>ZOOM придонного слоя</span><span>регулируемый: от 1 до 5 м</span></div>
+              <div class="product-params__item"><span>Диаметр пятна эхолота на дне</span><span>+</span></div>
+              <div class="product-params__item"><span>Диагностика эхолота на воздухе</span><span>+</span></div>
+              <div class="product-params__item"><span>Подсветка экрана</span><span>+</span></div>
+              <div class="product-params__item"><span>Режим «FISH ID»</span><span>обработанная информация, отображение контуров рыбы</span></div>
+              <div class="product-params__item"><span>Режим «Pro»</span><span>необработанная информация, профессиональный режим</span></div>
+              <div class="product-params__item"><span>Режим «Флешер»</span><span>необработанная информация в режиме реального времени</span></div>
+              <div class="product-params__item"><span>Режим «Мелководье (М.В.)»</span><span>предназначен для работы на глубинах 0,5-2 м</span></div>
+              <div class="product-params__item"><span>Режим «Глубиномер»</span><span>измерение глубины с точностью ±1 см, в т.ч. в сложных условиях мелководья и водорослей</span></div>
+              <div class="product-params__item"><span>Режим «Демо»</span><span>проверка работоспособности прибора на воздухе</span></div>
+              <div class="product-params__item"><span>Режим «Инфо»</span><span>+</span></div>
+              <div class="product-params__item"><span>Цвет кабеля</span><span>оранжевый, чёрный</span></div>
+            </div>
+          </div>
+          <!--Сравнение-->
+          <div class="product-about__content product-compare" data-product-content="4">
+            <div class="product-compare__scroll no-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <td></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>Глубиномер</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>6М</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>6S</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>6 PLUS</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>7 Wi-Fi</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>7 BWF</a></td>
+                    <td><a class="product-compare__product" href="#" role="link">
+                            <picture class="product-compare__picture">
+                              <source type="image/webp" data-srcset="img/tmp/webp/product-compare@2x.webp 2x, img/tmp/webp/product-compare.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-compare@2x.png 2x, img/tmp/product-compare.png 1x" srcset="" alt="" width="50" height="68">
+                            </picture>7 BWF <br>Универсал</a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Зимой на лунке</td>
+                    <td>идеален</td>
+                    <td class="_active">идеален</td>
+                    <td>идеален</td>
+                    <td>идеален</td>
+                    <td>да</td>
+                    <td>да</td>
+                    <td>идеален</td>
+                  </tr>
+                  <tr>
+                    <td>Летом с лодки</td>
+                    <td>да</td>
+                    <td class="_active">да</td>
+                    <td>да</td>
+                    <td>да</td>
+                    <td>идеален</td>
+                    <td>идеален</td>
+                    <td>идеален</td>
+                  </tr>
+                  <tr>
+                    <td>Летом с берега</td>
+                    <td>нет</td>
+                    <td class="_active">нет</td>
+                    <td>нет</td>
+                    <td>нет</td>
+                    <td>идеален</td>
+                    <td>идеален</td>
+                    <td>идеален</td>
+                  </tr>
+                  <tr>
+                    <td>Проводной / беспроводной</td>
+                    <td>самостоятельный</td>
+                    <td class="_active">проводной</td>
+                    <td>проводной</td>
+                    <td>проводной</td>
+                    <td>беспроводной</td>
+                    <td>беспроводной</td>
+                    <td>беспроводной/проводной</td>
+                  </tr>
+                  <tr>
+                    <td>Приемник информации</td>
+                    <td>нет</td>
+                    <td class="_active">блок Практик</td>
+                    <td>блок Практик</td>
+                    <td>блок Практик</td>
+                    <td>Смартфон/планшет</td>
+                    <td>Смартфон/блок Практик</td>
+                    <td>Смартфон/блок Практик</td>
+                  </tr>
+                  <tr>
+                    <td>Тип соединение блока и датчика</td>
+                    <td>нет</td>
+                    <td class="_active">разъемное (кабель)</td>
+                    <td>разъемное (кабель)</td>
+                    <td>разъемное (кабель)</td>
+                    <td>Wi-Fi</td>
+                    <td>Wi-Fi</td>
+                    <td>Wi-Fi/разъемное (кабель)</td>
+                  </tr>
+                  <tr>
+                    <td>Количество лучей</td>
+                    <td>1 (30°)</td>
+                    <td class="_active">1 (40°)</td>
+                    <td>1 (40°)</td>
+                    <td>2 (30° и 12) CHIRP</td>
+                    <td>1 (35°)</td>
+                    <td>1 (35°)</td>
+                    <td>1 (35°)</td>
+                  </tr>
+                  <tr>
+                    <td>Температура эксплуатации</td>
+                    <td>-20° ... +60°</td>
+                    <td class="_active">-20° ... +60°</td>
+                    <td>-20° ... +60°</td>
+                    <td>-30° ... +60°</td>
+                    <td>-20° ... +40°</td>
+                    <td>-20° ... +40°</td>
+                    <td>-20° ... +40°</td>
+                  </tr>
+                  <tr>
+                    <td>Вес эхолота</td>
+                    <td>100 г</td>
+                    <td class="_active">225 г</td>
+                    <td>225 г</td>
+                    <td>303 г</td>
+                    <td>303 г</td>
+                    <td>100 г</td>
+                    <td>100 г</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--Приложение-->
+          <div class="product-about__content product-info__content product-application" data-product-content="5">
+            <article class="product-application__application" role="article">
+              <h3 class="product-application__application-title heading-font _mobile" role="heading">Скачайте наше <span>приложение</span></h3>
+                  <picture class="product-application__application-picture">
+                    <source type="image/webp" data-srcset="img/tmp/webp/product-application@2x.webp 2x, img/tmp/webp/product-application.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-application@2x.png 2x, img/tmp/product-application.png 1x" srcset="" alt="" width="351" height="700">
+                  </picture>
+              <div class="product-application__application-content">
+                <h3 class="product-application__application-title heading-font" role="heading">Скачайте наше <span>приложение</span></h3>
+                <ul class="product-application__application-list heading-font" role="list">
+                  <li>
+                        <svg width="54" height="54">
+                          <use xlink:href="img/sprite.svg#product-application-1"></use>
+                        </svg>Стройте карты рельефа дна
+                  </li>
+                  <li>
+                        <svg width="54" height="54">
+                          <use xlink:href="img/sprite.svg#product-application-2"></use>
+                        </svg>Отмечайте точки для изучения
+                  </li>
+                  <li>
+                        <svg width="54" height="54">
+                          <use xlink:href="img/sprite.svg#product-application-3"></use>
+                        </svg>Узнавайте местоположение рыб
+                  </li>
+                </ul>
+                <div class="product-application__application-download"><a href="#" target="_blank" role="link">
+                        <picture>
+                          <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                        </picture></a><a href="#" target="_blank" role="link">
+                        <picture>
+                          <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                        </picture></a><span>Скачивайте приложение <br>во всех магазинах</span></div>
+              </div>
+            </article>
+            <article class="product-application__instruction" role="article">
+              <h3 class="product-application__instruction-title heading-font _mobile" role="heading">Инструкция по <br>использованию</h3><a class="product-application__instruction-video" href="https://www.youtube.com/watch?v=4rSIt2QUCds" data-fancybox role="link">
+                    <picture class="product-application__instruction-picture">
+                      <source type="image/webp" data-srcset="img/tmp/webp/product-application-instruction@2x.webp 2x, img/tmp/webp/product-application-instruction.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-application-instruction@2x.png 2x, img/tmp/product-application-instruction.png 1x" srcset="" alt="" width="781" height="434">
+                    </picture>
+                    <svg class="product-application__instruction-play" width="90" height="90">
+                      <use xlink:href="img/sprite.svg#product-video-play"></use>
+                    </svg></a>
+              <div class="product-application__instruction-content">
+                <h3 class="product-application__instruction-title heading-font" role="heading">Инструкция по <br>использованию</h3>
+                <p class="product-application__instruction-text"><strong>Хронометраж видео</strong></p>
+                <ul class="product-application__instruction-list" role="list">
+                  <li role="listitem">1:22 Как установить приложение</li>
+                  <li role="listitem">2:00 Возможности приложения</li>
+                  <li role="listitem">3:00 Как ставить метки на карте</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--Комплекты по акции-->
+      <section class="section _pb0">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__h2 section__header-h2 heading-font" role="heading">Комплекты по акции</h2>
+            <div class="section__header-controls carousel__controls">
+              <button class="carousel__navigation _prev _blue" type="button" role="button" data-complect-prev>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+              <button class="carousel__navigation _next _blue" type="button" role="button" data-complect-next>
+                    <svg width="23" height="15">
+                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="like__swiper swiper" data-auto-width-swiper data-prev="[data-complect-prev]" data-next="[data-complect-next]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Комплект 1</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+              <div class="swiper-slide like__slide">
+                    <article class="product compare__product _complect" role="article"><a class="product__picture compare__picture" href="#" role="link">
+                            <picture>
+                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                            </picture></a>
+                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                      <ul class="product__params" role="list">
+                        <li class="product__param" role="listitem">Позиция 1</li>
+                        <li class="product__param" role="listitem">Позиция 2</li>
+                        <li class="product__param" role="listitem">Позиция 3</li>
+                      </ul>
+                      <div class="product__price">12 700р<span>14 000р</span></div>
+                      <button class="product__cart btn _small _border" type="button" role="button">В корзину</button>
+                    </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Не нашли подходящую акцию?-->
+      <section class="section">
+        <div class="container">
+          <div class="not-find-stock">
+            <div class="not-find-stock__content">
+              <h2 class="section__h2 not-find-stock__title heading-font" role="heading">Не нашли подходящую акцию?</h2>
+              <p class="not-find-stock__subtitle">Оставьте почту и мы сообщим о новых акциях</p>
+              <form class="not-find-stock__form form" action="#" method="">
+                <input class="form__input" type="email" name="email" placeholder="Почта">
+                <button class="form__submit btn _border _middle" type="submit">Подписаться</button>
+              </form>
+            </div>
+            <div class="not-find-stock__picture"><img class="lazy" src="img/not-find-stock.svg" alt="" width="463" height="410"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__container">
+        <div class="footer__contacts"><a class="footer__logo" href="#" role="link">
+                <picture>
+                  <source type="image/webp" data-srcset="img/webp/logo-footer@2x.webp 2x, img/webp/logo-footer.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/logo-footer@2x.png 2x, img/logo-footer.png 1x" srcset="" alt="" width="101" height="73">
+                </picture></a>
+          <h2 class="footer__h2 heading-font" role="navigation">Контакты <br>и график работы</h2>
+          <div class="footer__items">
+            <address class="footer__item">
+              <p class="footer__item-title">Почта:</p><a class="footer__item-value footer__item-link" href="mailto:praktik@rusonar.ru">praktik@rusonar.ru</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Сервис и ремонт:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы офиса:</p>
+              <p class="footer__item-value">Пн-Пт: 10:00-17:00</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Заказы и консультации:</p><a class="footer__item-value footer__item-link" href="tel:+74955141173">+7 (495) 514-11-73</a>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">Адрес:</p>
+              <p class="footer__item-value">124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1</p>
+            </address>
+            <address class="footer__item">
+              <p class="footer__item-title">График работы интернет-магазина:</p>
+              <p class="footer__item-value">Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00</p>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h3 class="footer__h3 heading-font" role="heading">Мы в соцсетях:</h3>
+            <div class="footer__icons"><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#vk"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#ok"></use>
+                    </svg></a><a class="footer__social" href="#" target="_blank" rel="nofollow">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#youtube-footer"></use>
+                    </svg></a></div>
+          </div>
+        </div>
+        <nav class="footer__nav" role="navigation">
+          <ul class="footer__nav-list" role="list">
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">О нас</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Как это работает</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Контакты</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Подбор эхолота</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Ремонт</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Акции</a></li>
+            <li class="footer__nav-listitem" role="listitem"><a class="footer__nav-listlink" href="#" role="link">Оплата и доставка</a></li>
+          </ul>
+        </nav>
+        <div class="footer__download">
+          <div class="footer__download-content">
+            <h3 class="footer__download-title heading-font" role="heading">Скачивайте наше приложение <span>«Эхолоты практик 7»</span></h3>
+            <div class="footer__download-links"><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/google-play@2x.webp 2x, img/webp/google-play.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/google-play@2x.png 2x, img/google-play.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a><a class="footer__download-link" href="#" target="_blank" role="link">
+                    <picture>
+                      <source type="image/webp" data-srcset="img/webp/apple-store@2x.webp 2x, img/webp/apple-store.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store@2x.png 2x, img/apple-store.png 1x" srcset="" alt="" width="150" height="44">
+                    </picture></a></div>
+          </div>
+              <picture class="footer__download-picture">
+                <source type="image/webp" data-srcset="img/webp/apple-store-screenshot@2x.webp 2x, img/webp/apple-store-screenshot.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/apple-store-screenshot@2x.png 2x, img/apple-store-screenshot.png 1x" srcset="" alt="" width="310" height="459">
+              </picture>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+          <div class="footer__bottom-item">
+            <p>ⓒ «Практик», 2023</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__bottom-item">
+            <p>ООО «ПРАКТИК-НЦ»</p>
+            <p>ОГРН 1087746089276</p>
+            <p>ИНН 7735537073</p>
+            <p>КПП 773501001</p>
+          </div>
+          <address class="footer__bottom-item">
+            <p>Юридический адрес - 124365, Москва, г. Зеленоград, ул. Заводская, дом 31, стр.1</p>
+          </address>
+          <div class="footer__bottom-item"><a href="#" role="link">Договор оферты</a><a href="#" role="link">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/lazyload.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/fancybox.umd.js"></script>
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

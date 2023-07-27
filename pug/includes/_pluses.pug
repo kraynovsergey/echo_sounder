@@ -1,0 +1,20 @@
+mixin why_we_item(icon, title, text)
+    article.why-we__item(role="article")
+        img.why-we__icon.lazy(data-src="img/tmp/"+icon+".svg" alt="" width="533" height='338')
+        h3.why-we__title.heading-font(role="heading")= title
+        p.why-we__text= text
+
+section.section(class=pluses_classnames)
+    .container
+        h2.section__h2.heading-font(role="heading")=pluses_title
+
+        .why-we__items.no-scroll
+            +why_we_item('why-we-1', 'Высокое качество эхолотов', 'Меньше 1% рекламаций в течение гарантийного срока')
+            +why_we_item('why-we-2', 'Бесплатная рекламная продукция', 'Предлагаем для размещения на торговых площадках: плакаты и рекламные листовки формата А5.')
+            +why_we_item('why-we-3', 'Замена и ремонт брака', 'Нет проблем с заменой или ремонтом брака. Сервисный центр находится на базе нашего предприятия')
+            +why_we_item('why-we-4', 'Информация о партнерах', 'Информация о постоянных партнерах размещается на нашем сайте в разделе «Где купить»')
+            +why_we_item('why-we-5', 'Доставка по всей России', 'Доставка по всей России (СДЭК) или самовывоз')
+            article.why-we__item(role="article")
+                img.why-we__icon.lazy(data-src="img/tmp/why-we-6.svg" alt="" width="533" height='338')
+                h3.why-we__title.heading-font._big(role="heading") ВАЖНО!
+                h3.why-we__title.heading-font НЕТ ДЕМПИНГУ<br>во всех его проявлениях

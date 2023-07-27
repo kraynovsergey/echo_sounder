@@ -1,0 +1,12 @@
+extends base
+
+block seo
+    - var seo = {title: 'Страница не найдена', description: '', keywords: ''}
+
+block main
+     section.not-found
+        img.not-found__img.lazy(data-src="img/404-img.svg" alt="" width="740" height="579")
+        h1.not-found__title.heading-font(role="heading") Cтраница не найдена
+        a.not-found__home.btn._middle(href="#" role="link") На главную
+
+block footer

@@ -1,0 +1,173 @@
+.heading-font {
+	font-family: 'TT Runs', sans-serif;
+	font-weight: 800;
+}
+
+.btn-triangle {
+	display: flex;
+	align-items: center;
+
+	& svg {
+		margin-left: 4px;
+	}
+
+	&._active {
+		& svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.btn {
+	background: $color_orange;
+	border: 1px solid $color_orange;
+	text-transform: uppercase;
+	font-family: 'TT Runs', sans-serif;
+	color: $color_white;
+	font-weight: 800;
+	padding: 0 17px;
+	border-radius: 10px;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	justify-content: center;
+
+	&:hover {
+		background: $color_white;
+		color: $color_orange;
+	}
+
+	&._small {
+		height: 45px;
+		font-size: 14px;
+	}
+
+	&._middle {
+		height: 60px;
+		font-size: 16px;
+		border-width: 2px;
+
+		@media (max-width: 991px) {
+			font-size: 16px;
+			height: 50px;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 14px;
+		}
+	}
+
+	&._border {
+		background: $color_white;
+		color: $color_orange;
+
+		&:hover {
+			color: $color_white;
+			background: $color_orange;
+		}
+	}
+}
+
+.carousel {
+	&__controls {
+		display: flex;
+	}
+
+	&__navigation {
+		min-width: 62px;
+		max-width: 62px;
+		height: 62px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: 1440px) {
+			min-width: 55px;
+			max-width: 55px;
+			height: 55px;
+		}
+
+		@media (max-width: 1280px) {
+			min-width: 50px;
+			max-width: 50px;
+			height: 50px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		&._next {
+			transform: rotate(180deg);
+		}
+
+		&._orange {
+			color: $color_orange;
+			background: $color_white;
+			border: 1px solid $color_orange;
+
+			&:hover {
+				background: $color_orange;
+				color: $color_white;
+			}
+		}
+
+		&._blue {
+			color: $color_blue;
+			background: rgba(50, 142, 221, 0.2);
+
+			&:hover {
+				background: $color_blue;
+				color: $color_white;
+			}
+		}
+
+		&:disabled {
+			opacity: .5;
+			cursor: not-allowed;
+		}
+
+		& svg {
+			transition: none;
+		}
+	}
+}
+
+h1,
+.h1 {
+	font-size: 2rem;
+	color: $color_black;
+	text-transform: uppercase;
+	margin: 0 0 30px;
+	padding: 0;
+
+	@media (max-width: 991px) {
+		font-size: 1.5rem;
+	}
+
+	@media (max-width: 575px) {
+		font-size: 1.4rem;
+		margin-bottom: 25px;
+	}
+
+	& sup {
+		color: #C0C0C0;
+		font-size: 1.2rem;
+		position: relative;
+		top: -1rem;
+
+		@media (max-width: 1440px) {
+			font-size: .7rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: .87rem;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1rem;
+		}
+	}
+}

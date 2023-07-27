@@ -1,0 +1,151 @@
+.cabinet {
+	&__grid {
+		display: grid;
+		grid-template-columns: .5fr 1fr;
+		grid-gap: 20px;
+		align-items: start;
+
+		@media (max-width: 1600px) {
+			grid-template-columns: .45fr 1fr;
+		}
+
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__aside {
+		background: $color_white;
+		border-radius: 10px;
+		padding: 35px 50px;
+		display: grid;
+		grid-gap: 20px;
+		justify-items: start;
+
+		@media (max-width: 1440px) {
+			padding: 35px 20px;
+		}
+
+		@media (max-width: 991px) {
+			padding: 20px;
+			grid-gap: 15px;
+			grid-template-columns: 1fr 1fr;
+			justify-items: stretch;
+		}
+
+		@media (max-width: 575px) {
+			padding: 10px;
+			grid-gap: 5px;
+		}
+	}
+
+	&__aside-link {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-gap: 25px;
+		font-size: 1.2rem;
+		color: $color_primary_light;
+		font-weight: 700;
+		text-decoration: none;
+		align-items: center;
+
+		@media (max-width: 991px) {
+			grid-gap: 15px;
+			padding: 20px;
+			border: 1px solid $color_primary_light;
+			border-radius: 10px;
+		}
+
+		@media (max-width: 575px) {
+			padding: 10px 5px 10px 10px;
+			font-size: .85rem;
+			grid-gap: 8px;
+		}
+
+		&:hover,
+		&._active {
+			color: $color_blue;
+
+			@media (max-width: 991px) {
+				border-color: $color_blue;
+			}
+		}
+
+		&:last-child {
+			@media (max-width: 991px) {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__aside-icon {
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		background: $color_blue_light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color_blue;
+
+		@media (max-width: 575px) {
+			width: 30px;
+			height: 30px;
+			& svg {
+				height: 60%;
+				width: auto;
+			}
+		}
+	}
+
+	&__content {
+		background: $color_white;
+		border-radius: 10px;
+		padding: 35px;
+		width: 100%;
+		max-width: 1053px;
+		display: grid;
+
+		@media (max-width: 575px) {
+			padding: 20px 15px;
+		}
+	}
+
+	&__content-title {
+		color: $color_primary_light;
+		font-size: 1.55rem;
+		margin-bottom: 30px;
+
+		@media (max-width: 991px) {
+			font-size: 1.3rem;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 575px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__content-header {
+		margin-bottom: 30px;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-gap: 30px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+			grid-template-columns: 1fr;
+			grid-gap: 0;
+		}
+
+		@media (max-width: 575px) {
+			margin-bottom: 15px;
+		}
+
+		& .cabinet__content-title {
+			@media (min-width: 992px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

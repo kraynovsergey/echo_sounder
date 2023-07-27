@@ -1,0 +1,11 @@
+.repair-faq {
+	&__h2 {
+		width: 100%;
+		max-width: 1100px;
+	}
+
+	&__items {
+		display: grid;
+		grid-gap: 20px;
+	}
+}

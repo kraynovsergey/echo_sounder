@@ -1,0 +1,198 @@
+nav.nav.no-scroll(role="navigation" data-nav)
+    .container.nav__mobile-container
+        address.header__contacts._tablet
+            a.header__contacts-phone.heading-font(href="tel:88005004062" role="link") 8 800 500 40 62
+            .header__contacts-controls
+                button.header__contacts-btn.btn-triangle(type="button" role="button" data-toggle="[data-header-feedback-mobile]") Связаться
+                    +svg_sprite('triangle', 10, 8)
+                .header__contacts-info Звонок бесплатный
+
+            .header__contacts-box(data-header-feedback-mobile)
+                .header__contacts-socials
+                    a.header__contacts-social(href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link")
+                        span
+                            +svg_sprite('telegram', 25, 25)
+                        | Telegram
+                    a.header__contacts-social(href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link")
+                        span
+                            +svg_sprite('whatsapp', 25, 25)
+                        | WhatsApp
+                button.header__contacts-callback.btn._small(type="button" role="button") Заказать звонок
+
+        form.nav__search.search__form(action="#" method="get" role="form")
+            input.search__input(type="text" name="search" placeholder="Поиск")
+            button.search__submit(type="submit" role="button" aria-label="Искать")
+                +svg_sprite('search', 19, 22)
+
+        a.header__yandex._tablet(href="https://ya.ru" target="_blank" rel="nofollow" role="link")
+            +svg_sprite('yandex', 28, 28, 'header__yandex-icon')
+            span.header__yandex-content
+                span.header__yandex-rating.heading-font 5,0
+                span.header__yandex-text Рейтинг на яндекс
+
+        .header__user._tablet
+            .header__city
+                button.header__city-current.btn-triangle(type="button" role="button" data-toggle="[data-header-city-mobile]")
+                    span Москва
+                    +svg_sprite('triangle', 10, 8)
+
+                .header__city-box(data-header-city-mobile)
+                    form.header__city-search.search__form(action="#" method="get" role="form")
+                        input.search__input._border-grey(type="text" name="search" placeholder="Введите название вашего города")
+                        button.search__submit._border-grey(type="submit" role="button" aria-label="Искать")
+                            +svg_sprite('search', 19, 22)
+
+                    ul.header__city-list(role="list")
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink.header__city-current(href="#" role="link")
+                                span Москва
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Балашиха
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Дмитров
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Долгопрудный
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Жуковский
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Красногорск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Одинцово
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Санкт-Петербург
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Уфа
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Екатеринбург
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Новосибирск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Белгород
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Владивосток
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Владимир
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Казань
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Кострома
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Курск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Тверь
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Нижний Новгород
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Орел
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Пермь
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Псков
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Ростов
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Самара
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Ярославль
+
+            a.header__account(href="#" role="link" aria-label="Личный кабинет")
+                +svg_sprite('user', 16, 15)
+
+    .container.nav__container
+        .nav__catalog
+            button.nav__catalog-btn.heading-font(type="button" role="button" data-toggle="[data-nav-catalog-list]") В магазин
+                +svg_sprite('triangle-catalog', 21, 18)
+            ul.nav__catalog-list(role="list" data-nav-catalog-list)
+                li.nav__catalog-listitem(role="listitem" data-nav-item)
+                    a.nav__catalog-listlink.heading-font(href="#" role="link" data-nav-link) Эхолоты
+                        +svg_sprite('triangle', 10, 8)
+                    ul.nav__sublist(role="list" data-nav-sublist)
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Для зимней рыбалки
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Беспроводные
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Для летней рыбалки
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Для рыбалки с берега
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Для рыбалки с лодки
+                        li.nav__sublistitem(role="listitem")
+                            a.nav__sublistlink(href="#" role="link") Недорогие эхолоты
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Аксессуары для эхолотов
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Подводные камеры
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Глубиномеры
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Насос "Бриз"
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Фонари для рыбалки
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Электромоторы
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Товары для туризма
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Мерч
+                li.nav__catalog-listitem(role="listitem")
+                    a.nav__catalog-listlink.heading-font(href="#" role="link") Уцененные товары
+
+        ul.nav__list(role="list")
+            li.nav__listitem(role="listitem" data-nav-item)
+                a.nav__listlink(href="#" role="link" data-nav-link) О нас
+                    +svg_sprite('triangle', 10, 8)
+                ul.nav__sublist(role="list" data-nav-sublist)
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Общая информация
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Почему нам доверяют?
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") История компании
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Отзывы
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Сертификаты
+            li.nav__listitem(role="listitem")
+                a.nav__listlink(href="#" role="link") Подбор эхолота
+            li.nav__listitem(role="listitem" data-nav-item)
+                a.nav__listlink(href="#" role="link" data-nav-link) Как это работает
+                    +svg_sprite('triangle', 10, 8)
+                ul.nav__sublist(role="list" data-nav-sublist)
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Информационная поддержка пользователя
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Сервис
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Гарантийный талон
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Частые вопросы
+                    li.nav__sublistitem(role="listitem" data-nav-item)
+                        a.nav__sublistlink(href="#" role="link" data-nav-link) Блог
+                            +svg_sprite('triangle', 10, 8)
+                        ul.nav__sublist(role="list" data-nav-sublist)
+                            li.nav__sublistitem(role="listitem")
+                                a.nav__sublistlink(href="#" role="link") Новости
+                            li.nav__sublistitem(role="listitem")
+                                a.nav__sublistlink(href="#" role="link") Статьи
+                            li.nav__sublistitem(role="listitem")
+                                a.nav__sublistlink(href="#" role="link") Видео
+            li.nav__listitem(role="listitem")
+                a.nav__listlink(href="#" role="link") Акции
+            li.nav__listitem(role="listitem" data-nav-item)
+                a.nav__listlink(href="#" role="link" data-nav-link) Ремонт
+                    +svg_sprite('triangle', 10, 8)
+                ul.nav__sublist(role="list" data-nav-sublist)
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Как отправить прибор в сервис
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Платный ремонт
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Гарантийный талон
+                    li.nav__sublistitem(role="listitem")
+                        a.nav__sublistlink(href="#" role="link") Сервисные центры
+            li.nav__listitem(role="listitem")
+                a.nav__listlink(href="#" role="link") Оплата и доставка
+            li.nav__listitem(role="listitem")
+                a.nav__listlink(href="#" role="link") Контакты
+

@@ -1,0 +1,28 @@
+.product-complect {
+	&__title {
+		margin: 0 0 30px;
+		padding: 0;
+		color: $color_primary_light;
+		font-weight: 600;
+		font-size: 1.6rem;
+
+		@media (max-width: 1440px) {
+			font-size: 1.1rem;
+			margin-bottom: 25px;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 1rem;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__products {
+		display: grid;
+		grid-gap: 20px;
+
+		@media (min-width: 1281px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

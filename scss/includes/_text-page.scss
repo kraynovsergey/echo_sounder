@@ -1,0 +1,65 @@
+.text-page {
+	width: 70%;
+
+	@media (max-width: 1280px) {
+		width: 100%;
+	}
+
+	&__block {
+		margin-top: 130px;
+
+		@media (max-width: 1440px) {
+			margin-top: 100px;
+		}
+
+		@media (max-width: 991px) {
+			margin-top: 80px;
+		}
+
+		@media (max-width: 991px) {
+			margin-top: 60px;
+		}
+	}
+
+	& h1,
+	& h2 {
+		color: $color_orange;
+	}
+
+	& h2 {
+		padding: 0;
+		font-size: 1.6rem;
+		margin: 0 0 20px;
+
+		@media (max-width: 1440px) {
+			font-size: 1.3rem;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 1.1rem;
+		}
+	}
+
+	& ul,
+	& ol {
+		margin: 0 0 20px;
+		padding: 0;
+		list-style: none;
+
+		& ul,
+		& ol {
+			margin-left: 20px;
+			margin-top: 10px;
+		}
+
+		& li {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+header.header(role="banner" data-header)
+    .container.header__container
+        a.header__logo(href="#" role="link")
+            +picture('header__logo-logo', '', 'logo', 'png', 72, 52)
+            +picture('header__logo-flag', '', 'flag', 'png', 65, 65)
+
+        a.header__yandex(href="https://ya.ru" target="_blank" rel="nofollow" role="link")
+            +svg_sprite('yandex', 28, 28, 'header__yandex-icon')
+            span.header__yandex-content
+                span.header__yandex-rating.heading-font 5,0
+                span.header__yandex-text Рейтинг на яндекс
+
+        form.header__search.search__form(action="#" method="get" role="form")
+            input.search__input(type="text" name="search" placeholder="Поиск")
+            button.search__submit(type="submit" role="button" aria-label="Искать")
+                +svg_sprite('search', 19, 22)
+
+        address.header__contacts
+            a.header__contacts-phone.heading-font(href="tel:88005004062" role="link") 8 800 500 40 62
+            .header__contacts-controls
+                button.header__contacts-btn.btn-triangle(type="button" role="button" data-toggle="[data-header-feedback]") Связаться
+                    +svg_sprite('triangle', 10, 8)
+                .header__contacts-info Звонок бесплатный
+
+            .header__contacts-box(data-header-feedback)
+                .header__contacts-socials
+                    a.header__contacts-social(href="tg://resolve?domain=" target="_blank" rel="nofollow" role="link")
+                        span
+                            +svg_sprite('telegram', 25, 25)
+                        | Telegram
+                    a.header__contacts-social(href="https://api.whatsapp.com/send?phone=" target="_blank" rel="nofollow" role="link")
+                        span
+                            +svg_sprite('whatsapp', 25, 25)
+                        | WhatsApp
+                button.header__contacts-callback.btn._small(type="button" role="button") Заказать звонок
+
+        .header__controls
+            a.header__control._mobile(href="tel:88005004062" role="link" aria-label="Позвонить")
+                +svg_sprite('phone', 17, 20)
+            a.header__control(href="#" role="link" aria-label="Посмотреть список избранного")
+                +svg_sprite('favourite', 20, 19)
+            a.header__control(href="#" role="link" aria-label="Перейти к сравнению товаров")
+                +svg_sprite('compare', 25, 20)
+            a.header__control.header__cart(href="#" role="link" aria-label="В корзину")
+                +svg_sprite('cart', 22, 20)
+                span.header__cart-count 1
+
+        .header__user
+            .header__city
+                button.header__city-current.btn-triangle(type="button" role="button" data-toggle="[data-header-city]")
+                    span Москва
+                    +svg_sprite('triangle', 10, 8)
+
+                .header__city-box(data-header-city)
+                    form.header__city-search.search__form(action="#" method="get" role="form")
+                        input.search__input._border-grey(type="text" name="search" placeholder="Введите название вашего города")
+                        button.search__submit._border-grey(type="submit" role="button" aria-label="Искать")
+                            +svg_sprite('search', 19, 22)
+
+                    ul.header__city-list(role="list")
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink.header__city-current(href="#" role="link")
+                                span Москва
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Балашиха
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Дмитров
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Долгопрудный
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Жуковский
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Красногорск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Одинцово
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Санкт-Петербург
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Уфа
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Екатеринбург
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink._bold(href="#" role="link") Новосибирск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Белгород
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Владивосток
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Владимир
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Казань
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Кострома
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Курск
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Тверь
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Нижний Новгород
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Орел
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Пермь
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Псков
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Ростов
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Самара
+                        li.header__city-listitem(role="listitem")
+                            a.header__city-listlink(href="#" role="link") Ярославль
+
+            a.header__account(href="#" role="link" aria-label="Личный кабинет")
+                +svg_sprite('user', 16, 15)
+
+        button.header__burger(type="button" role="button" data-toggle="[data-nav]")
+            span
+            span
+            span
+
+
+
+
+
+
+
+
+
+
+
+
