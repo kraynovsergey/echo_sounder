@@ -24,6 +24,10 @@
 	& h1,
 	& h2 {
 		color: $color_orange;
+
+		&._black {
+			color: $color_black;
+		}
 	}
 
 	& h2 {
@@ -60,6 +64,40 @@
 			&:not(:last-child) {
 				margin-bottom: 10px;
 			}
+		}
+	}
+
+	&__spoiler {
+		height: 9rem;
+		overflow: hidden;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 7rem;
+			background: linear-gradient(to bottom, transparent, $color_white);
+		}
+
+		&._active {
+			height: unset;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__btn {
+		margin: 20px auto 0;
+		width: 100%;
+		max-width: 27rem;
+
+		&._hidden {
+			display: none;
 		}
 	}
 }

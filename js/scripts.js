@@ -719,4 +719,16 @@
 		});
 	}
 
+	/* Спойлер  */
+	const spoiler = document.querySelectorAll('[data-spoiler]');
+	if ( spoiler.length > 0 ) {
+		spoiler.forEach(item => {
+			item.addEventListener('click', () => {
+				let target = document.querySelector( item.getAttribute('data-spoiler') );
+				if ( target ) target.classList.add('_active');
+				item.classList.add('_hidden');
+			});
+		});
+	}
+
 })();

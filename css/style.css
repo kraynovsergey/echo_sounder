@@ -7844,6 +7844,8 @@ body .hidden {
         margin-top: 60px; } }
   .text-page h1, .text-page h2 {
     color: #FD5C00; }
+    .text-page h1._black, .text-page h2._black {
+      color: #000; }
   .text-page h2 {
     padding: 0;
     font-size: 1.6rem;
@@ -7866,6 +7868,28 @@ body .hidden {
       margin-top: 10px; }
     .text-page ul li:not(:last-child), .text-page ol li:not(:last-child) {
       margin-bottom: 10px; }
+  .text-page__spoiler {
+    height: 9rem;
+    overflow: hidden;
+    position: relative; }
+    .text-page__spoiler::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 7rem;
+      background: linear-gradient(to bottom, transparent, #fff); }
+    .text-page__spoiler._active {
+      height: unset; }
+      .text-page__spoiler._active::after {
+        display: none; }
+  .text-page__btn {
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 27rem; }
+    .text-page__btn._hidden {
+      display: none; }
 
 .quiz {
   display: grid;
