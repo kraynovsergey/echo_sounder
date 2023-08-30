@@ -3863,6 +3863,8 @@ body .hidden {
   @media (max-width: 680px) {
     .learn-more__link {
       display: none; } }
+  .learn-more__link._full {
+    padding: 0 3rem; }
   .learn-more__link-mobile {
     display: none; }
     @media (max-width: 680px) {
@@ -3870,6 +3872,8 @@ body .hidden {
         display: flex;
         width: 100%;
         margin-top: 35px; } }
+    .learn-more__link-mobile._full {
+      padding: 0 3rem; }
 
 .blog {
   display: grid;
@@ -8135,5 +8139,95 @@ body .hidden {
 .product-pluses__text {
   margin: 0;
   font-size: .8rem; }
+
+.subscribe-vk {
+  border-radius: .5rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  @media (max-width: 1199px) {
+    .subscribe-vk {
+      grid-template-columns: 1fr; } }
+  .subscribe-vk__content {
+    background: #3F8AE0;
+    display: grid;
+    color: #fff;
+    padding: 3rem 9rem 3rem 1.6rem;
+    grid-gap: 1.5rem;
+    align-content: center;
+    justify-items: start;
+    overflow: hidden;
+    position: relative; }
+    @media (max-width: 1440px) {
+      .subscribe-vk__content {
+        padding-right: 7rem; } }
+    @media (max-width: 1199px) {
+      .subscribe-vk__content {
+        padding: 3rem; } }
+    @media (max-width: 991px) {
+      .subscribe-vk__content {
+        padding: 2rem; } }
+    @media (max-width: 575px) {
+      .subscribe-vk__content {
+        padding: 1.5rem; } }
+  .subscribe-vk__title {
+    margin: 0; }
+  .subscribe-vk__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-gap: .8rem; }
+    .subscribe-vk__list-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: .5rem;
+      align-items: start; }
+      .subscribe-vk__list-item::before {
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        top: .4rem; }
+  .subscribe-vk__btn {
+    padding: 0 3rem; }
+    @media (max-width: 575px) {
+      .subscribe-vk__btn {
+        width: 100%; } }
+  .subscribe-vk__picture {
+    background: #F0F6FD;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 0 3rem 3rem;
+    position: relative; }
+    @media (max-width: 575px) {
+      .subscribe-vk__picture {
+        padding: 1.5rem 0 1.5rem 1.5rem; } }
+    .subscribe-vk__picture picture {
+      position: relative;
+      z-index: 2; }
+    .subscribe-vk__picture img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto; }
+    .subscribe-vk__picture::before {
+      content: '';
+      width: 49rem;
+      height: 49rem;
+      border-radius: 50%;
+      background: #F0F6FD;
+      position: absolute;
+      left: -7rem;
+      z-index: 1; }
+      @media (max-width: 1440px) {
+        .subscribe-vk__picture::before {
+          left: -6rem; } }
+      @media (max-width: 1199px) {
+        .subscribe-vk__picture::before {
+          display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -145,16 +145,39 @@ block main
 		include includes/_manufacturer
 
 		//Ответьте на 8 вопросов
-		- var quiz_classnames = '_pt0'
+		- var quiz_classnames = '_pt0 _pb0'
 		include includes/_quiz
 
-		//Стать партнером
-		- var get_partner_classnames = '_pt0 _pb0'
-		include includes/_get-partner
+		//Обновление ПО
+		section.section._pb0
+			.container
+				.learn-more
+					img.learn-more__bg.lazy(data-src="img/learn-more-bg.svg" alt="" width="1820" height="435")
+					.learn-more__content
+						h2.section__h2.heading-font.learn-more__h2(role="heading") Обновление ПО
+						p.learn-more__subtitle Текст дошлют
+						a.learn-more__link.btn._middle._full(href="#" role="link") Перейти
+					.learn-more__images
+						+picture_lazy('learn-more__picture _img1', 'tmp/', 'learn-more-update', 'png', 298, 309)
+						+picture_lazy('learn-more__picture _img2', '', 'apple-store-screenshot', 'png', 279, 413)
+				a.learn-more__link-mobile.btn._middle._full(href="#" role="link") Перейти
 
-		//Почему нам доверяют
-		- var pluses_title = 'Почему нам доверяют?'
-		include includes/_pluses
+		//Подпишитесь на группу ВК
+		section.section
+			.container
+				.subscribe-vk
+					.subscribe-vk__content
+						h2.section__h2.subscribe-vk__title.heading-font(role="heading") Подпишитесь на группу Вконтакте
+						ul.subscribe-vk__list(role="list")
+							li.subscribe-vk__list-item(role="listitem") Участвуйте в обсуждениях на самые интересные темы кемпинга и рыбалки
+							li.subscribe-vk__list-item(role="listitem") Узнавайте о свежие новости об обновлениях, акциях и спецпредложениях
+							li.subscribe-vk__list-item(role="listitem") Мы с радостью отвечаем на любые вопросы и даем рекомендации подписчикам по правильному использованию эхолотов
+						button.subscribe-vk__btn.btn._middle._full(type="button" role="button") Подписаться
+
+					.subscribe-vk__picture
+						+picture_lazy('', 'tmp/', 'subscribe-vk', 'png', 598, 425)
+
+
 
 		//Отзывы рыбаков
 		- var fishermen_classnames = '_small _blue'
