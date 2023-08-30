@@ -1,0 +1,38 @@
+.product-pluses {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 575px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		padding: .8rem;
+		border: 1px solid $color_blue_border;
+		border-radius: .6rem;
+		display: grid;
+		grid-gap: .6rem;
+		align-content: start;
+	}
+
+	&__icon {
+		margin-bottom: .5rem;
+	}
+
+	&__title {
+		font-size: 1.2rem;
+		margin: 0;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: .8rem;
+	}
+}

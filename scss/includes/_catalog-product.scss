@@ -317,5 +317,10 @@
 				background: $color_white;
 			}
 		}
+
+		& svg {
+			margin-left: .5rem;
+			transition: none;
+		}
 	}
 }

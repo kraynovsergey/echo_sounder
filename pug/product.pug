@@ -9,6 +9,7 @@ block main
         section
             .container
                 p.product-page__title._tablet.h1.heading-font(role="heading") Эхолот ПРАКТИК 6S
+                .product-page__price._tablet.heading-font 12 990 р
 
                 .product-page__container
                     //Галерея
@@ -40,10 +41,9 @@ block main
 
                         h1.product-page__title.heading-font(role="heading") Эхолот ПРАКТИК 6S
 
+                        .product-page__price.heading-font 12 990 р
+
                         .product-page__ratings.catalog-product__ratings
-                            .catalog-product__rating
-                                +svg_sprite('star', 19, 18)
-                                | 5
                             .catalog-product__buyers 312 покупок за 3 месяца
 
                         ul.product-page__params(role="list")
@@ -79,10 +79,18 @@ block main
                                     +svg_sprite('guard', 20, 21)
                                     | Ударопрочный корпус
 
+                        .product-page__share
+                            .product-page__share-title Поделиться
+                            ul.product-page__share-list(role="list")
+                                li.product-page__share-list-item(role="listitem")
+                                    a.product-page__share-list-link(href="#" target="_blank")
+                                        +svg_sprite('share-whatsapp', 41, 40)
+                                li.product-page__share-list-item(role="listitem")
+                                    a.product-page__share-list-link(href="#" target="_blank")
+                                        +svg_sprite('share-vk', 41, 40)
+
                     //Добавить корзину
                     .product-page__controls
-                        .product-page__price.heading-font 12 990 р
-
                         .product-page__products
                             article.product-page__product(role='article')
                                 +picture('product-page__product-picture', 'tmp/', 'product-page-complekt-1', 'png', 52, 60)
@@ -111,11 +119,10 @@ block main
                                 .product-page__itogo-oldprice.heading-font 17 990 р
                                 .product-page__itogo-price.heading-font 15 000 р
 
-                        .product-page__stocks Есть доступные акции!
-
                         .product-page__btns
                             button.catalog-product__btn._full.btn._middle(type="button" role="button") Купить в один клик
                             button.catalog-product__btn._full.btn._border._middle(type="button" role="button") Смотреть акции
+                                +svg_sprite('product-page-stock', 39, 38)
                             button.catalog-product__btn._full.btn._border._middle(type="button" role="button") В корзину
                             button.catalog-product__btn._full.btn._border._middle(type="button" role="button") Есть промокод
 
@@ -330,22 +337,16 @@ block main
                         h3.product-video__title.heading-font(role="heading") Обязательно описание о чем видео
                         p.product-video__text Таймкод
 
-        //Почему нам доверяют
-        - var pluses_classnames = '_blue'
-        - var pluses_title = 'Почему нам доверяют?'
-        include includes/_pluses
-
         //Информация о модели
-        section.section._pb0
+        section.section._pt0
             .container(data-product-tabs)
                 h2.section__h2.product-about__h2.heading-font(role="heading") Информация о модели
 
                 .product-about__tabs.product-info__tabs.no-scroll
                     button.product-about__tab._active(type="button" role="button" data-product-tab="1") Описание модели
-                    button.product-about__tab(type="button" role="button" data-product-tab="2") Отзывы
                     button.product-about__tab(type="button" role="button" data-product-tab="3") Характеристики
                     button.product-about__tab(type="button" role="button" data-product-tab="4") Сравнение
-                    button.product-about__tab(type="button" role="button" data-product-tab="4") Приложение
+                    button.product-about__tab(type="button" role="button" data-product-tab="5") Приложение
 
                 //Описание модели
                 .product-about__content.product-info__content._active(data-product-content="1")
@@ -385,37 +386,6 @@ block main
                                 span.faq__control
                             .faq__content(data-product-info-6 data-grid)
                                 p Эхолот практик 6S – это портативная модель для поиска перспективного рыбного места, которая подходит для суровых зим.
-
-                //Отзывы
-                mixin reviews_item
-                    .product-info__reviews-item
-                        .product-info__reviews-avatar И
-                        .product-info__reviews-title Иван И.
-                        .product-info__reviews-rating
-                            +svg_sprite('star', 19, 18)
-                            +svg_sprite('star', 19, 18)
-                            +svg_sprite('star', 19, 18)
-                            +svg_sprite('star', 19, 18)
-                            +svg_sprite('star', 19, 18)
-                        .product-info__reviews-text Хороший товар
-                        .product-info__reviews-picture
-                            a(href="img/tmp/product-reviews@2x.jpg" data-fancybox)
-                                +picture('', 'tmp/', 'product-reviews', 'jpg', 140, 100)
-
-                .product-about__content.product-info__reviews(data-product-content="2")
-                    h3.section__h2.heading-font(role="heading") Отзывы <sup>5</sup>
-                    .product-info__reviews-swiper.swiper(data-auto-width-swiper)
-                        .swiper-wrapper
-                            .product-info__reviews-slide.swiper-slide
-                                +reviews_item
-                            .product-info__reviews-slide.swiper-slide
-                                +reviews_item
-                            .product-info__reviews-slide.swiper-slide
-                                +reviews_item
-                            .product-info__reviews-slide.swiper-slide
-                                +reviews_item
-                            .product-info__reviews-slide.swiper-slide
-                                +reviews_item
 
                 //Характеристики
                 .product-about__content.product-params(data-product-content="3")
@@ -642,6 +612,23 @@ block main
                                 li(role="listitem") 2:00 Возможности приложения
                                 li(role="listitem") 3:00 Как ставить метки на карте
 
+        //Преимущества покупки у нас
+        section.section._pt0._pb0
+            .container
+                h2.section__h2.heading-font(role="heading") Преимущества <br>покупки у нас
+
+                mixin product_pluses_item(icon, title, text)
+                    article.product-pluses__item(role="article")
+                        +svg_sprite(icon, 73, 73, 'product-pluses__icon')
+                        h3.product-pluses__title.heading-font(role="heading")= title
+                        p.product-pluses__text= text
+
+                .product-pluses__items
+                    +product_pluses_item('pluses-1', 'Гарантийный сервис', 'Вы всегда можете обратиться в наши сервисные центры и наши специалисты вам помогут.')
+                    +product_pluses_item('pluses-2', 'Доставка по всей России', 'Доставим в любой уголок России.')
+                    +product_pluses_item('pluses-3', 'Оплата при получении', 'Мы принимаем оплату разными способами, в том числе и при получении.')
+                    +product_pluses_item('pluses-4', 'Работаем 7 дней в неделю', 'Наши специалисты помогут вам в любой день недели.')
+
         //Комплекты по акции
         section.section._pb0
             .container
@@ -672,6 +659,11 @@ block main
 
         //Не нашли подходящую акцию?
         include includes/_not_find_stock
+
+        //Вам может понравится
+        - var like_title = 'Похожие товары';
+        - var like_classnames = '_pt0';
+        include includes/_like
 
 
 
