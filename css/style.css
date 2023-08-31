@@ -1227,13 +1227,13 @@ body .hidden {
 
 .home-intro__wrapper {
   border-radius: 10px;
-  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column; }
   @media (max-width: 620px) {
     .home-intro__wrapper {
-      background: #3F8AE0; } }
+      background: #3F8AE0;
+      overflow: hidden; } }
 .home-intro__gradient {
   position: absolute;
   left: 0;
@@ -1241,7 +1241,8 @@ body .hidden {
   right: 20%;
   bottom: 0;
   background: linear-gradient(to right, #3F8AE0 45%, rgba(63, 138, 224, 0) 100%);
-  z-index: 2; }
+  z-index: 2;
+  border-radius: 10px 0 0 0; }
   @media (max-width: 620px) {
     .home-intro__gradient {
       right: 0;
@@ -1330,7 +1331,8 @@ body .hidden {
   right: 0;
   width: 65%;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  border-radius: 0 10px 10px 0; }
   @media (max-width: 620px) {
     .home-intro__carousel {
       position: relative;
@@ -1349,13 +1351,22 @@ body .hidden {
   @media (max-width: 620px) {
     .home-intro__bottom {
       display: none; } }
+  .home-intro__bottom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    top: calc(100% - 5px); }
 .home-intro__figure {
   border-bottom: 110px solid #fff;
   border-left: 400px solid transparent;
   border-right: 400px solid transparent;
   height: 0;
   width: 100%;
-  margin-left: -30%; }
+  margin-left: -30%;
+  position: relative; }
   @media (max-width: 1600px) {
     .home-intro__figure {
       border-right: 350px solid transparent;
