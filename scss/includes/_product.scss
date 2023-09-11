@@ -218,6 +218,8 @@
 			text-align: center;
 			background: none;
 			border: 0;
+			-webkit-appearance: none;
+			box-shadow: none;
 
 			@media (max-width: 991px) and (min-width: 576px) {
 				font-size: .87rem;

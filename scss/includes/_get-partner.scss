@@ -79,6 +79,8 @@
 		border: 0;
 		padding: 0 25px;
 		font-size: 1.1rem;
+		-webkit-appearance: none;
+		box-shadow: none;
 
 		@media (max-width: 991px) {
 			height: 50px;

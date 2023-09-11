@@ -23,6 +23,8 @@
 		color: $color_primary;
 		border-right-color: $color_white !important;
 		width: 100%;
+		-webkit-appearance: none;
+		box-shadow: none;
 
 		&::-moz-placeholder {
 			color: rgba(73, 74, 74, 0.5);

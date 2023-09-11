@@ -468,11 +468,6 @@ button {
   color: inherit;
   font-weight: normal; }
 
-body input,
-body textarea {
-  -webkit-appearance: none;
-  box-shadow: none; }
-
 .heading-font {
   font-family: 'TT Runs', sans-serif;
   font-weight: 800; }
@@ -642,7 +637,9 @@ body .hidden {
   flex-grow: 1;
   color: #454747;
   border-right-color: #fff !important;
-  width: 100%; }
+  width: 100%;
+  -webkit-appearance: none;
+  box-shadow: none; }
   .search__input::-moz-placeholder {
     color: rgba(73, 74, 74, 0.5); }
   .search__input::-ms-input-placeholder {
@@ -2032,7 +2029,9 @@ body .hidden {
       color: #595A5A;
       text-align: center;
       background: none;
-      border: 0; }
+      border: 0;
+      -webkit-appearance: none;
+      box-shadow: none; }
       @media (max-width: 991px) and (min-width: 576px) {
         .product__count-input {
           font-size: .87rem; } }
@@ -2597,7 +2596,9 @@ body .hidden {
   background: #fff;
   border: 0;
   padding: 0 25px;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  -webkit-appearance: none;
+  box-shadow: none; }
   @media (max-width: 991px) {
     .get-partner__input {
       height: 50px;
@@ -4984,7 +4985,9 @@ body .hidden {
     padding: 0 15px;
     color: #595A5A;
     background: #fff;
-    width: 100%; }
+    width: 100%;
+    -webkit-appearance: none;
+    box-shadow: none; }
     .form__input._blue {
       border-color: #95CFFF; }
     .form__input._transparent {
