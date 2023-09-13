@@ -1526,7 +1526,10 @@ body .hidden {
   .home-sales__tabs {
     display: flex;
     align-items: center;
-    margin-right: 50px; }
+    margin-right: 50px;
+    border: 1px solid #FD5C00;
+    border-radius: 10px;
+    overflow: hidden; }
     @media (max-width: 1550px) {
       .home-sales__tabs {
         margin-right: 30px; } }
@@ -1538,13 +1541,11 @@ body .hidden {
     background: none;
     padding: 0 35px;
     border-radius: 10px;
-    border: 1px solid #FD5C00;
     color: #FD5C00;
     font-size: 28px;
     text-transform: uppercase;
     position: relative;
-    z-index: 1;
-    overflow: hidden; }
+    z-index: 1; }
     @media (max-width: 1440px) {
       .home-sales__tab {
         height: 60px;
@@ -1564,13 +1565,14 @@ body .hidden {
       content: '';
       background: #fff;
       position: absolute;
-      width: 100%;
-      top: 0;
-      bottom: 0;
+      width: calc(100% + 2px);
+      top: -1px;
+      bottom: -1px;
       right: -100%;
       transition: .5s ease;
       z-index: 1;
-      border-radius: 10px; }
+      border-radius: 10px;
+      border: 1px solid #FD5C00; }
     .home-sales__tab:first-child._active::before {
       right: 0; }
     .home-sales__tab:first-child._active + .home-sales__tab::before {

@@ -119,6 +119,9 @@
 		display: flex;
 		align-items: center;
 		margin-right: 50px;
+		border: 1px solid $color_orange;
+		border-radius: 10px;
+		overflow: hidden;
 
 		@media (max-width: 1550px) {
 			margin-right: 30px;
@@ -134,13 +137,11 @@
 		background: none;
 		padding: 0 35px;
 		border-radius: 10px;
-		border: 1px solid $color_orange;
 		color: $color_orange;
 		font-size: 28px;
 		text-transform: uppercase;
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
 
 		@media (max-width: 1440px) {
 			height: 60px;
@@ -169,13 +170,15 @@
 			content: '';
 			background: $color_white;
 			position: absolute;
-			width: 100%;
-			top: 0;
-			bottom: 0;
+			width: calc(100% + 2px);
+			top: -1px;
+			bottom: -1px;
 			right: -100%;
 			transition: .5s ease;
 			z-index: 1;
 			border-radius: 10px;
+			border: 1px solid $color_orange;
+
 		}
 
 		&:first-child {
