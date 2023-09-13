@@ -140,6 +140,7 @@
 		text-transform: uppercase;
 		position: relative;
 		z-index: 1;
+		overflow: hidden;
 
 		@media (max-width: 1440px) {
 			height: 60px;
@@ -157,7 +158,52 @@
 
 		&._active {
 			z-index: 2;
+		}
+
+		& span {
+			position: relative;
+			z-index: 3;
+		}
+
+		&::before {
+			content: '';
 			background: $color_white;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			right: -100%;
+			transition: .5s ease;
+			z-index: 1;
+			border-radius: 10px;
+		}
+
+		&:first-child {
+			&._active {
+				&::before {
+					right: 0;
+				}
+
+				& + .home-sales__tab {
+					&::before {
+						left: -100%;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			&._active {
+				&::before {
+					left: 0;
+				}
+
+				& ~ .home-sales__tab {
+					&::before {
+						right: -100%;
+					}
+				}
+			}
 		}
 	}
 

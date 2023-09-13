@@ -1543,7 +1543,8 @@ body .hidden {
     font-size: 28px;
     text-transform: uppercase;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    overflow: hidden; }
     @media (max-width: 1440px) {
       .home-sales__tab {
         height: 60px;
@@ -1555,8 +1556,29 @@ body .hidden {
     .home-sales__tab:not(:first-child) {
       margin-left: -15px; }
     .home-sales__tab._active {
-      z-index: 2;
-      background: #fff; }
+      z-index: 2; }
+    .home-sales__tab span {
+      position: relative;
+      z-index: 3; }
+    .home-sales__tab::before {
+      content: '';
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      transition: .5s ease;
+      z-index: 1;
+      border-radius: 10px; }
+    .home-sales__tab:first-child._active::before {
+      right: 0; }
+    .home-sales__tab:first-child._active + .home-sales__tab::before {
+      left: -100%; }
+    .home-sales__tab:last-child._active::before {
+      left: 0; }
+    .home-sales__tab:last-child._active ~ .home-sales__tab::before {
+      right: -100%; }
   .home-sales__controls {
     display: none; }
     .home-sales__controls._active {
