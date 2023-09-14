@@ -47,8 +47,8 @@ block main
 						a.home-intro__control.btn._middle._border(href="#" role="link") Помощь в подборе
 
 		//Акции/Новинки
-		mixin product(img, title, list)
-			article.product(role="article")
+		mixin product(img, title)
+			article.product.compare__product(role="article")
 				a.product__picture(href="#" role="link")
 					+picture_nolazy('', 'tmp/', img, 'png', 238, 223)
 					ul.product__labels(role="list")
@@ -56,9 +56,8 @@ block main
 						li.product__label._orange(role="listitem") Акция
 				h3.product__title(role="heading")
 					a(href="#" role="link")= title
-				ul.product__params(role="list")
-					each val in list
-						li.product__param(role="listitem")= val
+				.product__price 12 700р
+					span 14 000р
 				button.product__cart.btn._small(type="button" role="button") В корзину
 				.product__count(data-product-count)
 					button.product__count-btn(type="button" role="button" data-product-count-minus) -
@@ -91,32 +90,32 @@ block main
 						.home-sales__swiper.swiper._active(data-home-sales-swiper="1")
 							.swiper-wrapper
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 								.home-sales__slide.swiper-slide
-									+product('product', 'Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+picture('home-sales__banner picture', 'tmp/', 'banner-stock', 'jpg', 1068, 480)
 
 						.home-sales__swiper.swiper(data-home-sales-swiper="2")
 							.swiper-wrapper
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом', 'Чувствительность до 25 метров'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 								.home-sales__slide.swiper-slide
-									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка', ['Антивандальный гермитичный корпус', 'Для рыбалки с берега и лодки, зимой и летом'])
+									+product('product', 'Новинка! Эхолот ПРАКТИК 6S + 3 подарка')
 
 		//Категории товаров
 		mixin category(size, img, title, width, height)

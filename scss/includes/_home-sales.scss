@@ -242,6 +242,8 @@
 
 	&__swiper {
 		display: none;
+		margin: 0 -25px;
+		padding: 0 25px;
 
 		&._active {
 			display: flex;
@@ -255,5 +257,11 @@
 		@media (max-width: 991px) {
 			width: 265px;
 		}
+	}
+
+	&__banner {
+		border-radius: 20px;
+		overflow: hidden;
+		display: flex;
 	}
 }

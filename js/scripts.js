@@ -157,9 +157,13 @@
 	const data_home_sales_swiper = document.querySelectorAll('[data-home-sales-swiper]');
 	if ( data_home_sales_swiper.length > 0 ) {
 		data_home_sales_swiper.forEach(item => {
-			let item_data = item.getAttribute('data-home-sales-swiper');
+			let item_data = +item.getAttribute('data-home-sales-swiper'),
+				spv = 'auto';
+
+			if ( item_data === 1 ) spv = 1.2;
+
 			new Swiper(item, {
-				slidesPerView: 'auto',
+				slidesPerView: spv,
 				navigation: {
 					nextEl: document.querySelector('[data-home-sales-nav="'+item_data+'"] ._next'),
 					prevEl: document.querySelector('[data-home-sales-nav="'+item_data+'"] ._prev')
