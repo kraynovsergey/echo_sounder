@@ -46,9 +46,9 @@ mixin compare_product(img, title)
             input.product__count-input(type="text" name="count" value="1")
             button.product__count-btn(type="button" role="button" data-product-count-plus) +
 
-mixin product(img, title)
+mixin product(img, title, favourites)
     article.product.compare__product(role="article")
-        button.product__favourites(type="button")
+        button.product__favourites(class=favourites type="button")
             +svg_sprite('favourites', 29, 28)
         a.product__picture.compare__picture(href="#" role="link")
             +picture_nolazy('', 'tmp/', img, 'png', 238, 223)

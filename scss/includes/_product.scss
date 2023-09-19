@@ -243,15 +243,19 @@
 	}
 
 	&__favourites {
-		color: #545555;
 		position: absolute;
 		right: 30px;
 		top: 30px;
 		z-index: 2;
+		color: transparent;
 
 		@media (max-width: 991px) {
 			right: 20px;
 			top: 20px;
+		}
+
+		&._active {
+			color: #545555;
 		}
 	}
 }
