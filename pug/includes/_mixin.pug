@@ -48,6 +48,8 @@ mixin compare_product(img, title)
 
 mixin product(img, title)
     article.product.compare__product(role="article")
+        button.product__favourites(type="button")
+            +svg_sprite('favourites', 29, 28)
         a.product__picture.compare__picture(href="#" role="link")
             +picture_nolazy('', 'tmp/', img, 'png', 238, 223)
         h3.product__title(role="heading")

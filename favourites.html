@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
-    <title>Мои заказы</title>
+    <title>Вам понравилось</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")-->
@@ -285,394 +285,230 @@
       </div>
     </nav>
     <main class="main" role="main">
-      <!--Редактирование личных данных-->
-      <section class="section _ultra-small _blue">
+      <section class="section _pt0">
         <div class="container">
-          <h1 class="h1 heading-font" role="heading">Личный кабинет</h1>
-          <div class="cabinet__grid">
-            <aside class="cabinet__aside" role="complementary"><a class="cabinet__aside-link _active" href="#" role="link"><span class="cabinet__aside-icon">
-                      <svg width="30" height="30">
-                        <use xlink:href="img/sprite.svg#cabinet-profile"></use>
-                      </svg></span>Личные данные</a><a class="cabinet__aside-link" href="#" role="link"><span class="cabinet__aside-icon">
-                      <svg width="22" height="28">
-                        <use xlink:href="img/sprite.svg#cabinet-orders"></use>
-                      </svg></span>Мои заказы</a><a class="cabinet__aside-link" href="#" role="link"><span class="cabinet__aside-icon">
-                      <svg width="30" height="26">
-                        <use xlink:href="img/sprite.svg#cabinet-statuses"></use>
-                      </svg></span>Статус сервиса</a></aside>
-            <div class="cabinet__content">
-              <div class="cabinet__content-header">
-                <h2 class="cabinet__content-title heading-font" role="heading">Мои заказы</h2>
-                <div class="orders__filters">
-                  <fieldset class="orders__filter">
-                    <input type="radio" name="orders_status" value="all" id="order-status-1" checked data-blog-filter>
-                    <label for="order-status-1">Все</label>
-                  </fieldset>
-                  <fieldset class="orders__filter">
-                    <input type="radio" name="orders_status" value="processing" id="order-status-2" data-blog-filter>
-                    <label for="order-status-2">В обработке</label>
-                  </fieldset>
-                  <fieldset class="orders__filter">
-                    <input type="radio" name="orders_status" value="success" id="order-status-3" data-blog-filter>
-                    <label for="order-status-3">Выполненные</label>
-                  </fieldset>
-                  <fieldset class="orders__filter">
-                    <input type="radio" name="orders_status" value="cancel" id="order-status-4" data-blog-filter>
-                    <label for="order-status-4">Отмененные</label>
-                  </fieldset>
-                </div>
-              </div>
-              <div class="orders__items">
-                              <article class="orders__item" role="article" data-blog-item="all processing">
-                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
-                                <div class="orders__status _processing">В обработке
-                                      <svg width="22" height="22">
-                                        <use xlink:href="img/sprite.svg#clock"></use>
-                                      </svg>
-                                </div>
-                                <div class="orders__info">
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Сумма:</div>
-                                    <div class="orders__info-value">36 000р</div>
-                                  </div>
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Оплата:</div>
-                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _success">(Оплачен)</span></div>
-                                  </div>
-                                  <div class="orders__info-item _products">
-                                    <div class="orders__info-title">Товары:</div>
-                                    <div class="orders__info-products">
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
-                              </article>
-                              <article class="orders__item" role="article" data-blog-item="all success">
-                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
-                                <div class="orders__status _success">Выполнен
-                                      <svg width="22" height="22">
-                                        <use xlink:href="img/sprite.svg#check"></use>
-                                      </svg>
-                                </div>
-                                <div class="orders__info">
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Сумма:</div>
-                                    <div class="orders__info-value">36 000р</div>
-                                  </div>
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Оплата:</div>
-                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _success">(Оплачен)</span></div>
-                                  </div>
-                                  <div class="orders__info-item _products">
-                                    <div class="orders__info-title">Товары:</div>
-                                    <div class="orders__info-products">
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
-                              </article>
-                              <article class="orders__item" role="article" data-blog-item="all cancel">
-                                <h3 class="orders__title heading-font" role="heading">Заказ №12345678 от 27.06.23</h3>
-                                <div class="orders__status _cancel">Отменен
-                                      <svg width="22" height="22">
-                                        <use xlink:href="img/sprite.svg#cross"></use>
-                                      </svg>
-                                </div>
-                                <div class="orders__info">
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Сумма:</div>
-                                    <div class="orders__info-value">36 000р</div>
-                                  </div>
-                                  <div class="orders__info-item">
-                                    <div class="orders__info-title">Оплата:</div>
-                                    <div class="orders__info-value">Банковской картой&nbsp;<span class="orders__info-payment _cancel">(Не оплачен)</span></div>
-                                  </div>
-                                  <div class="orders__info-item _products">
-                                    <div class="orders__info-title">Товары:</div>
-                                    <div class="orders__info-products">
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                      <div class="orders__info-product"><span>Эхолот ПРАКТИК 6S</span><span>2 шт</span><span>12 000р</span><span>24 000р</span></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <button class="orders__btn btn _border _middle" type="button" role="button">Повторить</button>
-                              </article>
-              </div>
-              <button class="orders__more btn _middle" type="button" role="button">Посмотреть все</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Электронный гарантийный талон-->
-      <section class="section _pb0">
-        <div class="container">
-          <h2 class="section__h2 repair-paid__h2 heading-font">Электронный <br>гарантийный талон</h2>
-          <p class="repair-paid__subtitle">Зарегистрируйте свою покупку, получите электронный гарантийный талон и вам не надо будет хранить бумажные чеки и талоны</p>
-          <div class="guarantee__items">
-            <div class="faq__item">
-              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-1]">Как получить электронный гарантийный талон<span class="faq__control"></span></button>
-              <div class="faq__content" data-guarantee-1 data-grid>
-                <div class="get-guarantee">
-                  <div class="service-centers__warning">
-                    <div class="service-centers__circle">
-                          <svg width="9" height="25">
-                            <use xlink:href="img/sprite.svg#info"></use>
-                          </svg>
-                    </div>
+          <ul class="breadcrumbs" role="list">
+            <li class="breadcrumbs__item" role="listitem"><a class="breadcrumbs__link" href="#" role="link">Главная</a></li>
+            <li class="breadcrumbs__item" role="listitem">Эхолоты</li>
+          </ul>
+          <h1 class="h1 heading-font catalog__h1" role="heading">Вам понравилось</h1>
+          <div class="catalog-stock__items">
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
                   </div>
-                  <div class="get-guarantee__content">
-                    <p class="get-guarantee__text">Отсканируйте или сфотографируйте бумажный чек и гарантийный талон, в котором проставлена дата покупки и печать продавца.</p>
-                    <div class="get-guarantee__block">
-                      <div class="get-guarantee__header">
-                        <h4 class="get-guarantee__title" role="heading">Чек и гарантийный талон</h4>
-                            <svg class="get-guarantee__icon" width="40" height="40">
-                              <use xlink:href="img/sprite.svg#camera"></use>
-                            </svg>
-                      </div>
-                      <form class="get-guarantee__form" action="#" method="post" enctype="multipart/form-data">
-                        <div class="get-guarantee__file">
-                          <input type="file" name="file" id="get-guarantee-file">
-                          <label class="btn _border _middle" for="get-guarantee-file">Прикрепить фото</label>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="get-guarantee__block">
-                      <div class="get-guarantee__header">
-                        <h4 class="get-guarantee__title" role="heading">Чек и гарантийный талон</h4>
-                        <div class="get-guarantee__success"></div>
-                      </div>
-                      <form class="get-guarantee__form" action="#" method="post" enctype="multipart/form-data">
-                        <div class="get-guarantee__figures">
-                          <figure class="get-guarantee__figure">
-                                <picture>
-                                  <source type="image/webp" srcset="img/tmp/webp/get-guarantee-img@2x.webp 2x, img/tmp/webp/get-guarantee-img.webp 1x"><img src="" srcset="img/tmp/get-guarantee-img@2x.jpg 2x, img/tmp/get-guarantee-img.jpg 1x" alt="" width="151" height="184">
-                                </picture>
-                            <figcaption class="get-guarantee__figcaption">гарантийный талон 1.jpg</figcaption>
-                          </figure>
-                          <figure class="get-guarantee__figure">
-                                <picture>
-                                  <source type="image/webp" srcset="img/tmp/webp/get-guarantee-img@2x.webp 2x, img/tmp/webp/get-guarantee-img.webp 1x"><img src="" srcset="img/tmp/get-guarantee-img@2x.jpg 2x, img/tmp/get-guarantee-img.jpg 1x" alt="" width="151" height="184">
-                                </picture>
-                            <figcaption class="get-guarantee__figcaption">гарантийный талон 1.jpg</figcaption>
-                          </figure>
-                        </div>
-                        <div class="get-guarantee__file">
-                          <input type="file" name="file" id="get-guarantee-file-temp">
-                          <label class="btn _border _middle" for="get-guarantee-file-temp">Прикрепить фото</label>
-                        </div>
-                      </form>
-                      <h4 class="get-guarantee__title" role="heading">Готово! Ваши талоны успешно загружены. Вы можете посмотреть их ниже, во вкладке “Мои гарантийные талоны”</h4>
-                    </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item">
-              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-2]">Какие преимущества дает электронный гарантийный талон<span class="faq__control"></span></button>
-              <div class="faq__content" data-guarantee-2 data-grid>
-                <ul class="guarantee__list" role="list">
-                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
-                          <svg width="29" height="37">
-                            <use xlink:href="img/sprite.svg#guarantee-1"></use>
-                          </svg></span>Вам не надо хранить и иметь под рукой бумажные документы, подтверждающие покупку</li>
-                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
-                          <svg width="30" height="30">
-                            <use xlink:href="img/sprite.svg#guarantee-2"></use>
-                          </svg></span>В случае обращения в сервисную службу будет достаточно назвать ваш номер телефона и имя или фамилию. Вы сможете позвонить прямо с рыбалки, чтобы получить консультацию.</li>
-                  <li class="guarantee__list-item" role="listitem"><span class="guarantee__list-circle">
-                          <svg width="30" height="30">
-                            <use xlink:href="img/sprite.svg#guarantee-3"></use>
-                          </svg></span>Вы получите доступ к информационной рассылке и сможете первым узнавать о выходе новинок Calypso и обновлении ПО.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="faq__item get-guarantee__faq-stretch">
-              <button class="faq__title heading-font" type="button" role="button" data-toggle="[data-guarantee-3]">Мои гарантийные талоны<span class="faq__control"></span></button>
-              <div class="faq__content" data-guarantee-3 data-grid>
-                <p>Содержимое этой вкладки находится в разработке</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Вам может понравится-->
-      <section class="section">
-        <div class="container">
-          <div class="section__header">
-            <h2 class="section__h2 section__header-h2 heading-font" role="heading">Вам может понравиться</h2>
-            <div class="section__header-controls carousel__controls">
-              <button class="carousel__navigation _prev _blue" type="button" role="button" data-like-prev>
-                    <svg width="23" height="15">
-                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
-                    </svg>
-              </button>
-              <button class="carousel__navigation _next _blue" type="button" role="button" data-like-next>
-                    <svg width="23" height="15">
-                      <use xlink:href="img/sprite.svg#carousel-nav"></use>
-                    </svg>
-              </button>
-            </div>
-          </div>
-          <div class="like__swiper swiper" data-auto-width-swiper data-prev="[data-like-prev]" data-next="[data-like-next]">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-              <div class="swiper-slide like__slide">
-                    <article class="product compare__product" role="article">
-                      <button class="product__favourites" type="button">
-                            <svg width="29" height="28">
-                              <use xlink:href="img/sprite.svg#favourites"></use>
-                            </svg>
-                      </button><a class="product__picture compare__picture" href="#" role="link">
-                            <picture>
-                              <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
-                            </picture></a>
-                      <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
-                      <div class="product__price">12 700р<span>14 000р</span></div>
-                      <button class="product__cart btn _small" type="button" role="button">В корзину</button>
-                      <div class="product__count" data-product-count>
-                        <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
-                        <input class="product__count-input" type="text" name="count" value="1">
-                        <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
-                      </div>
-                    </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Карты-->
-      <section class="section footer-maps _pt0 _pb0">
-        <button class="footer-maps__button heading-font _active" type="button" role="button" data-footer-map-tab="1">Наш офис</button>
-        <button class="footer-maps__button heading-font" type="button" role="button" data-footer-map-tab="2">Сервисные центры</button>
-        <div class="footer-maps__items">
-          <div class="footer-maps__item _active" data-footer-map="1">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
-          </div>
-          <div class="footer-maps__item" data-footer-map="2">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad69a8fdb37f9fcbae587aa7d7289d157443c3bcd4cd48b69300cc41cba7f514e&amp;amp;width=100%25&amp;amp;height=720&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
+                <article class="product compare__product" role="article">
+                  <button class="product__favourites" type="button">
+                        <svg width="29" height="28">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                  </button><a class="product__picture compare__picture" href="#" role="link">
+                        <picture>
+                          <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                        </picture></a>
+                  <h3 class="product__title" role="heading"><a href="#" role="link">Эхолот ПРАКТИК 6S + 2 подарка</a></h3>
+                  <div class="product__price">12 700р<span>14 000р</span></div>
+                  <button class="product__cart btn _small" type="button" role="button">В корзину</button>
+                  <div class="product__count" data-product-count>
+                    <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                    <input class="product__count-input" type="text" name="count" value="1">
+                    <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                  </div>
+                </article>
           </div>
         </div>
       </section>

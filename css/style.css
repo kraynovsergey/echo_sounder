@@ -1909,7 +1909,8 @@ body .hidden {
   padding: 15px;
   background: #fff;
   border-radius: 10px;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   @media (max-width: 991px) {
     .product {
       padding: 10px;
@@ -2075,6 +2076,16 @@ body .hidden {
       text-decoration: line-through;
       color: rgba(69, 71, 71, 0.5);
       margin-left: 10px; }
+  .product__favourites {
+    color: #545555;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 2; }
+    @media (max-width: 991px) {
+      .product__favourites {
+        right: 20px;
+        top: 20px; } }
 
 .category__items {
   display: grid;
