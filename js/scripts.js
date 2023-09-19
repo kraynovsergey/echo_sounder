@@ -426,8 +426,8 @@
 								allowTouchMove: false,
 								on: {
 									init: function(s) {
-										+el.activeIndex === 0 ?
-											s.update() : s.slideTo( el.activeIndex );
+										s.setTranslate(200);
+										s.slideTo( el.activeIndex );
 									}
 								}
 							});
