@@ -84,4 +84,40 @@
 			grid-template-columns: 1fr 1fr;
 		}
 	}
+
+	&__sorting-wrap {
+		position: relative;
+	}
+
+	&__sorting {
+		display: none;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: calc(100% + 8px);
+		padding: 20px;
+		border: 1px solid $color_blue;
+		border-radius: 10px;
+		background: $color_white;
+		flex-direction: column;
+		align-items: flex-start;
+		z-index: 5;
+
+		&-item {
+			font-size: 16px;
+			white-space: nowrap;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			&._active {
+				color: $color_blue;
+			}
+
+			&:hover {
+				opacity: .7;
+			}
+		}
+	}
 }

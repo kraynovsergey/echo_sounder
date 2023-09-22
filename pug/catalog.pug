@@ -88,8 +88,14 @@ block main
                         .catalog__controls
                             button.catalog__control.catalog__filter.btn-triangle(type="button" role="button" data-catalog-aside-control) Фильтр
                                 +svg_sprite('triangle', 10, 8)
-                            button.catalog__control.btn-triangle(type="button" role="button") Сортировка
-                                +svg_sprite('triangle', 10, 8)
+                            .catalog__sorting-wrap
+                                button.catalog__control.btn-triangle(type="button" role="button" data-toggle="[data-sorting]") Сортировка
+                                    +svg_sprite('triangle', 10, 8)
+                                .catalog__sorting(data-sorting)
+                                    button.catalog__sorting-item._active(type="button") Сначала дешевле
+                                    button.catalog__sorting-item(type="button") Сначала дороже
+                                    button.catalog__sorting-item(type="button") По популярности
+                                    button.catalog__sorting-item(type="button") Сначала новые
 
                         mixin catalog_product
                             article.catalog-product(role="article")

@@ -397,11 +397,19 @@
                         <use xlink:href="img/sprite.svg#triangle"></use>
                       </svg>
                 </button>
-                <button class="catalog__control btn-triangle" type="button" role="button">Сортировка
-                      <svg width="10" height="8">
-                        <use xlink:href="img/sprite.svg#triangle"></use>
-                      </svg>
-                </button>
+                <div class="catalog__sorting-wrap">
+                  <button class="catalog__control btn-triangle" type="button" role="button" data-toggle="[data-sorting]">Сортировка
+                        <svg width="10" height="8">
+                          <use xlink:href="img/sprite.svg#triangle"></use>
+                        </svg>
+                  </button>
+                  <div class="catalog__sorting" data-sorting>
+                    <button class="catalog__sorting-item _active" type="button">Сначала дешевле</button>
+                    <button class="catalog__sorting-item" type="button">Сначала дороже</button>
+                    <button class="catalog__sorting-item" type="button">По популярности</button>
+                    <button class="catalog__sorting-item" type="button">Сначала новые</button>
+                  </div>
+                </div>
               </div>
               <div class="catalog__products">
                               <article class="catalog-product" role="article"><a class="catalog-product__picture" href="#" role="link">
