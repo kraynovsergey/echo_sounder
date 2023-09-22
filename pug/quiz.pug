@@ -8,26 +8,26 @@ block main
         section.section._pt0
             .container
                 include includes/_breadcrumbs
-                .quiz(data-quiz)
+                .quiz(data-quiz data-quiz-form)
                     .quiz__step._active(data-question-step data-step="1")
                         h2.quiz__title.heading-font 1. В какое время года больше рыбачите?
                         .quiz__big-radios._w3
                             .quiz__big-radio.get-order__radio
-                                input(type="radio" name="quiz-1" value="" id="quiz-1-1" checked)
+                                input(type="radio" name="quiz-1" value="Зимнее" id="quiz-1-1" checked)
                                 label(for="quiz-1-1").quiz__box
                                     +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-1', 'png', 346, 346)
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Зимнее
                             .quiz__big-radio.get-order__radio
-                                input(type="radio" name="quiz-1" value="" id="quiz-1-2")
+                                input(type="radio" name="quiz-1" value="Летнее" id="quiz-1-2")
                                 label(for="quiz-1-2").quiz__box
                                     +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-2', 'png', 346, 346)
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Летнее
                             .quiz__big-radio.get-order__radio
-                                input(type="radio" name="quiz-1" value="" id="quiz-1-3")
+                                input(type="radio" name="quiz-1" value="Примерно одинаково зимой и летом" id="quiz-1-3")
                                 label(for="quiz-1-3").quiz__box
                                     +picture_nolazy('quiz__big-radio-picture', '', 'quiz-1-3', 'png', 469, 347)
                                     span.quiz__big-radio-title
@@ -38,13 +38,13 @@ block main
                         h2.quiz__title.heading-font 2. Летом вы рыбачите больше с лодки или с забросом?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-2" value="" id="quiz-2-1" checked)
+                                input(type="radio" name="quiz-2" value="С лодки" id="quiz-2-1" checked)
                                 label(for="quiz-2-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | С лодки
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-2" value="" id="quiz-2-2")
+                                input(type="radio" name="quiz-2" value="С забросом" id="quiz-2-2")
                                 label(for="quiz-2-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -55,13 +55,13 @@ block main
                         h2.quiz__title.heading-font 3. Вы профессиональный рыболов или рыбак-любитель?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-3" value="" id="quiz-3-1" checked)
+                                input(type="radio" name="quiz-3" value="Профи" id="quiz-3-1" checked)
                                 label(for="quiz-3-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Профи
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-3" value="" id="quiz-3-2")
+                                input(type="radio" name="quiz-3" value="Любитель" id="quiz-3-2")
                                 label(for="quiz-3-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -72,13 +72,13 @@ block main
                         h2.quiz__title.heading-font 4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-4" value="" id="quiz-4-1" checked)
+                                input(type="radio" name="quiz-4" value="Да" id="quiz-4-1" checked)
                                 label(for="quiz-4-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Да
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-4" value="" id="quiz-4-2")
+                                input(type="radio" name="quiz-4" value="Нет" id="quiz-4-2")
                                 label(for="quiz-4-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -89,13 +89,13 @@ block main
                         h2.quiz__title.heading-font 5. Максимально низкая температура, при которой собираетесь ловить рыбу?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-5" value="" id="quiz-5-1" checked)
+                                input(type="radio" name="quiz-5" value="До -20°C" id="quiz-5-1" checked)
                                 label(for="quiz-5-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | До -20°C
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-5" value="" id="quiz-5-2")
+                                input(type="radio" name="quiz-5" value="До -25°C и ниже" id="quiz-5-2")
                                 label(for="quiz-5-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -106,13 +106,13 @@ block main
                         h2.quiz__title.heading-font 6. Какой тип экрана эхолота вам необходим?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-6" value="" id="quiz-6-1" checked)
+                                input(type="radio" name="quiz-6" value="Цветной" id="quiz-6-1" checked)
                                 label(for="quiz-6-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Цветной
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-6" value="" id="quiz-6-2")
+                                input(type="radio" name="quiz-6" value="Чёрно-белый" id="quiz-6-2")
                                 label(for="quiz-6-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -123,13 +123,13 @@ block main
                         h2.quiz__title.heading-font 7. Какой элемент питания устройства предпочтителен?
                         .quiz__radios
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-7" value="" id="quiz-7-1" checked)
+                                input(type="radio" name="quiz-7" value="Батарейка" id="quiz-7-1" checked)
                                 label(for="quiz-7-1").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Батарейка
                             .quiz__radio.get-order__radio
-                                input(type="radio" name="quiz-7" value="" id="quiz-7-2")
+                                input(type="radio" name="quiz-7" value="Встроенный аккумулятор" id="quiz-7-2")
                                 label(for="quiz-7-2").quiz__box
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
@@ -140,14 +140,14 @@ block main
                         h2.quiz__title.heading-font 8. Какой тип соединения блока и датчика предпочтителен?
                         .quiz__big-radios._w2
                             .quiz__big-radio.get-order__radio
-                                input(type="radio" name="quiz-8" value="" id="quiz-8-1" checked)
+                                input(type="radio" name="quiz-8" value="Проводное" id="quiz-8-1" checked)
                                 label(for="quiz-8-1").quiz__box
                                     +picture_lazy('quiz__big-radio-picture', '', 'quiz-8-1', 'png', 346, 346)
                                     span.quiz__big-radio-title
                                         span.get-order__radio-check
                                         | Проводное
                             .quiz__big-radio.get-order__radio
-                                input(type="radio" name="quiz-8" value="" id="quiz-8-2")
+                                input(type="radio" name="quiz-8" value="Беспроводное" id="quiz-8-2")
                                 label(for="quiz-8-2").quiz__box
                                     +picture_lazy('quiz__big-radio-picture', '', 'quiz-8-2', 'png', 346, 346)
                                     span.quiz__big-radio-title
@@ -173,7 +173,7 @@ block main
                             button.quiz__control.btn._grey._middle(type="button" role="button" data-question-control data-prev data-step="0" disabled) Назад
                             button.quiz__control.btn._middle(type="button" role="button" data-question-control data-next data-step="2") Далее
 
-                .quiz__final(data-quiz-final)
+                //.quiz__final(data-quiz-final)
                     .quiz__final-content
                         +picture_nolazy('quiz__final-picture', 'tmp/', 'quiz-product', 'png', 272, 297)
                         .quiz__final-info

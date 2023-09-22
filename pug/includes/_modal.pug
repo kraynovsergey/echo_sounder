@@ -18,3 +18,25 @@
                 label(for="callback-policy")
                     span
                     | Отправляя данные вы соглашаетесь с политикой обработки персональных данных
+
+.modal(id="modal-quiz")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/sprite.svg#modal-close")
+    .modal__content
+        p.h1.modal__title.heading-font Подберем эхолот
+        p.modal__subtitle Заполните свои данные, мы пришлем подборку подходящих эхолотов в ватсап или телеграмм
+        form.form(action="#" method="post" role="form")
+            input(type="hidden" name="quiz" value="" data-result-quiz)
+            fieldset.form__fieldset
+                label.form__label(for="quiz-name") Ваше имя*
+                input.form__input(type="text" name="name" id="quiz-name")
+            fieldset.form__fieldset
+                label.form__label(for="quiz-phone") Ваш телефон*
+                input.form__input(type="tel" name="phone" id="quiz-phone" data-tel)
+            button.form__btn.btn._middle(type="submit" role="button") Отправить
+            .form__checkbox
+                input(type="checkbox" name="policy" id="quiz-policy" data-policy checked)
+                label(for="quiz-policy")
+                    span
+                    | Отправляя данные вы соглашаетесь с политикой обработки персональных данных

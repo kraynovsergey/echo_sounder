@@ -262,33 +262,53 @@
 
 		question_control.forEach(item => {
 			item.addEventListener('click', () => {
-				let current_step = +item.getAttribute('data-step'),
-					prev_step = +current_step - 1,
-					next_step = +current_step + 1;
+				let current_step = +item.getAttribute('data-step');
 
-				current_step === 1 ?
-					question_control_prev.disabled = true : question_control_prev.disabled = false;
+				if ( +current_step + 1 === 10 ) {
+					let radios = document.querySelectorAll('[data-quiz-form] input[type="radio"]'),
+						result = '';
+					if ( radios.length > 0 ) {
+						radios.forEach((item, i) => {
+							if ( item.checked ) {
+								if (i === 0) result = item.value;
+								else result = result + '||' +  item.value;
+							}
+						});
+					}
 
-				if ( current_step === 8 ) {
-					if ( !quiz_final ) question_control_next.disabled = true;
+					let result_quiz = document.querySelector('[data-result-quiz]');
+					if ( result_quiz ) result_quiz.value = result;
+
+					Fancybox.show(
+						[
+							{
+								src: "#modal-quiz",
+								type: "inline"
+							}
+						]
+					)
 				} else {
-					question_control_next.disabled = false;
-				}
+					let prev_step = +current_step - 1,
+						next_step = +current_step + 1;
 
-				question_steps.forEach(step => {
-					+step.getAttribute('data-step') === current_step ?
-						step.classList.add('_active') : step.classList.remove('_active');
-				});
+					current_step === 1 ?
+						question_control_prev.disabled = true : question_control_prev.disabled = false;
 
-				question_control_prev.setAttribute('data-step', prev_step);
-				question_control_next.setAttribute('data-step', next_step);
-				question_progress.setAttribute('data-step', current_step);
+					question_steps.forEach(step => {
+						+step.getAttribute('data-step') === current_step ?
+							step.classList.add('_active') : step.classList.remove('_active');
+					});
 
-				if ( step_number ) step_number.innerHTML = current_step;
+					question_control_prev.setAttribute('data-step', prev_step);
+					question_control_next.setAttribute('data-step', next_step);
+					question_progress.setAttribute('data-step', current_step);
 
-				if ( current_step === 9 ) {
-					quiz_final.classList.add('_active');
-					quiz.classList.add('hidden');
+					if ( step_number ) step_number.innerHTML = current_step;
+
+					if ( current_step === 9 ) {
+						quiz_final.classList.add('_active');
+						quiz.classList.add('hidden');
+					}
 				}
 			});
 		});

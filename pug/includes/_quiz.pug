@@ -16,62 +16,70 @@ section.section(class=quiz_classnames)
                 svg.question__fish(width="63" height="34")
                     use(xlink:href="img/sprite.svg#question-fish")
 
-            mixin question_item(name, id, title)
-                .question__item
-                    input(type="radio" name=name value=title id=id)
-                    label(for=id)
-                        span
-                            +svg_sprite('checkbox', 23, 17)
-                        =title
+            mixin question_item(name, id, title, checked)
+                if checked
+                    .question__item
+                        input(type="radio" name=name value=title id=id checked)
+                        label(for=id)
+                            span
+                                +svg_sprite('checkbox', 23, 17)
+                            =title
+                else
+                    .question__item
+                        input(type="radio" name=name value=title id=id)
+                        label(for=id)
+                            span
+                                +svg_sprite('checkbox', 23, 17)
+                            =title
 
-            form.question__form(role="form")
+            form.question__form(role="form" data-quiz-form)
                 fieldset.question__step._active(data-question-step data-step="1")
                     h3.question__title(role="heading") 1. В какое время года больше рыбачите?
                     .question__items
-                        +question_item('question1', 'question1_1', 'Зимнее')
+                        +question_item('question1', 'question1_1', 'Зимнее', true)
                         +question_item('question1', 'question1_2', 'Летнее')
                         +question_item('question1', 'question1_3', 'Примерно одинаково зимой и летом')
 
                 fieldset.question__step(data-question-step data-step="2")
                     h3.question__title(role="heading") 2. Летом вы рыбачите больше с лодки или с забросом?
                     .question__items
-                        +question_item('question2', 'question2_1', 'C лодки')
+                        +question_item('question2', 'question2_1', 'C лодки', true)
                         +question_item('question2', 'question2_2', 'C забросом')
 
                 fieldset.question__step(data-question-step data-step="3")
                     h3.question__title(role="heading") 3. Вы профессиональный рыболов или рыбак-любитель?
                     .question__items
-                        +question_item('question3', 'question3_1', 'Любитель')
+                        +question_item('question3', 'question3_1', 'Любитель', true)
                         +question_item('question3', 'question3_2', 'Профи')
 
                 fieldset.question__step(data-question-step data-step="4")
                     h3.question__title(role="heading") 4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?
                     .question__items
-                        +question_item('question4', 'question4_1', 'Да')
+                        +question_item('question4', 'question4_1', 'Да', true)
                         +question_item('question4', 'question4_2', 'Нет')
 
                 fieldset.question__step(data-question-step data-step="5")
                     h3.question__title(role="heading") 5. Максимально низкая температура, при которой собираетесь ловить рыбу?
                     .question__items
-                        +question_item('question5', 'question5_1', 'до –20гр.')
+                        +question_item('question5', 'question5_1', 'до –20гр.', true)
                         +question_item('question5', 'question5_2', 'до –25гр. и ниже')
 
                 fieldset.question__step(data-question-step data-step="6")
                     h3.question__title(role="heading") 6. Какой тип экрана эхолота вам необходим?
                     .question__items
-                        +question_item('question6', 'question6_1', 'Цветной')
+                        +question_item('question6', 'question6_1', 'Цветной', true)
                         +question_item('question6', 'question6_2', 'Черно-белый')
 
                 fieldset.question__step(data-question-step data-step="7")
                     h3.question__title(role="heading") 7. Какой элемент питания устройства предпочтителен?
                     .question__items
-                        +question_item('question7', 'question7_1', 'Батарейка')
+                        +question_item('question7', 'question7_1', 'Батарейка', true)
                         +question_item('question7', 'question7_2', 'Встроенный аккумулятор')
 
                 fieldset.question__step(data-question-step data-step="8")
                     h3.question__title(role="heading") 8. Какой тип соединения блока и датчика предпочтителен?
                     .question__items
-                        +question_item('question8', 'question8_1', 'Проводное')
+                        +question_item('question8', 'question8_1', 'Проводное', true)
                         +question_item('question8', 'question8_2', 'Беспроводное')
 
             .question__controls

@@ -586,6 +586,33 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="modal-quiz">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <p class="h1 modal__title heading-font">Подберем эхолот</p>
+        <p class="modal__subtitle">Заполните свои данные, мы пришлем подборку подходящих эхолотов в ватсап или телеграмм</p>
+        <form class="form" action="#" method="post" role="form">
+          <input type="hidden" name="quiz" value="" data-result-quiz>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="quiz-name">Ваше имя*</label>
+            <input class="form__input" type="text" name="name" id="quiz-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="quiz-phone">Ваш телефон*</label>
+            <input class="form__input" type="tel" name="phone" id="quiz-phone" data-tel>
+          </fieldset>
+          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <div class="form__checkbox">
+            <input type="checkbox" name="policy" id="quiz-policy" data-policy checked>
+            <label for="quiz-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/libs/lazyload.min.js"></script>
     <script src="js/libs/swiper-bundle.min.js"></script>
     <script src="js/libs/fancybox.umd.js"></script>

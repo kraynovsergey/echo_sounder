@@ -948,12 +948,12 @@
                 <use xlink:href="img/sprite.svg#question-fish"></use>
               </svg>
             </div>
-            <form class="question__form" role="form">
+            <form class="question__form" role="form" data-quiz-form>
               <fieldset class="question__step _active" data-question-step data-step="1">
                 <h3 class="question__title" role="heading">1. В какое время года больше рыбачите?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question1" value="Зимнее" id="question1_1">
+                                <input type="radio" name="question1" value="Зимнее" id="question1_1" checked>
                                 <label for="question1_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -982,7 +982,7 @@
                 <h3 class="question__title" role="heading">2. Летом вы рыбачите больше с лодки или с забросом?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question2" value="C лодки" id="question2_1">
+                                <input type="radio" name="question2" value="C лодки" id="question2_1" checked>
                                 <label for="question2_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1003,7 +1003,7 @@
                 <h3 class="question__title" role="heading">3. Вы профессиональный рыболов или рыбак-любитель?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question3" value="Любитель" id="question3_1">
+                                <input type="radio" name="question3" value="Любитель" id="question3_1" checked>
                                 <label for="question3_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1024,7 +1024,7 @@
                 <h3 class="question__title" role="heading">4. Планируете ли вы выводить данные с эхолота на экран мобильного телефона?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question4" value="Да" id="question4_1">
+                                <input type="radio" name="question4" value="Да" id="question4_1" checked>
                                 <label for="question4_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1045,7 +1045,7 @@
                 <h3 class="question__title" role="heading">5. Максимально низкая температура, при которой собираетесь ловить рыбу?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question5" value="до –20гр." id="question5_1">
+                                <input type="radio" name="question5" value="до –20гр." id="question5_1" checked>
                                 <label for="question5_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1066,7 +1066,7 @@
                 <h3 class="question__title" role="heading">6. Какой тип экрана эхолота вам необходим?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question6" value="Цветной" id="question6_1">
+                                <input type="radio" name="question6" value="Цветной" id="question6_1" checked>
                                 <label for="question6_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1087,7 +1087,7 @@
                 <h3 class="question__title" role="heading">7. Какой элемент питания устройства предпочтителен?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question7" value="Батарейка" id="question7_1">
+                                <input type="radio" name="question7" value="Батарейка" id="question7_1" checked>
                                 <label for="question7_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1108,7 +1108,7 @@
                 <h3 class="question__title" role="heading">8. Какой тип соединения блока и датчика предпочтителен?</h3>
                 <div class="question__items">
                               <div class="question__item">
-                                <input type="radio" name="question8" value="Проводное" id="question8_1">
+                                <input type="radio" name="question8" value="Проводное" id="question8_1" checked>
                                 <label for="question8_1"><span>
                                         <svg width="23" height="17">
                                           <use xlink:href="img/sprite.svg#checkbox"></use>
@@ -1488,6 +1488,33 @@
           <div class="form__checkbox">
             <input type="checkbox" name="policy" id="callback-policy" data-policy checked>
             <label for="callback-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-quiz">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <p class="h1 modal__title heading-font">Подберем эхолот</p>
+        <p class="modal__subtitle">Заполните свои данные, мы пришлем подборку подходящих эхолотов в ватсап или телеграмм</p>
+        <form class="form" action="#" method="post" role="form">
+          <input type="hidden" name="quiz" value="" data-result-quiz>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="quiz-name">Ваше имя*</label>
+            <input class="form__input" type="text" name="name" id="quiz-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="quiz-phone">Ваш телефон*</label>
+            <input class="form__input" type="tel" name="phone" id="quiz-phone" data-tel>
+          </fieldset>
+          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <div class="form__checkbox">
+            <input type="checkbox" name="policy" id="quiz-policy" data-policy checked>
+            <label for="quiz-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
           </div>
         </form>
       </div>
