@@ -49,7 +49,7 @@
                       <svg width="25" height="25">
                         <use xlink:href="img/sprite.svg#whatsapp"></use>
                       </svg></span>WhatsApp</a></div>
-            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+            <button class="header__contacts-callback btn _small" type="button" role="button" data-fancybox data-src="#modal-callback">Заказать звонок</button>
           </div>
         </address>
         <div class="header__controls"><a class="header__control _mobile" href="tel:88005004062" role="link" aria-label="Позвонить">
@@ -136,7 +136,7 @@
                       <svg width="25" height="25">
                         <use xlink:href="img/sprite.svg#whatsapp"></use>
                       </svg></span>WhatsApp</a></div>
-            <button class="header__contacts-callback btn _small" type="button" role="button">Заказать звонок</button>
+            <button class="header__contacts-callback btn _small" type="button" role="button" data-fancybox data-src="#modal-callback">Заказать звонок</button>
           </div>
         </address>
         <form class="nav__search search__form" action="#" method="get" role="form">
@@ -713,6 +713,32 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal-callback">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <p class="h1 modal__title heading-font">Заполните данные</p>
+        <p class="modal__subtitle">Заполните свои данные, мы свяжемся с вами в течение 15 минут</p>
+        <form class="form" action="#" method="post" role="form">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="callback-name">Ваше имя*</label>
+            <input class="form__input" type="text" name="name" id="callback-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="callback-phone">Ваш телефон*</label>
+            <input class="form__input" type="tel" name="phone" id="callback-phone" data-tel>
+          </fieldset>
+          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <div class="form__checkbox">
+            <input type="checkbox" name="policy" id="callback-policy" data-policy checked>
+            <label for="callback-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/libs/lazyload.min.js"></script>
     <script src="js/libs/swiper-bundle.min.js"></script>
     <script src="js/libs/fancybox.umd.js"></script>

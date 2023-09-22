@@ -1,0 +1,20 @@
+.modal(id="modal-callback")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/sprite.svg#modal-close")
+    .modal__content
+        p.h1.modal__title.heading-font Заполните данные
+        p.modal__subtitle Заполните свои данные, мы свяжемся с вами в течение 15 минут
+        form.form(action="#" method="post" role="form")
+            fieldset.form__fieldset
+                label.form__label(for="callback-name") Ваше имя*
+                input.form__input(type="text" name="name" id="callback-name")
+            fieldset.form__fieldset
+                label.form__label(for="callback-phone") Ваш телефон*
+                input.form__input(type="tel" name="phone" id="callback-phone" data-tel)
+            button.form__btn.btn._middle(type="submit" role="button") Отправить
+            .form__checkbox
+                input(type="checkbox" name="policy" id="callback-policy" data-policy checked)
+                label(for="callback-policy")
+                    span
+                    | Отправляя данные вы соглашаетесь с политикой обработки персональных данных
