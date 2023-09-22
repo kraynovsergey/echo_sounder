@@ -656,6 +656,49 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="modal-fastorder">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content">
+        <p class="h1 modal__title heading-font">Заказ в один клик</p>
+        <p class="modal__subtitle">Заполните свои данные, мы свяжемся с вами в течение 15 минут для уточнения деталей</p>
+        <form class="form" action="#" method="post" role="form">
+          <article class="cart__item" role="article"><a class="cart__picture" href="#" role="link">
+                  <picture>
+                    <source type="image/webp" data-srcset="img/tmp/webp/product-cart@2x.webp 2x, img/tmp/webp/product-cart.webp 1x" srcset=""><img class="lazy" src="" data-srcset="img/tmp/product-cart@2x.png 2x, img/tmp/product-cart.png 1x" srcset="" alt="" width="109" height="126">
+                  </picture></a>
+            <div class="cart__content">
+              <h3 class="cart__title heading-font" role="heading"><a href="#" role="link">Эхолот <br>ПРАКТИК 6S</a></h3>
+              <div class="cart__price heading-font">12 990 р</div>
+              <div class="cart__controls">
+                <div class="product__count cart__count" data-product-count>
+                  <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                  <input class="product__count-input" type="text" name="count" value="1">
+                  <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+                </div>
+                <button class="cart__remove" type="button" role="button">Удалить</button>
+              </div>
+            </div>
+          </article>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="fastorder-name">Ваше имя*</label>
+            <input class="form__input" type="text" name="name" id="fastorder-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="fastorder-phone">Ваш телефон*</label>
+            <input class="form__input" type="tel" name="phone" id="fastorder-phone" data-tel>
+          </fieldset>
+          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <div class="form__checkbox">
+            <input type="checkbox" name="policy" id="fastorder-policy" data-policy checked>
+            <label for="fastorder-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/libs/lazyload.min.js"></script>
     <script src="js/libs/swiper-bundle.min.js"></script>
     <script src="js/libs/fancybox.umd.js"></script>

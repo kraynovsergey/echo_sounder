@@ -8383,8 +8383,6 @@ body .hidden {
   .modal__content {
     width: 100%;
     max-width: 724px;
-    display: flex;
-    flex-direction: column;
     margin: 0 auto; }
   .modal__title {
     text-align: center;
