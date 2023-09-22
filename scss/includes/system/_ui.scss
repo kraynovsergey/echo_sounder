@@ -67,6 +67,13 @@
 			background: $color_orange;
 		}
 	}
+
+	&:disabled {
+		background: #ECECEC !important;
+		border-color: #ECECEC !important;
+		color: $color_white !important;
+		cursor: not-allowed;
+	}
 }
 
 .carousel {

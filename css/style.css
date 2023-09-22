@@ -517,6 +517,11 @@ button {
     .btn._border:hover {
       color: #fff;
       background: #FD5C00; }
+  .btn:disabled {
+    background: #ECECEC !important;
+    border-color: #ECECEC !important;
+    color: #fff !important;
+    cursor: not-allowed; }
 
 .carousel__controls {
   display: flex; }
@@ -5985,6 +5990,8 @@ body .hidden {
         border-color: #000;
         color: #000;
         background: #fff; }
+    .catalog-product__btn._active {
+      color: #FD5C00 !important; }
     .catalog-product__btn svg {
       margin-left: .5rem;
       transition: none; }
