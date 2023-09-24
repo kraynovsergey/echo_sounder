@@ -48,7 +48,12 @@
 		margin: 0;
 	}
 
-	&__form {
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__form,
+	&__subtitle {
 		width: 100%;
 		max-width: 724px;
 	}

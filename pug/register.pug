@@ -1,0 +1,36 @@
+extends base
+
+block seo
+    - var seo = {title: 'Регистрация', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Регистрация
+        section.section.auth._blue
+            .container.auth__container
+                .auth__block
+                    h1.h1.auth__title.heading-font(role="heading") Регистрация
+                    p.auth__subtitle После регистрации вы сможет получить электронный гарантийный талон; отследить заказ и статус сервиса.
+                    form.form.auth__form(action="#" method="post" role="form")
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-phone") Номер телефона*
+                            input.form__input(type="tel" name="phone" id="auth-phone" data-tel)
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-firstname") Имя*
+                            input.form__input(type="text" name="firstname" id="auth-firstname")
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-lastname") Фамилия
+                            input.form__input(type="text" name="lastname" id="auth-lastname")
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-password") Пароль*
+                            input.form__input(type="password" name="password" id="auth-password")
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-confirm-password") Подтвердите пароль*
+                            input.form__input(type="password" name="confirm_password" id="auth-confirm-password")
+                        button.form__btn.btn._middle(type="submit" role="button") Зарегистрироваться
+
+            img.auth__bg(src="img/auth-bg.svg" alt="" width="1920" height="832")
+
+        //Карты
+        - var footer_maps_classnames = '_pb0'
+        include includes/_footer-maps

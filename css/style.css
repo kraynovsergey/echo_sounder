@@ -5040,6 +5040,9 @@ body .hidden {
       border-color: #95CFFF; }
     .form__input._transparent {
       background: none; }
+    .form__input._error {
+      color: #BB1E25 !important;
+      border-color: #BB1E25 !important; }
   .form__note-right {
     display: grid;
     justify-items: end; }
@@ -5139,7 +5142,9 @@ body .hidden {
   .auth__title {
     text-align: center;
     margin: 0; }
-  .auth__form {
+  .auth__subtitle {
+    text-align: center; }
+  .auth__form, .auth__subtitle {
     width: 100%;
     max-width: 724px; }
   @media (min-width: 992px) {

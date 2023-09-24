@@ -41,6 +41,11 @@
 		&._transparent {
 			background: none;
 		}
+
+		&._error {
+			color: #BB1E25 !important;
+			border-color: #BB1E25 !important;
+		}
 	}
 
 	&__note-right {
