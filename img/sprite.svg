@@ -500,4 +500,16 @@
 		<rect width="66" height="66" rx="33" fill="#FDFBFA"/>
 		<path d="M46 21L21 46M21 21L46 46" stroke="#FD5C00" stroke-width="2" stroke-linecap="round"/>
 	</symbol>
+
+	<symbol id="modal-success" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="54.5" cy="54.5" r="54.5" fill="#21A600"/>
+		<path d="M38 60.4149L54.2645 72L79 42" stroke="white" stroke-width="5" stroke-linecap="round"/>
+	</symbol>
+
+	<symbol id="modal-error" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="54.5" cy="54.5" r="54.5" fill="#DC4747"/>
+		<path d="M74 35L54.5 54.5M35 74L54.5 54.5M54.5 54.5L35 35L74 74" stroke="white" stroke-width="5" stroke-linecap="round"/>
+		<path d="M54.5 54.5L35 35" stroke="white" stroke-width="5" stroke-linecap="round"/>
+	</symbol>
+
 </svg>

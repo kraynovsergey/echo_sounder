@@ -427,7 +427,7 @@
             <label class="form__label" for="callback-phone">Ваш телефон*</label>
             <input class="form__input" type="tel" name="phone" id="callback-phone" data-tel>
           </fieldset>
-          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <button class="form__btn btn _middle" type="submit" role="button" data-fancybox-double="#modal-success">Отправить</button>
           <div class="form__checkbox">
             <input type="checkbox" name="policy" id="callback-policy" data-policy checked>
             <label for="callback-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
@@ -454,7 +454,7 @@
             <label class="form__label" for="quiz-phone">Ваш телефон*</label>
             <input class="form__input" type="tel" name="phone" id="quiz-phone" data-tel>
           </fieldset>
-          <button class="form__btn btn _middle" type="submit" role="button">Отправить</button>
+          <button class="form__btn btn _middle" type="submit" role="button" data-fancybox-double="#modal-error">Отправить</button>
           <div class="form__checkbox">
             <input type="checkbox" name="policy" id="quiz-policy" data-policy checked>
             <label for="quiz-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
@@ -503,6 +503,32 @@
             <label for="fastorder-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
           </div>
         </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-success">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content modal__status">
+        <svg class="modal__status-icon" width="109" height="109">
+          <use xlink:href="img/sprite.svg#modal-success"></use>
+        </svg>
+        <p class="h1 modal__title heading-font modal__status-title _success">Данные успешно отправлены</p>
+      </div>
+    </div>
+    <div class="modal" id="modal-error">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#modal-close"></use>
+        </svg>
+      </button>
+      <div class="modal__content modal__status">
+        <svg class="modal__status-icon" width="109" height="109">
+          <use xlink:href="img/sprite.svg#modal-error"></use>
+        </svg>
+        <p class="h1 modal__title heading-font modal__status-title _error">Ошибка, повторите позже</p>
       </div>
     </div>
     <script src="js/libs/lazyload.min.js"></script>

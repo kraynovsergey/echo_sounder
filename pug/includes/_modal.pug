@@ -12,7 +12,7 @@
             fieldset.form__fieldset
                 label.form__label(for="callback-phone") Ваш телефон*
                 input.form__input(type="tel" name="phone" id="callback-phone" data-tel)
-            button.form__btn.btn._middle(type="submit" role="button") Отправить
+            button.form__btn.btn._middle(type="submit" role="button" data-fancybox-double="#modal-success") Отправить
             .form__checkbox
                 input(type="checkbox" name="policy" id="callback-policy" data-policy checked)
                 label(for="callback-policy")
@@ -34,7 +34,7 @@
             fieldset.form__fieldset
                 label.form__label(for="quiz-phone") Ваш телефон*
                 input.form__input(type="tel" name="phone" id="quiz-phone" data-tel)
-            button.form__btn.btn._middle(type="submit" role="button") Отправить
+            button.form__btn.btn._middle(type="submit" role="button" data-fancybox-double="#modal-error") Отправить
             .form__checkbox
                 input(type="checkbox" name="policy" id="quiz-policy" data-policy checked)
                 label(for="quiz-policy")
@@ -76,3 +76,21 @@
                 label(for="fastorder-policy")
                     span
                     | Отправляя данные вы соглашаетесь с политикой обработки персональных данных
+
+.modal(id="modal-success")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/sprite.svg#modal-close")
+    .modal__content.modal__status
+        svg.modal__status-icon(width="109" height="109")
+            use(xlink:href="img/sprite.svg#modal-success")
+        p.h1.modal__title.heading-font.modal__status-title._success Данные успешно отправлены
+
+.modal(id="modal-error")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/sprite.svg#modal-close")
+    .modal__content.modal__status
+        svg.modal__status-icon(width="109" height="109")
+            use(xlink:href="img/sprite.svg#modal-error")
+        p.h1.modal__title.heading-font.modal__status-title._error Ошибка, повторите позже

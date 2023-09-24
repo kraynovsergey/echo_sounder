@@ -755,4 +755,23 @@
 		});
 	}
 
+	/* Одновременное открытие закрытие и открытие следующего модального окна */
+	const double_fancybox = document.querySelectorAll('[data-fancybox-double]');
+	if ( double_fancybox.length > 0 ) {
+		double_fancybox.forEach(item => {
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
+				Fancybox.close();
+				Fancybox.show(
+					[
+						{
+							src: item.getAttribute('data-fancybox-double'),
+							type: 'inline'
+						}
+					]
+				)
+			});
+		});
+	}
+
 })();
