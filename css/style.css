@@ -1455,6 +1455,8 @@ body .hidden {
   @media (max-width: 620px) {
     .home-sales {
       margin-top: 70px; } }
+  .home-sales._mt0 {
+    margin-top: 0 !important; }
   .home-sales__wrapper {
     display: flex;
     flex-direction: column;
@@ -1531,6 +1533,8 @@ body .hidden {
     @media (max-width: 575px) {
       .home-sales__header {
         margin-bottom: 30px; } }
+  .home-sales__h1 {
+    margin: 0 50px 0 0; }
   .home-sales__tabs {
     display: flex;
     align-items: center;

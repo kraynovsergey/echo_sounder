@@ -15,6 +15,10 @@
 		margin-top: 70px;
 	}
 
+	&._mt0 {
+		margin-top: 0 !important;
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -113,6 +117,10 @@
 		@media (max-width: 575px) {
 			margin-bottom: 30px;
 		}
+	}
+
+	&__h1 {
+		margin: 0 50px 0 0;
 	}
 
 	&__tabs {
