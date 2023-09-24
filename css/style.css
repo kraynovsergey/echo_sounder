@@ -8465,4 +8465,30 @@ body .hidden {
         margin-top: 30px;
         margin-top: 15px; } }
 
+.contacts {
+  display: grid;
+  grid-template-columns: 500px minmax(50%, 1050px);
+  align-items: start;
+  gap: 30px;
+  justify-content: space-between; }
+  @media (max-width: 1280px) {
+    .contacts {
+      grid-template-columns: 1fr;
+      gap: 60px; } }
+  .contacts__items {
+    margin-bottom: 40px; }
+    @media (max-width: 1280px) {
+      .contacts__items {
+        margin-bottom: 20px; } }
+  .contacts h1 {
+    margin-bottom: 80px; }
+    @media (max-width: 1280px) {
+      .contacts h1 {
+        margin-bottom: 30px; } }
+  .contacts .footer-maps__item {
+    height: 420px; }
+    @media (max-width: 991px) {
+      .contacts .footer-maps__item {
+        height: 380px; } }
+
 /*# sourceMappingURL=style.css.map */

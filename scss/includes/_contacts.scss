@@ -1,0 +1,36 @@
+.contacts {
+	display: grid;
+	grid-template-columns: 500px minmax(50%, 1050px);
+	align-items: start;
+	gap: 30px;
+	justify-content: space-between;
+
+	@media (max-width: 1280px) {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+
+	&__items {
+		margin-bottom: 40px;
+
+		@media (max-width: 1280px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	& h1 {
+		margin-bottom: 80px;
+
+		@media (max-width: 1280px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	& .footer-maps__item {
+		height: 420px;
+
+		@media (max-width: 991px) {
+			height: 380px;
+		}
+	}
+}

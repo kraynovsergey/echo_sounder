@@ -1,0 +1,57 @@
+extends base
+
+block seo
+    - var seo = {title: 'Контакты', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                //Хлебные крошки
+                include includes/_breadcrumbs
+
+                .contacts
+                    //Контакты
+                    .contacts__content
+                        h1.heading-font Контакты и график работы
+                        .footer__items.contacts__items
+                            address.footer__item
+                                p.footer__item-title Почта:
+                                a.footer__item-value.footer__item-link(href="mailto:praktik@rusonar.ru") praktik@rusonar.ru
+                            address.footer__item
+                                p.footer__item-title Сервис и ремонт:
+                                a.footer__item-value.footer__item-link(href="tel:+74955141173") +7 (495) 514-11-73
+                            address.footer__item
+                                p.footer__item-title График работы офиса:
+                                p.footer__item-value Пн-Пт: 10:00-17:00
+                            address.footer__item
+                                p.footer__item-title Заказы и консультации:
+                                a.footer__item-value.footer__item-link(href="tel:+74955141173") +7 (495) 514-11-73
+                            address.footer__item
+                                p.footer__item-title Адрес:
+                                p.footer__item-value 124365, г. Зеленоград, ул. Заводская, д. 31, стр. 1
+                            address.footer__item
+                                p.footer__item-title График работы интернет-магазина:
+                                p.footer__item-value Пн-Пт: 9:00-18:00,<br>Сб-Вс: 12:00-15:00
+                        .footer__socials
+                            h3.footer__h3.heading-font(role="heading") Мы в соцсетях:
+                            .footer__icons
+                                a.footer__social(href="#" target="_blank" rel="nofollow")
+                                    +svg_sprite('vk', 48, 48)
+                                a.footer__social(href="#" target="_blank" rel="nofollow")
+                                    +svg_sprite('ok', 48, 48)
+                                a.footer__social(href="#" target="_blank" rel="nofollow")
+                                    +svg_sprite('youtube-footer', 48, 48)
+
+                    .footer-maps
+                        button.footer-maps__button.heading-font._active(type="button" role="button" data-footer-map-tab="1") Наш офис
+                        button.footer-maps__button.heading-font(type="button" role="button" data-footer-map-tab="2") Сервисные центры
+                        .footer-maps__items
+                            .footer-maps__item._active(data-footer-map="1")
+                                script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93d474d0e104573f5a331a1f482ab8bbaf3695b7d2e7573d965526defb62d965&amp;width=100%25&amp;height=530&amp;lang=ru_RU&amp;scroll=false")
+                            .footer-maps__item(data-footer-map="2")
+                                script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad69a8fdb37f9fcbae587aa7d7289d157443c3bcd4cd48b69300cc41cba7f514e&amp;width=100%25&amp;height=530&amp;lang=ru_RU&amp;scroll=false")
+
+
+
+
