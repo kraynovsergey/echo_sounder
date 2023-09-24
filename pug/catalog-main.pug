@@ -1,0 +1,174 @@
+extends base
+
+block seo
+    - var seo = {title: 'Каталог главный', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section.im._pt0._pb0
+            .container
+                //Хлебные крошки
+                include includes/_breadcrumbs
+                h1.im__h1.heading-font Интернет-магазин
+
+                ul.im__list.heading-font.no-scroll
+                    li
+                        a._active(href="#") Каталог
+                    li
+                        a(href="#") Акции
+                    li
+                        a(href="#") Оплата / доставка
+                    li
+                        a(href="#") Магазины
+                    li
+                        a(href="#") Сервис
+
+                mixin category(size, img, title, width, height)
+                    article.category__item(class=size role="article")
+                        h3.category__title.heading-font(role="heading")
+                            a.all-link(href="#" role="link")=title
+                        +picture_lazy('category__picture', 'tmp/', img, 'png', width, height)
+
+                .category__items
+                    +category('_big', 'category-1', 'Эхолоты', 183, 224)
+                    +category('', 'category-2', 'Глубиномеры', 176, 160)
+                    +category('', 'category-3', 'Подводные камеры', 123, 153)
+                    +category('', 'category-4', 'Фонари для рыбалки', 235, 167)
+                    +category('', 'category-5', 'Электромоторы', 338, 157)
+                    +category('_big', 'category-6', 'Аксессуары для эхолотов', 286, 175)
+                    +category('_big', 'category-7', 'Воздушный насос "Бриз"', 222, 209)
+                    +category('_big', 'category-8', 'Мерч', 213, 208)
+                    +category('_big', 'category-7', 'Товары для туризма', 222, 209)
+                    +category('_big', 'category-8', 'Уцененные товары', 213, 208)
+
+        //Акции (товары)
+        section.section._pb0
+            .container
+                h2.section__h2.heading-font Акции
+                .catalog-stock__items
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка', '_active')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+                    +product('product', 'Эхолот ПРАКТИК 6S + 2 подарка')
+
+        //Доставка и оплата
+        section.section
+            .container
+                .product-about(data-product-tabs)
+                    h2.section__h2.product-about__h2.heading-font(role="heading") Доставка и оплата
+
+                    .product-about__tabs
+                        button.product-about__tab._active(type="button" role="button" data-product-tab="1") Оплата
+                        button.product-about__tab(type="button" role="button" data-product-tab="2") Доставка
+
+                    //Оплата
+                    .product-about__content._active(data-product-content="1")
+                        .product-about__faqs
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-payment-1]") Оплата банковской картой на сайте
+                                    span.faq__control
+                                .faq__content(data-product-payment-1 data-grid)
+                                    p Для выбора оплаты товара с помощью банковской карты на соответствующей странице необходимо нажать кнопку «оплата заказа банковской картой». Оплата происходит через ПАО «СБЕРБАНК» с использованием банковских карт следующих платёжных систем:
+                                    .product-about__cards
+                                        img.lazy(data-src="img/payment-1.svg" alt="" width="120" height="36")
+                                        img.lazy(data-src="img/payment-2.svg" alt="" width="90" height="30")
+                                        img.lazy(data-src="img/payment-3.svg" alt="" width="60" height="46")
+                                        img.lazy(data-src="img/payment-4.svg" alt="" width="60" height="46")
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-payment-2]") Наличными или банковской картой
+                                    span.faq__control
+                                .faq__content(data-product-payment-2 data-grid)
+                                    .product-about__payments
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-1', 238, 238)
+                                            | Непосредственно у нас в офисе в г. Зеленограде
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-2', 204, 162)
+                                            | При получении заказов в филиалах городов Новосибирск и Екатеринбург
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-3', 220, 220)
+                                            | Оплата с банковской карты на наш расчетный счет
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-4', 190, 190)
+                                            | Распечатать квитанцию и оплатить в ближайшем отделении Сбербанка или через приложение «Сбербанк-онлайн»
+                                        .product-about__payment
+                                            .product-about__payment-icon
+                                                +svg_sprite('product-payment-5', 204, 204)
+                                            | Безналичная оплата (для ЮЛ и ИП)
+
+                    //Доставка
+                    .product-about__content(data-product-content="2")
+                        .product-about__faqs
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-1]") Самовывоз
+                                    span.faq__control
+                                .faq__content(data-product-delivery-1 data-grid)
+                                    p Пункты выдачи заказов:
+                                    .product-about__pickups
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Зеленоград
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-1', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Зеленоград, ул. Заводская, д. 31, стр.1 (выдача в день заказа)
+                                                p Режим работы: ПН-ПТ с 9.00 до 17.00, СБ-ВС — выходной
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Новосибирск
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-2', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Новосибирск, ул. Северный проезд, 37а, офис 1 (бывш.ул. Сибиряков-Гвардейцев, 49/3 корп.
+                                                p По предварительному согласованию.
+                                        article.product-about__pickup(role="article")
+                                            h4.product-about__pickup-title.heading-font(role="heading") г. Екатеринбург
+                                            +picture_lazy('product-about__pickup-picture', 'tmp/', 'pickup-map-3', 'jpg', 548, 400)
+                                            .product-about__pickup-text
+                                                p г. Екатеринбург, ул. Учителей, 46 пав.9
+                                                p По предварительному согласованию.
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-2]") Службой доставки
+                                    span.faq__control
+                                .faq__content(data-product-delivery-2 data-grid)
+                                    p Содержимое этой вкладки находится в разработке
+
+                            .faq__item._white
+                                button.faq__title.heading-font(type="button" role="button" data-toggle="[data-product-delivery-3]") Почтой России
+                                    span.faq__control
+                                .faq__content(data-product-delivery-3 data-grid)
+                                    p Содержимое этой вкладки находится в разработке
+
+        //Сервис
+        section.section._blue
+            .container
+                h2.section__h2.heading-font(role="heading") сервис
+                .for-users-service__items
+                    article.for-users-service__item(role="article")
+                        h3.for-users-service__title.heading-font(role="heading") Гарантийный сервис
+                        p Наша компания предоставляет бесплатный ремонт эхолотов, при  соблюдении условий гарантии.
+                        p Чтобы не хранить чеки, зарегистрируйте свою покупку в личном кабинете и получите электронный гарантийный талон.
+                        a.for-users-service__link.btn._middle(href="#" role="link") Подробнее об условиях
+                        img.for-users-service__icon.lazy(data-src="img/for-users-service-1.svg" alt="" width="225" height="180")
+
+                    article.for-users-service__item(role="article")
+                        h3.for-users-service__title.heading-font(role="heading") Платный сервис
+                        p По истечению гарантийного срока или не выполнения гарантийных обязательств, ремонт эхолотов производится, согласно прайс-листу в одном из многочисленных сервисных центров компании.
+                        a.for-users-service__link.btn._middle(href="#" role="link") Подробнее
+                        img.for-users-service__icon.lazy(data-src="img/for-users-service-2.svg" alt="" width="225" height="180")
+
+
+
+
+
+
