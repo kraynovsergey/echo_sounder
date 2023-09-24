@@ -1,0 +1,27 @@
+extends base
+
+block seo
+    - var seo = {title: 'Пароль сброшен', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        //Пароль сброшен
+        section.section.auth._blue
+            .container.auth__container
+                .auth__block
+                    h1.h1.auth__title.heading-font(role="heading") Пароль сброшен
+                    p.auth__subtitle Введите новый пароль
+                    form.form.auth__form(action="#" method="post" role="form")
+                        fieldset.form__fieldset
+                            label.form__label(for="reset-password") Новый пароль*
+                            input.form__input(type="password" name="password" id="reset-password")
+                        fieldset.form__fieldset
+                            label.form__label(for="auth-confirm-reset-password") Повторите пароль*
+                            input.form__input(type="password" name="confirm_password" id="auth-confirm-reset-password")
+                        button.form__btn.btn._middle(type="submit" role="button") Подтвердить
+
+            img.auth__bg(src="img/auth-bg.svg" alt="" width="1920" height="832")
+
+        //Карты
+        - var footer_maps_classnames = '_pb0'
+        include includes/_footer-maps

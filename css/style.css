@@ -600,6 +600,9 @@ h1,
       h1 sup,
       .h1 sup {
         font-size: 1rem; } }
+  h1._black,
+  .h1._black {
+    color: #000 !important; }
 
 .no-scroll {
   scrollbar-width: none; }
@@ -8416,5 +8419,46 @@ body .hidden {
         color: #DC4747; }
       .modal__status-title._success {
         color: #21A600; }
+
+.article-page {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto 0; }
+  @media (max-width: 991px) {
+    .article-page {
+      margin-top: 40px; } }
+  @media (max-width: 575px) {
+    .article-page {
+      margin-top: 10px; } }
+  .article-page__picture {
+    width: 100%;
+    display: flex;
+    margin-bottom: 80px; }
+    @media (max-width: 1440px) {
+      .article-page__picture {
+        margin-bottom: 40px; } }
+    @media (max-width: 575px) {
+      .article-page__picture {
+        margin-bottom: 20px; } }
+    .article-page__picture img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px; }
+  .article-page__content {
+    width: 100%;
+    max-width: 840px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .article-page__btn {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 50px; }
+    @media (max-width: 1440px) {
+      .article-page__btn {
+        margin-top: 30px;
+        margin-top: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

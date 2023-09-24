@@ -177,4 +177,8 @@ h1,
 			font-size: 1rem;
 		}
 	}
+
+	&._black {
+		color: $color_black !important;
+	}
 }
