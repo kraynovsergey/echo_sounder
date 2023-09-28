@@ -10,7 +10,7 @@ block main
                 ul.get-order__steps(role="list")
                     li.get-order__step(role="listitem")
                         span.get-order__step-number.heading-font 1
-                        span.get-order__step-title Оформите заказ
+                        span.get-order__step-title Корзина
                         +svg_sprite('get-order-step', 8, 10)
                     li.get-order__step._active(role="listitem" data-order-delivery)
                         span.get-order__step-number.heading-font 2
@@ -119,8 +119,11 @@ block main
                             .get-order__delivery-subtype(data-delivery-subtype="delivery-3")
                                 h2.get-order__delivery-subtype-title.section__h2.heading-font(role="heading") Введите ваш <br>адрес
                                 form.form(action="#" method="post")
-                                    input.form__input._blue(type="text" name="address" placeholder="Адрес")
+                                    input.form__input._blue(type="text" name="index" placeholder="Почтовый индекс")
                                     .get-order__delivery-inputs
+                                        input.form__input._blue(type="text" name="city" placeholder="Город")
+                                        input.form__input._blue(type="text" name="street" placeholder="Улица")
+                                        input.form__input._blue(type="text" name="building" placeholder="Дом")
                                         input.form__input._blue(type="text" name="room" placeholder="Квартира")
                                         input.form__input._blue(type="text" name="entrance" placeholder="Подъезд")
                                         input.form__input._blue(type="text" name="floor" placeholder="Этаж")
@@ -154,8 +157,11 @@ block main
                                 .get-order__delivery-right-form
                                     h3.section__h2.heading-font(role="heading") Адрес доставки
                                     form.form(action="#" method="post")
-                                        input.form__input._blue._transparent(type="text" name="address" placeholder="Адрес")
+                                        input.form__input._blue._transparent(type="text" name="index" placeholder="Почтовый индекс")
                                         .get-order__delivery-inputs
+                                            input.form__input._blue._transparent(type="text" name="city" placeholder="Город")
+                                            input.form__input._blue._transparent(type="text" name="street" placeholder="Улица")
+                                            input.form__input._blue._transparent(type="text" name="building" placeholder="Дом")
                                             input.form__input._blue._transparent(type="text" name="room" placeholder="Квартира")
                                             input.form__input._blue._transparent(type="text" name="entrance" placeholder="Подъезд")
                                             input.form__input._blue._transparent(type="text" name="floor" placeholder="Этаж")
