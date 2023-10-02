@@ -83,6 +83,7 @@
 		position: absolute;
 		top: 8px;
 		left: 8px;
+		right: 8px;
 		display: grid;
 		justify-items: start;
 		grid-gap: 5px;
@@ -95,8 +96,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 30px;
-		padding: 0 15px;
+		min-height: 30px;
+		padding: 5px 15px;
+		line-height: 120%;
 		font-size: .77rem;
 		color: $color_white;
 		font-weight: 500;
