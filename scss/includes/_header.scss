@@ -282,7 +282,9 @@
 		}
 	}
 
-	&__cart {
+	&__cart,
+	&__control,
+	&__favourites {
 		position: relative;
 
 		&-count {

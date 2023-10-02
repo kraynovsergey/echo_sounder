@@ -1091,9 +1091,9 @@ body .hidden {
       @media (max-width: 575px) {
         .header__control._mobile {
           display: flex; } }
-  .header__cart {
+  .header__cart, .header__control, .header__favourites {
     position: relative; }
-    .header__cart-count {
+    .header__cart-count, .header__control-count, .header__favourites-count {
       width: 18px;
       height: 18px;
       background: #FD5C00;
