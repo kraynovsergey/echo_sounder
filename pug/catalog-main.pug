@@ -27,7 +27,9 @@ block main
                     article.category__item(class=size role="article")
                         h3.category__title.heading-font(role="heading")
                             a.all-link(href="#" role="link")=title
-                        +picture_lazy('category__picture', 'tmp/', img, 'png', width, height)
+                        picture.category__picture
+                            source(type="image/webp" data-srcset="img/tmp/webp/" + img + "@2x.webp 2x, img/tmp/webp/" + img + ".webp 1x" srcset="")
+                            img.lazy(src="" data-srcset="img/tmp/" + img + "@2x.png" + " 2x, img/tmp/" + img + ".png" + " 1x" srcset="" alt="")
 
                 .category__items
                     +category('_big', 'category-1', 'Эхолоты', 183, 224)

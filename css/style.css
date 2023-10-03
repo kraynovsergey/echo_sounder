@@ -2185,7 +2185,6 @@ body .hidden {
         left: 0; } }
   .category__picture img {
     width: auto;
-    height: auto;
     max-width: 80%;
     max-height: 80%;
     position: relative;
