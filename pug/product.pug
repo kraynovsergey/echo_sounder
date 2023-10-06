@@ -18,16 +18,25 @@ block main
                             .swiper-wrapper
                                 .swiper-slide.product-page__slide
                                     a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
-                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                        picture(data-loupe-wrapper)
+                                            source(type="image/webp" srcset="img/tmp/webp/product-page@2x.webp")
+                                            img.product-page__picture-img(src="img/tmp/product-page@2x.png" alt="" width="509" height="562" data-loupe-image loading="lazy")
                                 .swiper-slide.product-page__slide
                                     a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
-                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                        picture(data-loupe-wrapper)
+                                            source(type="image/webp" srcset="img/tmp/webp/product-page@2x.webp")
+                                            img.product-page__picture-img(src="img/tmp/product-page@2x.png" alt="" width="509" height="562" data-loupe-image loading="lazy")
                                 .swiper-slide.product-page__slide
                                     a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
-                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                        picture(data-loupe-wrapper)
+                                            source(type="image/webp" srcset="img/tmp/webp/product-page@2x.webp")
+                                            img.product-page__picture-img(src="img/tmp/product-page@2x.png" alt="" width="509" height="562" data-loupe-image loading="lazy")
                                 .swiper-slide.product-page__slide
                                     a.product-page__picture(href="img/tmp/product-page@2x.png" data-fancybox="product-gallery")
-                                        +picture('', 'tmp/', 'product-page', 'png', 509, 562)
+                                        picture(data-loupe-wrapper)
+                                            source(type="image/webp" srcset="img/tmp/webp/product-page@2x.webp")
+                                            img.product-page__picture-img(src="img/tmp/product-page@2x.png" alt="" width="509" height="562" data-loupe-image loading="lazy")
+
                         .product-page__thumbs
                             +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)
                             +picture('product-page__thumb', 'tmp/', 'product-page-thumb', 'png', 85, 99)

@@ -6211,11 +6211,11 @@ body .hidden {
     @media (max-width: 991px) {
       .product-page__picture picture {
         padding: 20px; } }
-    .product-page__picture picture img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%; }
+  .product-page__picture-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; }
 .product-page__thumbs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
