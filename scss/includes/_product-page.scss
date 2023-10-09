@@ -12,6 +12,11 @@
 		@media (max-width: 700px) {
 			grid-template-columns: 1fr;
 		}
+
+		& [data-loupe] {
+			width: 300px;
+			height: 300px;
+		}
 	}
 
 	&__gallery {
@@ -453,5 +458,4 @@
 			}
 		}
 	}
-
 }
