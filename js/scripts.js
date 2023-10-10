@@ -774,4 +774,14 @@
 		});
 	}
 
+	/* Запрет фэнсибокса на мобиле */
+	const product_page_fancy = document.querySelectorAll('.product-page__picture');
+	if ( product_page_fancy.length > 0 ) {
+		product_page_fancy.forEach(item => {
+			item.addEventListener('click', (e) => {
+				if ( document.documentElement.offsetWidth < 992 ) e.preventDefault();
+			});
+		});
+	}
+
 })();
