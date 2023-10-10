@@ -635,7 +635,8 @@
 	if ( product_gallery && product_thumbs.length > 0 ) {
 		const product_gallery_swiper = new Swiper(product_gallery, {
 			slidesPerView: 1,
-			spaceBetween: 0
+			spaceBetween: 0,
+			autoHeight: true
 		});
 
 		product_thumbs.forEach(item => {
