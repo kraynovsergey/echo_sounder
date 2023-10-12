@@ -5883,9 +5883,8 @@ body .hidden {
     padding: 0;
     list-style: none; }
     .catalog-product__tags li {
-      height: 40px;
       border-radius: 20px;
-      padding: 0 20px;
+      padding: 5px 20px;
       background: #3F8AE0;
       color: #fff;
       font-size: .87rem;
@@ -5896,19 +5895,18 @@ body .hidden {
       margin: 0 4px 4px 0; }
       @media (max-width: 1440px) {
         .catalog-product__tags li {
-          height: 30px;
           font-size: .66rem;
           border-radius: 15px; } }
       @media (max-width: 991px) {
         .catalog-product__tags li {
           font-size: .6rem;
-          height: 20px;
           border-radius: 10px;
           grid-gap: 5px;
-          padding: 0 10px; } }
+          padding: 5px 10px; } }
       .catalog-product__tags li svg {
-        height: 60%;
-        width: auto; }
+        min-width: 20px;
+        max-width: 20px;
+        height: auto; }
   .catalog-product__params {
     margin: 30px 0 0;
     display: grid;
