@@ -4359,22 +4359,18 @@ body .hidden {
       max-width: 100%; }
   .demonstration__echo-sounders-screen {
     position: absolute;
-    left: 27%;
-    top: 31%;
-    width: 42%;
-    transition: .5s ease;
-    opacity: 0; }
-    @media (max-width: 991px) {
-      .demonstration__echo-sounders-screen {
-        width: 43%; } }
-    @media (max-width: 575px) {
-      .demonstration__echo-sounders-screen {
-        width: 46%;
-        left: 25%;
-        top: 31%; } }
+    top: 0;
+    text-align: center;
+    display: flex;
+    max-height: 100%;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s ease-in-out; }
     .demonstration__echo-sounders-screen img {
-      width: 100%;
-      height: auto; }
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%; }
   .demonstration__echo-sounders-controls {
     display: grid;
     grid-template-columns: auto 1fr auto;
