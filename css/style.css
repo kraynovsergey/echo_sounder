@@ -8547,4 +8547,27 @@ body .hidden {
         color: #fff;
         background: #3F8AE0; }
 
+.promocode {
+  display: flex;
+  margin-bottom: 20px;
+  grid-gap: 0; }
+  .promocode__input {
+    flex-grow: 1;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 0; }
+    @media (max-width: 991px) {
+      .promocode__input {
+        height: 50px; } }
+  .promocode__submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #3F8AE0;
+    border-color: #3F8AE0;
+    font-size: 12px !important; }
+    .promocode__submit:hover {
+      background: #9ECCFF;
+      border-color: #9ECCFF;
+      color: #fff; }
+
 /*# sourceMappingURL=style.css.map */

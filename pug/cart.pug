@@ -30,6 +30,11 @@ block main
 
                     .cart__details
                         .cart__details-title.heading-font Детали заказа
+
+                        form.form.promocode(action="#" method="post")
+                            input.form__input.promocode__input._blue(type="text" name="promocode" placeholder="Промокод")
+                            button.btn._middle.promocode__submit(type="submit") Применить
+
                         .cart__details-products
                             span 2 товара
                             span 17 990 р.

@@ -1,0 +1,30 @@
+.promocode {
+	display: flex;
+	margin-bottom: 20px;
+	grid-gap: 0;
+
+	&__input {
+		flex-grow: 1;
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		border-right: 0;
+
+		@media (max-width: 991px) {
+			height: 50px;
+		}
+	}
+
+	&__submit {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		background: $color_blue;
+		border-color: $color_blue;
+		font-size: 12px !important;
+
+		&:hover {
+			background: $color_blue_border;
+			border-color: $color_blue_border;
+			color: $color_white;
+		}
+	}
+}
