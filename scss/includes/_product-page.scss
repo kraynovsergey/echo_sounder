@@ -57,9 +57,21 @@
 	}
 
 	&__thumbs {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 10px;
+		width: 100%;
+
+		& .swiper-slide-thumb-active {
+			& .product-page__thumb {
+				border-color: $color_blue;
+			}
+		}
+
+		&-nav {
+			justify-content: center;
+
+			& .carousel__navigation:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
 	}
 
 	&__thumb {
@@ -72,6 +84,8 @@
 		justify-content: center;
 		height: 100%;
 		cursor: pointer;
+		border: 2px solid $color_blue_light;
+		transition: .5s ease-in-out;
 
 		& img {
 			width: auto;

@@ -631,28 +631,27 @@
 
 	/* Галерея на странице товара */
 	const product_gallery = document.querySelector('[data-product-gallery]'),
-		product_thumbs = document.querySelectorAll('.product-page__thumb');
-	if ( product_gallery && product_thumbs.length > 0 ) {
+		product_gallery_thumbs = document.querySelector('[data-product-gallery-thumbs]');
+	if ( product_gallery && product_gallery_thumbs ) {
+		const product_gallery_thumbs_swiper = new Swiper(product_gallery_thumbs, {
+			slidesPerView: 4,
+			spaceBetween: 10,
+			freeMode: true,
+			watchSlidesProgress: true,
+		});
+
 		const product_gallery_swiper = new Swiper(product_gallery, {
 			slidesPerView: 1,
 			spaceBetween: 0,
-			autoHeight: true
+			autoHeight: true,
+			thumbs: {
+				swiper: product_gallery_thumbs_swiper
+			},
+			navigation: {
+				nextEl: document.querySelector('[data-product-gallery-next]'),
+				prevEl: document.querySelector('[data-product-gallery-prev]')
+			},
 		});
-
-		product_thumbs.forEach(item => {
-			item.addEventListener('click', () => {
-				product_gallery_swiper.slideTo(+index(item) - 1);
-			});
-		});
-
-		function index(el) {
-			if (!el) return -1;
-			var i = 0;
-			do {
-				i++;
-			} while (el = el.previousElementSibling);
-			return i;
-		}
 	}
 
 	/* Табы на странице продукта */
