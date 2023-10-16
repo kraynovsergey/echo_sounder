@@ -24,22 +24,48 @@
         svg(width="66" height="66")
             use(xlink:href="img/sprite.svg#modal-close")
     .modal__content
-        p.h1.modal__title.heading-font Подберем эхолот
-        p.modal__subtitle Заполните свои данные, мы пришлем подборку подходящих эхолотов в ватсап или телеграмм
-        form.form(action="#" method="post" role="form")
-            input(type="hidden" name="quiz" value="" data-result-quiz)
-            fieldset.form__fieldset
-                label.form__label(for="quiz-name") Ваше имя*
-                input.form__input(type="text" name="name" id="quiz-name")
-            fieldset.form__fieldset
-                label.form__label(for="quiz-phone") Ваш телефон*
-                input.form__input(type="tel" name="phone" id="quiz-phone" data-tel)
-            button.form__btn.btn._middle(type="submit" role="button" data-fancybox-double="#modal-error") Отправить
-            .form__checkbox
-                input(type="checkbox" name="policy" id="quiz-policy" data-policy checked)
-                label(for="quiz-policy")
-                    span
-                    | Отправляя данные вы соглашаетесь с политикой обработки персональных данных
+        p.h1.modal__title.heading-font Вам подходят:
+        .quiz__products
+            .quiz__product
+                article.product.compare__product
+                    button.product__favourites
+                        svg(width="29" height="28")
+                            use(xlink:href="img/sprite.svg#favourites")
+                    a.product__picture.compare__picture(href="#")
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x")
+                            img(src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223")
+                    h3.product__title
+                        a(href="#") Новинка! Эхолот ПРАКТИК 6S + 3 подарка
+                    .product__price 12 700р
+                        span 14 000р
+                    button.product__cart.btn._small В корзину
+                    .product__count(data-product-count)
+                        button.product__count-btn(type="button" role="button" data-product-count-minus) -
+                        input.product__count-input(type="text" name="count" value="1")
+                        button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+            .quiz__product
+                article.product.compare__product
+                    button.product__favourites
+                        svg(width="29" height="28")
+                            use(xlink:href="img/sprite.svg#favourites")
+                    a.product__picture.compare__picture(href="#")
+                        picture
+                            source(type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x")
+                            img(src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223")
+                    h3.product__title
+                        a(href="#") Новинка! Эхолот ПРАКТИК 6S + 3 подарка
+                    .product__price 12 700р
+                        span 14 000р
+                    button.product__cart.btn._small В корзину
+                    .product__count(data-product-count)
+                        button.product__count-btn(type="button" role="button" data-product-count-minus) -
+                        input.product__count-input(type="text" name="count" value="1")
+                        button.product__count-btn(type="button" role="button" data-product-count-plus) +
+
+        button.quiz__restart.btn._border._middle(type="button" data-fancybox-close) Пройти опрос заново
+
 
 .modal(id="modal-fastorder")
     button.modal__close(type="button" data-fancybox-close)

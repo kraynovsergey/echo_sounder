@@ -8242,6 +8242,33 @@ body .hidden {
       .quiz__final-control._grey:hover {
         background: #A0A0A0;
         color: #fff; }
+  .quiz__products {
+    display: flex;
+    justify-content: center;
+    margin: 30px -10px; }
+    @media (max-width: 575px) {
+      .quiz__products {
+        margin: 20px 0 25px;
+        flex-wrap: wrap; } }
+  .quiz__product {
+    padding: 0 10px;
+    display: flex;
+    width: 50%; }
+    @media (max-width: 575px) {
+      .quiz__product {
+        width: 100%;
+        padding: 0; }
+        .quiz__product:not(:last-child) {
+          margin-bottom: 25px; } }
+    .quiz__product .product {
+      width: 100%; }
+  .quiz__restart {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px; }
+    @media (max-width: 575px) {
+      .quiz__restart {
+        font-size: 12px !important; } }
 
 .product-pluses__items {
   display: grid;

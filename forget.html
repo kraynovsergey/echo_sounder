@@ -438,24 +438,50 @@
         </svg>
       </button>
       <div class="modal__content">
-        <p class="h1 modal__title heading-font">Подберем эхолот</p>
-        <p class="modal__subtitle">Заполните свои данные, мы пришлем подборку подходящих эхолотов в ватсап или телеграмм</p>
-        <form class="form" action="#" method="post" role="form">
-          <input type="hidden" name="quiz" value="" data-result-quiz>
-          <fieldset class="form__fieldset">
-            <label class="form__label" for="quiz-name">Ваше имя*</label>
-            <input class="form__input" type="text" name="name" id="quiz-name">
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <label class="form__label" for="quiz-phone">Ваш телефон*</label>
-            <input class="form__input" type="tel" name="phone" id="quiz-phone" data-tel>
-          </fieldset>
-          <button class="form__btn btn _middle" type="submit" role="button" data-fancybox-double="#modal-error">Отправить</button>
-          <div class="form__checkbox">
-            <input type="checkbox" name="policy" id="quiz-policy" data-policy checked>
-            <label for="quiz-policy"><span></span>Отправляя данные вы соглашаетесь с политикой обработки персональных данных</label>
+        <p class="h1 modal__title heading-font">Вам подходят:</p>
+        <div class="quiz__products">
+          <div class="quiz__product">
+            <article class="product compare__product">
+              <button class="product__favourites">
+                <svg width="29" height="28">
+                  <use xlink:href="img/sprite.svg#favourites"></use>
+                </svg>
+              </button><a class="product__picture compare__picture" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                </picture></a>
+              <h3 class="product__title"><a href="#">Новинка! Эхолот ПРАКТИК 6S + 3 подарка</a></h3>
+              <div class="product__price">12 700р<span>14 000р</span></div>
+              <button class="product__cart btn _small">В корзину</button>
+              <div class="product__count" data-product-count>
+                <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                <input class="product__count-input" type="text" name="count" value="1">
+                <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+              </div>
+            </article>
           </div>
-        </form>
+          <div class="quiz__product">
+            <article class="product compare__product">
+              <button class="product__favourites">
+                <svg width="29" height="28">
+                  <use xlink:href="img/sprite.svg#favourites"></use>
+                </svg>
+              </button><a class="product__picture compare__picture" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/tmp/webp/product@2x.webp 2x, img/tmp/webp/product.webp 1x"><img src="" srcset="img/tmp/product@2x.png 2x, img/tmp/product.png 1x" alt="" width="238" height="223">
+                </picture></a>
+              <h3 class="product__title"><a href="#">Новинка! Эхолот ПРАКТИК 6S + 3 подарка</a></h3>
+              <div class="product__price">12 700р<span>14 000р</span></div>
+              <button class="product__cart btn _small">В корзину</button>
+              <div class="product__count" data-product-count>
+                <button class="product__count-btn" type="button" role="button" data-product-count-minus>-</button>
+                <input class="product__count-input" type="text" name="count" value="1">
+                <button class="product__count-btn" type="button" role="button" data-product-count-plus>+</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="quiz__restart btn _border _middle" type="button" data-fancybox-close>Пройти опрос заново</button>
       </div>
     </div>
     <div class="modal" id="modal-fastorder">
