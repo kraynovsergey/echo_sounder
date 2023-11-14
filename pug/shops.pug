@@ -1,0 +1,201 @@
+extends base
+
+block seo
+    - var seo = {title: 'Магазины официальных партнеров ООО “ПРАКТИК-НЦ”', description: '', keywords: ''}
+
+block main
+    main.main(role="main")
+        section.section._pt0
+            .container
+                include includes/_breadcrumbs
+
+                .text-page
+                    h1.heading-font.shops__h1._black(role="heading") Магазины официальных партнеров ООО “ПРАКТИК-НЦ”
+                    p.shops__text Введите город в поиск и найдите ближайший магазин
+
+                form.search__form.shops__form(action="#" method="get" role="form")
+                    input.search__input(type="text" name="search" placeholder="Поиск по региону" data-region-search)
+                    button.search__submit(type="submit" role="button" aria-label="Искать")
+                        +svg_sprite('search', 19, 22)
+
+                ul.shops__alphabet
+                    li.shops__letter E
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Europe
+
+                    li.shops__letter A
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Алтайский край
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Архангельская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Астраханская область
+
+                    li.shops__letter Б
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Белгородская область
+
+                    li.shops__letter В
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Владимирская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Волгоградская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Вологодская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Воронежская область
+
+                    li.shops__letter И
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ивановская область
+
+                    li.shops__letter К
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Казахстан
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Калининградская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Калужская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Камчатский край
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Кемеровская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Кировская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Костромская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Краснодарский край
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Красноярский край
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Курганская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Курская область
+
+                    li.shops__letter Л
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ленинградская область
+
+                    li.shops__letter М
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Москва
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Московская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Мурманская область
+
+                    li.shops__letter Н
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Нижегородская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Новгородская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Новосибирская область
+
+                    li.shops__letter О
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Омская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Оренбургская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Орловская область
+
+                    li.shops__letter П
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Пензенская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Пермский край
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Приморский край
+
+                    li.shops__letter Р
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Алтай
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Башкортостан
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Беларусь
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Карелия
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Коми
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Марий Эл
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Мордовия
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Саха (Якутия)
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Татарстан
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Республика Хакасия
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ростовская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Рязанская область
+
+                    li.shops__letter С
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Самарская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Санкт-Петербург
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Саратовская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Свердловская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Смоленская область
+
+                    li.shops__letter Т
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Тверская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Томская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Тульская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Тюменская область
+
+                    li.shops__letter У
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Удмуртская республика
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Украина
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ульяновская область
+
+                    li.shops__letter Х
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ханты-Мансийский АО
+
+                    li.shops__letter Ч
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Челябинская область
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Чувашская Республика
+
+                    li.shops__letter Я
+                        ul.shops__regions
+                            li.shops__region
+                                a.shops__region-link(href="#" data-region-link) Ярославская область
+
+
+

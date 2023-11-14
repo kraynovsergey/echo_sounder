@@ -784,4 +784,37 @@
 		});
 	}
 
+	/* Поиск по регионам */
+	const region_search = document.querySelector('[data-region-search]');
+	if (region_search) {
+		let form = region_search.closest('form'),
+			regions = document.querySelectorAll('[data-region-link]');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+		});
+
+		region_search.addEventListener('keyup', () => {
+			let val = region_search.value.toLowerCase();
+
+			if (regions.length > 0) {
+				regions.forEach(region => {
+					let region_name = region.innerHTML.toLowerCase();
+
+					if (region_name.includes(val)) region.closest('.shops__region').classList.remove('_hidden');
+						else region.closest('.shops__region').classList.add('_hidden');
+				});
+
+				let letters = document.querySelectorAll('.shops__letter');
+				if (letters.length > 0) {
+					letters.forEach(item => {
+						let childs = item.querySelectorAll('.shops__region:not(._hidden)');
+						if (childs.length === 0) item.classList.add('_hidden');
+							else item.classList.remove('_hidden');
+					});
+				}
+			}
+		});
+	}
+
 })();
