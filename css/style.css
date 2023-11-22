@@ -2106,15 +2106,12 @@ body .hidden {
 .category__items {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 240px); }
+  grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 991px) {
     .category__items {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(6, 180px); } }
+      grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 575px) {
     .category__items {
-      grid-template-rows: repeat(8, 120px);
       grid-template-columns: 1fr;
       grid-gap: 15px; } }
 .category__item {
