@@ -7963,8 +7963,7 @@ body .hidden {
         font-size: 1.1rem; } }
   .text-page ul, .text-page ol {
     margin: 0 0 20px;
-    padding: 0;
-    list-style: none; }
+    padding: 0 0 0 40px; }
     .text-page ul ul, .text-page ul ol, .text-page ol ul, .text-page ol ol {
       margin-left: 20px;
       margin-top: 10px; }
